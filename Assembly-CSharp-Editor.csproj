@@ -53,14 +53,17 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\DialogueSystem\Editor\DialogueWindow.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Components\ButtonEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\EditorDataManager.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Components\ConnectionPoint.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\DialoguesScriptableEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Components\OptionEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\DialogueEditorConfigs.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Components\TextEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Components\NodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Component.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\DialogueWindowManager.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Components\ConnectorEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\DialoguesScriptableEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\DialogueEditorManager.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Components\ConnectionEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\EditorData.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

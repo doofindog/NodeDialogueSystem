@@ -6,21 +6,23 @@ using UnityEngine.UI;
 
 public class OptionEditor
 {
-    public DialogueEditorConfig.OptionConfig config; 
-    
+    public Rect rect;
+    public DialogueEditor.TextEditor optionText;
+
+
     public OptionEditor()
     {
-        config = new DialogueEditorConfig.OptionConfig();
+        optionText = new DialogueEditor.TextEditor();
     }
 
     public void Draw(Rect rect)
     {
-        config.rect = rect;
-        config.textEditor.Draw(config.rect);
+        this.rect = rect;
+        optionText.Draw(rect);
     }
 
     public string GetText()
     {
-        return config.textEditor.GetText();
+        return optionText.GetText();
     }
 }

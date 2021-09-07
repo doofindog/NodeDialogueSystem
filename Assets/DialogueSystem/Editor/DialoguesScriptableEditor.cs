@@ -9,11 +9,11 @@ public class DialoguesScriptableEditor : Editor
 {
     public override void OnInspectorGUI()
     {
-        //base.OnInspectorGUI();
+        base.OnInspectorGUI();
         if (GUILayout.Button("Open Dialogue Window"))
         {
             DialoguesScriptable dialogue = (DialoguesScriptable)target;
-            DialogueWindowManager.OpenDialogueWindow(dialogue);
+            DialogueEditorManager.OpenDialogueWindow(dialogue);
         }
     }
     

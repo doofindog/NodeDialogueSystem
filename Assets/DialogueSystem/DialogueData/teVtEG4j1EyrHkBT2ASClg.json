@@ -1,0 +1,58 @@
+{
+    "id": "teVtEG4j1EyrHkBT2ASClg",
+    "dialoguesScriptable": {
+        "instanceID": -6432
+    },
+    "nodes": [
+        {
+            "id": 0,
+            "rect": {
+                "serializedVersion": "2",
+                "x": 178.0,
+                "y": 170.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": 0,
+            "rect": {
+                "serializedVersion": "2",
+                "x": 617.0,
+                "y": 39.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": 0,
+            "rect": {
+                "serializedVersion": "2",
+                "x": 425.0,
+                "y": 303.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": 0,
+            "rect": {
+                "serializedVersion": "2",
+                "x": 767.0,
+                "y": 169.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": 0,
+            "rect": {
+                "serializedVersion": "2",
+                "x": 252.0,
+                "y": 30.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        }
+    ]
+}

@@ -9,18 +9,51 @@ namespace DialogueEditor
 {
     public class NodeEditor
     {
-        public DialogueEditorConfig.NodeConfig config;
+        public int id;
         
-        public NodeEditor(Vector2 position,Action<NodeEditor> onRemoveNode)
+        public Vector2 padding;
+        public Rect rect;
+        public Vector2 spacing;
+
+        private Action<NodeEditor> OnRemoveNode;
+        private bool isSelected;
+        private bool canDrag;
+
+        private TextEditor mainText;
+        private List<OptionEditor> options;
+
+        private ConnectionPoint inPoint;
+        private ConnectionPoint outPoint;
+        private List<ConnectionPoint> optionPoint;
+
+        private Action<ConnectionPoint> OnInPointClick;
+        private Action<ConnectionPoint> OnOutPointClick;
+        
+        public NodeEditor(Vector2 position,Action<NodeEditor> onRemoveNode, Action<ConnectionPoint> onInClick, Action<ConnectionPoint> onOutClick)
         {
-            config = new DialogueEditorConfig.NodeConfig(position, new Vector2(300, 100), new Vector2(20, 20), onRemoveNode);
+
+            this.padding = new Vector2(20, 20);
+            Vector2 size = new Vector2(300, 100);
+            rect = new Rect(position, size);
+
+            OnRemoveNode = onRemoveNode;
+
+            mainText = new TextEditor();
+            options = new List<OptionEditor>();
+            OnInPointClick = onInClick;
+            OnOutPointClick = onOutClick;
+            inPoint = new ConnectionPoint(ConnectionPointType.IN,onInClick);
+            outPoint = new ConnectionPoint(ConnectionPointType.OUT,onOutClick);
+            optionPoint = new List<ConnectionPoint>();
+            
+            
         }
         
     
         public void Draw()
         {
-            GUI.Box(config.rect, config.title);
-            config.spacing = new Vector2(0, 0);
+            GUI.Box(rect, string.Empty);
+            spacing = new Vector2(0, 0);
             
             DrawDialogueText(45);
             DrawOptionText(20);
@@ -37,31 +70,31 @@ namespace DialogueEditor
             {
                 case EventType.MouseDown:
                 {
-                    if (e.button == 1 && config.rect.Contains(e.mousePosition))
+                    if (e.button == 1 && rect.Contains(e.mousePosition))
                     {
                         OpenMenu();
                         e.Use();
                     }
 
-                    if (e.button == 0 && config.rect.Contains(e.mousePosition))
+                    if (e.button == 0 && rect.Contains(e.mousePosition))
                     {
-                        config.isSelected = true;
-                        config.canDrag = true;
+                        isSelected = true;
+                        canDrag = true;
                     }
                     break;
                 }
                 case EventType.MouseUp:
                 {
-                    if (e.button == 0 && config.isSelected == true)
+                    if (e.button == 0 && isSelected == true)
                     {
-                        config.isSelected = false;
-                        config.canDrag = false;
+                        isSelected = false;
+                        canDrag = false;
                     }
                     break;
                 }
                 case EventType.MouseDrag:
                 {
-                    if (e.button == 0 && config.canDrag == true)
+                    if (e.button == 0 && canDrag == true)
                     {
                         UpdatePositon(e.delta);
                         e.Use();
@@ -81,55 +114,57 @@ namespace DialogueEditor
     
         private void DeleteNode()
         {
-            if (config.OnRemoveNode != null)
+            if (OnRemoveNode != null)
             {
-                config.OnRemoveNode(this);
+                OnRemoveNode(this);
             }
         }
 
         public void UpdatePositon(Vector2 newPosition)
         {
-            config.rect.position += newPosition;
+            rect.position += newPosition;
         }
         
         public void AddOption()
         {
             OptionEditor option = new OptionEditor();
-            config.options.Add(option);
-            config.rect.size += new Vector2(0, 20 + 5);
+            options.Add(option);
+            rect.size += new Vector2(0, 20 + 5);
+
+            ConnectionPoint outPoint = new ConnectionPoint(ConnectionPointType.OUT,OnOutPointClick);
+            optionPoint.Add(outPoint);
         }
 
         public void DrawDialogueText(float length)
         {
-            Vector2 position = config.rect.position + config.padding + config.spacing;
-            Vector2 size = new Vector2(config.rect.size.x - 2 * config.padding.x, length);
-            config.TextEditor.Draw(new Rect(position, size));
-            config.spacing.y += length + 10;
+            Vector2 position = rect.position + padding + spacing;
+            Vector2 size = new Vector2(rect.size.x - 2 * padding.x, length);
+            mainText.Draw(new Rect(position, size));
+            spacing.y += length + 10;
         }
 
         public void DrawOptionText(float length)
         {
-            foreach (OptionEditor option in config.options)
+            foreach (OptionEditor option in options)
             {
-                Vector2 position = config.rect.position + config.padding + config.spacing;
-                Vector2 size = new Vector2(config.rect.size.x - 2 * config.padding.x, length);
+                Vector2 position = rect.position + padding + spacing;
+                Vector2 size = new Vector2(rect.size.x - 2 * padding.x, length);
                 option.Draw(new Rect(position, size));
-                config.spacing.y += 20 + 5;
+                spacing.y += 20 + 5;
             }
         }
 
         public void DrawInConnectors()
         {
             Vector2 size = new Vector2(20,20);
-            Vector2 position = config.rect.position;
+            Vector2 position = rect.position;
             position.x -= size.x * 0.5f;
-            position.y += (config.rect.size.y * 0.5f) - (size.y * 0.5f);
+            position.y += (rect.size.y * 0.5f) - (size.y * 0.5f);
 
             Rect inRect = new Rect(position, size);
-            if (GUI.Button(inRect, ""))
-            {
-                //TODO
-            }
+            
+            
+            inPoint.Draw(inRect);
 
             
         }
@@ -138,32 +173,30 @@ namespace DialogueEditor
         {
             Vector2 size = new Vector2(20,20);
             Vector2 position = Vector2.zero;
-            if (config.options.Count == 0)
+            if (options.Count == 0)
             {
 
-                position = config.rect.position;
-                position.x += (config.rect.size.x) - size.x * 0.5f;
-                position.y += (config.rect.size.y * 0.5f) - (size.y * 0.5f);
+                position = rect.position;
+                position.x += (rect.size.x) - size.x * 0.5f;
+                position.y += (rect.size.y * 0.5f) - (size.y * 0.5f);
 
-                Rect rect = new Rect(position, size);
-                if (GUI.Button(rect, string.Empty))
-                {
-                    //TODO
-                }
+                Rect buttonRect = new Rect(position, size);
+                
+                
+                outPoint.Draw(buttonRect);
+                
             }
             else
             {
-                for (int i = 0; i < config.options.Count; i++)
+                for (int i = 0; i < options.Count; i++)
                 {
-                    Rect optionRect = config.options[i].config.rect;
-                    position.x = config.rect.position.x + config.rect.size.x - (size.x * 0.5f);
-                    position.y = config.rect.position.y + ( Mathf.Abs(config.rect.position.y - optionRect.position.y)) - (optionRect.size.y * 0.5f - size.y * 0.5f);
+                    Rect optionRect = options[i].rect;
+                    position.x = rect.position.x + rect.size.x - (size.x * 0.5f);
+                    position.y = rect.position.y + (Mathf.Abs(rect.position.y - optionRect.position.y))- (optionRect.size.y * 0.5f - size.y * 0.5f);
 
-                    Rect rect = new Rect(position, size);
-                    if (GUI.Button(rect, string.Empty))
-                    {
-                        //TODO
-                    }
+                    Rect buttonRect = new Rect(position, size);
+
+                    optionPoint[i].Draw(buttonRect);
                 }
             }
         }

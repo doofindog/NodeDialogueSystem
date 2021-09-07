@@ -1,42 +1,53 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using Codice.Client.Common.TreeGrouper;
 using UnityEngine;
 using UnityEditor;
-using DialogueEditor;
+
 
 namespace  DialogueEditor
 {
+    [System.Serializable]
     public class DialogueWindow : EditorWindow
     {
-        private DialoguesScriptable dialoguesScriptable;
-        private List<NodeEditor> nodes;
+        public string id;
+        public DialoguesScriptable dialoguesScriptable;
 
+        public List<NodeEditor> nodes;
+        public List<ConnectionEditor> connections;
         
-    
+        private ConnectionPoint inConnectionPoint;
+        private ConnectionPoint outConnectionPoint;
+
+
+
+
         public void Initialise(DialoguesScriptable dialoguesScriptable)
         {
+            ClearData();
+            DialogueEditorManager.LoadData(dialoguesScriptable);
             this.dialoguesScriptable = dialoguesScriptable;
-            nodes = new List<NodeEditor>();
+            id = dialoguesScriptable.id;
         }
         
     
         private void OnGUI()
         {
-            GUILayout.Label("Dialogue Editor Window", EditorStyles.boldLabel); 
-    
-            DrawNodeGUI();
-            ProcessNodeEvents(Event.current);
-            ProcessEvents(Event.current);
-            
-    
-    
-            if (GUI.changed)
+            if (dialoguesScriptable != null)
             {
-                Repaint();
+                GUILayout.Label("Dialogue Editor Window", EditorStyles.boldLabel);
+
+                DrawNodeGUI();
+                DrawConnectionsGUI();
+                ProcessNodeEvents(Event.current);
+                ProcessEvents(Event.current);
+                
+                
+                DrawSave();
+
+                if (GUI.changed)
+                {
+                    Repaint();
+                }
             }
-    
         }
     
         private void ProcessEvents(Event e)
@@ -65,7 +76,7 @@ namespace  DialogueEditor
     
         private void ProcessNodeEvents(Event e)
         {
-            if (nodes.Count > 0)
+            if (nodes != null)
             {
                 foreach (NodeEditor node in nodes)
                 {
@@ -76,7 +87,7 @@ namespace  DialogueEditor
     
         private void DrawNodeGUI()
         {
-            if (nodes.Count > 0)
+            if (nodes != null)
             {
                 foreach (NodeEditor node in nodes)
                 {
@@ -84,7 +95,20 @@ namespace  DialogueEditor
                 }
             }
         }
-    
+
+        private void DrawConnectionsGUI()
+        {
+            if (connections == null)
+            {
+                connections = new List<ConnectionEditor>();
+            }
+            
+            foreach (ConnectionEditor connection in connections)
+            {
+                connection.Draw();
+            }
+        }
+
         private void OpenContextMenu(Vector2 position)
         {
             GenericMenu contextMenu = new GenericMenu();
@@ -92,9 +116,14 @@ namespace  DialogueEditor
             contextMenu.ShowAsContext();
         }
     
-        private void AddNode(Vector2 position)
+        public void AddNode(Vector2 position)
         {
-            NodeEditor nodeEditor = new NodeEditor(position, RemoveNode);
+            if(nodes == null)
+            {
+                nodes = new List<NodeEditor>();
+            }
+            NodeEditor nodeEditor =
+                new NodeEditor(position, RemoveNode, SelectInConnectionPoint, SelectOutConnectionPoint);
             nodes.Add(nodeEditor);
         }
     
@@ -114,6 +143,79 @@ namespace  DialogueEditor
                 }
             }
         }
+
+        private void SelectInConnectionPoint(ConnectionPoint point)
+        {
+            if (inConnectionPoint != point)
+            {
+                inConnectionPoint = point;
+                CreateConnection();
+            }
+            else
+            {
+                ClearConnection();
+            }
+        }
+
+        private void SelectOutConnectionPoint(ConnectionPoint point)
+        {
+            if (inConnectionPoint != point)
+            {
+                outConnectionPoint = point;
+                CreateConnection();
+            }
+            else
+            {
+                ClearConnection();
+            }
+        }
+
+        private void CreateConnection()
+        {
+            if (inConnectionPoint != null && outConnectionPoint != null)
+            {
+                connections.Add(new ConnectionEditor(inConnectionPoint,outConnectionPoint));
+                ClearConnection();
+            }
+        }
+
+        private void ClearConnection()
+        {
+            inConnectionPoint = null;
+            outConnectionPoint = null;
+        }
+
+        private void DrawSave()
+        {
+            
+            Vector2 size = new Vector2(100, 50);
+            Vector2 position = Vector2.zero + (this.position.size - size);
+            Rect rect = new Rect(position, size);
+            if (GUI.Button(rect, "Save"))
+            {
+                DialogueEditorManager.SaveData();
+            }
+        }
+
+        public void ClearData()
+        {
+            id = null;
+            
+            if (nodes != null)
+            {
+                nodes.Clear();
+            }
+
+            if (connections != null)
+            {
+                connections.Clear();
+            }
+
+            inConnectionPoint = null;
+            outConnectionPoint = null; 
+        }
+
+
     }
 }
 

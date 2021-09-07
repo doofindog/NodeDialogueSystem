@@ -53,10 +53,9 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\DialogueSystem\Script\Node.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\Connector.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\DialoguesScriptable.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Option.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\DialogueManager.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\DialoguesScriptable.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\DialoguesManager.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

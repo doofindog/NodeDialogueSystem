@@ -6,8 +6,8 @@ using UnityEngine;
 [System.Serializable]
 public class Node
 {
-    public int id;
+    public string id;
     public string text;
     public List<Option> options;
-    public List<Connector> connectors;
+    //public List<Connector> connectors;
 }

@@ -6,25 +6,27 @@ using UnityEditor;
 
 namespace  DialogueEditor
 {
+
     public class TextEditor
     { 
-        public DialogueEditorConfig.TextConfig config;
+        public string text;
+        public Rect rect;
+        public GUIStyle style;
 
         public TextEditor()
         {
-            config = new DialogueEditorConfig.TextConfig();
+            
         }
-        
 
         public void Draw(Rect rect)
         {
-            config.rect = rect;
-            config.text = GUI.TextArea(rect, config.text);
+            rect = rect;
+            text = GUI.TextArea(rect, text);
         }
 
         public string GetText()
         {
-            return config.text;
+            return text;
         }
     }
 }

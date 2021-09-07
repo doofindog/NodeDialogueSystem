@@ -1,0 +1,35 @@
+{
+    "id": "t0SvdX4e206HKdUjVsn6A",
+    "nodes": [
+        {
+            "id": 0,
+            "rect": {
+                "serializedVersion": "2",
+                "x": 183.0,
+                "y": 133.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": 0,
+            "rect": {
+                "serializedVersion": "2",
+                "x": 397.0,
+                "y": 452.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": 0,
+            "rect": {
+                "serializedVersion": "2",
+                "x": 862.0,
+                "y": 231.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        }
+    ]
+}
