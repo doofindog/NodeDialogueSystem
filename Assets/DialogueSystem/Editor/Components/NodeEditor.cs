@@ -4,13 +4,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using DialogueEditor;
+using UnityEditor.Graphs;
 
 namespace DialogueEditor
 {
     public class NodeEditor
     {
-        public int id;
-        
+        public Dialogue dialogue;
+
+        public string id;
+
         public Vector2 padding;
         public Rect rect;
         public Vector2 spacing;
@@ -18,35 +21,34 @@ namespace DialogueEditor
         private Action<NodeEditor> OnRemoveNode;
         private bool isSelected;
         private bool canDrag;
-
-        private TextEditor mainText;
+        
         private List<OptionEditor> options;
+        private OptionEditor optionsDeleteList; 
 
         private ConnectionPoint inPoint;
         private ConnectionPoint outPoint;
-        private List<ConnectionPoint> optionPoint;
+        private List<ConnectionPoint> connectionPoints;
 
         private Action<ConnectionPoint> OnInPointClick;
         private Action<ConnectionPoint> OnOutPointClick;
         
-        public NodeEditor(Vector2 position,Action<NodeEditor> onRemoveNode, Action<ConnectionPoint> onInClick, Action<ConnectionPoint> onOutClick)
+        public NodeEditor(Vector2 position,Action<NodeEditor> onRemoveNode, Action<ConnectionPoint> onInClick, Action<ConnectionPoint> onOutClick, Dialogue dialogue)
         {
-
+            this.dialogue = dialogue;
+            id = dialogue.id;
+            
             this.padding = new Vector2(20, 20);
             Vector2 size = new Vector2(300, 100);
             rect = new Rect(position, size);
 
             OnRemoveNode = onRemoveNode;
-
-            mainText = new TextEditor();
+            
             options = new List<OptionEditor>();
             OnInPointClick = onInClick;
             OnOutPointClick = onOutClick;
             inPoint = new ConnectionPoint(ConnectionPointType.IN,onInClick);
             outPoint = new ConnectionPoint(ConnectionPointType.OUT,onOutClick);
-            optionPoint = new List<ConnectionPoint>();
-            
-            
+            connectionPoints = new List<ConnectionPoint>();
         }
         
     
@@ -56,11 +58,12 @@ namespace DialogueEditor
             spacing = new Vector2(0, 0);
             
             DrawDialogueText(45);
-            DrawOptionText(20);
+            DrawOptions(20);
             
             DrawInConnectors();
             DrawOutConnector();
             
+            RemoveOption();
             
         }
     
@@ -103,12 +106,15 @@ namespace DialogueEditor
                 }
             }
         }
-    
+
         private void OpenMenu()
         {
             GenericMenu menu = new GenericMenu();
             menu.AddItem(new GUIContent("Remove Node"),false, DeleteNode);
-            menu.AddItem(new GUIContent("Add Option"),false, AddOption);
+            menu.AddItem(new GUIContent("Add Option"),false, () =>
+            {
+                AddOption(dialogue.CreateOption());
+            });
             menu.ShowAsContext();
         }
     
@@ -124,26 +130,41 @@ namespace DialogueEditor
         {
             rect.position += newPosition;
         }
-        
-        public void AddOption()
+
+        public void AddOption(Option option)
         {
-            OptionEditor option = new OptionEditor();
-            options.Add(option);
+            OptionEditor optionEditor = new OptionEditor(option, AddOptionToDelete);
+            options.Add(optionEditor);
             rect.size += new Vector2(0, 20 + 5);
 
+            
             ConnectionPoint outPoint = new ConnectionPoint(ConnectionPointType.OUT,OnOutPointClick);
-            optionPoint.Add(outPoint);
+            connectionPoints.Add(outPoint);
         }
 
-        public void DrawDialogueText(float length)
+        private void AddOptionToDelete(OptionEditor optionEditor)
+        {
+            dialogue.RemoveOption(optionEditor.option);
+            optionsDeleteList = optionEditor;
+            rect.size -= new Vector2(0, 20 + 5);
+        }
+
+        private void RemoveOption()
+        {
+            options.Remove(optionsDeleteList);
+            optionsDeleteList = null;
+            DialogueEditorManager.SaveData();
+        }
+
+        private void DrawDialogueText(float length)
         {
             Vector2 position = rect.position + padding + spacing;
             Vector2 size = new Vector2(rect.size.x - 2 * padding.x, length);
-            mainText.Draw(new Rect(position, size));
+            dialogue.text = GUI.TextArea(new Rect(position, size), dialogue.text);
             spacing.y += length + 10;
         }
 
-        public void DrawOptionText(float length)
+        private void DrawOptions(float length)
         {
             foreach (OptionEditor option in options)
             {
@@ -154,7 +175,7 @@ namespace DialogueEditor
             }
         }
 
-        public void DrawInConnectors()
+        private void DrawInConnectors()
         {
             Vector2 size = new Vector2(20,20);
             Vector2 position = rect.position;
@@ -169,7 +190,7 @@ namespace DialogueEditor
             
         }
 
-        void DrawOutConnector()
+        private void DrawOutConnector()
         {
             Vector2 size = new Vector2(20,20);
             Vector2 position = Vector2.zero;
@@ -196,7 +217,7 @@ namespace DialogueEditor
 
                     Rect buttonRect = new Rect(position, size);
 
-                    optionPoint[i].Draw(buttonRect);
+                    connectionPoints[i].Draw(buttonRect);
                 }
             }
         }

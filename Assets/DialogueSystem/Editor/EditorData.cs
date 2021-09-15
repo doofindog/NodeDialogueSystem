@@ -2,6 +2,7 @@
 using System.Collections.Generic;
  using DialogueEditor;
  using UnityEngine;
+ using UnityEngine.Serialization;
 
  [System.Serializable]
 public class EditorData
@@ -13,21 +14,24 @@ public class EditorData
 
     public EditorData(DialogueWindow window)
     {
-        this.id = window.id;
-        nodes = new NodeEditorData[window.nodes.Count];
-        for (int i = 0; i < nodes.Length; i++)
+        if (window != null)
         {
-            nodes[i] = new NodeEditorData(window.nodes[i]);
-        }
+            this.id = window.id;
+            nodes = new NodeEditorData[window.nodes.Count];
+            for (int i = 0; i < nodes.Length; i++)
+            {
+                nodes[i] = new NodeEditorData(window.nodes[i]);
+            }
 
-        this.dialoguesScriptable = window.dialoguesScriptable;
+            this.dialoguesScriptable = window.dialoguesScriptable;
+        }
     }
 }
 
  [System.Serializable]
  public class NodeEditorData
  {
-     public int id;
+     public string id;
      public Rect rect;
 
      public NodeEditorData(NodeEditor node)
@@ -35,6 +39,13 @@ public class EditorData
          id = node.id;
          rect = node.rect;
      }
+ }
+
+ [System.Serializable]
+ public class ConnectionPointData
+ {
+     public string id;
+     public Rect rect;
  }
  
  

@@ -1,28 +1,40 @@
-using System.Collections;
-using System.Collections.Generic;
-using DialogueEditor;
+using System;
+using UnityEditor;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class OptionEditor
 {
     public Rect rect;
-    public DialogueEditor.TextEditor optionText;
+    public Option option;
+    private Action<OptionEditor> callback;
 
 
-    public OptionEditor()
+    public OptionEditor(Option option, Action<OptionEditor> callback)
     {
-        optionText = new DialogueEditor.TextEditor();
+        this.option = option;
+        this.callback = callback;
     }
 
     public void Draw(Rect rect)
     {
         this.rect = rect;
-        optionText.Draw(rect);
+        option.text = GUI.TextArea(rect, option.text);
+
+        Vector2 size = new Vector2(10, 10);
+        Vector2 positon = rect.position;
+        positon.x += rect.size.x  - (size.x * 0.5f);
+        positon.y += size.y * 0.5f;
+
+        Rect buttonrect = new Rect(positon, size);
+
+        if (GUI.Button(buttonrect, String.Empty))
+        {
+            callback(this);
+        }
     }
 
     public string GetText()
     {
-        return optionText.GetText();
+        return option.text;
     }
 }

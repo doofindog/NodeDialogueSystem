@@ -1,0 +1,148 @@
+{
+    "id": "",
+    "dialoguesScriptable": {
+        "instanceID": -1554
+    },
+    "nodes": [
+        {
+            "id": "hxm27",
+            "rect": {
+                "serializedVersion": "2",
+                "x": -134.0,
+                "y": -17.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "V4a32",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 469.0,
+                "y": 7.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "itaII",
+            "rect": {
+                "serializedVersion": "2",
+                "x": -367.0,
+                "y": 231.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "BWpUt",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 550.0,
+                "y": 112.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "fOOMZ",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 97.0,
+                "y": 123.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "PxiCo",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 136.0,
+                "y": 446.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "LAnfl",
+            "rect": {
+                "serializedVersion": "2",
+                "x": -189.0,
+                "y": 362.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "VrNMR",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 681.0,
+                "y": 445.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "sRHuv",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 195.0,
+                "y": -37.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "7yWzZ",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 1170.0,
+                "y": 463.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "AkkEt",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 1781.0,
+                "y": 141.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "l0jHI",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 1551.0,
+                "y": 198.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "mVI3j",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 433.0,
+                "y": 217.0,
+                "width": 300.0,
+                "height": 125.0
+            }
+        },
+        {
+            "id": "Z7FJx",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 829.0,
+                "y": 718.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        }
+    ]
+}

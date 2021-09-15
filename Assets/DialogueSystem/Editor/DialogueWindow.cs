@@ -23,9 +23,9 @@ namespace  DialogueEditor
         public void Initialise(DialoguesScriptable dialoguesScriptable)
         {
             ClearData();
-            DialogueEditorManager.LoadData(dialoguesScriptable);
             this.dialoguesScriptable = dialoguesScriptable;
             id = dialoguesScriptable.id;
+            DialogueEditorManager.LoadData(dialoguesScriptable);
         }
         
     
@@ -40,8 +40,6 @@ namespace  DialogueEditor
                 ProcessNodeEvents(Event.current);
                 ProcessEvents(Event.current);
                 
-                
-                DrawSave();
 
                 if (GUI.changed)
                 {
@@ -68,6 +66,14 @@ namespace  DialogueEditor
                     {
                         DragNodes(e.delta);
                         e.Use();
+                    }
+                    break;
+                }
+                case EventType.MouseUp:
+                {
+                    if (e.button == 0)
+                    {
+                        DialogueEditorManager.SaveData();
                     }
                     break;
                 }
@@ -109,27 +115,32 @@ namespace  DialogueEditor
             }
         }
 
-        private void OpenContextMenu(Vector2 position)
+        private void OpenContextMenu(Vector2 contextPosition)
         {
             GenericMenu contextMenu = new GenericMenu();
-            contextMenu.AddItem(new GUIContent("Add Node"), false,() => AddNode(position));
+            contextMenu.AddItem(new GUIContent("Add Node"), false,() => CreateNode(contextPosition, dialoguesScriptable.CreateDialogue()));
             contextMenu.ShowAsContext();
         }
     
-        public void AddNode(Vector2 position)
+        public NodeEditor CreateNode(Vector2 nodePosition,Dialogue dialogue)
         {
             if(nodes == null)
             {
                 nodes = new List<NodeEditor>();
             }
-            NodeEditor nodeEditor =
-                new NodeEditor(position, RemoveNode, SelectInConnectionPoint, SelectOutConnectionPoint);
+            NodeEditor nodeEditor = new NodeEditor(nodePosition, RemoveNode, SelectInConnectionPoint, SelectOutConnectionPoint,dialogue);
             nodes.Add(nodeEditor);
+            DialogueEditorManager.SaveData();
+
+            return nodeEditor;
         }
-    
+        
+
         private void RemoveNode(NodeEditor nodeEditor)
         {
+            dialoguesScriptable.RemoveDialogue(nodeEditor.dialogue);
             nodes.Remove(nodeEditor);
+            DialogueEditorManager.SaveData();
             Repaint();
         }
 
@@ -183,18 +194,6 @@ namespace  DialogueEditor
         {
             inConnectionPoint = null;
             outConnectionPoint = null;
-        }
-
-        private void DrawSave()
-        {
-            
-            Vector2 size = new Vector2(100, 50);
-            Vector2 position = Vector2.zero + (this.position.size - size);
-            Rect rect = new Rect(position, size);
-            if (GUI.Button(rect, "Save"))
-            {
-                DialogueEditorManager.SaveData();
-            }
         }
 
         public void ClearData()

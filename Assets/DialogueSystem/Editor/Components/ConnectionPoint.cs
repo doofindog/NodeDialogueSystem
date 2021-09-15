@@ -20,8 +20,6 @@ public class ConnectionPoint
     {
         this.type = type;
         this.callBack = callBack;
-        
-        
     }
 
     public void Draw(Rect rect)
