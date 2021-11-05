@@ -8,5 +8,4 @@ using UnityEngine;
 public class Option
 {
     public string text;
-    public Node nextNode;
 }

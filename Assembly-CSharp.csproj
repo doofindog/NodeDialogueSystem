@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\DialogueSystem\Script\Dialogue.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Option.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\Connector.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialoguesScriptable.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialoguesManager.cs" />
  <Reference Include="UnityEngine">

@@ -9,7 +9,7 @@ public class Dialogue
     public string id;
     public string text;
     public List<Option> options;
-
+    
     public Dialogue()
     {
         id = DialoguesManager.GenerateUniqueId();
@@ -22,11 +22,9 @@ public class Dialogue
         options.Add(option);
         return option;
     }
-
+    
     public void RemoveOption(Option option)
     {
         options.Remove(option);
     }
-
-
 }

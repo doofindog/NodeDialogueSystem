@@ -1,10 +1,7 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using DialogueEditor;
-using UnityEditor.Graphs;
 
 namespace DialogueEditor
 {
@@ -22,12 +19,12 @@ namespace DialogueEditor
         private bool isSelected;
         private bool canDrag;
         
-        private List<OptionEditor> options;
+        public List<OptionEditor> options;
         private OptionEditor optionsDeleteList; 
 
-        private ConnectionPoint inPoint;
-        private ConnectionPoint outPoint;
-        private List<ConnectionPoint> connectionPoints;
+        public ConnectionPoint inPoint;
+        public ConnectionPoint outPoint;
+        public Dictionary<Option,ConnectionPoint> optionConnectionPoints;
 
         private Action<ConnectionPoint> OnInPointClick;
         private Action<ConnectionPoint> OnOutPointClick;
@@ -48,7 +45,7 @@ namespace DialogueEditor
             OnOutPointClick = onOutClick;
             inPoint = new ConnectionPoint(ConnectionPointType.IN,onInClick);
             outPoint = new ConnectionPoint(ConnectionPointType.OUT,onOutClick);
-            connectionPoints = new List<ConnectionPoint>();
+            optionConnectionPoints = new Dictionary<Option, ConnectionPoint>();
         }
         
     
@@ -139,7 +136,7 @@ namespace DialogueEditor
 
             
             ConnectionPoint outPoint = new ConnectionPoint(ConnectionPointType.OUT,OnOutPointClick);
-            connectionPoints.Add(outPoint);
+            optionConnectionPoints.Add(option,outPoint);
         }
 
         private void AddOptionToDelete(OptionEditor optionEditor)
@@ -217,11 +214,12 @@ namespace DialogueEditor
 
                     Rect buttonRect = new Rect(position, size);
 
-                    connectionPoints[i].Draw(buttonRect);
+                    ConnectionPoint connectionPoint = optionConnectionPoints[options[i].option];
+                    connectionPoint.Draw(buttonRect);
                 }
             }
         }
-
+        
     }
 }
 

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+using UnityEditor.PackageManager.UI;
 
 
 namespace  DialogueEditor
@@ -185,7 +186,7 @@ namespace  DialogueEditor
         {
             if (inConnectionPoint != null && outConnectionPoint != null)
             {
-                connections.Add(new ConnectionEditor(inConnectionPoint,outConnectionPoint));
+                connections.Add(new ConnectionEditor(inConnectionPoint, outConnectionPoint));
                 ClearConnection();
             }
         }
@@ -212,6 +213,19 @@ namespace  DialogueEditor
 
             inConnectionPoint = null;
             outConnectionPoint = null; 
+        }
+
+        public NodeEditor GetNode(Dialogue dialogue)
+        {
+            foreach (NodeEditor node in nodes)
+            {
+                if (node.dialogue == dialogue)
+                {
+                    return node;
+                }
+            }
+
+            return null;
         }
 
 

@@ -52,6 +52,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\DialogueSystem\Editor\JsonCleaner.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DialogueWindow.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Components\ConnectionPoint.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DialoguesScriptableEditor.cs" />
