@@ -1,59 +1,53 @@
- using System.Collections;
-using System.Collections.Generic;
- using DialogueEditor;
- using UnityEngine;
- using UnityEngine.Serialization;
 
+using UnityEngine;
 
- namespace DialogueEditor
+namespace DialogueSystem.Editor
+{
+ [System.Serializable]
+ public class EditorData
  {
-  [System.Serializable]
-  public class EditorData
+  public string id;
+  public DialogueGraph dialogueGraph;
+  public NodeData[] nodes;
+
+
+  public EditorData(NodeGraphWindow window)
   {
-   public string id;
-   public DialoguesScriptable dialoguesScriptable;
-   public NodeEditorData[] nodes;
-
-
-   public EditorData(DialogueWindow window)
+   if (window != null)
    {
-    if (window != null)
+    if (window.nodes != null)
     {
      this.id = window.id;
-     nodes = new NodeEditorData[window.nodes.Count];
+
+     nodes = new NodeData[window.nodes.Count];
      for (int i = 0; i < nodes.Length; i++)
      {
-      nodes[i] = new NodeEditorData(window.nodes[i]);
+      nodes[i] = new NodeData(window.nodes[i]);
      }
 
-     this.dialoguesScriptable = window.dialoguesScriptable;
+     this.dialogueGraph = window.dialogueGraph;
     }
    }
   }
+ }
 
-  [System.Serializable]
-  public class NodeEditorData
+ [System.Serializable]
+ public class NodeData
+ {
+  public string id;
+  public Rect rect;
+
+  public NodeData(Node node)
   {
-   public string id;
-   public Rect rect;
-
-   public NodeEditorData(NodeEditor node)
-   {
-    id = node.id;
-    rect = node.rect;
-   }
-  }
-
-  [System.Serializable]
-  public class ConnectionPointData
-  {
-   public string id;
-   public Rect rect;
+   id = node.id;
+   rect = node.rect;
   }
  }
- 
- 
- 
- 
- 
- 
+
+ [System.Serializable]
+ public class ConnectionPointData
+ {
+  public string id;
+  public Rect rect;
+ }
+}

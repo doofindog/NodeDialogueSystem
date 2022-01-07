@@ -53,13 +53,14 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\DialogueSystem\Editor\JsonCleaner.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\DialogueWindow.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Components\ConnectionPoint.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\DialoguesScriptableEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Components\OptionEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Components\NodeEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\DialogueEditorManager.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Components\ConnectionEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeGraphWindow.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Node.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\ConnectionPort.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\DialogueGraphEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\OptionEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\TextNode.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\EditorManager.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Connection.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\EditorData.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -753,6 +754,14 @@
     <ProjectReference Include="Assembly-CSharp.csproj">
       <Project>{1940536d-50a1-4595-e459-a56ef07e9d82}</Project>
       <Name>Assembly-CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="XNode.csproj">
+      <Project>{9095a3c6-0894-02b5-97d5-0347aa0e3119}</Project>
+      <Name>XNode</Name>
+    </ProjectReference>
+    <ProjectReference Include="XNodeEditor.csproj">
+      <Project>{79da54a0-89a1-63ea-081c-d876a3d0479d}</Project>
+      <Name>XNodeEditor</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

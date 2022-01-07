@@ -1,0 +1,58 @@
+{
+    "id": "NbVSj",
+    "dialoguesScriptable": {
+        "instanceID": 17426
+    },
+    "nodes": [
+        {
+            "id": "6ASG2",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 220.0,
+                "y": 301.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "TQVny",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 198.0,
+                "y": 493.0,
+                "width": 300.0,
+                "height": 150.0
+            }
+        },
+        {
+            "id": "l2G7Y",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 740.0,
+                "y": 109.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "9oOLO",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 659.0,
+                "y": 465.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        },
+        {
+            "id": "vgfW4",
+            "rect": {
+                "serializedVersion": "2",
+                "x": 659.0,
+                "y": 629.0,
+                "width": 300.0,
+                "height": 100.0
+            }
+        }
+    ]
+}
