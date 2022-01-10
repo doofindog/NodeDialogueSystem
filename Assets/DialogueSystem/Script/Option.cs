@@ -5,19 +5,23 @@ using UnityEngine;
 using UnityEngine.Serialization;
 
 
-[System.Serializable]
-public class Option
+namespace DialogueSystem
 {
-    public string id;
-    public string text;
 
-    public Option()
+    [System.Serializable]
+    public class Option
     {
-        id = "-1";
-    }
+        public string id;
+        public string text;
 
-    public Option(string id)
-    {
-        this.id = id;
+        public Option()
+        {
+            id = "-1";
+        }
+
+        public Option(string id)
+        {
+            this.id = id;
+        }
     }
 }

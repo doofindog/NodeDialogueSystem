@@ -9,28 +9,19 @@ namespace DialogueSystem.Editor
     {
 
         public TextDialogue textDialogue;
-        public Action<TextNode> onDeleteCallBack;
 
         public List<OptionEditor> options;
         private OptionEditor _optiontoDelete; 
         
         public readonly Dictionary<string,ConnectionPort> outPoints;
         
-        public TextNode(Vector2 position,Action<TextNode> onDeleteCallBack, 
-            Action<ConnectionPort> onInClick, Action<ConnectionPort> onOutClick, 
-            TextDialogue textDialogue) : base(position,onInClick,onOutClick,textDialogue)
-        {
-            
-            this.textDialogue = textDialogue;
-            options = new List<OptionEditor>();
-            outPoints = new Dictionary<string, ConnectionPort>();
 
-            this.onDeleteCallBack = onDeleteCallBack;
-        }
         
     
         public override void Draw()
         {
+            GUILayout.BeginArea(rect);
+            GUILayout.EndArea();
             GUI.Box(rect, string.Empty);
             spacing = new Vector2(0, 0);
             
@@ -88,10 +79,6 @@ namespace DialogueSystem.Editor
         {
             GenericMenu menu = new GenericMenu();
             menu.AddItem(new GUIContent("Remove Node"),false, DeleteNode);
-            menu.AddItem(new GUIContent("Add Option"),false, () =>
-            {
-                AddOption(textDialogue.CreateOption());
-            });
             menu.ShowAsContext();
         }
         
@@ -116,7 +103,7 @@ namespace DialogueSystem.Editor
 
         private void AddOptionToDelete(OptionEditor optionEditor)
         {
-            textDialogue.RemoveOption(optionEditor.option);
+            //textDialogue.RemoveOption(optionEditor.option);
             _optiontoDelete = optionEditor;
             rect.size -= new Vector2(0, 20 + 5);
         }
@@ -143,15 +130,7 @@ namespace DialogueSystem.Editor
                 spacing.y += 20 + 5;
             }
         }
-
-        protected override void DeleteNode()
-        {
-            if (onDeleteCallBack != null)
-            {
-                onDeleteCallBack.Invoke(this);
-            }
-        }
-
+        
         protected override void DrawOutConnectionPoint()
         {
             Vector2 size = new Vector2(20,20);
@@ -184,10 +163,6 @@ namespace DialogueSystem.Editor
                 }
             }
         }
-
-
-
-
     }
 }
 

@@ -1,6 +1,6 @@
 {
     "id": "",
-    "dialoguesScriptable": {
+    "dialogueGraph": {
         "instanceID": 0
     },
     "nodes": []

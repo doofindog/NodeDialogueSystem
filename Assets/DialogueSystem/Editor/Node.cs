@@ -5,9 +5,11 @@ using UnityEngine;
 
 namespace DialogueSystem.Editor
 {
-    public class Node
+    [CustomEditor(typeof(DialogueSystem.Dialogue))]
+    public class Node : UnityEditor.Editor
     {
         public readonly string id;
+        public DialogueSystem.Dialogue dialogue;
 
         protected Vector2 padding;
         public Rect rect;
@@ -22,14 +24,12 @@ namespace DialogueSystem.Editor
         public Action<ConnectionPort> onInPointClick;
         public Action<ConnectionPort> onOutPointClick;
 
-
-
-
-
+        
         public Node(Vector2 position, Action<ConnectionPort> onInClick,
-            Action<ConnectionPort> onOutClick, Dialogue dialogue)
+            Action<ConnectionPort> onOutClick, DialogueSystem.Dialogue dialogue)
         {
             id = dialogue.id;
+            this.dialogue = dialogue;
 
             this.padding = new Vector2(20, 20);
             Vector2 size = new Vector2(300, 100);
@@ -56,8 +56,7 @@ namespace DialogueSystem.Editor
             menu.AddItem(new GUIContent("Remove Node"),false, DeleteNode);
             menu.ShowAsContext();
         }
-
-
+        
         public void UpdatePosition(Vector2 newPosition)
         {
             rect.position += newPosition;

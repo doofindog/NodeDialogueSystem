@@ -79,55 +79,16 @@ namespace DialogueSystem.Editor
                 if (data != null)
                 {
                     //Loads Dialogues
-                    foreach (NodeData nodeData in data.nodes)
-                    {
-                        foreach (TextDialogue dialogue in dialogueScriptable.dialogues)
-                        {
-                            if (nodeData.id == dialogue.id)
-                            {
-                                TextNode textNode = window.CreateNode(nodeData.rect.position, dialogue);
-                                foreach (Option option in dialogue.options)
-                                {
-                                    textNode.AddOption(option);
-                                }
-                            }
-                        }
-                    }
-
-                    //loadConnectors
-                    foreach (TextDialogue dialogue in dialogueScriptable.dialogues)
-                    {
-                        global::Connection[] connectors = dialogueScriptable.GetConnections(dialogue);
-                        if (connectors != null)
-                        {
-                            if (dialogue.options.Count > 0)
-                            {
-                                TextNode startTextNode = window.GetNode(dialogue);
-                                foreach (global::Connection connector in connectors)
-                                {
-                                    ConnectionPort startPort = null;
-                                    startPort = startTextNode.outPoints[connector.option.id ];
-                                    
-                                    TextNode endTextNode = window.GetNode(connector.endDialogue);
-                                    ConnectionPort endPort = endTextNode.inPort;
-                                    window.connections.Add(new Connection(startPort, endPort, window.RemoveConnection, connector.ID));
-                                }
-                            }
-                            else
-                            {
-                                TextNode startTextNode = window.GetNode(dialogue);
-                                TextNode endTextNode = window.GetNode(connectors[0].endDialogue);
-                                ConnectionPort startPort = startTextNode.outPoint[0];
-                                ConnectionPort endPort = endTextNode.inPort;
-                                window.connections.Add(new Connection(startPort, endPort, window.RemoveConnection, connectors[0].ID));
-                            }
-                            
-                        }
-                        else
-                        {
-                            Debug.Log("connectors is null");
-                        }
-                    }
+                    // foreach (NodeData nodeData in data.nodes)
+                    // {
+                    //     foreach (TextDialogue dialogue in dialogueScriptable.dialogues)
+                    //     {
+                    //         if (nodeData.id == dialogue.id)
+                    //         {
+                    //             window.CreateNode(nodeData.rect.position, dialogue);
+                    //         }
+                    //     }
+                    // }
                 }
                 else
                 {

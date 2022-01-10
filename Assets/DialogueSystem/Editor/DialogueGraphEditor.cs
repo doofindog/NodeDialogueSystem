@@ -23,8 +23,8 @@ namespace DialogueSystem.Editor
             if (GUILayout.Button("Clear Data"))
             {
                 DialogueGraph dialogueGraph = (DialogueGraph)target;
-                dialogueGraph.connectors = new List<global::Connection>();
-                dialogueGraph.dialogues = new List<Dialogue>();
+                dialogueGraph.connectors = new List<DialogueSystem.Connection>();
+                dialogueGraph.dialogues = new List<DialogueSystem.Dialogue>();
             }
         
         }

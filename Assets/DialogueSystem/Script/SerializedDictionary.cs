@@ -3,6 +3,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
+
 [System.Serializable]
 public class SerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
@@ -32,9 +34,4 @@ public class SerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISer
             this.valueData.Add(item.Value);
         }
     }
-}
-
-[System.Serializable]
-public class Linkers : SerializedDictionary<TextDialogue, List<Connection>>
-{
 }

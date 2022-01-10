@@ -16,10 +16,7 @@ namespace DialogueSystem.Editor
         
         private ConnectionPort _inConnectionPort;
         private ConnectionPort _outConnectionPort;
-
-
-
-
+        
         public void Initialise(DialogueGraph dialogueGraph)
         {
             ClearData();
@@ -28,7 +25,6 @@ namespace DialogueSystem.Editor
             EditorManager.LoadData(dialogueGraph);
         }
         
-    
         private void OnGUI()
         {
             if (dialogueGraph != null)
@@ -118,22 +114,29 @@ namespace DialogueSystem.Editor
         private void OpenContextMenu(Vector2 contextPosition)
         {
             GenericMenu contextMenu = new GenericMenu();
-            contextMenu.AddItem(new GUIContent("Add Text Node"), false,() => CreateNode(contextPosition, dialogueGraph.CreateDialogue(Dialogue.TypeContrain.TEXT)));
+            contextMenu.AddItem(new GUIContent("Add Text Node"), false,() => CreateNode(contextPosition, dialogueGraph.CreateDialogue(typeof(TextDialogue))));
             contextMenu.ShowAsContext();
         }
     
-        public TextNode CreateNode(Vector2 nodePosition,Dialogue dialogue)
+        public TextNode CreateNode(Vector2 nodePosition,DialogueSystem.Dialogue dialogue)
         {
             if(nodes == null)
             {
                 nodes = new List<Node>();
             }
-            
-            TextNode node = new TextNode(nodePosition, RemoveNode, SelectInConnectionPoint, SelectOutConnectionPoint,dialogue);
-            nodes.Add(node);
-            EditorManager.SaveData();
 
-            return node;
+            switch (dialogue.type)
+            {
+                case Dialogue.TypeContrain.TEXT:
+                {
+                    TextNode node = new TextNode(nodePosition, RemoveNode, SelectInConnectionPoint, SelectOutConnectionPoint,(TextDialogue)dialogue);
+                    nodes.Add(node);
+                    EditorManager.SaveData();
+                    return node;
+                }
+            }
+
+            return null;
         }
         
         private void RemoveNode(Node node)
@@ -148,34 +151,17 @@ namespace DialogueSystem.Editor
 
             foreach (Connection connection in connections.ToList())
             {
-                if (node.outPoint.Count == 1)
+                if (connection.startPort.node.id == node.outPoint[0].node.id)
                 {
-                    if (connection.startPort.dialogueNode.id == node.outPoint[0].dialogueNode.id)
-                    {
-                        RemoveConnection(connection);
-                    }
-                }
-                else
-                {
-                    foreach (OptionEditor option in node.options)
-                    {
-                        ConnectionPort outPort;
-                        node.outPoints.TryGetValue(option.option.id,out outPort);
-
-                        if (connection.startPort.ID == outPort.ID)
-                        {
-                            RemoveConnection(connection);
-                        }
-                    }
+                    RemoveConnection(connection);
                 }
             }
 
-            dialogueGraph.RemoveDialogue(node.textDialogue);
+            dialogueGraph.RemoveDialogue(node.dialogue);
             nodes.Remove(node);
             EditorManager.SaveData();
             Repaint();
         }
-        
         
         private void DragNodes(Vector2 newPosition)
         {
@@ -221,29 +207,14 @@ namespace DialogueSystem.Editor
         {
             if (_inConnectionPort != null && _outConnectionPort != null)
             {
-                Node endDialogueNode = _inConnectionPort.dialogueNode;
-                Node startDialogueNode = _outConnectionPort.dialogueNode;
-                TextDialogue endTextDialogue = endDialogueNode.textDialogue;
-                TextDialogue startTextDialogue = startDialogueNode.textDialogue;
-                global::Connection connection = null;
+                Node endDialogueNode = _inConnectionPort.node;
+                Node startDialogueNode = _outConnectionPort.node;
+                Dialogue endTextDialogue = endDialogueNode.dialogue;
+                Dialogue startTextDialogue = startDialogueNode.dialogue;
+                DialogueSystem.Connection connection = null;
                 
-                if (startTextDialogue.options.Count > 0)
-                {
-                    foreach (Option option in startTextDialogue.options)
-                    {
-                        if (_outConnectionPort == startDialogueNode.outPoints[option.id])
-                        {
-                            connection = dialogueGraph.CreateConnection(startTextDialogue,endTextDialogue,option);
-                        }
-                    }
-                }
-                else
-                {
-                    connection = dialogueGraph.CreateConnection(startTextDialogue,endTextDialogue);
-                }
-
-                 
                 
+                connection = dialogueGraph.CreateConnection(startTextDialogue,endTextDialogue);
                 connections.Add(new Connection(_outConnectionPort, _inConnectionPort,RemoveConnection, connection.ID));
                 EditorManager.SaveData();
                 ClearConnection();
@@ -252,27 +223,12 @@ namespace DialogueSystem.Editor
 
         public void CreateConnection(ConnectionPort inConnectionPort, ConnectionPort outConnectionPort)
         {
-            TextNode endTextNode = inConnectionPort.dialogueNode;
-            TextNode startTextNode = outConnectionPort.dialogueNode;
-            TextDialogue endTextDialogue = endTextNode.textDialogue;
-            TextDialogue startTextDialogue = startTextNode.textDialogue;
-            global::Connection connection = null;
-
-            if (endTextDialogue.options.Count > 0)
-            {
-                foreach (Option option in startTextDialogue.options)
-                {
-                    if (outConnectionPort == startTextNode.outPoints[option.id])
-                    {
-                        connection = dialogueGraph.CreateConnection(startTextDialogue,endTextDialogue,option);
-                    }
-                }
-            }
-            else
-            {
-                connection = dialogueGraph.CreateConnection(startTextDialogue,endTextDialogue);
-            }
-                
+            Node endTextNode = inConnectionPort.node;
+            Node startTextNode = outConnectionPort.node;
+            Dialogue endTextDialogue = endTextNode.dialogue;
+            Dialogue startTextDialogue = startTextNode.dialogue;
+            DialogueSystem.Connection connection = null;
+            connection = dialogueGraph.CreateConnection(startTextDialogue,endTextDialogue);
             connections.Add(new Connection(outConnectionPort, inConnectionPort,RemoveConnection, connection.ID));
             EditorManager.SaveData();
             ClearConnection();
@@ -282,20 +238,13 @@ namespace DialogueSystem.Editor
         {
             ConnectionPort startPort = connection.startPort;
             ConnectionPort endPort = connection.endPort;
-            Node startDialogueNode = startPort.dialogueNode; 
-            Node endDialogueNode = endPort.dialogueNode;
-            TextDialogue startTextDialogue = startDialogueNode.textDialogue;
-            TextDialogue endTextDialogue = endDialogueNode.textDialogue;
-            if (connection.optionEd == null)
-            {
-                dialogueGraph.RemoveConnection(startTextDialogue, endTextDialogue);
-            }
-            else
-            {
-                dialogueGraph.RemoveConnection(startTextDialogue,endTextDialogue,connection.optionEd.option);
-            }
-
-
+            Node startDialogueNode = startPort.node; 
+            Node endDialogueNode = endPort.node;
+            Dialogue startTextDialogue = startDialogueNode.dialogue;
+            Dialogue endTextDialogue = endDialogueNode.dialogue;
+            
+            dialogueGraph.RemoveConnection(startTextDialogue, endTextDialogue);
+            
             connections.Remove(connection);
             EditorManager.SaveData();
             Repaint();
@@ -303,24 +252,6 @@ namespace DialogueSystem.Editor
 
         public Connection FindConnector(TextNode startNode, OptionEditor optionEditor = null)
         {
-            if (optionEditor != null)
-            {
-                foreach (Connection connector in connections)
-                {
-                    TextNode toFindTextNode = connector.startPort.dialogueNode;
-                    if (toFindTextNode.textDialogue.id == startNode.textDialogue.id)
-                    {
-                        foreach (OptionEditor toFindOptionEd in toFindTextNode.options)
-                        {
-                            if (toFindOptionEd.option.id == optionEditor.option.id)
-                            {
-                                return connector;
-                            }
-                        }
-                    }
-                }
-            }
-
             return null;
         }
 

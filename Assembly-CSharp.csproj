@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\DialogueSystem\Script\SerializedDictionary.cs" />
      <Compile Include="Assets\DialogueSystem\Script\TextDialogue.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\ConnectionPort.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Option.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Connection.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Dialogue.cs" />
@@ -721,14 +722,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="XNode.csproj">
-      <Project>{9095a3c6-0894-02b5-97d5-0347aa0e3119}</Project>
-      <Name>XNode</Name>
-    </ProjectReference>
-    <ProjectReference Include="XNodeEditor.csproj">
-      <Project>{79da54a0-89a1-63ea-081c-d876a3d0479d}</Project>
-      <Name>XNodeEditor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

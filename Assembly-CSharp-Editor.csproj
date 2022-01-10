@@ -755,14 +755,6 @@
       <Project>{1940536d-50a1-4595-e459-a56ef07e9d82}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
-    <ProjectReference Include="XNode.csproj">
-      <Project>{9095a3c6-0894-02b5-97d5-0347aa0e3119}</Project>
-      <Name>XNode</Name>
-    </ProjectReference>
-    <ProjectReference Include="XNodeEditor.csproj">
-      <Project>{79da54a0-89a1-63ea-081c-d876a3d0479d}</Project>
-      <Name>XNodeEditor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
