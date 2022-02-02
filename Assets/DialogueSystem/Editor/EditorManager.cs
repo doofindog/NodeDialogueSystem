@@ -1,118 +1,78 @@
+using System;
+using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using System.Reflection;
 using DialogueSystem.Editor;
 using UnityEditor;
 using UnityEngine;
 
 namespace DialogueSystem.Editor
 {
-    public class EditorManager : MonoBehaviour
+    [InitializeOnLoad]
+    public class EditorManager
     {
-        public static NodeGraphWindow window;
+        public static GraphWindow window;
         private static string FOLDER_NAME = "DialogueEditorData";
         private static string PATH = "/DialogueSystem/DialogueData";
 
-
-        public static void OpenDialogueWindow(DialogueGraph dialogueGraph)
+        private static Dictionary<Type, Type> m_editors = new Dictionary<Type, Type>();
+        
+        static EditorManager()
         {
-            window = (NodeGraphWindow) EditorWindow.GetWindow(typeof(NodeGraphWindow));
-            window.Initialise(dialogueGraph);
-            window.Show();
+            CacheCustomNodeEditor();
         }
         
-        [MenuItem("DialogueSystem/CreateDialogue")]
-        public static void CreateData()
+        public static void OpenDialogueWindow(Graph graph)
         {
-            if (!Directory.Exists(Application.dataPath + "/DialogueSystem/Dialogues"))
-            {
-                Directory.CreateDirectory(Application.dataPath + "/DialogueSystem/Dialogues");
-            }
-
-            DialogueGraph dialogueScriptable = ScriptableObject.CreateInstance<DialogueGraph>();
-            dialogueScriptable.Initalise(DeleteData);
-            AssetDatabase.CreateAsset(dialogueScriptable,"Assets/DialogueSystem/Dialogues/"+dialogueScriptable.id+".asset");
-            AssetDatabase.SaveAssets();
-        
-            Selection.activeObject = dialogueScriptable;
-            EditorUtility.SetDirty(dialogueScriptable);
-            
-            
-            
-            string modifiedPath = Application.dataPath + PATH;
-
-            if (!Directory.Exists(modifiedPath))
-            {
-                Directory.CreateDirectory(modifiedPath);
-            }
-
-            string filename = "/" + dialogueScriptable.id + ".json";
-            System.IO.File.WriteAllText(modifiedPath + filename, string.Empty);
-            AssetDatabase.Refresh();
+            window = (GraphWindow) EditorWindow.GetWindow(typeof(GraphWindow));
+            window.Initialise(graph);
+            window.Show();
         }
         
         public static void SaveData()
         {
-            if (window != null)
+            if (window.graph != null)
             {
-                string modifiedPath = Application.dataPath + PATH;
-
-                if (!Directory.Exists(modifiedPath))
-                {
-                    Directory.CreateDirectory(modifiedPath);
-                }
-
-                EditorData data = new EditorData(window);
-
-                string editorData = JsonUtility.ToJson(data, true);
-                string filename = "/" + data.id + ".json";
-                File.WriteAllText(modifiedPath + filename, editorData);
-                EditorUtility.SetDirty(window.dialogueGraph);
+                EditorUtility.SetDirty(window.graph);
+                AssetDatabase.SaveAssets();
             }
         }
 
-        public static void LoadData(DialogueGraph dialogueScriptable)
+        private static void CacheCustomNodeEditor()
         {
-            string dataPath = Application.dataPath + PATH + "/" + dialogueScriptable.id + ".json";
-            if (File.Exists(dataPath))
+            Type[] nodeEditors = ReflectionHandler.GetDerivedTypes(typeof(NodeEditor));
+            for (int i = 0; i < nodeEditors.Length; i++)
             {
-                string rawData = File.ReadAllText(dataPath);
-                EditorData data = JsonUtility.FromJson<EditorData>(rawData);
-                if (data != null)
-                {
-                    //Loads Dialogues
-                    // foreach (NodeData nodeData in data.nodes)
-                    // {
-                    //     foreach (TextDialogue dialogue in dialogueScriptable.dialogues)
-                    //     {
-                    //         if (nodeData.id == dialogue.id)
-                    //         {
-                    //             window.CreateNode(nodeData.rect.position, dialogue);
-                    //         }
-                    //     }
-                    // }
-                }
-                else
-                {
-                    Debug.Log("Json Data Not loaded");
-                }
-            }
-            else
-            {
-                Debug.Log("File Does not Exist");
+                CustomNodeEditorAttribute attrib = nodeEditors[i].GetCustomAttribute(typeof(CustomNodeEditorAttribute)) as CustomNodeEditorAttribute;
+                m_editors.Add(attrib.GetInspectedType(),nodeEditors[i]);
             }
         }
-
-        public static void DeleteData(DialogueGraph dialogueScriptable)
+        
+        public static Type GetCustomEditor(Type type)
         {
-            string dataPath = Application.dataPath + PATH + "/" + dialogueScriptable.id + ".json";
-            string dataPathMeta = Application.dataPath + PATH + "/" + dialogueScriptable.id + ".meta";
-            if (File.Exists(dataPath))
+            if (type == null)
             {
-                File.Delete(dataPath);
-                File.Delete(dataPathMeta);
+                return null;
             }
-            
-            AssetDatabase.Refresh();
-        }
+            if (m_editors == null)
+            {
+                CacheCustomNodeEditor();
+            }
 
+            System.Type result;
+            if (m_editors.TryGetValue(type, out result))
+            {
+                return result;
+            }
+
+            return GetCustomEditor(type.BaseType);
+        }
+        
+
+        public static String GetName(string fullPath)
+        {
+            return string.Empty;
+        }
     }
 }

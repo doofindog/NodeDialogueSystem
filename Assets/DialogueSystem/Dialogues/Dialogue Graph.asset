@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6590049976672689313
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 862, y: 94}
+  graph: {fileID: 11400000}
+  id: WhvTc
+  inPort:
+    id: mufOZ
+    m_node: {fileID: -6590049976672689313}
+    m_DirectionFlow: 0
+  outPort:
+    id: Fqt0Q
+    m_node: {fileID: -6590049976672689313}
+    m_DirectionFlow: 1
+  m_pointType: 1
+--- !u!114 &-5708451483722329015
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 54, y: 186}
+  graph: {fileID: 11400000}
+  id: 05FG2
+  inPort:
+    id: UtxuT
+    m_node: {fileID: -5708451483722329015}
+    m_DirectionFlow: 0
+  outPort:
+    id: iwHAJ
+    m_node: {fileID: -5708451483722329015}
+    m_DirectionFlow: 1
+  text: 
+--- !u!114 &-1102903713676517244
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 274, y: 97}
+  graph: {fileID: 11400000}
+  id: n0vx4
+  inPort:
+    id: T5o8j
+    m_node: {fileID: -1102903713676517244}
+    m_DirectionFlow: 0
+  outPort:
+    id: TFfeZ
+    m_node: {fileID: -1102903713676517244}
+    m_DirectionFlow: 1
+  m_pointType: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: Dialogue Graph
+  m_EditorClassIdentifier: 
+  isInitialised: 1
+  id: HvhHD
+  nodes:
+  - {fileID: -1102903713676517244}
+  - {fileID: -6590049976672689313}
+  - {fileID: 7867704425588857157}
+  - {fileID: 8441125565551381394}
+  - {fileID: -5708451483722329015}
+  connections:
+    keyData: []
+    valueData: []
+  m_startNode: {fileID: -1102903713676517244}
+  m_endNode: {fileID: -6590049976672689313}
+--- !u!114 &7867704425588857157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 723, y: 246}
+  graph: {fileID: 11400000}
+  id: Qzzbh
+  inPort:
+    id: XujvD
+    m_node: {fileID: 7867704425588857157}
+    m_DirectionFlow: 0
+  outPort:
+    id: MDvD0
+    m_node: {fileID: 7867704425588857157}
+    m_DirectionFlow: 1
+  text: 
+--- !u!114 &8441125565551381394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 291, y: 318}
+  graph: {fileID: 11400000}
+  id: 8LqVX
+  inPort:
+    id: WiE9R
+    m_node: {fileID: 8441125565551381394}
+    m_DirectionFlow: 0
+  outPort:
+    id: xDRME
+    m_node: {fileID: 8441125565551381394}
+    m_DirectionFlow: 1
+  text: What the fuick is going on

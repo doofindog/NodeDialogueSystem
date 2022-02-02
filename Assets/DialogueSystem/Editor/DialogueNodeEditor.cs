@@ -5,74 +5,39 @@ using UnityEngine;
 
 namespace DialogueSystem.Editor
 {
-    public class TextNode : Node
+    [CustomNodeEditor(typeof(DialogueSystem.DialogueNode))]
+    public class DialogueNodeEditor : NodeEditor
     {
-
-        public TextDialogue textDialogue;
-
+        public DialogueNode dialogueNode;
         public List<OptionEditor> options;
-        private OptionEditor _optiontoDelete; 
-        
-        public readonly Dictionary<string,ConnectionPort> outPoints;
+        private OptionEditor _optiontoDelete;
+        public readonly Dictionary<string,PortEditor> outPoints;
+
+       
         
 
+        public override void Init(Node node, GraphWindow graphWindow )
+        {
+            base.Init(node, graphWindow);
+            dialogueNode = (DialogueNode)node;
+        }
         
-    
+
+
         public override void Draw()
         {
-            GUILayout.BeginArea(rect);
-            GUILayout.EndArea();
-            GUI.Box(rect, string.Empty);
+            base.Draw();
             spacing = new Vector2(0, 0);
             
             DrawDialogueText(45);
-            DrawOptions(20);
-            
-            DrawInConnectionPoint();
-            DrawOutConnectionPoint();
-            
-            RemoveOption();
-            
+            DrawInPorts();
+            DrawOutPorts();
+            //DrawOptions(20);
         }
     
-        public void ProcessEvent(Event e)
+        public override void ProcessEvent(Event e)
         {
-            switch (e.type)
-            {
-                case EventType.MouseDown:
-                {
-                    if (e.button == 1 && rect.Contains(e.mousePosition))
-                    {
-                        OpenMenu();
-                        e.Use();
-                    }
-
-                    if (e.button == 0 && rect.Contains(e.mousePosition))
-                    {
-                        _isSelected = true;
-                        _canDrag = true;
-                    }
-                    break;
-                }
-                case EventType.MouseUp:
-                {
-                    if (e.button == 0 && _isSelected == true)
-                    {
-                        _isSelected = false;
-                        _canDrag = false;
-                    }
-                    break;
-                }
-                case EventType.MouseDrag:
-                {
-                    if (e.button == 0 && _canDrag == true)
-                    {
-                        UpdatePosition(e.delta);
-                        e.Use();
-                    }
-                    break;
-                }
-            }
+            base.ProcessEvent(e);
         }
 
         protected override void OpenMenu()
@@ -86,7 +51,7 @@ namespace DialogueSystem.Editor
         {
             Vector2 position = rect.position + padding + spacing;
             Vector2 size = new Vector2(rect.size.x - 2 * padding.x, length);
-            textDialogue.text = GUI.TextArea(new Rect(position, size), textDialogue.text);
+            dialogueNode.text = GUI.TextArea(new Rect(position, size), dialogueNode.text);
             spacing.y += length + 10;
         }
         
@@ -95,10 +60,8 @@ namespace DialogueSystem.Editor
             OptionEditor optionEditor = new OptionEditor(option, AddOptionToDelete);
             options.Add(optionEditor);
             rect.size += new Vector2(0, 20 + 5);
-
             
-            ConnectionPort outPort = new ConnectionPort(this,ConnectionPointType.OUT, onOutPointClick);
-            outPoints.Add(option.id,outPort);
+            outPoints.Add(option.id,outPortEditor);
         }
 
         private void AddOptionToDelete(OptionEditor optionEditor)
@@ -107,18 +70,7 @@ namespace DialogueSystem.Editor
             _optiontoDelete = optionEditor;
             rect.size -= new Vector2(0, 20 + 5);
         }
-
-        private void RemoveOption()
-        {
-            if (_optiontoDelete != null)
-            {
-                Connection connectiontoRemove = EditorManager.window.FindConnector(this, _optiontoDelete);
-                options.Remove(_optiontoDelete);
-                EditorManager.window.RemoveConnection(connectiontoRemove);
-                _optiontoDelete = null;
-                EditorManager.SaveData();
-            }
-        }
+        
 
         private void DrawOptions(float length)
         {
@@ -131,7 +83,8 @@ namespace DialogueSystem.Editor
             }
         }
         
-        protected override void DrawOutConnectionPoint()
+        
+        /*protected override void DrawOutConnectionPoint()
         {
             Vector2 size = new Vector2(20,20);
             Vector2 position = Vector2.zero;
@@ -162,7 +115,8 @@ namespace DialogueSystem.Editor
                     connectionPort.Draw(buttonRect);
                 }
             }
-        }
+        }*/
+
     }
 }
 

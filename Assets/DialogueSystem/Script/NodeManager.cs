@@ -3,7 +3,7 @@ using System;
 
 namespace DialogueSystem
 {
-    public class DialoguesManager
+    public class NodeManager
     {
 
         public static string GenerateUniqueId()

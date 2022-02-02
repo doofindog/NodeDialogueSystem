@@ -12,21 +12,21 @@ namespace DialogueSystem
     {
         public string ID;
         public Option option;
-        public DialogueSystem.Dialogue startDialogue;  
-        public DialogueSystem.Dialogue endDialogue;
+        public DialogueSystem.Node startNode;  
+        public DialogueSystem.Node endNode;
 
-        public Connection(Dialogue startDialogue,Dialogue endDialogue)
+        public Connection(Node startNode,Node endNode)
         {
-            ID = DialoguesManager.GenerateUniqueId();
-            this.startDialogue = startDialogue; 
-            this.endDialogue = endDialogue;
+            ID = NodeManager.GenerateUniqueId();
+            this.startNode = startNode; 
+            this.endNode = endNode;
         }
 
-        public Connection(Option option,Dialogue startDialogue,Dialogue endDialogue)
+        public Connection(Option option,Node startNode,Node endNode)
         {
             this.option = option;
-            this.startDialogue = startDialogue;
-            this.endDialogue = endDialogue;
+            this.startNode = startNode;
+            this.endNode = endNode;
         }
     }
 }

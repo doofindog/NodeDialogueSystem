@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using DialogueSystem;
 using UnityEngine;
 
 
@@ -22,7 +23,7 @@ public class SerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISer
             this[this.keyData[i]] = this.valueData[i];
         }
     }
-    
+
     void ISerializationCallbackReceiver.OnBeforeSerialize()
     {
         this.keyData.Clear();
@@ -34,4 +35,11 @@ public class SerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISer
             this.valueData.Add(item.Value);
         }
     }
+}
+
+
+[System.Serializable]
+public class Linkers : SerializedDictionary<Port, Port>
+{
+    
 }
