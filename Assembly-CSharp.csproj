@@ -52,6 +52,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\DialogueSystem\Script\SerializableType.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueManager.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDictionary.cs" />
      <Compile Include="Assets\DialogueSystem\Script\CachedData.cs" />
@@ -62,6 +63,7 @@
      <Compile Include="Assets\DialogueSystem\Script\Port.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Option.cs" />
      <Compile Include="Assets\Player.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\SerializableMethodInfo.cs" />
      <Compile Include="Assets\DialogueSystem\Script\GameEvents.cs" />
      <Compile Include="Assets\DialogueSystem\Script\PointNode.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Connection.cs" />

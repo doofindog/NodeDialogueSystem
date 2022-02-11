@@ -15,16 +15,14 @@ namespace DialogueSystem
     public class EventNode : Node
     {
         [SerializeField] public string text;
-        [SerializeField] public DialogueEvents m_eventObj;
-        [SerializeField] public MethodInfo m_method;
-
-        public void SetEventObj(Type eventType)
-        {
-            m_eventObj = Activator.CreateInstance(eventType) as DialogueEvents;
-        }
+        [SerializeField] public SerializableMethodInfo m_method;
+        [SerializeField] public SerializableType m_type;
         
-       
-
+        public void SetEvent(MethodInfo method)
+        {
+            m_method.methodInfo = method;
+            m_type = m_method.type;
+        }
     }
 }
 

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEditor;
 using UnityEngine;
 
@@ -11,25 +12,15 @@ namespace DialogueSystem.Editor
     {
         private EventNode eventNode;
         private int typeIndex;
-        private int cachedTypeIndex;
-
         private int methodIndex;
-        private int CachedMethodIndex;
         
-        private List<string> optiontext;
+
 
         public override void Init(Node node, GraphWindow graphWindow)
         {
             base.Init(node, graphWindow);
             eventNode = (EventNode) node;
-            optiontext = new List<string>();
-            Type[] types = CachedData.GetEventTypes();
 
-            for(int i =0 ;i< types.Length;i++)
-            {
-                optiontext.Add(types[i].Name);
-            }
-            
         }
 
         public override void Draw()
@@ -43,14 +34,52 @@ namespace DialogueSystem.Editor
             spacing.y += 45 + 10;
             size.y = 100 + spacing.y;
             
-            Vector2 holderPosition = rect.position + padding + spacing;
-            Vector2 holderSize = new Vector2(rect.size.x - 2 * padding.x,25);
-            typeIndex = EditorGUI.Popup(new Rect(holderPosition, holderSize),typeIndex,optiontext.ToArray());
-            if (cachedTypeIndex != typeIndex)
+            Vector2 typePosition = rect.position + padding + spacing;
+            Vector2 typeSize = new Vector2(rect.size.x - 2 * padding.x,25);
+
+            
+            System.Type[] eventTypes = CachedData.eventTypes;
+            string[] eventNames = new string[eventTypes.Length];
+            for (int i = 0; i < eventTypes.Length; i++)
             {
-                cachedTypeIndex = typeIndex;
-                eventNode.SetEventObj(CachedData.GetEvent(typeIndex));
+                eventNames[i] = eventTypes[i].Name;
+                if (eventNode.m_type.type != null)
+                {
+                    if (eventNode.m_type.type.Name == eventNames[i])
+                    {
+                        typeIndex = i;
+                    }
+                }
             }
+
+            typeIndex = EditorGUI.Popup(new Rect(typePosition, typeSize),typeIndex,eventNames);
+            MethodInfo[] methods = CachedData.GetMethods(eventTypes[typeIndex]);
+
+            spacing.y += 25 + 10;
+            size.y = 100 + spacing.y;
+            
+            Vector2 methodPosition = rect.position + padding + spacing;
+            Vector2 methodSize = new Vector2(rect.size.x - 2 * padding.x,25);
+            
+            
+            string[] methodNames = new string[methods.Length];
+            for (int i = 0; i < methods.Length; i++)
+            {
+                methodNames[i] = methods[i].Name;
+                if (eventNode.m_method.methodInfo != null)
+                {
+                    if (eventNode.m_method.methodInfo.Name == methodNames[i])
+                    {
+                        methodIndex = i;
+                    }
+                }
+            }
+            methodIndex = EditorGUI.Popup(new Rect(methodPosition, methodSize),methodIndex,methodNames);
+            eventNode.SetEvent(methods[methodIndex]);
+            
+            
+            DrawInPorts();
+            DrawOutPorts();
 
         }
     }

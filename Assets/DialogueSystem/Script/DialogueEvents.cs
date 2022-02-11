@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueEvents
+[System.Serializable]
+public abstract class DialogueEvents : MonoBehaviour
 {
+    
 }

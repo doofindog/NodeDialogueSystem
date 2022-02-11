@@ -14,6 +14,7 @@ public class CachedData : MonoBehaviour
 
     static CachedData()
     {
+        methods = new Dictionary<Type, MethodInfo[]>();
         CacheEvents();
     }
 
@@ -35,5 +36,10 @@ public class CachedData : MonoBehaviour
     public static Type GetEvent(int index)
     {
         return eventTypes[index];
+    }
+
+    public static MethodInfo[] GetMethods(Type type)
+    {
+        return methods[type];
     }
 }

@@ -66,7 +66,6 @@ namespace DialogueSystem.Editor
 
         private void AddOptionToDelete(OptionEditor optionEditor)
         {
-            //textDialogue.RemoveOption(optionEditor.option);
             _optiontoDelete = optionEditor;
             rect.size -= new Vector2(0, 20 + 5);
         }
@@ -83,40 +82,6 @@ namespace DialogueSystem.Editor
             }
         }
         
-        
-        /*protected override void DrawOutConnectionPoint()
-        {
-            Vector2 size = new Vector2(20,20);
-            Vector2 position = Vector2.zero;
-            if (options.Count == 0)
-            {
-
-                position = rect.position;
-                position.x += (rect.size.x) - size.x * 0.5f;
-                position.y += (rect.size.y * 0.5f) - (size.y * 0.5f);
-
-                Rect buttonRect = new Rect(position, size);
-                
-                
-                outPoint[0].Draw(buttonRect);
-                
-            }
-            else
-            {
-                for (int i = 0; i < options.Count; i++)
-                {
-                    Rect optionRect = options[i].rect;
-                    position.x = rect.position.x + rect.size.x - (size.x * 0.5f);
-                    position.y = rect.position.y + (Mathf.Abs(rect.position.y - optionRect.position.y))- (optionRect.size.y * 0.5f - size.y * 0.5f);
-
-                    Rect buttonRect = new Rect(position, size);
-
-                    ConnectionPort connectionPort = outPoints[options[i].option.id];
-                    connectionPort.Draw(buttonRect);
-                }
-            }
-        }*/
-
     }
 }
 

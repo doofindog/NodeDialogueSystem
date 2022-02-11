@@ -27,9 +27,9 @@ public class ReflectionHandler
         return types.ToArray();
     }
 
-    public static MethodInfo[] GetMethods(object target, BindingFlags flags)
+    public static MethodInfo[] GetMethods(Type target, BindingFlags flags)
     {
-        MethodInfo[] infos = target.GetType().GetMethods(flags);
+        MethodInfo[] infos = target.GetMethods(flags);
         return infos;
     }
 }
