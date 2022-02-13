@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace DialogueSystem.Editor
 {
-    [CustomEditor(typeof(Graph))]
+    [CustomEditor(typeof(DialogueGraph))]
     public class GraphEditor : UnityEditor.Editor
     {
         public override void OnInspectorGUI()
@@ -12,17 +12,17 @@ namespace DialogueSystem.Editor
             base.OnInspectorGUI();
             if (GUILayout.Button("Open Dialogue Window"))
             {
-                Graph graph = (Graph)target;
-                EditorManager.OpenDialogueWindow(graph);
+                DialogueGraph dialogueGraph = (DialogueGraph)target;
+                EditorManager.OpenDialogueWindow(dialogueGraph);
             }
             if (GUILayout.Button("Print Connector Count"))
             {
-                Graph graph = (Graph)target;
+                DialogueGraph dialogueGraph = (DialogueGraph)target;
             }
             if (GUILayout.Button("Clear Data"))
             {
-                Graph graph = (Graph)target;
-                graph.nodes = new List<DialogueSystem.Node>();
+                DialogueGraph dialogueGraph = (DialogueGraph)target;
+                dialogueGraph.nodes = new List<DialogueSystem.Node>();
             }
         
         }

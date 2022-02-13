@@ -18,8 +18,8 @@ public class GraphImporter : AssetPostprocessor
                 continue;
             }
 
-            Graph graph = AssetDatabase.LoadAssetAtPath<Graph>(path);
-            graph.Initalise();
+            DialogueGraph dialogueGraph = AssetDatabase.LoadAssetAtPath<DialogueGraph>(path);
+            dialogueGraph.Initalise();
         }
     }
 }

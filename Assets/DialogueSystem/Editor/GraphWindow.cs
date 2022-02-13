@@ -10,7 +10,7 @@ namespace DialogueSystem.Editor
     public class GraphWindow : EditorWindow
     {
         public string id;
-        public Graph graph;
+        public DialogueGraph dialogueGraph;
 
         public Dictionary<Node,NodeEditor> nodesEditors;
         public Dictionary<PortEditor, PortEditor> connections;
@@ -21,21 +21,21 @@ namespace DialogueSystem.Editor
 
         public void OnEnable()
         {
-            this.graph = null;
+            this.dialogueGraph = null;
             id = null;
             _SelectINPort = null;
             _SelectdOutPort = null; 
         }
 
-        public void Initialise(Graph graph)
+        public void Initialise(DialogueGraph dialogueGraph)
         {
             
-            this.graph = graph;
-            id = graph.id;
+            this.dialogueGraph = dialogueGraph;
+            id = dialogueGraph.id;
             
             nodesEditors = new Dictionary<Node, NodeEditor>();
             connections = new Dictionary<PortEditor, PortEditor>();
-            DialogueSystem.Node[] nodes = graph.GetNodes();
+            DialogueSystem.Node[] nodes = dialogueGraph.GetNodes();
             if (nodes != null)
             {
                 foreach (Node node in nodes)
@@ -52,7 +52,7 @@ namespace DialogueSystem.Editor
         
         private void OnGUI()
         {
-            if (graph != null)
+            if (dialogueGraph != null)
             {
                 GUILayout.Label("Dialogue Editor Window", EditorStyles.boldLabel);
                 
@@ -135,7 +135,6 @@ namespace DialogueSystem.Editor
             {
                 PortEditor outPortEditor = portEditors;
                 PortEditor inPortEditor = connections[portEditors];
-                //Handles.DrawBezier(outPortEditor.GetCenterPosition(), inPortEditor.GetCenterPosition(),outPortEditor.GetCenterPosition() + Vector2.up * 50f , inPortEditor.GetCenterPosition() + Vector2.down * 50f, Color.white,null, 2f);
                 Handles.DrawLine(outPortEditor.GetCenterPosition(),inPortEditor.GetCenterPosition());
                 if (Handles.Button((outPortEditor.GetCenterPosition() + inPortEditor.GetCenterPosition()) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap))
                 {
@@ -170,7 +169,7 @@ namespace DialogueSystem.Editor
                 {
                     contextMenu.AddItem(new GUIContent(type.Name), false, () =>
                     {
-                        Node node = graph.CreateNode(type, contextPosition);
+                        Node node = dialogueGraph.CreateNode(type, contextPosition);
                         CreateNode(node);
                     });
                 }
@@ -190,7 +189,7 @@ namespace DialogueSystem.Editor
         public void RemoveNode(NodeEditor nodeEditor)
         {
             nodesEditors.Remove(nodeEditor.node);
-            graph.RemoveDialogue(nodeEditor.node);
+            dialogueGraph.RemoveDialogue(nodeEditor.node);
             EditorManager.SaveData();
             Repaint();
         }
@@ -244,7 +243,7 @@ namespace DialogueSystem.Editor
                     connections = new Dictionary<PortEditor, PortEditor>();
                 }
 
-                graph.CreateConnection(_SelectdOutPort.m_port,_SelectINPort.m_port);
+                dialogueGraph.CreateConnection(_SelectdOutPort.m_port,_SelectINPort.m_port);
                 connections.Add(_SelectdOutPort,_SelectINPort);
                 EditorManager.SaveData();
                 ClearConnection();
@@ -255,10 +254,10 @@ namespace DialogueSystem.Editor
         {
             connections = new Dictionary<PortEditor, PortEditor>();
 
-            foreach (Port key in graph.connections.Keys)
+            foreach (Port key in dialogueGraph.connections.Keys)
             {
                 Port outPort = key;
-                Port inPort = graph.connections[key];
+                Port inPort = dialogueGraph.connections[key];
                 NodeEditor outNodeEditor = nodesEditors[outPort.GetNode()];
                 NodeEditor inNodeEditor = nodesEditors[inPort.GetNode()];
                 _SelectdOutPort = outNodeEditor.GetPortEditor(outPort);
@@ -280,7 +279,7 @@ namespace DialogueSystem.Editor
                 if (portEditor.m_port.id == outPort.id)
                 {
                     connections.Remove(portEditor);
-                    graph.RemoveConnection(outPort);
+                    dialogueGraph.RemoveConnection(outPort);
                     return;
                 }
             }
@@ -288,7 +287,7 @@ namespace DialogueSystem.Editor
 
         }
 
-        public Connection FindConnector(DialogueNodeEditor startNodeEditor, OptionEditor optionEditor = null)
+        public Connection FindConnector(TextNodeEditor startNodeEditor, OptionEditor optionEditor = null)
         {
             return null;
         }

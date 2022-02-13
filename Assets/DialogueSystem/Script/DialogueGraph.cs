@@ -12,7 +12,7 @@ namespace DialogueSystem
 {
     [CreateAssetMenu(fileName = "Dialogue Graph", menuName = "Dialogue/Create Graph")]
     [Serializable]
-    public class Graph : ScriptableObject
+    public class DialogueGraph : ScriptableObject
     {
         [SerializeField, HideInInspector] private bool isInitialised;
         
@@ -20,7 +20,7 @@ namespace DialogueSystem
         [SerializeField] public List<Node> nodes; //TODO : Could be changed to a HashTable
         [SerializeField] public Linkers connections;
 
-        private Action<Graph> OnDestoryCallBack;
+        private Action<DialogueGraph> OnDestoryCallBack;
 
         [SerializeField] private PointNode m_startNode;
         [SerializeField] private PointNode m_endNode;
@@ -57,7 +57,7 @@ namespace DialogueSystem
             if (node != null)
             {
                 node.Init(position);
-                node.graph = this;
+                node.dialogueGraph = this;
                 AssetDatabase.AddObjectToAsset(node, this);
                 SaveManager.SaveData(node);
                 AssetDatabase.SaveAssets();

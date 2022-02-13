@@ -23,18 +23,18 @@ namespace DialogueSystem.Editor
             CacheCustomNodeEditor();
         }
         
-        public static void OpenDialogueWindow(Graph graph)
+        public static void OpenDialogueWindow(DialogueGraph dialogueGraph)
         {
             window = (GraphWindow) EditorWindow.GetWindow(typeof(GraphWindow));
-            window.Initialise(graph);
+            window.Initialise(dialogueGraph);
             window.Show();
         }
         
         public static void SaveData()
         {
-            if (window.graph != null)
+            if (window.dialogueGraph != null)
             {
-                EditorUtility.SetDirty(window.graph);
+                EditorUtility.SetDirty(window.dialogueGraph);
                 AssetDatabase.SaveAssets();
             }
         }

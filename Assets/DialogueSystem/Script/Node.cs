@@ -10,7 +10,7 @@ namespace DialogueSystem
     {
         public Vector2 position;
         
-        public Graph graph;
+        public DialogueGraph dialogueGraph;
         public string id;
         public Port inPort;
         public Port outPort;

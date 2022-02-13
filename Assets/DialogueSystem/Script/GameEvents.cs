@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class GameEvents : DialogueEvents
 {
-    public static void GameDialogue()
-    {
-        
-    }
-
-    public static void SomeOtherDialogue()
+    public static void GiveHealth()
     {
         
     }

@@ -7,7 +7,7 @@ namespace DialogueSystem
 {
 
     [System.Serializable]
-    public class DialogueNode : Node
+    public class TextNode : Node
     {
         [SerializeField] public string text;
 

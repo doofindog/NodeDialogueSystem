@@ -5,10 +5,10 @@ using UnityEngine;
 
 namespace DialogueSystem.Editor
 {
-    [CustomNodeEditor(typeof(DialogueSystem.DialogueNode))]
-    public class DialogueNodeEditor : NodeEditor
+    [CustomNodeEditor(typeof(DialogueSystem.TextNode))]
+    public class TextNodeEditor : NodeEditor
     {
-        public DialogueNode dialogueNode;
+        public TextNode textNode;
         public List<OptionEditor> options;
         private OptionEditor _optiontoDelete;
         public readonly Dictionary<string,PortEditor> outPoints;
@@ -19,7 +19,7 @@ namespace DialogueSystem.Editor
         public override void Init(Node node, GraphWindow graphWindow )
         {
             base.Init(node, graphWindow);
-            dialogueNode = (DialogueNode)node;
+            textNode = (TextNode)node;
         }
         
 
@@ -51,7 +51,7 @@ namespace DialogueSystem.Editor
         {
             Vector2 position = rect.position + padding + spacing;
             Vector2 size = new Vector2(rect.size.x - 2 * padding.x, length);
-            dialogueNode.text = GUI.TextArea(new Rect(position, size), dialogueNode.text);
+            textNode.text = GUI.TextArea(new Rect(position, size), textNode.text);
             spacing.y += length + 10;
         }
         

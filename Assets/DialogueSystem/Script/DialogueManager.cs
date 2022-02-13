@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
+    [SerializeField] private DialogueGraph m_dialogue;
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private Text m_text;
     [SerializeField] private float m_textSpeed;
@@ -16,7 +17,7 @@ public class DialogueManager : MonoBehaviour
     private bool textCompleted;
     private bool endReached;
     
-    private Graph m_graph;
+    private DialogueGraph _mDialogueGraph;
     private Node currentIndex;
 
     private IEnumerator _enumerator;
@@ -28,7 +29,14 @@ public class DialogueManager : MonoBehaviour
             instance.gameObject.SetActive(false);
         }
     }
-    
+
+    public void OpenDialogue(DialogueGraph dialogueGraph)
+    {
+        m_dialogue = dialogueGraph;
+        LoadDialogue(m_dialogue);
+        
+    }
+
     public void ShowDiloague(string text, List<Option> option = null)
     {
         dialogueUI.SetActive(true);
@@ -73,18 +81,18 @@ public class DialogueManager : MonoBehaviour
         this.gameObject.SetActive(false);
     }
     
-    public void LoadDialogue(Graph dialogueGraph)
+    public void LoadDialogue(DialogueGraph dialogueDialogueGraph)
     {
         instance.gameObject.SetActive(true);
         dialogueUI.gameObject.SetActive(true);
-        m_graph = dialogueGraph;
-        currentIndex = m_graph.GetStarNode();
+        _mDialogueGraph = dialogueDialogueGraph;
+        currentIndex = _mDialogueGraph.GetStarNode();
         MoveToNextNode();
     }
     
     public void MoveToNextNode()
     {
-        Node node = m_graph.GetNext(currentIndex);
+        Node node = _mDialogueGraph.GetNext(currentIndex);
         if (node != null)
         {
             currentIndex = node;
@@ -101,16 +109,10 @@ public class DialogueManager : MonoBehaviour
 
     }
 
-    public void OnClick()
-    { 
-        currentIndex.Invoke();
-    }
-
     private void Update()
     {
         if (Input.GetKeyDown(m_key))
         {
-            Debug.Log("Called");
             if (textCompleted != true)
             {
                 fastShow = true;

@@ -23,6 +23,12 @@ namespace DialogueSystem
             m_method.methodInfo = method;
             m_type = m_method.type;
         }
+
+        public override void Invoke()
+        {
+            m_method.methodInfo.Invoke(null, null);
+            DialogueManager.instance.ShowDiloague(text);
+        }
     }
 }
 
