@@ -59,7 +59,7 @@
      <Compile Include="Assets\DialogueSystem\Editor\GraphEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\OptionEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Node Editors\EventNodeEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\TextNodeEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\TextNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\EditorManager.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Connection.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Node Editors\PointNodeEditor.cs" />

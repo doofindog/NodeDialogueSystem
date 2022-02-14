@@ -73,6 +73,7 @@
      <Compile Include="Assets\DialogueSystem\Script\NodeManager.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueEvents.cs" />
      <Compile Include="Assets\DialogueSystem\Script\CharacterDialogue.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\OptionNode.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

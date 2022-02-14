@@ -6,6 +6,6 @@ public class GameEvents : DialogueEvents
 {
     public static void GiveHealth()
     {
-        
+        Debug.Log("Thanks for healing me");
     }
 }
