@@ -62,6 +62,7 @@
      <Compile Include="Assets\DialogueSystem\Editor\Node Editors\TextNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\EditorManager.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Connection.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\OptionNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Node Editors\PointNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\CustomNodeEditorAttribute.cs" />
  <Reference Include="UnityEngine">
