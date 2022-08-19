@@ -41,7 +41,7 @@ namespace DialogueSystem.Editor
 
         private static void CacheCustomNodeEditor()
         {
-            Type[] nodeEditors = ReflectionHandler.GetDerivedTypes(typeof(NodeEditor));
+            Type[] nodeEditors = ReflectionHandler.GetDerivedTypes(typeof(BaseNodeEditor));
             for (int i = 0; i < nodeEditors.Length; i++)
             {
                 CustomNodeEditorAttribute attrib = nodeEditors[i].GetCustomAttribute(typeof(CustomNodeEditorAttribute)) as CustomNodeEditorAttribute;

@@ -54,16 +54,16 @@
   <ItemGroup>
      <Compile Include="Assets\DialogueSystem\Editor\JsonCleaner.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\GraphWindow.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\NodeEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\BaseNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\PortEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\GraphEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\OptionEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\EventNodeEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\TextNodeEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\EventBaseNodeEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\DialogueNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\EditorManager.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Connection.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\OptionNodeEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\PointNodeEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\DecisionNodeEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Node Editors\PointBaseNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\CustomNodeEditorAttribute.cs" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/Hub/Editor/2020.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

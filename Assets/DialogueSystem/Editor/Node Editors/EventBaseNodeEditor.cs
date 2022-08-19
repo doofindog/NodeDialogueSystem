@@ -8,7 +8,7 @@ using UnityEngine;
 namespace DialogueSystem.Editor
 {
     [CustomNodeEditor(typeof(DialogueSystem.EventNode))]
-    public class EventNodeEditor : NodeEditor
+    public class EventBaseNodeEditor : BaseNodeEditor
     {
         private EventNode eventNode;
         private int typeIndex;

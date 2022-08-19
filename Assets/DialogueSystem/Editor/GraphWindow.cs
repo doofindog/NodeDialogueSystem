@@ -12,7 +12,7 @@ namespace DialogueSystem.Editor
         public string id;
         public DialogueGraph dialogueGraph;
 
-        public Dictionary<Node,NodeEditor> nodesEditors;
+        public Dictionary<Node,BaseNodeEditor> nodesEditors;
         public Dictionary<PortEditor, PortEditor> connections;
 
         private PortEditor _SelectINPort;
@@ -33,7 +33,7 @@ namespace DialogueSystem.Editor
             this.dialogueGraph = dialogueGraph;
             id = dialogueGraph.id;
             
-            nodesEditors = new Dictionary<Node, NodeEditor>();
+            nodesEditors = new Dictionary<Node, BaseNodeEditor>();
             connections = new Dictionary<PortEditor, PortEditor>();
             DialogueSystem.Node[] nodes = dialogueGraph.GetNodes();
             if (nodes != null)
@@ -181,15 +181,15 @@ namespace DialogueSystem.Editor
         {
             Type nodeType = node.GetType();
             Type editorType = EditorManager.GetCustomEditor(nodeType);
-            NodeEditor nodeEditor = Activator.CreateInstance(editorType) as NodeEditor;
-            nodeEditor.Init(node,this);
-            nodesEditors.Add(node,nodeEditor);
+            BaseNodeEditor baseNodeEditor = Activator.CreateInstance(editorType) as BaseNodeEditor;
+            baseNodeEditor.Init(node,this);
+            nodesEditors.Add(node,baseNodeEditor);
         }
 
-        public void RemoveNode(NodeEditor nodeEditor)
+        public void RemoveNode(BaseNodeEditor baseNodeEditor)
         {
-            nodesEditors.Remove(nodeEditor.node);
-            dialogueGraph.RemoveDialogue(nodeEditor.node);
+            nodesEditors.Remove(baseNodeEditor.node);
+            dialogueGraph.RemoveDialogue(baseNodeEditor.node);
             EditorManager.SaveData();
             Repaint();
         }
@@ -258,10 +258,10 @@ namespace DialogueSystem.Editor
             {
                 Port outPort = key;
                 Port inPort = dialogueGraph.connections[key];
-                NodeEditor outNodeEditor = nodesEditors[outPort.GetNode()];
-                NodeEditor inNodeEditor = nodesEditors[inPort.GetNode()];
-                _SelectdOutPort = outNodeEditor.GetPortEditor(outPort);
-                _SelectINPort = inNodeEditor.GetPortEditor(inPort);
+                BaseNodeEditor outBaseNodeEditor = nodesEditors[outPort.GetNode()];
+                BaseNodeEditor inBaseNodeEditor = nodesEditors[inPort.GetNode()];
+                _SelectdOutPort = outBaseNodeEditor.GetPortEditor(outPort);
+                _SelectINPort = inBaseNodeEditor.GetPortEditor(inPort);
                 connections.Add(_SelectdOutPort, _SelectINPort);
             }
             EditorManager.SaveData();
@@ -287,7 +287,7 @@ namespace DialogueSystem.Editor
 
         }
 
-        public Connection FindConnector(TextNodeEditor startNodeEditor, OptionEditor optionEditor = null)
+        public Connection FindConnector(DialogueNodeEditor startBaseNodeEditor, OptionEditor optionEditor = null)
         {
             return null;
         }
@@ -316,7 +316,7 @@ namespace DialogueSystem.Editor
             _SelectdOutPort = null; 
         }
 
-        public NodeEditor GetNode(Node node)
+        public BaseNodeEditor GetNode(Node node)
         {
             if (nodesEditors.ContainsKey(node))
             {

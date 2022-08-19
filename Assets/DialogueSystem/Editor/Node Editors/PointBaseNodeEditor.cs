@@ -7,7 +7,7 @@ using UnityEngine;
 namespace DialogueSystem.Editor
 {
     [CustomNodeEditor(typeof(DialogueSystem.PointNode))]
-    public class PointNodeEditor : NodeEditor
+    public class PointBaseNodeEditor : BaseNodeEditor
     {
         private PointNode pointNode;
         public PointType pointType;

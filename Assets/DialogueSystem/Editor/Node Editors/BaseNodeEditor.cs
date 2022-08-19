@@ -6,7 +6,7 @@ using UnityEngine;
 namespace DialogueSystem.Editor
 {
     [CustomNodeEditor(typeof(DialogueSystem.Node))]
-    public abstract class NodeEditor : UnityEditor.Editor
+    public abstract class BaseNodeEditor : UnityEditor.Editor
     {
         public string id;
         public GraphWindow graphWindow;
@@ -22,13 +22,13 @@ namespace DialogueSystem.Editor
         protected bool _canDrag;
 
         public List<PortEditor> portEditors;
-        public PortEditor inPortEditor;
-        public PortEditor outPortEditor;
+        protected PortEditor inPortEditor;
+        protected PortEditor outPortEditor;
         
         public GUIStyle panelStyle;
 
+        protected GenericMenu menu;
         
-
         public virtual void Init(DialogueSystem.Node node,GraphWindow graphWindow)
         {
             id = node.id;
@@ -36,34 +36,42 @@ namespace DialogueSystem.Editor
             this.node = node;
             portEditors = new List<PortEditor>();
 
+            GenericMenu menu = new GenericMenu();
+            ConfigMenu();
+            ConfigPorts();
+            
             
             this.padding = new Vector2(20, 20);
             size = new Vector2(300, 100);
             rect = new Rect(node.position, size);
+        }
+
+        public virtual void Draw()
+        {
+            spacing = Vector2.zero;
+            rect.size = size;
+            panelStyle = new GUIStyle(GUI.skin.box) { alignment = TextAnchor.UpperCenter };
+            
+            GUI.Box(rect, node.GetType().Name,panelStyle);
+            DrawInPorts();
+            DrawOutPorts();
+        }
+
+        protected virtual void ConfigMenu()
+        {
+            menu.AddItem(new GUIContent("Remove Node"),false, DeleteNode);
+        }
+
+        protected virtual void ConfigPorts()
+        {
             inPortEditor = new PortEditor(node.inPort, this.graphWindow.SelectInPort);
             outPortEditor = new PortEditor(node.outPort, this.graphWindow.SelectOutPort);
             portEditors.Add(outPortEditor);
             portEditors.Add(inPortEditor);
         }
 
-
-        public virtual void Draw()
-        {
-            spacing = Vector2.zero;
-            rect.size = size;
-                        
-            panelStyle = new GUIStyle(GUI.skin.box)
-            {
-                alignment = TextAnchor.UpperCenter
-            };
-            
-            GUI.Box(rect, node.GetType().Name,panelStyle);
-        }
-
         protected virtual void OpenMenu()
         {
-            GenericMenu menu = new GenericMenu();
-            menu.AddItem(new GUIContent("Remove Node"),false, DeleteNode);
             menu.ShowAsContext();
         }
 
@@ -75,7 +83,7 @@ namespace DialogueSystem.Editor
                 {
                     if (e.button == 1 && rect.Contains(e.mousePosition))
                     {
-                        OpenMenu();
+                        HandleRightClick();
                         e.Use();
                     }
 
@@ -117,10 +125,9 @@ namespace DialogueSystem.Editor
         {
             graphWindow.RemoveNode(this);
         }
-    
+
         protected virtual void DrawInPorts()
         {
-            Vector2 size = new Vector2(20,20);
             Vector2 position = rect.position;
             position.x -= size.x * 0.5f;
             position.y += (rect.size.y * 0.5f) - (size.y * 0.5f);
@@ -133,7 +140,7 @@ namespace DialogueSystem.Editor
         protected virtual void DrawOutPorts()
         {
             Vector2 size = new Vector2(20,20);
-            Vector2 position = Vector2.zero;
+            Vector2 position;
             position = rect.position;
             position.x += (rect.size.x) - size.x * 0.5f;
             position.y += (rect.size.y * 0.5f) - (size.y * 0.5f);
@@ -153,6 +160,11 @@ namespace DialogueSystem.Editor
                 }
             }
             return null;
+        }
+
+        protected virtual void HandleRightClick()
+        {
+            OpenMenu();
         }
     }
 }
