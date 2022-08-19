@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using DialogueSystem.Editor.NodeComponents;
 using UnityEditor;
 using UnityEngine;
 
@@ -12,14 +13,14 @@ namespace DialogueSystem.Editor
         public GraphWindow graphWindow;
         public DialogueSystem.Node node;
 
-        protected Vector2 padding;
+        public Vector2 padding;
         public Rect rect;
         protected Vector2 size;
         protected Vector2 newSize;
-        protected Vector2 spacing;
+        public Vector2 spacing;
 
-        protected bool _isSelected;
-        protected bool _canDrag;
+        protected bool m_isSelected;
+        protected bool m_canDrag;
 
         public List<PortEditor> portEditors;
         protected PortEditor inPortEditor;
@@ -36,7 +37,7 @@ namespace DialogueSystem.Editor
             this.node = node;
             portEditors = new List<PortEditor>();
 
-            GenericMenu menu = new GenericMenu();
+            menu = new GenericMenu();
             ConfigMenu();
             ConfigPorts();
             
@@ -64,8 +65,9 @@ namespace DialogueSystem.Editor
 
         protected virtual void ConfigPorts()
         {
-            inPortEditor = new PortEditor(node.inPort, this.graphWindow.SelectInPort);
-            outPortEditor = new PortEditor(node.outPort, this.graphWindow.SelectOutPort);
+            inPortEditor = new PortEditor(node.inPort, this.graphWindow.SelectInPort, this, EPortType.IN);
+            outPortEditor = new PortEditor(node.outPort, this.graphWindow.SelectOutPort, this, EPortType.OUT);
+            
             portEditors.Add(outPortEditor);
             portEditors.Add(inPortEditor);
         }
@@ -89,23 +91,23 @@ namespace DialogueSystem.Editor
 
                     if (e.button == 0 && rect.Contains(e.mousePosition))
                     {
-                        _isSelected = true;
-                        _canDrag = true;
+                        m_isSelected = true;
+                        m_canDrag = true;
                     }
                     break;
                 }
                 case EventType.MouseUp:
                 {
-                    if (e.button == 0 && _isSelected == true)
+                    if (e.button == 0 && m_isSelected == true)
                     {
-                        _isSelected = false;
-                        _canDrag = false;
+                        m_isSelected = false;
+                        m_canDrag = false;
                     }
                     break;
                 }
                 case EventType.MouseDrag:
                 {
-                    if (e.button == 0 && _canDrag == true)
+                    if (e.button == 0 && m_canDrag == true)
                     {
                         UpdatePosition(e.delta);
                         e.Use();
@@ -128,26 +130,12 @@ namespace DialogueSystem.Editor
 
         protected virtual void DrawInPorts()
         {
-            Vector2 position = rect.position;
-            position.x -= size.x * 0.5f;
-            position.y += (rect.size.y * 0.5f) - (size.y * 0.5f);
-
-            Rect inRect = new Rect(position, size);
-            
-            inPortEditor.Draw(inRect);
+            inPortEditor.Draw();
         }
 
         protected virtual void DrawOutPorts()
         {
-            Vector2 size = new Vector2(20,20);
-            Vector2 position;
-            position = rect.position;
-            position.x += (rect.size.x) - size.x * 0.5f;
-            position.y += (rect.size.y * 0.5f) - (size.y * 0.5f);
-
-            Rect buttonRect = new Rect(position, size);
-            
-            outPortEditor.Draw(buttonRect);
+            outPortEditor.Draw();
         }
 
         public PortEditor GetPortEditor(Port port)

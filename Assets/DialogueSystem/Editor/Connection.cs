@@ -1,4 +1,5 @@
 using System;
+using DialogueSystem.Editor.NodeComponents;
 using UnityEditor;
 using UnityEngine;
 

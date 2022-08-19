@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using DialogueSystem.Editor.NodeComponents;
 using UnityEditor;
 using UnityEngine;
 

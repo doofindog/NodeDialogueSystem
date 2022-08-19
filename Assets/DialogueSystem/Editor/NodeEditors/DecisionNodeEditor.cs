@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using DialogueSystem;
 using DialogueSystem.Editor;
+using DialogueSystem.Editor.NodeComponents;
 using UnityEditor;
 using UnityEngine;
 
@@ -94,9 +95,8 @@ namespace  DialogueSystem.Editor
                 Port port = decisionNode.GetOptionPort(options[i]);
                 PortEditor portEditor = new PortEditor(port, this.graphWindow.SelectOutPort);
                 
-                portEditor.Draw(portRect);
-
-
+                portEditor.Draw();
+                
                 spacing.y += length + 5;
             }
 

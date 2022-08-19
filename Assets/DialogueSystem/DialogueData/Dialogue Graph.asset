@@ -1,0 +1,97 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6381692159101913404
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 62, y: 105}
+  dialogueGraph: {fileID: 11400000}
+  id: zzcdj
+  inPort:
+    id: XrD6L
+    m_node: {fileID: -6381692159101913404}
+    m_DirectionFlow: 0
+  outPort:
+    id: FjDkE
+    m_node: {fileID: -6381692159101913404}
+    m_DirectionFlow: 1
+  m_pointType: 0
+--- !u!114 &-3468280231390070804
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 425, y: 404}
+  dialogueGraph: {fileID: 11400000}
+  id: 9c7XY
+  inPort:
+    id: hs5m1
+    m_node: {fileID: -3468280231390070804}
+    m_DirectionFlow: 0
+  outPort:
+    id: iqLEd
+    m_node: {fileID: -3468280231390070804}
+    m_DirectionFlow: 1
+  text: 
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: Dialogue Graph
+  m_EditorClassIdentifier: 
+  isInitialised: 1
+  id: 0FsA7
+  nodes:
+  - {fileID: -6381692159101913404}
+  - {fileID: 7083457872394918842}
+  - {fileID: -3468280231390070804}
+  connections:
+    keyData: []
+    valueData: []
+  m_startNode: {fileID: -6381692159101913404}
+  m_endNode: {fileID: 7083457872394918842}
+--- !u!114 &7083457872394918842
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 591, y: 102}
+  dialogueGraph: {fileID: 11400000}
+  id: 3UaPm
+  inPort:
+    id: t1Z8U
+    m_node: {fileID: 7083457872394918842}
+    m_DirectionFlow: 0
+  outPort:
+    id: 8jCKL
+    m_node: {fileID: 7083457872394918842}
+    m_DirectionFlow: 1
+  m_pointType: 1
