@@ -6,27 +6,27 @@ using UnityEngine;
 
 namespace DialogueSystem.Editor
 {
-    [CustomNodeEditor(typeof(DialogueSystem.TextNode))]
+    [CustomNodeEditor(typeof(DialogueSystem.DialogueNode))]
     public class DialogueNodeEditor : BaseNodeEditor
     {
-        public TextNode textNode;
-        public List<OptionEditor> options;
-        private OptionEditor _optiontoDelete;
+        public DialogueNode dialogueNode;
+        public List<NodeOptionEditor> options;
+        private NodeOptionEditor _optiontoDelete;
         public readonly Dictionary<string,PortEditor> outPoints;
-        private NodeTextEditor m_nodeText;
+        private NodeTextEditor m_nodeTextEditor;
         
         public override void Init(Node node, GraphWindow graphWindow )
         {
             base.Init(node, graphWindow);
-            textNode = (TextNode)node;
-            
-            m_nodeText = 
+            dialogueNode = (DialogueNode)node;
+
+            m_nodeTextEditor = new NodeTextEditor(dialogueNode.text,this);
         }
         
         public override void Draw()
         {
             base.Draw();
-            DrawDialogueText(45);
+            dialogueNode.text = m_nodeTextEditor.Draw(dialogueNode.text);
         }
         
     }

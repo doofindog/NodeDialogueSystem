@@ -59,7 +59,7 @@
      <Compile Include="Assets\DialogueSystem\Script\SaveManager.cs" />
      <Compile Include="Assets\DialogueSystem\Script\GraphImporter.cs" />
      <Compile Include="Assets\DialogueSystem\Script\EventNode.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\TextNode.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\DialogueNode.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Port.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Option.cs" />
      <Compile Include="Assets\npcController.cs" />

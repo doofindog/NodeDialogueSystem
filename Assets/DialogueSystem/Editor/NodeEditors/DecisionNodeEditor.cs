@@ -14,28 +14,20 @@ namespace  DialogueSystem.Editor
     {
         public DecisionNode decisionNode;
         public List<PortEditor> optionPorts;
+        private NodeTextEditor m_textEditor; 
 
         public override void Init(Node node, GraphWindow graphWindow)
         {
             base.Init(node, graphWindow);
 
             decisionNode = (DecisionNode) node;
-            
-            inPortEditor = new PortEditor(node.inPort, this.graphWindow.SelectInPort);
-            portEditors.Add(inPortEditor);
-
-            optionPorts = new List<PortEditor>();
+            m_textEditor = new NodeTextEditor(decisionNode.text, this, 40);
         }
 
         protected override void ConfigMenu()
         {
             base.ConfigMenu();
             menu.AddItem(new GUIContent("Add Option"), false, AddOption);
-        }
-
-        protected override void ConfigPorts()
-        {
-            
         }
 
         protected override void OpenMenu()
@@ -46,19 +38,7 @@ namespace  DialogueSystem.Editor
         public override void Draw()
         {
             base.Draw();
-            spacing = new Vector2(0, 0);
-
-            DrawDialogueText(45);
-            DrawOptions(20);
-            DrawInPorts();
-        }
-
-        private void DrawDialogueText(float length)
-        {
-            Vector2 position = rect.position + padding + spacing;
-            Vector2 size = new Vector2(rect.size.x - 2 * padding.x, length);
-            decisionNode.text = GUI.TextArea(new Rect(position, size), decisionNode.text);
-            spacing.y += length + 10;
+            decisionNode.text = m_textEditor.Draw();
         }
 
         private void DrawOptions(float length)

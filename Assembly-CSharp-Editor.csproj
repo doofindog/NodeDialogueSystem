@@ -57,15 +57,16 @@
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\BaseNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\PortEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\GraphEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\OptionEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeOptionEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\EventBaseNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\DialogueNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\EditorManager.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\Connection.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\DecisionNodeEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\PointBaseNodeEditor.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\CustomNodeEditorAttribute.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeTextEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\CustomNodeEditorAttribute.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeComponent.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

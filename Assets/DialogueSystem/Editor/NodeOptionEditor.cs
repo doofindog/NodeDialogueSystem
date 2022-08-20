@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace DialogueSystem.Editor
 {
-    public class OptionEditor
+    public class NodeOptionEditor
     {
         public Rect rect;
         public Option option;
-        private Action<OptionEditor> removeCallback;
+        private Action<NodeOptionEditor> removeCallback;
 
 
-        public OptionEditor(Option option, Action<OptionEditor> removeCallback)
+        public NodeOptionEditor(Option option, BaseNodeEditor editor, Action<NodeOptionEditor> removeCallback)
         {
             this.option = option;
             this.removeCallback = removeCallback;
@@ -32,6 +32,16 @@ namespace DialogueSystem.Editor
             {
                 removeCallback(this);
             }
+        }
+
+        public void UpdatePosition()
+        {
+            
+        }
+
+        public void UpdateSize()
+        {
+            
         }
 
         public string GetText()

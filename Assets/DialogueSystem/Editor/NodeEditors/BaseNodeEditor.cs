@@ -18,9 +18,10 @@ namespace DialogueSystem.Editor
         protected Vector2 size;
         protected Vector2 newSize;
         public Vector2 spacing;
+        public Vector2 drawPosition;
 
-        protected bool m_isSelected;
-        protected bool m_canDrag;
+        private bool m_isSelected;
+        private bool m_canDrag;
 
         public List<PortEditor> portEditors;
         protected PortEditor inPortEditor;
