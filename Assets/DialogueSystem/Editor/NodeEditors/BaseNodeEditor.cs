@@ -18,7 +18,6 @@ namespace DialogueSystem.Editor
         protected Vector2 size;
         protected Vector2 newSize;
         public Vector2 spacing;
-        public Vector2 drawPosition;
 
         private bool m_isSelected;
         private bool m_canDrag;
@@ -30,22 +29,29 @@ namespace DialogueSystem.Editor
         public GUIStyle panelStyle;
 
         protected GenericMenu menu;
-        
+
+        protected List<NodeComponent> nodeComponents;
+
         public virtual void Init(DialogueSystem.Node node,GraphWindow graphWindow)
         {
             id = node.id;
             this.graphWindow = graphWindow;
             this.node = node;
+            
             portEditors = new List<PortEditor>();
-
+            nodeComponents = new List<NodeComponent>();
+            
             menu = new GenericMenu();
+            
             ConfigMenu();
             ConfigPorts();
+            ConfigComponents();
             
             
             this.padding = new Vector2(20, 20);
             size = new Vector2(300, 100);
             rect = new Rect(node.position, size);
+            
         }
 
         public virtual void Draw()
@@ -53,7 +59,6 @@ namespace DialogueSystem.Editor
             spacing = Vector2.zero;
             rect.size = size;
             panelStyle = new GUIStyle(GUI.skin.box) { alignment = TextAnchor.UpperCenter };
-            
             GUI.Box(rect, node.GetType().Name,panelStyle);
             DrawInPorts();
             DrawOutPorts();
@@ -71,6 +76,20 @@ namespace DialogueSystem.Editor
             
             portEditors.Add(outPortEditor);
             portEditors.Add(inPortEditor);
+        }
+        
+        protected virtual void ConfigComponents() {}
+
+        protected virtual T AddComponent<T>(T component) where T : NodeComponent
+        {
+            nodeComponents.Add(component);
+            return component;
+        }
+
+        protected virtual T RemoveComponent<T>(T component) where T : NodeComponent
+        {
+            nodeComponents.Remove(component);
+            return component;
         }
 
         protected virtual void OpenMenu()
@@ -122,6 +141,11 @@ namespace DialogueSystem.Editor
         {
             node.position += newPosition;
             rect.position = node.position;
+        }
+
+        public Vector2 Rescale()
+        {
+            return Vector2.zero;
         }
 
         protected virtual void DeleteNode()

@@ -1,13 +1,8 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using DialogueSystem;
-using DialogueSystem.Editor;
 using DialogueSystem.Editor.NodeComponents;
-using UnityEditor;
 using UnityEngine;
 
-namespace  DialogueSystem.Editor
+namespace  DialogueSystem.Editor.NodeEditors
 {
     [CustomNodeEditor(typeof(DialogueSystem.DecisionNode))]
     public class DecisionNodeEditor : BaseNodeEditor
@@ -19,20 +14,18 @@ namespace  DialogueSystem.Editor
         public override void Init(Node node, GraphWindow graphWindow)
         {
             base.Init(node, graphWindow);
-
             decisionNode = (DecisionNode) node;
-            m_textEditor = new NodeTextEditor(decisionNode.text, this, 40);
+        }
+
+        protected override void ConfigComponents()
+        {
+            m_textEditor = AddComponent(new NodeTextEditor(this, 45));
         }
 
         protected override void ConfigMenu()
         {
             base.ConfigMenu();
             menu.AddItem(new GUIContent("Add Option"), false, AddOption);
-        }
-
-        protected override void OpenMenu()
-        {
-            menu.ShowAsContext();
         }
 
         public override void Draw()

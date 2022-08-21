@@ -1,30 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-7172730602452677301
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 91, y: 286}
-  dialogueGraph: {fileID: 11400000}
-  id: N3d6m
-  inPort:
-    id: zbcgU
-    m_node: {fileID: -7172730602452677301}
-    m_DirectionFlow: 0
-  outPort:
-    id: Bbs9P
-    m_node: {fileID: -7172730602452677301}
-    m_DirectionFlow: 1
-  text: 
---- !u!114 &-6381692159101913404
+--- !u!114 &-8064894809526756635
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -36,19 +12,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 62, y: 105}
+  position: {x: 109, y: 95}
   dialogueGraph: {fileID: 11400000}
-  id: zzcdj
+  id: Juqc5
   inPort:
-    id: XrD6L
-    m_node: {fileID: -6381692159101913404}
+    id: yNtEr
+    m_node: {fileID: -8064894809526756635}
     m_DirectionFlow: 0
   outPort:
-    id: FjDkE
-    m_node: {fileID: -6381692159101913404}
+    id: sMWNB
+    m_node: {fileID: -8064894809526756635}
     m_DirectionFlow: 1
   m_pointType: 0
---- !u!114 &-4988936489678036786
+--- !u!114 &-4527772874891555733
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -60,16 +36,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 525, y: 239}
+  position: {x: 553, y: 438}
   dialogueGraph: {fileID: 11400000}
-  id: qjdfa
+  id: PrNym
   inPort:
-    id: jycIM
-    m_node: {fileID: -4988936489678036786}
+    id: dYWkM
+    m_node: {fileID: -4527772874891555733}
     m_DirectionFlow: 0
   outPort:
-    id: fsBuC
-    m_node: {fileID: -4988936489678036786}
+    id: QGXM8
+    m_node: {fileID: -4527772874891555733}
     m_DirectionFlow: 1
   text: 
   options:
@@ -78,36 +54,12 @@ MonoBehaviour:
   - id: 2
     text: 
   optionPorts:
-  - id: 3lUxm
-    m_node: {fileID: -4988936489678036786}
+  - id: frpmR
+    m_node: {fileID: -4527772874891555733}
     m_DirectionFlow: 1
-  - id: MxcL1
-    m_node: {fileID: -4988936489678036786}
+  - id: rTtnI
+    m_node: {fileID: -4527772874891555733}
     m_DirectionFlow: 1
---- !u!114 &-3468280231390070804
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 425, y: 404}
-  dialogueGraph: {fileID: 11400000}
-  id: 9c7XY
-  inPort:
-    id: hs5m1
-    m_node: {fileID: -3468280231390070804}
-    m_DirectionFlow: 0
-  outPort:
-    id: iqLEd
-    m_node: {fileID: -3468280231390070804}
-    m_DirectionFlow: 1
-  text: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -121,19 +73,18 @@ MonoBehaviour:
   m_Name: Dialogue Graph
   m_EditorClassIdentifier: 
   isInitialised: 1
-  id: 0FsA7
+  id: Cybgm
   nodes:
-  - {fileID: -6381692159101913404}
-  - {fileID: 7083457872394918842}
-  - {fileID: -3468280231390070804}
-  - {fileID: -7172730602452677301}
-  - {fileID: -4988936489678036786}
+  - {fileID: -8064894809526756635}
+  - {fileID: 6977423965396171114}
+  - {fileID: 8058578009009853174}
+  - {fileID: -4527772874891555733}
   connections:
     keyData: []
     valueData: []
-  m_startNode: {fileID: -6381692159101913404}
-  m_endNode: {fileID: 7083457872394918842}
---- !u!114 &7083457872394918842
+  m_startNode: {fileID: -8064894809526756635}
+  m_endNode: {fileID: 6977423965396171114}
+--- !u!114 &6977423965396171114
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,15 +96,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 591, y: 102}
+  position: {x: 209, y: 195}
   dialogueGraph: {fileID: 11400000}
-  id: 3UaPm
+  id: x9mKu
   inPort:
-    id: t1Z8U
-    m_node: {fileID: 7083457872394918842}
+    id: LxmRG
+    m_node: {fileID: 6977423965396171114}
     m_DirectionFlow: 0
   outPort:
-    id: 8jCKL
-    m_node: {fileID: 7083457872394918842}
+    id: N217D
+    m_node: {fileID: 6977423965396171114}
     m_DirectionFlow: 1
   m_pointType: 1
+--- !u!114 &8058578009009853174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 27, y: 439}
+  dialogueGraph: {fileID: 11400000}
+  id: uMWva
+  inPort:
+    id: i47l2
+    m_node: {fileID: 8058578009009853174}
+    m_DirectionFlow: 0
+  outPort:
+    id: 3kprk
+    m_node: {fileID: 8058578009009853174}
+    m_DirectionFlow: 1
+  text: 
