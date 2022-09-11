@@ -20,11 +20,6 @@ namespace DialogueSystem.Editor
             {
                 ConversationGraph conversationGraph = (ConversationGraph)target;
             }
-            if (GUILayout.Button("Clear Data"))
-            {
-                ConversationGraph conversationGraph = (ConversationGraph)target;
-                conversationGraph.entries = new List<DialogueSystem.Entry>();
-            }
         }
     
     }

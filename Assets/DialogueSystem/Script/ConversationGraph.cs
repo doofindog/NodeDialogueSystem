@@ -31,9 +31,8 @@ namespace DialogueSystem
             return null;
         }
 
-        public void Initalise()
+        public void Initialise()
         {
-
             id = NodeManager.GenerateUniqueId();
             name = "Conversation (" + id + ")";
             
@@ -65,7 +64,6 @@ namespace DialogueSystem
                 AssetDatabase.AddObjectToAsset(entry, this);
                 AssetDatabase.SaveAssets();
                 AddNode(entry);
-      
             }
             return entry;
         }

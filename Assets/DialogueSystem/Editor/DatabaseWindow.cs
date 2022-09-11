@@ -13,7 +13,6 @@ namespace DialogueSystem.Editor
     {
         public DialogueDatabase dialogueDB;
         
-        public Dictionary<PortEditor, PortEditor> connections;
 
         public ConversationGraph selectedGraph;
         public List<Node> nodes;
@@ -31,6 +30,8 @@ namespace DialogueSystem.Editor
         {
             this.dialogueDB = dialogueDB;
             name = dialogueDB.name;
+
+            nodes = new List<Node>();
         }
 
         public void OnEnable()
@@ -40,69 +41,79 @@ namespace DialogueSystem.Editor
 
         private void OnGUI()
         {
-            if (dialogueDB != null)
+            if (dialogueDB == null) { return; }
+            
+            GUIStyle headerStyle = new GUIStyle(GUI.skin.label)
             {
-                GUIStyle headerStyle = new GUIStyle(GUI.skin.label)
-                {
-                    alignment = TextAnchor.MiddleCenter,
-                    fontStyle = FontStyle.Bold
-                };
-                EditorGUILayout.LabelField(dialogueDB.name,headerStyle);
+                alignment = TextAnchor.MiddleCenter,
+                fontStyle = FontStyle.Bold
+            };
+            EditorGUILayout.LabelField(dialogueDB.name,headerStyle);
 
-                EditorGUILayout.BeginHorizontal();
+            EditorGUILayout.BeginHorizontal();
+            
+
+            if (dialogueDB.GetAllConversations() != null)
+            {
                 List<string> dropDownContent = new List<string>();
-
-                if (dialogueDB.GetAllConversations() != null)
+                foreach (ConversationGraph conv in dialogueDB.GetAllConversations())
                 {
-                    foreach (ConversationGraph conv in dialogueDB.GetAllConversations())
-                    {
-                        dropDownContent.Add(conv.GetName());
-                    }
+                    dropDownContent.Add(conv.GetName());
                 }
-
+                
+                EditorGUI.BeginChangeCheck();
                 convIndex = EditorGUILayout.Popup("Conversations", convIndex, dropDownContent.ToArray());
-                if (dialogueDB.GetAllConversations() != null)
+                if (EditorGUI.EndChangeCheck())
                 {
                     selectedGraph = dialogueDB.GetConversationGraphAtIndex(convIndex);
-                }
-                
-                if (convIndex != preIndex)
-                {
-                    preIndex = convIndex;
                     Selection.activeObject = selectedGraph;
-                }
-
-                if (GUILayout.Button("+",GUILayout.Width(50)))
-                {
-                    dialogueDB.CreateNewConversation();
+                    LoadNodes();
                 }
                 
-                if (GUILayout.Button("-",GUILayout.Width(50)))
-                {
-                    ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(convIndex);
-                    dialogueDB.DeleteDialogue(graph);
-                    convIndex = 0;
-                }
-                
-                EditorGUILayout.EndHorizontal();
-
-                DrawGrid(20, 0.2f, Color.gray);
-                DrawGrid(100, 0.4f, Color.gray);
-                
+            }
+            
+            if (GUILayout.Button("+",GUILayout.Width(50)))
+            {
+                selectedGraph = dialogueDB.CreateNewConversation();
+                Selection.activeObject = selectedGraph;
                 LoadNodes();
                 
-                DrawNode();
-                DrawConnectionsGUI();
-                ProcessNodeEvents(Event.current);
-                ProcessEvents(Event.current);
-                
-                DrawSave();
-                
+                convIndex = dialogueDB.GetAllConversations().Length - 1;
+            }
+            
+            if (GUILayout.Button("-",GUILayout.Width(50)))
+            {
+                ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(convIndex);
+                dialogueDB.DeleteDialogue(graph);
+                convIndex = 0;
+            }
+            
+            EditorGUILayout.EndHorizontal();
+
+            DrawGrid(20, 0.2f, Color.gray);
+            DrawGrid(100, 0.4f, Color.gray);
+
+            if (selectedGraph == null)
+            {
                 if (GUI.changed)
                 {
                     Repaint();
-                }
+                }  
+                return;
             }
+            
+            
+            DrawNode();
+            
+            ProcessNodeEvents(Event.current);
+            ProcessEvents(Event.current);
+            
+            DrawSave();
+            
+            if (GUI.changed)
+            {
+                Repaint();
+            }    
         }
     
         private void ProcessEvents(Event e)
@@ -151,8 +162,8 @@ namespace DialogueSystem.Editor
                 {
                     contextMenu.AddItem(new GUIContent(type.Name), false, () =>
                     {
-                        Entry entry = selectedGraph.CreateEntry(type, contextPosition);
-                        selectedGraph.AddNode(entry);
+                        selectedGraph.CreateEntry(type, contextPosition);
+                        LoadNodes();
                     });
                 }
             }
@@ -160,31 +171,43 @@ namespace DialogueSystem.Editor
         }
 
         #region Nodes
+        
+        public void CreateNode(Entry entry)
+        {
+            Type nodeType = entry.GetType();
+            Type editorType = DatabaseEditorManager.GetCustomEditor(nodeType);
+            
+            Node node = ScriptableObject.CreateInstance(editorType) as Node;
+            if (node == null)
+            {
+                return;
+            }
 
+            node.Init(entry,this);
+            
+            nodes.Add(node);
+        }
+        
         public void LoadNodes()
         {
             nodes.Clear();
+            if (selectedGraph == null) { return; }
+            if (selectedGraph.GetEntries() == null) { return; } 
+
             Entry[] entries = selectedGraph.GetEntries();
             for (int i = 0; i < entries.Length; i++)
             {
                 CreateNode(entries[i]);
             }
         }
-        
-        public void CreateNode(Entry entry)
-        {
-            Type nodeType = entry.GetType();
-            Type editorType = DatabaseEditorManager.GetCustomEditor(nodeType);
-            Node node = ScriptableObject.CreateInstance(editorType) as Node;
-            if (node == null) { return; }
-            node.Init(entry,this);
-            nodes.Add(node);
-        }
 
         private void DrawNode()
         {
+            if (nodes == null) { return; }
+            
             for (int i = 0; i < nodes.Count; i++)
             {
+                NodeComponentUtilt.focusedNode = nodes[i];
                 nodes[i].Draw();
             }
         }
@@ -211,70 +234,6 @@ namespace DialogueSystem.Editor
         #endregion
 
 
-        #region Connections
-        
-        private void DrawConnectionsGUI()
-        {
-            if (connections == null)
-            {
-                connections = new Dictionary<PortEditor, PortEditor>();
-            }
-            
-            foreach (PortEditor portEditors in connections.Keys.ToList())
-            {
-                PortEditor outPortEditor = portEditors;
-                PortEditor inPortEditor = connections[portEditors];
-                Handles.DrawLine(outPortEditor.GetCenterPosition(),inPortEditor.GetCenterPosition());
-                if (Handles.Button((outPortEditor.GetCenterPosition() + inPortEditor.GetCenterPosition()) * 0.5f, Quaternion.identity, 4, 8, Handles.RectangleHandleCap))
-                {
-                    RemoveConnection(outPortEditor);
-                }
-            }
-        }
-        
-        private void CreateConnection()
-        {
-            if (_SelectINPort != null && _SelectdOutPort != null)
-            {
-                if (connections == null)
-                {
-                    connections = new Dictionary<PortEditor, PortEditor>();
-                }
-                
-                connections.Add(_SelectdOutPort,_SelectINPort);
-                DatabaseEditorManager.SaveData();
-                ClearConnection();
-            }
-        }
-        
-        public void RemoveConnection(PortEditor outPortEditor)
-        {
-            /*Port outPort = outPortEditor.m_port;
-            foreach (PortEditor portEditor in connections.Keys)
-            {
-                if (portEditor.m_port.id == outPort.id)
-                {
-                    connections.Remove(portEditor);
-                    conversationGraph.RemoveConnection(outPort);
-                    return;
-                }
-            }*/
-        }
-
-        public Connection FindConnector(DialogueNode startBaseNode)
-        {
-            return null;
-        }
-
-        private void ClearConnection()
-        {
-            _SelectINPort = null;
-            _SelectdOutPort = null;
-        }
-        
-        #endregion
-        
-
         public void DrawSave()
         {
             Rect buttonRect;
@@ -297,33 +256,6 @@ namespace DialogueSystem.Editor
                 }
             }
         }
-
-        public void SelectInPort(PortEditor portEditor)
-        {
-            if (_SelectdOutPort != portEditor)
-            {
-                _SelectINPort = portEditor;
-                CreateConnection();
-            }
-            else
-            {
-                ClearConnection();
-            }
-        }
-
-        public void SelectOutPort(PortEditor portEditor)
-        {
-            if (_SelectINPort != portEditor)
-            {
-                _SelectdOutPort = portEditor;
-                CreateConnection();
-            }
-            else
-            {
-                ClearConnection();
-            }
-        }
-        
         
         private void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
         {

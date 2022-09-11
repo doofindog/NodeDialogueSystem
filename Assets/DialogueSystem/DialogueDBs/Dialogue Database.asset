@@ -1,6 +1,62 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-2188561018929243636
+--- !u!114 &-8659490964677875018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 335, y: 211}
+  CommunicationGraph: {fileID: 6174269152274948476}
+  id: 3BMxZ
+  inPort:
+    id: Jzn8e
+    mEntry: {fileID: -8659490964677875018}
+    m_DirectionFlow: 0
+  outPort:
+    id: r5huO
+    mEntry: {fileID: -8659490964677875018}
+    m_DirectionFlow: 1
+  text: 
+--- !u!114 &-5292599715217638309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 902, y: 328}
+  CommunicationGraph: {fileID: -5252940273379741960}
+  id: wHhzf
+  inPort:
+    id: fs8xT
+    mEntry: {fileID: -5292599715217638309}
+    m_DirectionFlow: 0
+  outPort:
+    id: rpSTf
+    mEntry: {fileID: -5292599715217638309}
+    m_DirectionFlow: 1
+  text: 
+  m_method:
+    type:
+      data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    methodName: GiveHealth
+    parameters: []
+    flags: 24
+  m_type:
+    data: ff
+--- !u!114 &-5252940273379741960
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,9 +68,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: d54Vp
-  name: Conversation (d54Vp)
-  entries: []
+  id: P64xn
+  name: Conversation (P64xn)
+  entries:
+  - {fileID: -1146287438557190775}
+--- !u!114 &-3471096742791279631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: cq5xn
+  name: Conversation (cq5xn)
+  entries:
+  - {fileID: 8308118943079144004}
+--- !u!114 &-1146287438557190775
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 325, y: 167}
+  CommunicationGraph: {fileID: -5252940273379741960}
+  id: m3i3L
+  inPort:
+    id: DI7qZ
+    mEntry: {fileID: -1146287438557190775}
+    m_DirectionFlow: 0
+  outPort:
+    id: 1TMGa
+    mEntry: {fileID: -1146287438557190775}
+    m_DirectionFlow: 1
+  text: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29,33 +126,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   conversations:
-  - {fileID: 5191065128330571885}
-  - {fileID: -2188561018929243636}
---- !u!114 &4985751847191563293
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  position: {x: 367, y: 388}
-  CommunicationGraph: {fileID: 5191065128330571885}
-  id: 7vz9k
-  inPort:
-    id: ANnKc
-    mEntry: {fileID: 4985751847191563293}
-    m_DirectionFlow: 0
-  outPort:
-    id: K4oky
-    mEntry: {fileID: 4985751847191563293}
-    m_DirectionFlow: 1
-  text: 
---- !u!114 &5191065128330571885
+  - {fileID: -3471096742791279631}
+  - {fileID: 6174269152274948476}
+  - {fileID: -5252940273379741960}
+--- !u!114 &6174269152274948476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,14 +141,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: gZacj
-  name: Conversation (gZacj)
+  id: eKuMI
+  name: Conversation (eKuMI)
   entries:
-  - {fileID: 6974225959856174875}
-  - {fileID: 6974225959856174875}
-  - {fileID: 4985751847191563293}
-  - {fileID: 4985751847191563293}
---- !u!114 &6974225959856174875
+  - {fileID: -8659490964677875018}
+--- !u!114 &8308118943079144004
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -83,30 +154,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  position: {x: 68, y: 163}
-  CommunicationGraph: {fileID: 5191065128330571885}
-  id: q6HfJ
+  position: {x: 386, y: 95}
+  CommunicationGraph: {fileID: -3471096742791279631}
+  id: azn55
   inPort:
-    id: 5Hkhu
-    mEntry: {fileID: 6974225959856174875}
+    id: BLXX3
+    mEntry: {fileID: 8308118943079144004}
     m_DirectionFlow: 0
   outPort:
-    id: dOBqj
-    mEntry: {fileID: 6974225959856174875}
+    id: a3tmC
+    mEntry: {fileID: 8308118943079144004}
     m_DirectionFlow: 1
   text: 
-  options:
-  - id: 1
-    text: 
-  - id: 2
-    text: 
-  optionPorts:
-  - id: oI2ti
-    mEntry: {fileID: 6974225959856174875}
-    m_DirectionFlow: 1
-  - id: QRkvw
-    mEntry: {fileID: 6974225959856174875}
-    m_DirectionFlow: 1

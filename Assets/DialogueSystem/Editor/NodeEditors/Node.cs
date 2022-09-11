@@ -12,7 +12,6 @@ namespace DialogueSystem.Editor
     public abstract class Node : UnityEditor.Editor
     {
         //ID and References
-        [HideInInspector] public string id;
         [HideInInspector] public DatabaseWindow databaseWindow;
         [HideInInspector] public DialogueSystem.Entry entry;
         [HideInInspector] public Vector2 padding;
@@ -30,15 +29,13 @@ namespace DialogueSystem.Editor
         
         public virtual void Init(DialogueSystem.Entry entry,DatabaseWindow databaseWindow)
         {
-            id = entry.id;
             this.databaseWindow = databaseWindow;
             this.entry = entry;
 
             menu = new GenericMenu();
             
             ConfigMenu();
-
-
+            
             this.padding = new Vector2(20, 20);
             defaultSize = new Vector2(250, 50);
             _rescaleSize = Vector2.zero; 
@@ -90,6 +87,7 @@ namespace DialogueSystem.Editor
                 Selection.activeObject = this;
                 m_isSelected = true;
                 m_canDrag = true;
+                e.Use();
             }
         }
 
@@ -131,12 +129,11 @@ namespace DialogueSystem.Editor
             }
             
             _panelStyle = new GUIStyle(GUI.skin.box) { alignment = TextAnchor.UpperCenter };
-            GUI.Box(rect, entry.GetType().Name,_panelStyle);
-            
+            GUI.Box(rect, entry.GetType().Name);
+
             componentDrawPos = rect.position + padding;
             _rescaleSize = Vector2.zero;
             
-            NodeComponentUtilt.focusedNode = this;
             DrawComponents();
         }
 

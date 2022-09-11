@@ -25,8 +25,7 @@ namespace DialogueSystem.Editor
 
         public override void Draw()
         {
-            base.Draw();
-            
+
             Vector2 textPosition = rect.position + padding + spacing;
             Vector2 textSize = new Vector2(rect.size.x - 2 * padding.x,45);
             _eventEntry.text = GUI.TextArea(new Rect(textPosition, textSize), _eventEntry.text);

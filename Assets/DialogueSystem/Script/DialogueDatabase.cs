@@ -31,14 +31,14 @@ public class DialogueDatabase : ScriptableObject
         return null;
     }
 
-    public void CreateNewConversation()
+    public ConversationGraph CreateNewConversation()
     {
         conversations ??= new List<ConversationGraph>();
         
         AssetDatabase.StartAssetEditing();
         
         ConversationGraph graph = ScriptableObject.CreateInstance<ConversationGraph>();
-        graph.Initalise();
+        graph.Initialise();
         
         AssetDatabase.AddObjectToAsset(graph, this);
         SaveManager.SaveData(graph);
@@ -47,6 +47,8 @@ public class DialogueDatabase : ScriptableObject
         AssetDatabase.StopAssetEditing();
         
         conversations.Add(graph);
+
+        return graph;
     }
 
     public void DeleteDialogue(ConversationGraph conv)
