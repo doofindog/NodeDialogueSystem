@@ -11,20 +11,20 @@ namespace DialogueSystem
     public class Port
     {
         [SerializeField,ReadOnly] public string id;
-        [SerializeField] private Node m_node;
+        [SerializeField] private Entry mEntry;
         [SerializeField] private DirectionFlow m_DirectionFlow;
 
 
-        public Port(Node node, DirectionFlow directionFlow)
+        public Port(Entry entry, DirectionFlow directionFlow)
         {
             id = NodeManager.GenerateUniqueId();
-            m_node = node;
+            mEntry = entry;
             m_DirectionFlow = directionFlow;
         }
 
-        public Node GetNode()
+        public Entry GetNode()
         {
-            return m_node;
+            return mEntry;
         }
 
         public DirectionFlow GetFlow()

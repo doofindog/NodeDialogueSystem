@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
-    [SerializeField] private DialogueGraph m_dialogue;
+    [SerializeField] private ConversationGraph mConversation;
     [SerializeField] private GameObject dialogueUI;
     [SerializeField] private Text m_text;
     [SerializeField] private float m_textSpeed;
@@ -17,8 +17,8 @@ public class DialogueManager : MonoBehaviour
     private bool textCompleted;
     private bool endReached;
     
-    private DialogueGraph _mDialogueGraph;
-    private Node currentIndex;
+    private ConversationGraph _mConversationGraph;
+    private Entry currentIndex;
 
     private IEnumerator _enumerator;
     public void Awake()
@@ -30,10 +30,10 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
-    public void OpenDialogue(DialogueGraph dialogueGraph)
+    public void OpenDialogue(ConversationGraph conversationGraph)
     {
-        m_dialogue = dialogueGraph;
-        LoadDialogue(m_dialogue);
+        mConversation = conversationGraph;
+        LoadDialogue(mConversation);
         
     }
 
@@ -81,46 +81,11 @@ public class DialogueManager : MonoBehaviour
         this.gameObject.SetActive(false);
     }
     
-    public void LoadDialogue(DialogueGraph dialogueDialogueGraph)
+    public void LoadDialogue(ConversationGraph conversationConversationGraph)
     {
         instance.gameObject.SetActive(true);
         dialogueUI.gameObject.SetActive(true);
-        _mDialogueGraph = dialogueDialogueGraph;
-        currentIndex = _mDialogueGraph.GetStarNode();
-        MoveToNextNode();
+        _mConversationGraph = conversationConversationGraph;
     }
     
-    public void MoveToNextNode()
-    {
-        Node node = _mDialogueGraph.GetNext(currentIndex);
-        if (node != null)
-        {
-            currentIndex = node;
-            if (node.GetType() == typeof(PointNode))
-            {
-                CloseDialogue();
-            }
-            else
-            {
-                currentIndex.Invoke();
-            }
-        }
-
-
-    }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(m_key))
-        {
-            if (textCompleted != true)
-            {
-                fastShow = true;
-            }
-            else
-            {
-                MoveToNextNode();
-            }
-        }
-    }
 }

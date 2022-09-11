@@ -10,7 +10,7 @@ namespace DialogueSystem.Editor
         private Action<NodeOptionEditor> removeCallback;
 
 
-        public NodeOptionEditor(Option option, BaseNodeEditor editor, Action<NodeOptionEditor> removeCallback)
+        public NodeOptionEditor(Option option, Node editor, Action<NodeOptionEditor> removeCallback)
         {
             this.option = option;
             this.removeCallback = removeCallback;

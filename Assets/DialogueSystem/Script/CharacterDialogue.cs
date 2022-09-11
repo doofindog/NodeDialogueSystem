@@ -8,5 +8,5 @@ using UnityEngine;
 //You can add a list of dialogues and Manage it here
 public class CharacterDialogue : MonoBehaviour
 {
-    public DialogueGraph m_characterDialogue;
+    public ConversationGraph mCharacterConversation;
 }

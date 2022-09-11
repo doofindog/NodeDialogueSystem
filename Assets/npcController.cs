@@ -22,7 +22,7 @@ public class npcController : MonoBehaviour
 
     public void OnInteract()
     {
-        DialogueManager.instance.OpenDialogue(dialogues.m_characterDialogue);
+        DialogueManager.instance.OpenDialogue(dialogues.mCharacterConversation);
     }
 
     public void OnTriggerStay(Collider other)
