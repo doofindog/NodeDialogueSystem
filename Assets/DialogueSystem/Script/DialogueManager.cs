@@ -14,7 +14,6 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private float m_textSpeed;
     [SerializeField] private KeyCode m_key;
     private bool fastShow;
-    private bool textCompleted;
     private bool endReached;
     
     private ConversationGraph _mConversationGraph;
@@ -71,8 +70,6 @@ public class DialogueManager : MonoBehaviour
             {
 
             }
-
-            textCompleted = true;
         }
     }
     public void CloseDialogue()

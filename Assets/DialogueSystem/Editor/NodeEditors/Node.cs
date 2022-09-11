@@ -140,11 +140,6 @@ namespace DialogueSystem.Editor
         protected virtual void DrawComponents()
         {
         }
-        
-        public PortEditor GetPortEditor(Port port)
-        {
-            return null;
-        }
 
         public void AddComponent(NodeComponent component)
         {

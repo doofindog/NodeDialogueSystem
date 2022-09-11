@@ -8,25 +8,25 @@ using UnityEngine.Serialization;
 namespace DialogueSystem
 {
     [System.Serializable]
-    public class Connection
+    public class Link
     {
-        public string ID;
-        public Option option;
-        public DialogueSystem.Entry startEntry;  
-        public DialogueSystem.Entry endEntry;
+        public string id;
+        
+        public DialogueSystem.Entry sourceEntry;  
+        public DialogueSystem.Entry destinationEntry;
 
-        public Connection(Entry startEntry,Entry endEntry)
+        public Link(Entry sourceEntry,Entry destinationEntry)
         {
-            ID = NodeManager.GenerateUniqueId();
-            this.startEntry = startEntry; 
-            this.endEntry = endEntry;
+            id = NodeManager.GenerateUniqueId();
+            
+            this.sourceEntry = sourceEntry; 
+            this.destinationEntry = destinationEntry;
         }
 
-        public Connection(Option option,Entry startEntry,Entry endEntry)
+        public Link(Option option,Entry sourceEntry,Entry destinationEntry)
         {
-            this.option = option;
-            this.startEntry = startEntry;
-            this.endEntry = endEntry;
+            this.sourceEntry = sourceEntry;
+            this.destinationEntry = destinationEntry;
         }
     }
 }

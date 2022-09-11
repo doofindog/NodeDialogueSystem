@@ -15,12 +15,28 @@ namespace DialogueSystem
     {
         [SerializeField] private string id;
         [SerializeField] private new string name;
-        [SerializeField] public List<Entry> entries; //TODO : Could be changed to a HashTable
+        
+        public List<Entry> entries;
+        public List<Link> links;
 
+        public void Initialise()
+        {
+            id = NodeManager.GenerateUniqueId();
+            name = "Conversation (" + id + ")";
+            
+            entries = new List<Entry>();
+            links = new List<Link>();
+            
+            StartEntry startEntry = CreateEntry<StartEntry>(new Vector2(100, 100));
+        }
+        
         public string GetName()
         {
             return name;
         }
+
+        #region  entry
+        
         public Entry[] GetEntries()
         {
             if (entries != null)
@@ -31,24 +47,17 @@ namespace DialogueSystem
             return null;
         }
 
-        public void Initialise()
-        {
-            id = NodeManager.GenerateUniqueId();
-            name = "Conversation (" + id + ")";
-            
-            entries = new List<Entry>();
-        }
-
         public T CreateEntry<T>(Vector2 position) where T : Entry
         {
             T entry = ScriptableObject.CreateInstance<T>() as T;
             if (entry != null)
             {
+                entry.hideFlags = HideFlags.HideInHierarchy;
                 entry.Init(position);
                 entry.CommunicationGraph = this;
                 AssetDatabase.AddObjectToAsset(entry, this);
                 AssetDatabase.SaveAssets();
-                AddNode(entry);
+                AddEntry(entry);
       
             }
             return entry;
@@ -59,16 +68,17 @@ namespace DialogueSystem
             Entry entry = ScriptableObject.CreateInstance(type) as Entry;
             if (entry != null)
             {
+                entry.hideFlags = HideFlags.HideInHierarchy;
                 entry.Init(position);
                 entry.CommunicationGraph = this;
                 AssetDatabase.AddObjectToAsset(entry, this);
                 AssetDatabase.SaveAssets();
-                AddNode(entry);
+                AddEntry(entry);
             }
             return entry;
         }
         
-        public void AddNode(Entry entry)
+        public void AddEntry(Entry entry)
         {
             if (entries == null)
             {
@@ -78,12 +88,25 @@ namespace DialogueSystem
             entries.Add(entry);
         }
 
-        public void RemoveDialogue(Entry entry)
+        public void RemoveEntry(Entry entry)
         {
             entries.Remove(entry);
             DestroyImmediate(entry,true);
         }
 
+        #endregion
+
+        #region Links
+
+        public Link CreateLink(Entry sourceEntry, Entry destinationEntry)
+        {
+            Link link = new Link(sourceEntry, destinationEntry);
+            links.Add(link);
+
+            return link;
+        }
+        
+        #endregion
         public bool Equals(ConversationGraph other)
         {
             if (ReferenceEquals(null, other)) return false;

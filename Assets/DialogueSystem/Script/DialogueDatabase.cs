@@ -11,14 +11,10 @@ public class DialogueDatabase : ScriptableObject
     [SerializeField] private string id;
     [SerializeField] private List<ConversationGraph> conversations;
 
-    public ConversationGraph[] GetAllConversations()
+    public List<ConversationGraph> GetAllConversations()
     {
-        if (conversations != null)
-        {
-            return conversations.ToArray();
-        }
-
-        return null;
+        conversations ??= new List<ConversationGraph>();
+        return conversations;
     }
 
     public ConversationGraph GetConversationGraphAtIndex(int index)
@@ -38,11 +34,12 @@ public class DialogueDatabase : ScriptableObject
         AssetDatabase.StartAssetEditing();
         
         ConversationGraph graph = ScriptableObject.CreateInstance<ConversationGraph>();
-        graph.Initialise();
-        
+        graph.hideFlags = HideFlags.HideInHierarchy;
         AssetDatabase.AddObjectToAsset(graph, this);
         SaveManager.SaveData(graph);
         AssetDatabase.SaveAssets();
+        
+        graph.Initialise();
         
         AssetDatabase.StopAssetEditing();
         

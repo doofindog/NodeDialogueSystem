@@ -52,18 +52,18 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\PointNode.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\StartNode.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\Node.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponent.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\EventNode.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DatabaseWindow.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeSpace.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\PortEditor.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\Port.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DialogueDBInspector.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeOptionEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeComponentUtilt.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DatabaseEditorManager.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\Connection.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\Linker.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\DialogueNode.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\DecisionNode.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeTextArea.cs" />

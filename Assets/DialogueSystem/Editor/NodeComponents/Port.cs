@@ -3,14 +3,14 @@ using UnityEngine;
 
 namespace DialogueSystem.Editor.NodeComponents
 {
-    public class PortEditor : NodeComponent
+    public class Port : NodeComponent
     {
         private PortType m_portType;
         
         private const int maxSizeX = 20;
         private const int maxSizeY = 20;
 
-        public PortEditor(Rect rect, PortType portType)
+        public Port(Rect rect, PortType portType)
         {
             canvasRect = rect;
         }
@@ -19,7 +19,15 @@ namespace DialogueSystem.Editor.NodeComponents
         {
             if (GUI.Button(canvasRect, string.Empty))
             {
-                
+                if (m_portType == PortType.Out)
+                {
+                    DatabaseEditorManager.window.SelectSourceNode(node, this);
+                }
+
+                if (m_portType == PortType.In)
+                {
+                    DatabaseEditorManager.window.SelectDestinationNode(node, this);
+                }
             }
         }
 

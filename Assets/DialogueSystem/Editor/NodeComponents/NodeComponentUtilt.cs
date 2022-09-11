@@ -45,7 +45,7 @@ namespace DialogueSystem.Editor.NodeComponents
             focusedNode.AddComponent(nodeSpace);
         }
 
-        public static void DrawPort(PortType type, float yPos = 0)
+        public static Port DrawPort(PortType type, float yPos = 0)
         {
             Vector2 size = new Vector2(20, 20);
             Vector2 position = Vector2.zero;
@@ -62,9 +62,11 @@ namespace DialogueSystem.Editor.NodeComponents
 
             Rect componentRect = new Rect(position, size);
 
-            PortEditor portEditor = new PortEditor(componentRect, type);
-            lastDrawnComponent = portEditor;
-            portEditor.Draw();
+            Port port = new Port(componentRect, type);
+            lastDrawnComponent = port;
+            port.Draw();
+
+            return port;
         }
 
         public static NodeComponent GetLastDrawnComponent()

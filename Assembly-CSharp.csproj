@@ -61,12 +61,11 @@
      <Compile Include="Assets\DialogueSystem\Script\SaveManager.cs" />
      <Compile Include="Assets\DialogueSystem\Script\EventEntry.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueEntry.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\Port.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Option.cs" />
      <Compile Include="Assets\npcController.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableMethodInfo.cs" />
      <Compile Include="Assets\DialogueSystem\Script\GameEvents.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\PointEntry.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\StartEntry.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Link.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Entry.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DecisionEntry.cs" />

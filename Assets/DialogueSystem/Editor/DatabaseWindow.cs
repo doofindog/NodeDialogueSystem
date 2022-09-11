@@ -13,25 +13,36 @@ namespace DialogueSystem.Editor
     {
         public DialogueDatabase dialogueDB;
         
-
         public ConversationGraph selectedGraph;
         public List<Node> nodes;
-        
+        public List<Linker> linkers;
         public int convIndex = 0;
-        public int preIndex = 0;
 
-        private PortEditor _SelectINPort;
-        private PortEditor _SelectdOutPort;
+        private Node _sourceNode;
+        private Port _sourcePort; 
         
-        private Vector2 offset;
-        private Vector2 drag;
+        private Node _destinationNode;
+        private Port _destinationPort;
+        
+        
+        private Vector2 _offset;
+        private Vector2 _drag;
 
         public void Initialise(DialogueDatabase dialogueDB)
         {
             this.dialogueDB = dialogueDB;
             name = dialogueDB.name;
 
+            _sourceNode = null;
+            _destinationNode = null;
+            
             nodes = new List<Node>();
+            if (dialogueDB.GetAllConversations().Count > 0)
+            {
+                selectedGraph = dialogueDB.GetConversationGraphAtIndex(0);
+                LoadNodes();
+                LoadLinks();
+            }
         }
 
         public void OnEnable()
@@ -78,7 +89,7 @@ namespace DialogueSystem.Editor
                 Selection.activeObject = selectedGraph;
                 LoadNodes();
                 
-                convIndex = dialogueDB.GetAllConversations().Length - 1;
+                convIndex = dialogueDB.GetAllConversations().Count - 1;
             }
             
             if (GUILayout.Button("-",GUILayout.Width(50)))
@@ -116,7 +127,7 @@ namespace DialogueSystem.Editor
             }    
         }
     
-        private void ProcessEvents(Event e)
+         private void ProcessEvents(Event e)
         {
             switch (e.type)
             {
@@ -126,6 +137,15 @@ namespace DialogueSystem.Editor
                     {
                         OpenContextMenu(e.mousePosition);
                     }
+
+                    if (e.button == 0)
+                    {
+                        if (selectedGraph != null)
+                        {
+                            Selection.activeObject = selectedGraph;
+                        }
+                    }
+
                     break;
                 }
                 case EventType.MouseDrag:
@@ -152,7 +172,7 @@ namespace DialogueSystem.Editor
         {
             List<Type> ignoreType = new List<Type>()
             {
-                typeof(PointEntry)
+                typeof(StartEntry)
             };
             Type[] types = ReflectionHandler.GetDerivedTypes(typeof(Entry));
             GenericMenu contextMenu = new GenericMenu();
@@ -214,8 +234,9 @@ namespace DialogueSystem.Editor
         
         public void RemoveNode(Node node)
         {
-            selectedGraph.RemoveDialogue(node.entry);
+            selectedGraph.RemoveEntry(node.entry);
             DatabaseEditorManager.SaveData();
+            LoadNodes();
             Repaint();
         }
         
@@ -230,10 +251,47 @@ namespace DialogueSystem.Editor
             }
         }
         
-
         #endregion
 
+        #region Connections
 
+        public void SelectSourceNode(Node node, Port port)
+        {
+            _sourceNode = node;
+            _sourcePort = port;
+            CreateLink();
+        }
+
+        public void SelectDestinationNode(Node node, Port port)
+        {
+            _destinationNode = node;
+            _destinationPort = port;
+            CreateLink();
+        }
+
+        public void CreateLink()
+        {
+            if (_sourceNode != null && _destinationNode != null)
+            {
+                Entry source = _sourceNode.entry;
+                Entry destination = _destinationNode.entry;
+                
+                Link link = selectedGraph.CreateLink(source, destination);
+                Linker linker = new Linker(link, _sourcePort, _destinationPort);
+                linkers.Add(linker);
+
+                _sourceNode = null;
+                _destinationNode = null;
+            }
+        }
+
+        public void LoadLinks()
+        {
+            
+        }
+
+        #endregion
+        
         public void DrawSave()
         {
             Rect buttonRect;
@@ -265,8 +323,8 @@ namespace DialogueSystem.Editor
             Handles.BeginGUI();
             Handles.color = new Color(gridColor.r, gridColor.g, gridColor.b, gridOpacity);
  
-            offset += drag * 0.5f;
-            Vector3 newOffset = new Vector3(offset.x % gridSpacing, offset.y % gridSpacing, 0);
+            _offset += _drag * 0.5f;
+            Vector3 newOffset = new Vector3(_offset.x % gridSpacing, _offset.y % gridSpacing, 0);
  
             for (int i = 0; i < widthDivs; i++)
             {
@@ -283,6 +341,3 @@ namespace DialogueSystem.Editor
         }
     }
 }
-
-
-

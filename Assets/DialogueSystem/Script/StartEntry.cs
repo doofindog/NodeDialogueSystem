@@ -8,7 +8,7 @@ using UnityEngine;
 namespace DialogueSystem
 {
     [System.Serializable]
-    public class PointEntry : Entry
+    public class StartEntry : Entry
     {
         [SerializeField] private PointType m_pointType;
         

@@ -8,7 +8,7 @@ namespace  DialogueSystem.Editor.NodeEditors
     public class DecisionNode : Node
     {
         public DecisionEntry decisionEntry;
-        public List<PortEditor> optionPorts;
+        public List<Port> optionPorts;
 
         public override void Init(Entry entry, DatabaseWindow databaseWindow)
         {

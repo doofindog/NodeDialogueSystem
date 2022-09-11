@@ -36,10 +36,3 @@ public class SerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISer
         }
     }
 }
-
-
-[System.Serializable]
-public class Linkers : SerializedDictionary<Port, Port>
-{
-    
-}
