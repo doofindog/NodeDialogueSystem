@@ -17,7 +17,7 @@ namespace DialogueSystem
         [SerializeField] private new string name;
         
         public List<Entry> entries;
-        public List<Link> links;
+        public SerializedDictionary<Entry, List<Link>> links;
 
         public void Initialise()
         {
@@ -25,7 +25,7 @@ namespace DialogueSystem
             name = "Conversation (" + id + ")";
             
             entries = new List<Entry>();
-            links = new List<Link>();
+            links = new SerializedDictionary<Entry, List<Link>>();
             
             StartEntry startEntry = CreateEntry<StartEntry>(new Vector2(100, 100));
         }
@@ -100,13 +100,30 @@ namespace DialogueSystem
 
         public Link CreateLink(Entry sourceEntry, Entry destinationEntry)
         {
-            Link link = new Link(sourceEntry, destinationEntry);
-            links.Add(link);
+            List<Link> adjLinks = null;
+            links.TryGetValue(sourceEntry, out adjLinks);
+            if (adjLinks == null)
+            {
+                Debug.Log("No Nodes found");
+            }
 
-            return link;
+            adjLinks ??= new List<Link>();
+            Link link = new Link(sourceEntry, destinationEntry);
+            adjLinks.Add(link);
         }
-        
+
+        public Link[] GetAdjLinks(Entry entry)
+        {
+            if (links.ContainsKey(entry))
+            {
+                return links[entry].ToArray();
+            }
+
+            return null;
+        }
+
         #endregion
+        
         public bool Equals(ConversationGraph other)
         {
             if (ReferenceEquals(null, other)) return false;

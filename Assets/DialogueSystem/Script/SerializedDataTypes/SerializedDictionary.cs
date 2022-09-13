@@ -9,10 +9,10 @@ using UnityEngine;
 [System.Serializable]
 public class SerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
 {
-    [SerializeField, HideInInspector] 
+    [SerializeField] 
     private List<TKey> keyData = new List<TKey>();
 
-    [SerializeField, HideInInspector] 
+    [SerializeField] 
     private List<TValue> valueData = new List<TValue>();
 
     void ISerializationCallbackReceiver.OnAfterDeserialize()
@@ -36,3 +36,4 @@ public class SerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISer
         }
     }
 }
+

@@ -13,6 +13,7 @@ namespace DialogueSystem.Editor.NodeComponents
         public Port(Rect rect, PortType portType)
         {
             canvasRect = rect;
+            m_portType = portType;
         }
 
         public void Draw()
@@ -21,12 +22,12 @@ namespace DialogueSystem.Editor.NodeComponents
             {
                 if (m_portType == PortType.Out)
                 {
-                    DatabaseEditorManager.window.SelectSourceNode(node, this);
+                    DatabaseEditorManager.window.SelectSourceNode(node);
                 }
 
                 if (m_portType == PortType.In)
                 {
-                    DatabaseEditorManager.window.SelectDestinationNode(node, this);
+                    DatabaseEditorManager.window.SelectDestinationNode(node);
                 }
             }
         }
