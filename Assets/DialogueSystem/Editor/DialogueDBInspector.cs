@@ -16,10 +16,11 @@ namespace DialogueSystem.Editor
                 DialogueDatabase database = (DialogueDatabase)target;
                 DatabaseEditorManager.OpenDatabaseWindow(database);
             }
-            if (GUILayout.Button("Print Connector Count"))
+            if (GUILayout.Button("Load Connections"))
             {
-                ConversationGraph conversationGraph = (ConversationGraph)target;
+                DatabaseEditorManager.window.DrawLinks();
             }
+            
         }
     
     }

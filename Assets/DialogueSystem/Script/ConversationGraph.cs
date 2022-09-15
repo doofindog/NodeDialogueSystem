@@ -17,7 +17,7 @@ namespace DialogueSystem
         [SerializeField] private new string name;
         
         public List<Entry> entries;
-        public SerializedDictionary<Entry, List<Link>> links;
+        public LinkDictionary links;
 
         public void Initialise()
         {
@@ -25,7 +25,7 @@ namespace DialogueSystem
             name = "Conversation (" + id + ")";
             
             entries = new List<Entry>();
-            links = new SerializedDictionary<Entry, List<Link>>();
+            links = new LinkDictionary();
             
             StartEntry startEntry = CreateEntry<StartEntry>(new Vector2(100, 100));
         }
@@ -53,8 +53,7 @@ namespace DialogueSystem
             if (entry != null)
             {
                 entry.hideFlags = HideFlags.HideInHierarchy;
-                entry.Init(position);
-                entry.CommunicationGraph = this;
+                entry.Init(position, this);
                 AssetDatabase.AddObjectToAsset(entry, this);
                 AssetDatabase.SaveAssets();
                 AddEntry(entry);
@@ -69,8 +68,7 @@ namespace DialogueSystem
             if (entry != null)
             {
                 entry.hideFlags = HideFlags.HideInHierarchy;
-                entry.Init(position);
-                entry.CommunicationGraph = this;
+                entry.Init(position, this);
                 AssetDatabase.AddObjectToAsset(entry, this);
                 AssetDatabase.SaveAssets();
                 AddEntry(entry);
@@ -98,31 +96,45 @@ namespace DialogueSystem
 
         #region Links
 
-        public Link CreateLink(Entry sourceEntry, Entry destinationEntry)
+        public bool ContainsLinks()
         {
-            List<Link> adjLinks = null;
-            links.TryGetValue(sourceEntry, out adjLinks);
-            if (adjLinks == null)
+            return links.Keys.Count != 0;
+        }
+
+        public Link CreateLink(Entry sourceEntry, Entry destinationEntry, Option option = null)
+        {
+            if (!links.ContainsKey(sourceEntry))
             {
-                Debug.Log("No Nodes found");
+                links.Add(sourceEntry, new List<Link>());
             }
 
-            adjLinks ??= new List<Link>();
-            Link link = new Link(sourceEntry, destinationEntry);
-            adjLinks.Add(link);
+            links.TryGetValue(sourceEntry, out List<Link> adjLinks);
+            Link link = new Link(sourceEntry, destinationEntry, option);
+            adjLinks?.Add(link);
+            
+            Debug.Log("New link Created");
+            return link;
         }
 
         public Link[] GetAdjLinks(Entry entry)
         {
-            if (links.ContainsKey(entry))
+            if(links.ContainsKey(entry))
             {
-                return links[entry].ToArray();
+                this.links.TryGetValue(entry, out List<Link> adjLinks);
+                if (adjLinks != null)
+                {
+                    return adjLinks.ToArray();
+                }
             }
-
+            
+            Debug.Log("(GetAdjLink) : No entry found");
             return null;
         }
+        
 
         #endregion
+
+        #region IEquatable
         
         public bool Equals(ConversationGraph other)
         {
@@ -149,5 +161,8 @@ namespace DialogueSystem
                 return hashCode;
             }
         }
+        
+        #endregion
+
     }
 }

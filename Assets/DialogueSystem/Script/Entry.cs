@@ -6,53 +6,55 @@ using UnityEngine;
 namespace DialogueSystem
 {
     [System.Serializable]
-    public abstract class Entry : ScriptableObject, IEquatable<Entry>, IComparable<Entry>
+    public abstract class Entry : ScriptableObject, IEqualityComparer<Entry>
     {
-        public Vector2 position;
-        
-        public ConversationGraph CommunicationGraph;
-        public string id;
+        public string id; 
+        [SerializeField] private Vector2 position;
+        private ConversationGraph _conversationGraph;
 
-        public virtual void Init(Vector2 position)
+        public virtual void Init(Vector2 position, ConversationGraph graph)
         {
             this.id = NodeManager.GenerateUniqueId();
+            _conversationGraph = graph;
             this.position = position;
+        }
+
+        public string GetId()
+        {
+            return id;
+        }
+
+        public Vector2 GetPosition()
+        {
+            return position;
+        }
+
+        public void UpdatePosition(Vector2 newPositon)
+        {
+            position = newPositon;
         }
 
         public virtual void Invoke()
         {
             
         }
-
-        public bool Equals(Entry other)
+        
+        #region IEqualityComparer
+        
+        public bool Equals(Entry x, Entry y)
         {
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
-            return base.Equals(other) && id == other.id;
+            if (ReferenceEquals(x, y)) return true;
+            if (ReferenceEquals(x, null)) return false;
+            if (ReferenceEquals(y, null)) return false;
+            return x.id == y.id;
         }
 
-        public override bool Equals(object obj)
+        public int GetHashCode(Entry obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
-            return Equals((Entry) obj);
+            return (obj.id != null ? obj.id.GetHashCode() : 0);
         }
-
-        public override int GetHashCode()
-        {
-            unchecked
-            {
-                return (base.GetHashCode() * 397) ^ (id != null ? id.GetHashCode() : 0);
-            }
-        }
-
-        public int CompareTo(Entry other)
-        {
-            if (ReferenceEquals(this, other)) return 0;
-            if (ReferenceEquals(null, other)) return 1;
-            return string.Compare(id, other.id, StringComparison.Ordinal);
-        }
+        
+        #endregion
 
     }
 }

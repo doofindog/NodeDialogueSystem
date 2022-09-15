@@ -11,7 +11,6 @@ namespace DialogueSystem.Editor
     public class StartNode : Node
     {
         private StartEntry _startEntry;
-        private Port _outPort;
 
         public override void Init(Entry entry, DatabaseWindow databaseWindow)
         {
@@ -22,7 +21,7 @@ namespace DialogueSystem.Editor
         protected override void DrawComponents()
         {
             NodeComponentUtilt.DrawText(_startEntry.GetPointType().ToString(), 50);
-            _outPort = NodeComponentUtilt.DrawPort(PortType.Out);
+            outPort = NodeComponentUtilt.DrawPort(PortType.Out, HandleOutPortSelect);
         }
 
         protected override void ConfigMenu()

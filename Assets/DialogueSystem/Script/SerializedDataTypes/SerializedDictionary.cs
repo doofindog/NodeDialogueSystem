@@ -1,39 +1,27 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using DialogueSystem;
-using UnityEngine;
-
-
 
 [System.Serializable]
-public class SerializedDictionary<TKey, TValue> : Dictionary<TKey, TValue>, ISerializationCallbackReceiver
+public class LinkDictionary : SerializableDictionary<Entry, List<Link>, LinkStorage>, IEqualityComparer<Entry>
 {
-    [SerializeField] 
-    private List<TKey> keyData = new List<TKey>();
-
-    [SerializeField] 
-    private List<TValue> valueData = new List<TValue>();
-
-    void ISerializationCallbackReceiver.OnAfterDeserialize()
+    public bool Equals(Entry x, Entry y)
     {
-        this.Clear();
-        for (int i = 0; i < this.keyData.Count && i < this.valueData.Count; i++)
-        {
-            this[this.keyData[i]] = this.valueData[i];
-        }
+        if (ReferenceEquals(x, y)) return true;
+        if (ReferenceEquals(x, null)) return false;
+        if (ReferenceEquals(y, null)) return false;
+        return x.id == y.id;
     }
 
-    void ISerializationCallbackReceiver.OnBeforeSerialize()
+    public int GetHashCode(Entry obj)
     {
-        this.keyData.Clear();
-        this.valueData.Clear();
-
-        foreach (var item in this)
-        {
-            this.keyData.Add(item.Key);
-            this.valueData.Add(item.Value);
-        }
+        return (obj.id != null ? obj.id.GetHashCode() : 0);
     }
+    
+}
+
+[System.Serializable]
+public class LinkStorage : SerializableDictionary.Storage<List<Link>>
+{
+    
 }
 

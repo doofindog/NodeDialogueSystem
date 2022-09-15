@@ -45,7 +45,7 @@ namespace DialogueSystem.Editor.NodeComponents
             focusedNode.AddComponent(nodeSpace);
         }
 
-        public static Port DrawPort(PortType type, float yPos = 0)
+        public static Port DrawPort(PortType type, Action callBack ,float yPos = 0)
         {
             Vector2 size = new Vector2(20, 20);
             Vector2 position = Vector2.zero;
@@ -62,13 +62,37 @@ namespace DialogueSystem.Editor.NodeComponents
 
             Rect componentRect = new Rect(position, size);
 
-            Port port = new Port(componentRect, type);
+            Port port = new Port(componentRect, type, callBack);
             lastDrawnComponent = port;
             port.Draw();
 
             return port;
         }
 
+        public static int DrawPopUp(int index, string[] content, int length)
+        {
+            Vector2 position = focusedNode.componentDrawPos;
+            Vector2 offset = new Vector2
+            {
+                x = Mathf.Abs(position.x - focusedNode.rect.position.x),
+                y = Mathf.Abs(position.y - focusedNode.rect.position.y)
+            };
+            Vector2 size = new Vector2
+            (
+                focusedNode.rect.size.x - focusedNode.padding.x - offset.x, 
+                length == 0 ? focusedNode.rect.size.y - focusedNode.padding.y - offset.y : length
+            );
+            Rect componentRect = new Rect(position, size);
+
+            NodePopUp popUp = new NodePopUp(componentRect, index, content);
+            int selectedIndex = popUp.Draw();
+
+            lastDrawnComponent = popUp;
+            
+            focusedNode.AddComponent(popUp);
+            
+            return selectedIndex;
+        }
         public static NodeComponent GetLastDrawnComponent()
         {
             return lastDrawnComponent ?? null;

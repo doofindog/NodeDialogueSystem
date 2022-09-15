@@ -5,30 +5,26 @@ namespace DialogueSystem.Editor.NodeComponents
 {
     public class Port : NodeComponent
     {
-        private PortType m_portType;
+        private PortType _portType;
         
         private const int maxSizeX = 20;
         private const int maxSizeY = 20;
 
-        public Port(Rect rect, PortType portType)
+        private Action _callBack;
+
+        public Port(Rect rect, PortType portType, Action callBack)
         {
             canvasRect = rect;
-            m_portType = portType;
+            _portType = portType;
+            _callBack = callBack;
+
         }
 
         public void Draw()
         {
             if (GUI.Button(canvasRect, string.Empty))
             {
-                if (m_portType == PortType.Out)
-                {
-                    DatabaseEditorManager.window.SelectSourceNode(node);
-                }
-
-                if (m_portType == PortType.In)
-                {
-                    DatabaseEditorManager.window.SelectDestinationNode(node);
-                }
+                _callBack?.Invoke();
             }
         }
 

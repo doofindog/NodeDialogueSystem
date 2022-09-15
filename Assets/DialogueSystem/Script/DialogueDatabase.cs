@@ -11,6 +11,15 @@ public class DialogueDatabase : ScriptableObject
     [SerializeField] private string id;
     [SerializeField] private List<ConversationGraph> conversations;
 
+
+    public bool ContainsConversations()
+    {
+        if (conversations == null) { return false; }
+        if (conversations.Count == 0) { return false; }
+        
+        return true;
+    }
+
     public List<ConversationGraph> GetAllConversations()
     {
         conversations ??= new List<ConversationGraph>();

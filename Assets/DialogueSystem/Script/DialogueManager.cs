@@ -72,6 +72,7 @@ public class DialogueManager : MonoBehaviour
             }
         }
     }
+    
     public void CloseDialogue()
     {
         dialogueUI.SetActive(false);

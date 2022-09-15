@@ -12,34 +12,31 @@ namespace DialogueSystem.Editor
     public class DatabaseWindow : EditorWindow
     {
         public DialogueDatabase dialogueDB;
-        
         public ConversationGraph selectedGraph;
         public Dictionary<Entry,Node> nodes;
-        public Dictionary<Node, LinkEditor> linkers;
         public int convIndex = 0;
 
-        private Node _sourceNode;
-        private Node _destinationNode;
-
-
+        private Entry _source;
+        private Entry _destination;
+        private Option _option;
+        
         private Vector2 _offset;
         private Vector2 _drag;
         
-        public bool isDragged;
+        
 
         public void Initialise(DialogueDatabase dialogueDB)
         {
             this.dialogueDB = dialogueDB;
 
-            _sourceNode = null;
-            _destinationNode = null;
+            _source = null;
+            _destination = null;
             nodes = new Dictionary<Entry,Node>();
-            linkers = new Dictionary<Node, LinkEditor>();
-            
-            if (dialogueDB.GetAllConversations().Count > 0)
+
+            if (dialogueDB.ContainsConversations())
             {
-                selectedGraph = dialogueDB.GetConversationGraphAtIndex(0);
-                LoadNodes();
+                ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(0);
+                LoadConversation(graph);
             }
         }
 
@@ -59,12 +56,14 @@ namespace DialogueSystem.Editor
             };
             EditorGUILayout.LabelField(dialogueDB.name,headerStyle);
 
+            #region Conversation Selection GUI
+
             EditorGUILayout.BeginHorizontal();
             
-
-            if (dialogueDB.GetAllConversations() != null)
+            if (dialogueDB.ContainsConversations())
             {
                 List<string> dropDownContent = new List<string>();
+                
                 foreach (ConversationGraph conv in dialogueDB.GetAllConversations())
                 {
                     dropDownContent.Add(conv.GetName());
@@ -72,13 +71,12 @@ namespace DialogueSystem.Editor
                 
                 EditorGUI.BeginChangeCheck();
                 convIndex = EditorGUILayout.Popup("Conversations", convIndex, dropDownContent.ToArray());
+                
                 if (EditorGUI.EndChangeCheck())
                 {
-                    selectedGraph = dialogueDB.GetConversationGraphAtIndex(convIndex);
-                    Selection.activeObject = selectedGraph;
-                    LoadNodes();
+                    ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(convIndex);
+                    LoadConversation(graph);
                 }
-                
             }
             
             if (GUILayout.Button("+",GUILayout.Width(50)))
@@ -89,7 +87,6 @@ namespace DialogueSystem.Editor
                 
                 convIndex = dialogueDB.GetAllConversations().Count - 1;
             }
-            
             if (GUILayout.Button("-",GUILayout.Width(50)))
             {
                 ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(convIndex);
@@ -99,94 +96,116 @@ namespace DialogueSystem.Editor
             
             EditorGUILayout.EndHorizontal();
 
+            #endregion
+
+            #region Grid GUI
+
             DrawGrid(20, 0.2f, Color.gray);
             DrawGrid(100, 0.4f, Color.gray);
 
+            #endregion
+
+            #region Graph GUI
+            
             if (selectedGraph == null)
             {
-                if (GUI.changed)
-                {
-                    Repaint();
-                }  
+                if (GUI.changed) { Repaint(); }  
                 return;
             }
-
+            
             DrawNode();
             DrawLinks();
-
+            
             ProcessNodeEvents(Event.current);
             ProcessEvents(Event.current);
             
-            DrawSave();
-            
-            if (GUI.changed)
-            {
-                Repaint();
-            }    
+            #endregion
+
+            if (GUI.changed) { Repaint(); }    
         }
-    
-         private void ProcessEvents(Event e)
+
+        #region Events Processes
+        
+        private void ProcessEvents(Event e)
         {
             switch (e.type)
             {
                 case EventType.MouseDown:
                 {
-                    if (e.button == 1)
-                    {
-                        OpenContextMenu(e.mousePosition);
-                    }
-
-                    if (e.button == 0)
-                    {
-                        if (selectedGraph != null)
-                        {
-                            Selection.activeObject = selectedGraph;
-                        }
-                    }
-
+                    OnMouseDown(e);
                     break;
                 }
                 case EventType.MouseDrag:
                 {
-                    if (e.button == 0)
-                    {
-                        DragWindow(e.delta);
-                        e.Use();
-                    }
+                    OnMouseDrag(e);
                     break;
                 }
                 case EventType.MouseUp:
                 {
-                    if (e.button == 0)
-                    {
-                        DatabaseEditorManager.SaveData();
-                    }
+                    OnMouseUp(e);
                     break;
                 }
             }
         }
 
-        private void OpenContextMenu(Vector2 contextPosition)
+        private void OnMouseDown(Event e)
         {
-            List<Type> ignoreType = new List<Type>()
+            if (e.button == 1) { OpenContextMenu(e.mousePosition); }
+            if (e.button == 0)
             {
-                typeof(StartEntry)
-            };
-            Type[] types = ReflectionHandler.GetDerivedTypes(typeof(Entry));
-            GenericMenu contextMenu = new GenericMenu();
-            foreach (Type type in types)
-            {
-                if (!ignoreType.Contains(type))
+                if (selectedGraph != null)
                 {
-                    contextMenu.AddItem(new GUIContent(type.Name), false, () =>
-                    {
-                        selectedGraph.CreateEntry(type, contextPosition);
-                        LoadNodes();
-                    });
+                    Selection.activeObject = selectedGraph;
                 }
             }
+        }
+
+        private void OnMouseUp(Event e)
+        {
+            if (e.button == 0) { DatabaseEditorManager.SaveData(); }
+        }
+
+        private void OnMouseDrag(Event e)
+        {
+            if (e.button == 0)
+            {
+                DragWindow(e.delta);
+                e.Use();
+            }
+        }
+        
+        private void OpenContextMenu(Vector2 contextPosition)
+        {
+            List<Type> ignoreType = new List<Type>() {typeof(StartEntry)};
+            Type[] types = ReflectionHandler.GetDerivedTypes(typeof(Entry));
+            GenericMenu contextMenu = new GenericMenu();
+            
+            foreach (Type type in types)
+            {
+                if (ignoreType.Contains(type)) { continue; }
+                contextMenu.AddItem(new GUIContent(type.Name), false, () =>
+                {
+                    selectedGraph.CreateEntry(type, contextPosition);
+                    LoadNodes();
+                });
+            }
+            
             contextMenu.ShowAsContext();
         }
+        
+        #endregion
+        
+        #region Conversation
+
+        public void LoadConversation(ConversationGraph conv)
+        {
+            if(conv == null) { return; }
+
+            Selection.activeObject = selectedGraph = conv;
+            LoadNodes();
+        }
+
+        #endregion
 
         #region Nodes
         
@@ -196,10 +215,8 @@ namespace DialogueSystem.Editor
             Type editorType = DatabaseEditorManager.GetCustomEditor(nodeType);
             
             Node node = ScriptableObject.CreateInstance(editorType) as Node;
-            if (node == null)
-            {
-                return;
-            }
+            
+            if (node == null) { return; }
 
             node.Init(entry,this);
             nodes.Add(entry,node);
@@ -207,12 +224,7 @@ namespace DialogueSystem.Editor
 
         public Node GetNode(Entry entry)
         {
-            if (!nodes.ContainsKey(entry))
-            {
-                return null;
-            }
-
-            return nodes[entry];
+            return !nodes.ContainsKey(entry) ? null : nodes[entry];
         }
 
         public void LoadNodes()
@@ -221,7 +233,6 @@ namespace DialogueSystem.Editor
             if (selectedGraph == null) { return; }
             if (selectedGraph.GetEntries() == null) { return; }
             
-
             Entry[] entries = selectedGraph.GetEntries();
             foreach (var entry in entries)
             {
@@ -269,87 +280,75 @@ namespace DialogueSystem.Editor
 
         #region Connections
 
-        public void SelectSourceNode(Node node)
+        public void SelectSourceNode(Node node, Option option = null)
         {
-            _sourceNode = node;
+            _source = node.entry;
+            _option = option;
             TryCreateLink();
         }
 
         public void SelectDestinationNode(Node node)
         {
-            _destinationNode = node;
+            _destination = node.entry;
             TryCreateLink();
         }
 
         public void TryCreateLink()
         {
-            if (_sourceNode != null && _destinationNode != null)
-            {
-                Entry source = _sourceNode.entry;
-                Entry destination = _destinationNode.entry;
+            if (_source == null || _destination == null) {return;}
+            
+            Node sourceNode = GetNode(_source);
+            Node  destinationNode = GetNode(_destination);
+            
+            Link link = selectedGraph.CreateLink(_source, _destination, _option);
                 
-                Link link = selectedGraph.CreateLink(source, destination);
-                
-                _sourceNode = null;
-                _destinationNode = null;
-            }
-        }
-
-        public void LoadLink()
-        {
-            foreach (Entry entry in selectedGraph.links.Keys)
-            {
-                
-            }
+            _source = null;
+            _destination = null;
         }
 
         public void DrawLinks()
         {
-            if (selectedGraph.links == null)
+            if (!selectedGraph.ContainsLinks())
             {
+                Debug.Log("(Draw Link) : Selection Graph is null");
                 return;
             }
             
-            foreach (Entry entry in nodes.Keys)
+            foreach (Entry entry in selectedGraph.links.Keys)
             {
-                if (selectedGraph.GetAdjLinks(entry) == null) {continue;}
-                
-                Node sourceNode = GetNode(entry);
-                if (sourceNode == null)
+                Link[] adjLinks = selectedGraph.GetAdjLinks(entry);
+                if (adjLinks == null)
                 {
+                    Debug.Log("(Draw Link) : Adj Graph is empty");
                     continue;
                 }
                 
-                foreach (Entry adjEntry in selectedGraph.GetAdjLinks(entry))
+                foreach (Link link in adjLinks)
                 {
-                    Node destinationNode = GetNode(adjEntry);
-                    if (destinationNode == null)
+                    LinkEditor linkEditor = new LinkEditor();
+
+                    Port sourcePort = null;
+                    if (entry.GetType() == typeof(DecisionEntry))
                     {
-                        Debug.Log("Draw Link : Destination Node does not exist");
-                        continue;
+                        Debug.Log("option Id : " + link.option.id);
+                        DecisionNode node = (DecisionNode) GetNode(entry);
+                        sourcePort = node.GetOptionPort(link.option);
+                    }
+                    else
+                    {
+                        sourcePort = GetNode(link.sourceEntry).GetOutPort();
                     }
 
-                    Vector2 sourcePos = sourceNode.GetRect().center;
-                    Vector2 destinationPos = destinationNode.GetRect().center;
-                    Handles.DrawLine(sourcePos, destinationPos);
+                    Port destinationPort = GetNode(link.destinationEntry).GetInPort();
+                    Vector2 startPos = sourcePort.GetRect().center;
+                    Vector2 endPos = destinationPort.GetRect().center;
+                        
+                    linkEditor.Draw(startPos,endPos);
                 }
             }
         }
-
         #endregion
         
-        public void DrawSave()
-        {
-            Rect buttonRect;
-            Vector2 buttonSize = new Vector2(200, 100);
-            Vector2 buttonPosition = new Vector2(position.width - buttonSize.x ,position.height - buttonSize.y );
-            buttonRect = new Rect(buttonPosition, buttonSize);
-            if (GUI.Button(buttonRect,"Save"))
-            {
-                DatabaseEditorManager.SaveData();
-            }
-        }
-
         private void DragWindow(Vector2 newPosition)
         {
             foreach (Entry entry in nodes.Keys)

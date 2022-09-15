@@ -15,11 +15,11 @@ namespace DialogueSystem.Editor.NodeEditors
 
         protected override void DrawComponents()
         {
-            NodeComponentUtilt.DrawPort(PortType.In);
+            inPort = NodeComponentUtilt.DrawPort(PortType.In, HandleInPortSelect);
             
             dialogueEntry.text = NodeComponentUtilt.DrawText(dialogueEntry.text, 50);
             
-            NodeComponentUtilt.DrawPort(PortType.Out);
+            outPort = NodeComponentUtilt.DrawPort(PortType.Out, HandleOutPortSelect);
         }
     }
 }

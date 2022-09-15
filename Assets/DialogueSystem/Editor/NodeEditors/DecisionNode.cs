@@ -8,7 +8,7 @@ namespace  DialogueSystem.Editor.NodeEditors
     public class DecisionNode : Node
     {
         public DecisionEntry decisionEntry;
-        public List<Port> optionPorts;
+        public Dictionary<Option, Port> optionOutPorts;
 
         public override void Init(Entry entry, DatabaseWindow databaseWindow)
         {
@@ -26,12 +26,13 @@ namespace  DialogueSystem.Editor.NodeEditors
 
         protected override void DrawComponents()
         {
-            NodeComponentUtilt.DrawPort(PortType.In);
+            inPort = NodeComponentUtilt.DrawPort(PortType.In, HandleInPortSelect);
             
             decisionEntry.text = NodeComponentUtilt.DrawText(decisionEntry.text, 50);
  
             NodeComponentUtilt.DrawSpace(10);
             
+            optionOutPorts = new Dictionary<Option, Port>();
             Option[] options = decisionEntry.GetOptions();
             for (int i = 0; i < options.Length; i++)
             {
@@ -39,7 +40,11 @@ namespace  DialogueSystem.Editor.NodeEditors
                 
                 Rect optionTextRect = NodeComponentUtilt.GetLastDrawnComponent().GetRect();
                 float portYPos = optionTextRect.position.y;
-                NodeComponentUtilt.DrawPort(PortType.Out, portYPos);
+                Port port = NodeComponentUtilt.DrawPort(PortType.Out, () =>
+                {
+                    DatabaseEditorManager.window.SelectSourceNode(this,options[i]);
+                }, portYPos);
+                optionOutPorts.Add(options[i], port);
                 
                 if (i != options.Length - 1)
                 {
@@ -59,6 +64,18 @@ namespace  DialogueSystem.Editor.NodeEditors
             Option option =  decisionEntry.GetOptions()[lastOptionIndex];
             decisionEntry.RemoveOption(option);
         }
+
+        public Port GetOptionPort(Option option)
+        {
+            if (optionOutPorts.ContainsKey(option))
+            {
+
+                return optionOutPorts[option];
+            }
+
+            return null;
+        }
     }
+    
 }
 

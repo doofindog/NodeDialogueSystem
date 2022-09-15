@@ -26,6 +26,9 @@ namespace DialogueSystem.Editor
         private bool m_isSelected;
         private bool m_canDrag;
         private GUIStyle _panelStyle;
+
+        protected Port inPort;
+        protected Port outPort;
         
         public virtual void Init(DialogueSystem.Entry entry,DatabaseWindow databaseWindow)
         {
@@ -39,7 +42,7 @@ namespace DialogueSystem.Editor
             this.padding = new Vector2(20, 20);
             defaultSize = new Vector2(250, 50);
             _rescaleSize = Vector2.zero; 
-            rect = new Rect(entry.position, defaultSize);
+            rect = new Rect(entry.GetPosition(), defaultSize);
         }
 
         protected virtual void ConfigMenu()
@@ -109,10 +112,10 @@ namespace DialogueSystem.Editor
             }
         }
 
-        public void UpdatePosition(Vector2 newPosition)
+        public void UpdatePosition(Vector2 deltaPosition)
         {
-            entry.position += newPosition;
-            rect.position = entry.position;
+            rect.position += deltaPosition;
+            entry.UpdatePosition(rect.position);
         }
 
         protected virtual void DeleteNode()
@@ -159,6 +162,26 @@ namespace DialogueSystem.Editor
             return rect;
         }
 
+        protected void HandleInPortSelect()
+        {
+            DatabaseEditorManager.window.SelectDestinationNode(this);
+        }
+
+        protected void HandleOutPortSelect()
+        {
+            DatabaseEditorManager.window.SelectSourceNode(this);
+        }
+
+        public Port GetInPort()
+        {
+            return inPort;
+        }
+
+        public Port GetOutPort()
+        {
+            return outPort;
+        }
+
         #region Equatable
         
         public bool Equals(Node other)
@@ -182,7 +205,6 @@ namespace DialogueSystem.Editor
                 return (base.GetHashCode() * 397) ^ (entry != null ? entry.GetHashCode() : 0);
             }
         }
-        
         #endregion
 
     }
