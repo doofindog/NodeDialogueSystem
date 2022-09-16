@@ -18,7 +18,7 @@ namespace DialogueSystem.Editor.NodeEditors
             inPort = NodeComponentUtilt.DrawPort(PortType.In, HandleInPortSelect);
             
             dialogueEntry.text = NodeComponentUtilt.DrawText(dialogueEntry.text, 50);
-            
+
             outPort = NodeComponentUtilt.DrawPort(PortType.Out, HandleOutPortSelect);
         }
     }

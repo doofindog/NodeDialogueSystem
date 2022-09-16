@@ -8,14 +8,13 @@ namespace DialogueSystem
     public class DecisionEntry : Entry
     {
         [SerializeField] public string text;
-        [SerializeField] private List<Option> options;
+        [SerializeField] public List<Option> options;
 
         public override void Init(Vector2 position, ConversationGraph graph)
         {
             base.Init(position, graph);
             
             options = new List<Option>();
-
             for (int i = 0; i < 2; i++)
             {
                 AddOption();

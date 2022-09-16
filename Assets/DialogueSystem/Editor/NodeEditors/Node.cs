@@ -18,13 +18,13 @@ namespace DialogueSystem.Editor
         [HideInInspector] public Rect rect;
         [HideInInspector] public Vector2 componentDrawPos;
         [HideInInspector] public Vector2 spacing;
-        
-        protected Vector2 defaultSize;
+
+        private Vector2 _defaultSize;
         protected GenericMenu menu;
         
         private Vector2 _rescaleSize;
-        private bool m_isSelected;
-        private bool m_canDrag;
+        private bool _isSelected;
+        private bool _canDrag;
         private GUIStyle _panelStyle;
 
         protected Port inPort;
@@ -40,9 +40,9 @@ namespace DialogueSystem.Editor
             ConfigMenu();
             
             this.padding = new Vector2(20, 20);
-            defaultSize = new Vector2(250, 50);
+            _defaultSize = new Vector2(250, 50);
             _rescaleSize = Vector2.zero; 
-            rect = new Rect(entry.GetPosition(), defaultSize);
+            rect = new Rect(entry.GetPosition(), _defaultSize);
         }
 
         protected virtual void ConfigMenu()
@@ -77,7 +77,7 @@ namespace DialogueSystem.Editor
             }
         }
 
-        private void OnMouseDown(Event e)
+        protected virtual void OnMouseDown(Event e)
         {
             if (e.button == 1 && rect.Contains(e.mousePosition))
             {
@@ -87,25 +87,25 @@ namespace DialogueSystem.Editor
 
             if (e.button == 0 && rect.Contains(e.mousePosition))
             {
-                Selection.activeObject = this;
-                m_isSelected = true;
-                m_canDrag = true;
+                Selection.activeObject = entry;
+                _isSelected = true;
+                _canDrag = true;
                 e.Use();
             }
         }
 
         private void OnMouseUp(Event e)
         {
-            if (e.button == 0 && m_isSelected == true)
+            if (e.button == 0 && _isSelected == true)
             {
-                m_isSelected = false;
-                m_canDrag = false;
+                _isSelected = false;
+                _canDrag = false;
             }
         }
 
         private void OnMouseDrag(Event e)
         {
-            if (e.button == 0 && m_canDrag == true)
+            if (e.button == 0 && _canDrag == true)
             {
                 UpdatePosition(e.delta);
                 e.Use();
@@ -125,10 +125,10 @@ namespace DialogueSystem.Editor
         
         public virtual void Draw()
         {
-            rect.size = defaultSize;
-            if (_rescaleSize.y + (padding.y*2) > defaultSize.y)
+            rect.size = _defaultSize;
+            if (_rescaleSize.y + (padding.y*2) > _defaultSize.y)
             {
-                rect.size = new Vector2(defaultSize.x, _rescaleSize.y + (padding.y * 2));
+                rect.size = new Vector2(_defaultSize.x, _rescaleSize.y + (padding.y * 2));
             }
             
             _panelStyle = new GUIStyle(GUI.skin.box) { alignment = TextAnchor.UpperCenter };
@@ -150,11 +150,6 @@ namespace DialogueSystem.Editor
             
             componentDrawPos += new Vector2(0, size.y);
             _rescaleSize += new Vector2(0,size.y);
-        }
-
-        public override void OnInspectorGUI()
-        {
-            base.OnInspectorGUI();
         }
 
         public Rect GetRect()

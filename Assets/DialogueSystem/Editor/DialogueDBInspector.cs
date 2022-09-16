@@ -16,11 +16,6 @@ namespace DialogueSystem.Editor
                 DialogueDatabase database = (DialogueDatabase)target;
                 DatabaseEditorManager.OpenDatabaseWindow(database);
             }
-            if (GUILayout.Button("Load Connections"))
-            {
-                DatabaseEditorManager.window.DrawLinks();
-            }
-            
         }
     
     }

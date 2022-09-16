@@ -8,8 +8,8 @@ namespace DialogueSystem
     [System.Serializable]
     public abstract class Entry : ScriptableObject, IEqualityComparer<Entry>
     {
-        public string id; 
-        [SerializeField] private Vector2 position;
+        [HideInInspector] public string id; 
+        [SerializeField, HideInInspector] private Vector2 position;
         private ConversationGraph _conversationGraph;
 
         public virtual void Init(Vector2 position, ConversationGraph graph)

@@ -1,6 +1,8 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
+using System.Timers;
 using DialogueSystem.Editor.NodeComponents;
 using DialogueSystem.Editor.NodeEditors;
 using UnityEditor;
@@ -167,7 +169,7 @@ namespace DialogueSystem.Editor
 
         private void OnMouseDrag(Event e)
         {
-            if (e.button == 0)
+            if (e.button == 2)
             {
                 DragWindow(e.delta);
                 e.Use();
@@ -310,7 +312,6 @@ namespace DialogueSystem.Editor
         {
             if (!selectedGraph.ContainsLinks())
             {
-                Debug.Log("(Draw Link) : Selection Graph is null");
                 return;
             }
             
@@ -330,7 +331,6 @@ namespace DialogueSystem.Editor
                     Port sourcePort = null;
                     if (entry.GetType() == typeof(DecisionEntry))
                     {
-                        Debug.Log("option Id : " + link.option.id);
                         DecisionNode node = (DecisionNode) GetNode(entry);
                         sourcePort = node.GetOptionPort(link.option);
                     }

@@ -25,3 +25,21 @@ public class LinkStorage : SerializableDictionary.Storage<List<Link>>
     
 }
 
+
+public class MethodDictionary : SerializableDictionary<SerializableType, List<SerializableMethodInfo>>, IEqualityComparer<SerializableType>
+{
+    public bool Equals(SerializableType x, SerializableType y)
+    {
+        if (ReferenceEquals(x, y)) return true;
+        if (ReferenceEquals(x, null)) return false;
+        if (ReferenceEquals(y, null)) return false;
+        if (x.GetType() != y.GetType()) return false;
+        return x.type == y.type;
+    }
+
+    public int GetHashCode(SerializableType obj)
+    {
+        return (obj.type != null ? obj.type.GetHashCode() : 0);
+    }
+}
+

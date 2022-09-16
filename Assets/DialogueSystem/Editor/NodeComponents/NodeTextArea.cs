@@ -20,8 +20,10 @@ namespace DialogueSystem.Editor.NodeComponents
             {
                 text = _text;
             }
-            
+
+            GUI.skin.textArea.wordWrap = true;
             _text = GUI.TextArea(canvasRect, text);
+            GUI.skin.textArea.wordWrap = true;
             return _text;
         }
     }

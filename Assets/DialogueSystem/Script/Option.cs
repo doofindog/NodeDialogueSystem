@@ -12,7 +12,7 @@ namespace DialogueSystem
     [System.Serializable]
     public class Option : IEqualityComparer<Option>, IEquatable<Option>
     {
-        public string id;
+        [HideInInspector] public string id;
         public string text;
 
         public Option()

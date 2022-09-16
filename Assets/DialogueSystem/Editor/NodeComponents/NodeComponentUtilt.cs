@@ -93,6 +93,28 @@ namespace DialogueSystem.Editor.NodeComponents
             
             return selectedIndex;
         }
+
+        public static void DrawLine()
+        {
+            Vector2 position = focusedNode.componentDrawPos;
+            Vector2 offset = new Vector2
+            {
+                x = Mathf.Abs(position.x - focusedNode.rect.position.x),
+                y = Mathf.Abs(position.y - focusedNode.rect.position.y)
+            };
+            Vector2 size = new Vector2
+            (
+                focusedNode.rect.size.x - focusedNode.padding.x - offset.x, 
+                2
+            );
+            Rect componentRect = new Rect(position, size);
+
+            NodeLine line = new NodeLine(componentRect);
+            line.Draw();
+            
+            focusedNode.AddComponent(line);
+        }
+
         public static NodeComponent GetLastDrawnComponent()
         {
             return lastDrawnComponent ?? null;

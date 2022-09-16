@@ -4,7 +4,7 @@ using System.Reflection;
 using UnityEngine;
 
 [System.Serializable]
-public class SerializableType : ISerializationCallbackReceiver
+public class SerializableType : ISerializationCallbackReceiver, IEqualityComparer<SerializableType>
 {
     public System.Type type;
     public byte[] data;
@@ -74,6 +74,22 @@ public class SerializableType : ISerializationCallbackReceiver
         using (var r = new BinaryReader(stream))
         {
             type = Read(r);
+        }
+    }
+
+    public bool Equals(SerializableType x, SerializableType y)
+    {
+        if (ReferenceEquals(x, y)) return true;
+        if (ReferenceEquals(x, null)) return false;
+        if (ReferenceEquals(y, null)) return false;
+        return x.type == y.type && Equals(x.data, y.data);
+    }
+
+    public int GetHashCode(SerializableType obj)
+    {
+        unchecked
+        {
+            return ((obj.type != null ? obj.type.GetHashCode() : 0) * 397) ^ (obj.data != null ? obj.data.GetHashCode() : 0);
         }
     }
 }

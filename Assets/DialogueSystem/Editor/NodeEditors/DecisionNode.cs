@@ -8,15 +8,14 @@ namespace  DialogueSystem.Editor.NodeEditors
     public class DecisionNode : Node
     {
         public DecisionEntry decisionEntry;
-        public Dictionary<Option, Port> optionOutPorts;
+        private Dictionary<Option, Port> _optionOutPorts;
 
         public override void Init(Entry entry, DatabaseWindow databaseWindow)
         {
             base.Init(entry, databaseWindow);
             decisionEntry = (DecisionEntry) entry;
         }
-        
-        
+
         protected override void ConfigMenu()
         {
             base.ConfigMenu();
@@ -32,7 +31,7 @@ namespace  DialogueSystem.Editor.NodeEditors
  
             NodeComponentUtilt.DrawSpace(10);
             
-            optionOutPorts = new Dictionary<Option, Port>();
+            _optionOutPorts = new Dictionary<Option, Port>();
             Option[] options = decisionEntry.GetOptions();
             for (int i = 0; i < options.Length; i++)
             {
@@ -44,7 +43,7 @@ namespace  DialogueSystem.Editor.NodeEditors
                 {
                     DatabaseEditorManager.window.SelectSourceNode(this,options[i]);
                 }, portYPos);
-                optionOutPorts.Add(options[i], port);
+                _optionOutPorts.Add(options[i], port);
                 
                 if (i != options.Length - 1)
                 {
@@ -67,15 +66,14 @@ namespace  DialogueSystem.Editor.NodeEditors
 
         public Port GetOptionPort(Option option)
         {
-            if (optionOutPorts.ContainsKey(option))
+            if (_optionOutPorts.ContainsKey(option))
             {
 
-                return optionOutPorts[option];
+                return _optionOutPorts[option];
             }
 
             return null;
         }
     }
-    
 }
 

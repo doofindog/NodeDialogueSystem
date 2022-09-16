@@ -8,4 +8,14 @@ public class GameEvents : DialogueEvents
     {
         Debug.Log("Thanks for healing me");
     }
+
+    public static void GiveStamina()
+    {
+        Debug.Log("Much mana, Much wow");
+    }
+
+    public static void GiveBoth()
+    {
+        Debug.Log("I got both");
+    }
 }

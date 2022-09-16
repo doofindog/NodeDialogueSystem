@@ -28,6 +28,11 @@ namespace DialogueSystem.Editor
         {
             //base.ConfigMenu();
         }
+
+        public override void OnInspectorGUI()
+        {
+            
+        }
     }
 }
 
