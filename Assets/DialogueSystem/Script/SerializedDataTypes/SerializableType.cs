@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -7,10 +8,22 @@ using UnityEngine;
 public class SerializableType : ISerializationCallbackReceiver, IEqualityComparer<SerializableType>
 {
     public System.Type type;
+    public string typeName;
     public byte[] data;
     public SerializableType(System.Type aType)
     {
-        type = aType;
+        if (aType != null)
+        {
+            type = aType;
+            typeName = aType.Name;
+        }
+    }
+
+    public void SetType(Type p_type)
+    {
+        this.type = p_type;
+        typeName = p_type.Name;
+        OnBeforeSerialize();
     }
 
     public static System.Type Read(BinaryReader aReader)
@@ -82,14 +95,12 @@ public class SerializableType : ISerializationCallbackReceiver, IEqualityCompare
         if (ReferenceEquals(x, y)) return true;
         if (ReferenceEquals(x, null)) return false;
         if (ReferenceEquals(y, null)) return false;
-        return x.type == y.type && Equals(x.data, y.data);
+        if (x.GetType() != y.GetType()) return false;
+        return x.typeName == y.typeName;
     }
 
     public int GetHashCode(SerializableType obj)
     {
-        unchecked
-        {
-            return ((obj.type != null ? obj.type.GetHashCode() : 0) * 397) ^ (obj.data != null ? obj.data.GetHashCode() : 0);
-        }
+        return (obj.typeName != null ? obj.typeName.GetHashCode() : 0);
     }
 }

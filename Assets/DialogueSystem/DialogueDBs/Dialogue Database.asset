@@ -1,0 +1,80 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8686595237726263349
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: AsqtB
+  position: {x: 21, y: 269}
+  m_pointType: 0
+--- !u!114 &-4655278845097843073
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1F1r2
+  position: {x: 245, y: 490.5}
+  text: 
+  staticEvents:
+  - eventType:
+      typeName: GameEvents
+      data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: 
+        data: ff
+      methodName: 
+      parameters: []
+      flags: 0
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fdd7ae4ff0a491cb08714f7a31547c, type: 3}
+  m_Name: Dialogue Database
+  m_EditorClassIdentifier: 
+  id: 
+  conversations:
+  - {fileID: 3596849424459967772}
+--- !u!114 &3596849424459967772
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: LQX3A
+  name: Conversation (LQX3A)
+  entries:
+  - {fileID: -8686595237726263349}
+  links:
+    m_keys: []
+    m_values: []

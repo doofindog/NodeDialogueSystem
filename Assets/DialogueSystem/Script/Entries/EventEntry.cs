@@ -15,46 +15,32 @@ namespace DialogueSystem
     public class EventEntry : Entry
     {
         [SerializeField, HideInInspector] public string text;
-        [SerializeField, HideInInspector] public SerializableMethodInfo m_method;
-        [SerializeField, HideInInspector] public SerializableType m_type;
-
-        [SerializeField] public MethodDictionary _methods;
         
-        [SerializeField] private UnityEvent listeners;
+        [SerializeField] public List<EventInfo> staticEvents;
+        [SerializeField] private UnityEvent unityEvent;
 
         public override void Init(Vector2 position, ConversationGraph graph)
         {
             base.Init(position, graph);
-            _methods = new MethodDictionary();
+            staticEvents = new List<EventInfo>();
             
-            
+            AddNewEvent();
         }
 
-        public void SetEvent(MethodInfo method)
+        public void AddNewEvent()
         {
-            m_method.methodInfo = method;
-            m_type = m_method.type;
+            EventInfo eventInfo = new EventInfo();
+            staticEvents.Add(eventInfo);
         }
-
-        public void AddEvent()
-        {
-            SerializableType type = new SerializableType(CachedData.GetEventTypes()[0]);
-            SerializableMethodInfo methodInfo = new SerializableMethodInfo(CachedData.GetMethods(type.type)[0]);
-            List<SerializableMethodInfo> methodInfos = new List<SerializableMethodInfo>();
-
-            _methods ??= new MethodDictionary();
-            _methods.Add(type,methodInfos);
-        }
-        
 
         public override void Invoke()
         {
-            m_method.methodInfo.Invoke(null, null);
+            //m_method.methodInfo.Invoke(null, null);
         }
 
         public void Invoke(object[] parameters)
         {
-            m_method.methodInfo.Invoke(null, parameters);
+            //m_method.methodInfo.Invoke(null, parameters);
         }
     }
 }

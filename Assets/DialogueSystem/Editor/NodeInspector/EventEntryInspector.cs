@@ -37,49 +37,7 @@ public class EventEntryInspector : Editor
         #endregion
         
         EditorGUILayout.Space(50);
-        
-        #region Static Events
 
-        EditorGUILayout.LabelField("Static Event", headingStyle);
-        
-        System.Type[] eventTypes = CachedData.eventTypes;
-        string[] eventNames = new string[eventTypes.Length];
-        for (int i = 0; i < eventTypes.Length; i++)
-        {
-            eventNames[i] = eventTypes[i].Name;
-            if (eventEntry.m_type.type != null)
-            {
-                if (eventNames[i].Equals(eventEntry.m_type.type.Name))
-                {
-                    typeIndex = i;
-                }
-            }
-        }
-        typeIndex = EditorGUILayout.Popup("Event Type", typeIndex, eventNames);
-
-        
-        MethodInfo[] methods = CachedData.GetMethods(eventTypes[typeIndex]);
-        string[] methodNames = new string[methods.Length];
-        for (int i = 0; i < methods.Length; i++)
-        {
-            methodNames[i] = methods[i].Name;
-            if (eventEntry.m_method.methodInfo != null)
-            {
-                if (eventEntry.m_method.methodInfo.Name == methodNames[i])
-                {
-                    methodIndex = i;
-                }
-            }
-        }
-
-        methodIndex = EditorGUILayout.Popup("Method", methodIndex, methodNames);
-        
-        eventEntry.SetEvent(methods[methodIndex]);
-
-        #endregion
-
-        EditorGUILayout.Space(50);
-        
         #region UnityEvents
         
         EditorGUILayout.LabelField("Unity Event", headingStyle);

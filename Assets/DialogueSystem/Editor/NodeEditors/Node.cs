@@ -50,7 +50,7 @@ namespace DialogueSystem.Editor
             menu.AddItem(new GUIContent("Remove Node"),false, DeleteNode);
         }
 
-        protected virtual void OpenMenu()
+        private void OpenMenu()
         {
             menu.ShowAsContext();
         }

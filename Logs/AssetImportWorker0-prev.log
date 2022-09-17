@@ -12,58 +12,58 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52243
+51666
 Successfully changed project path to: /Users/doof/Documents/Personal/NodeDialogueSystem
 /Users/doof/Documents/Personal/NodeDialogueSystem
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 38.98 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 39.62 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/doof/Documents/Personal/NodeDialogueSystem/Assets
 GfxDevice: creating device client; threaded=0
-2022-09-16 10:36:33.621 Unity[33131:217754] LG HDR 4K preferred device: AMD Radeon Pro 5600M (high power)
-2022-09-16 10:36:33.621 Unity[33131:217754] Metal devices available: 2
-2022-09-16 10:36:33.621 Unity[33131:217754] 0: AMD Radeon Pro 5600M (high power)
-2022-09-16 10:36:33.621 Unity[33131:217754] 1: Intel(R) UHD Graphics 630 (low power)
-2022-09-16 10:36:33.621 Unity[33131:217754] Using device AMD Radeon Pro 5600M (high power)
+2022-09-16 21:24:20.807 Unity[3829:87002] 27GL850 preferred device: AMD Radeon Pro 5600M (high power)
+2022-09-16 21:24:20.807 Unity[3829:87002] Metal devices available: 2
+2022-09-16 21:24:20.807 Unity[3829:87002] 0: AMD Radeon Pro 5600M (high power)
+2022-09-16 21:24:20.807 Unity[3829:87002] 1: Intel(R) UHD Graphics 630 (low power)
+2022-09-16 21:24:20.807 Unity[3829:87002] Using device AMD Radeon Pro 5600M (high power)
 Initializing Metal device caps: AMD Radeon Pro 5600M
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56131
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56829
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000649 seconds.
+Registered in 0.000338 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 37.34 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 39.37 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.959 seconds
+- Completed reload, in  2.205 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001272 seconds.
+Registered in 0.001329 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 34.76 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 39.30 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.363 seconds
+- Completed reload, in  1.491 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2136 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 195.7 MB.
-System memory in use after: 195.8 MB.
+Unloading 2138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 194.7 MB.
+System memory in use after: 194.8 MB.
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2573.
-Total: 2.227262 ms (FindLiveObjects: 0.172793 ms CreateObjectMapping: 0.069230 ms MarkObjects: 1.920791 ms  DeleteObjects: 0.063700 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2575.
+Total: 2.311447 ms (FindLiveObjects: 0.192417 ms CreateObjectMapping: 0.077499 ms MarkObjects: 1.976927 ms  DeleteObjects: 0.063809 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -75,423 +75,4 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6e437e1915f8f603c1bc9111ec5012ab') in 0.193801 seconds 
-  Import took 0.196729 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.440428 seconds.
-  path: Assets/DialogueSystem/Script/DialogueEvents/SomeEvent.cs
-  artifactKey: Guid(127d33f27ea794f5c81d5f79332e6b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Script/DialogueEvents/SomeEvent.cs using Guid(127d33f27ea794f5c81d5f79332e6b0e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '71d7f7586223770aaeb8baa1a4192172') in 0.164014 seconds 
-  Import took 0.166717 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001692 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  2.070 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2127 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.8 MB.
-System memory in use after: 203.9 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2577.
-Total: 3.127155 ms (FindLiveObjects: 0.225985 ms CreateObjectMapping: 0.133582 ms MarkObjects: 2.746078 ms  DeleteObjects: 0.020600 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 73.756159 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc983b2204e724587a318e3b59986713') in 0.022157 seconds 
-  Import took 0.025391 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.525932 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8af177b8c69b49b7c2b9b4719268836') in 0.003301 seconds 
-  Import took 0.006557 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.008829 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8af177b8c69b49b7c2b9b4719268836') in 0.003112 seconds 
-  Import took 0.006138 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.985671 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '741272976b7c500587289f7e367a435e') in 0.003011 seconds 
-  Import took 0.005924 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005673 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '741272976b7c500587289f7e367a435e') in 0.002937 seconds 
-  Import took 0.005763 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.827034 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27cc3d92e793f078390e3640257c074') in 0.003243 seconds 
-  Import took 0.006666 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006185 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e27cc3d92e793f078390e3640257c074') in 0.002804 seconds 
-  Import took 0.005558 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.031308 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d78cb830b68188abdb0115a738a9907') in 0.003743 seconds 
-  Import took 0.007118 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006765 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5d78cb830b68188abdb0115a738a9907') in 0.002967 seconds 
-  Import took 0.005884 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.279232 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd335173a73d4e36fd854945d934a4ae5') in 0.003430 seconds 
-  Import took 0.006220 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.008860 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd335173a73d4e36fd854945d934a4ae5') in 0.002849 seconds 
-  Import took 0.005576 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.297187 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b345935b262ca62dcdae93d67e0f4b') in 0.003247 seconds 
-  Import took 0.006389 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007998 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd7b345935b262ca62dcdae93d67e0f4b') in 0.003279 seconds 
-  Import took 0.006194 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.296861 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92caa8950740a8900a7f384d9150b2d5') in 0.003078 seconds 
-  Import took 0.005922 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.092976 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd46c5e4600465ee37cc3d816c5ce4f3f') in 0.002875 seconds 
-  Import took 0.005606 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.171680 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3f1d69756713e0f64870ee0071306485') in 0.003331 seconds 
-  Import took 0.006560 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.723216 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3241f4459be9dee906184488eaa19f39') in 0.003472 seconds 
-  Import took 0.006649 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.435720 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1a24e7cca8ed179e64ce2a57e42e60c') in 0.002980 seconds 
-  Import took 0.005868 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.110281 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '578b30e29d1aa7cc6dfaa76df165f631') in 0.003127 seconds 
-  Import took 0.006197 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.545398 seconds.
-  path: Assets/DialogueSystem/Editor/NodeComponents/NodeComponentUtilt.cs
-  artifactKey: Guid(64db582b93e0447e1a03317325d74dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeComponentUtilt.cs using Guid(64db582b93e0447e1a03317325d74dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de19db51d8e61d76fcda9c973f414354') in 0.001645 seconds 
-  Import took 0.004737 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000373 seconds.
-  path: Assets/DialogueSystem/Editor/NodeComponents/NodeComponentUtilt.cs
-  artifactKey: Guid(64db582b93e0447e1a03317325d74dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeComponentUtilt.cs using Guid(64db582b93e0447e1a03317325d74dee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'de19db51d8e61d76fcda9c973f414354') in 0.001286 seconds 
-  Import took 0.004119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.035059 seconds.
-  path: Assets/DialogueSystem/Editor/NodeEditors/Node.cs
-  artifactKey: Guid(1bbfec29d0d754d5ca3a6dc8a43d7877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Editor/NodeEditors/Node.cs using Guid(1bbfec29d0d754d5ca3a6dc8a43d7877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ee8ea3fee8f9c88da3f9f1b0c030aec') in 0.001638 seconds 
-  Import took 0.004798 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007247 seconds.
-  path: Assets/DialogueSystem/Editor/NodeEditors/Node.cs
-  artifactKey: Guid(1bbfec29d0d754d5ca3a6dc8a43d7877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Editor/NodeEditors/Node.cs using Guid(1bbfec29d0d754d5ca3a6dc8a43d7877) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ee8ea3fee8f9c88da3f9f1b0c030aec') in 0.001389 seconds 
-  Import took 0.004411 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 41.704206 seconds.
-  path: Assets/DialogueSystem/Editor/NodeComponents/NodeTextArea.cs
-  artifactKey: Guid(f745086ab6e51445d889f33b2bfd6e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeTextArea.cs using Guid(f745086ab6e51445d889f33b2bfd6e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6c7aaea8b8af3f696bbb77822e5d858') in 0.001629 seconds 
-  Import took 0.004749 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000343 seconds.
-  path: Assets/DialogueSystem/Editor/NodeComponents/NodeTextArea.cs
-  artifactKey: Guid(f745086ab6e51445d889f33b2bfd6e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeTextArea.cs using Guid(f745086ab6e51445d889f33b2bfd6e21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e6c7aaea8b8af3f696bbb77822e5d858') in 0.001484 seconds 
-  Import took 0.004217 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.573096 seconds.
-  path: Assets/DialogueSystem/Editor/NodeComponents/Port.cs
-  artifactKey: Guid(364cbe5de54ba4237883bf18847ed80c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Editor/NodeComponents/Port.cs using Guid(364cbe5de54ba4237883bf18847ed80c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9687c248ea65885c5926960bc0312d5d') in 0.001603 seconds 
-  Import took 0.004968 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.217751 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '07b53c69e602e737b8d371ab56cd7c57') in 0.003131 seconds 
-  Import took 0.006118 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 23.756750 seconds.
-  path: Assets/DialogueSystem/Editor/NodeComponents/NodePopUp.cs
-  artifactKey: Guid(ec08d63dad0ba4540b1ca6ef47f5480a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/Editor/NodeComponents/NodePopUp.cs using Guid(ec08d63dad0ba4540b1ca6ef47f5480a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8f8c0c6a9dc0241f12f09a01d16d0065') in 0.001639 seconds 
-  Import took 0.004731 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001595 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.43 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.304 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2127 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 204.1 MB.
-System memory in use after: 204.2 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2580.
-Total: 2.250334 ms (FindLiveObjects: 0.191306 ms CreateObjectMapping: 0.073492 ms MarkObjects: 1.969910 ms  DeleteObjects: 0.014800 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 137.337744 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'daa9c27a663b070c7b164ba8121075c3') in 0.023186 seconds 
-  Import took 0.026121 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.014095 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a0cdf08501b1185d481586d80f8ee66') in 0.003425 seconds 
-  Import took 0.006543 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.010402 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a0cdf08501b1185d481586d80f8ee66') in 0.002909 seconds 
-  Import took 0.005660 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.907469 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac398fd76ba12a227673cfb6a49b78ec') in 0.003107 seconds 
-  Import took 0.005917 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.009309 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ac398fd76ba12a227673cfb6a49b78ec') in 0.002947 seconds 
-  Import took 0.005540 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.666843 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21e8f625001c8d1a6c008c35b7f112ab') in 0.003305 seconds 
-  Import took 0.006041 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.010067 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21e8f625001c8d1a6c008c35b7f112ab') in 0.003094 seconds 
-  Import took 0.006103 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.131095 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e77e8fd0d1deed07e4d181324b264ab') in 0.003199 seconds 
-  Import took 0.005970 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.008717 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e77e8fd0d1deed07e4d181324b264ab') in 0.002188 seconds 
-  Import took 0.004804 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.009754 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2f0fc3f1055b161a63624cff82c2f1e') in 0.003210 seconds 
-  Import took 0.005924 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.008934 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2f0fc3f1055b161a63624cff82c2f1e') in 0.003403 seconds 
-  Import took 0.006701 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.063030 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '455a322bbbd0b22f0caa295b2df1701b') in 0.005220 seconds 
-  Import took 0.008087 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006772 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '455a322bbbd0b22f0caa295b2df1701b') in 0.003345 seconds 
-  Import took 0.006344 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.637098 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bca6f36b969bb70a62973f1aab2ea06') in 0.003773 seconds 
-  Import took 0.007181 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004976 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset
-  artifactKey: Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Dialogue Database.asset using Guid(61b20864d7f484d1da5abdad27efbdee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0bca6f36b969bb70a62973f1aab2ea06') in 0.003216 seconds 
-  Import took 0.005898 seconds .
-
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

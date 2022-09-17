@@ -6,15 +6,22 @@ using UnityEngine;
 [System.Serializable]
 public class SerializableMethodInfo : ISerializationCallbackReceiver
 {
-    public SerializableMethodInfo(MethodInfo aMethodInfo)
-    {
-        methodInfo = aMethodInfo;
-    }
     public MethodInfo methodInfo;
     public SerializableType type;
     public string methodName;
     public List<SerializableType> parameters = null;
     public int flags = 0;
+
+    public SerializableMethodInfo(MethodInfo aMethodInfo)
+    {
+        methodInfo = aMethodInfo;
+    }
+
+    public void SetMethodInfo(MethodInfo p_methodInfo)
+    {
+        methodInfo = p_methodInfo;
+        OnBeforeSerialize();
+    }
 
     public void OnBeforeSerialize()
     {

@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableType.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueManager.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\EventInfo.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializedList.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueDatabase.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableDictionary\Example\SerializableDictionaryExample.cs" />
@@ -62,7 +63,6 @@
      <Compile Include="Assets\DialogueSystem\Script\SaveManager.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Entries\EventEntry.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Entries\DialogueEntry.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\SomeEvent.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableDictionary\SerializableHashSet.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Option.cs" />
      <Compile Include="Assets\npcController.cs" />
@@ -79,6 +79,7 @@
      <Compile Include="Assets\DialogueSystem\Script\DialogueUtil.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\DialogueEvents.cs" />
      <Compile Include="Assets\DialogueSystem\Script\CharacterDialogue.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\InventoryEvents.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

@@ -13,70 +13,87 @@ namespace DialogueSystem.Editor
     public class EventNode : Node
     {
         private EventEntry _eventEntry;
-        
-        private string[] _methodNames;
-        private string[] _typeNames;
-        
-        private int typeIndex;
-        private int methodIndex;
 
-        private List<Rect> _eventRect;
-        
         public override void Init(Entry entry, DatabaseWindow databaseWindow)
         {
             base.Init(entry, databaseWindow);
             _eventEntry = (EventEntry) entry;
-            _eventRect = new List<Rect>();
         }
 
+        protected override void ConfigMenu()
+        {
+            base.ConfigMenu();
+            menu.AddItem(new GUIContent("Add Function"), false, AddEvent );
+        }
+        
         protected override void DrawComponents()
         {
-            _eventRect.Clear();
             inPort = NodeComponentUtilt.DrawPort(PortType.In, HandleInPortSelect);
             
             _eventEntry.text = NodeComponentUtilt.DrawText(_eventEntry.text, 50);
             
             NodeComponentUtilt.DrawSpace(10);
-
+            
             DrawMethodList();
             
             outPort = NodeComponentUtilt.DrawPort(PortType.Out, HandleOutPortSelect);
         }
 
-        public void DrawMethodList()
+        private void DrawMethodList()
         {
-            System.Type[] eventTypes = CachedData.eventTypes;
-            string[] eventNames = new string[eventTypes.Length];
-            for (int i = 0; i < eventTypes.Length; i++)
+            if (_eventEntry.staticEvents == null)
             {
-                eventNames[i] = eventTypes[i].Name;
-                if (_eventEntry.m_type.type != null)
+                return;
+            }
+
+            for(int i = 0; i < _eventEntry.staticEvents.Count;i++)
+            {
+                NodeComponentUtilt.DrawLine();
+                NodeComponentUtilt.DrawSpace(5);
+                
+                int typeIndex = 0;
+                string currentEventName = _eventEntry.staticEvents[i].eventType.typeName;
+
+                Type[] types = CachedData.GetEventTypes();
+                string[] typeNames = new string[types.Length];
+                for (int j = 0; j < types.Length; j++)
                 {
-                    if (eventNames[i].Equals(_eventEntry.m_type.type.Name))
+                    typeNames[j] = types[j].Name;
+                    if (currentEventName == typeNames[j])
                     {
-                        typeIndex = i;
+                        typeIndex = j;
                     }
                 }
-            }
-            
-            typeIndex = NodeComponentUtilt.DrawPopUp(typeIndex, eventNames, 20);
-            
-            MethodInfo[] methods = CachedData.GetMethods(eventTypes[typeIndex]);
-            string[] methodNames = new string[methods.Length];
-            for (int i = 0; i < methods.Length; i++)
-            {
-                methodNames[i] = methods[i].Name;
-                if (_eventEntry.m_method.methodInfo != null)
+
+                typeIndex = NodeComponentUtilt.DrawPopUp(typeIndex, typeNames, 20);
+                Type selectedType = types[typeIndex];
+                _eventEntry.staticEvents[i].SetEventType(selectedType);
+
+                int methodIndex = 0;
+                string currentMethodName = _eventEntry.staticEvents[i].eventMethod.methodName;
+
+                MethodInfo[] methods = CachedData.GetMethods(selectedType);
+                string[] methodNames = new string[methods.Length];
+                for (int j = 0; j < methods.Length; j++)
                 {
-                    if (_eventEntry.m_method.methodInfo.Name == methodNames[i])
+                    methodNames[j] = methods[j].Name;
+                    if (currentMethodName == methodNames[j])
                     {
-                        methodIndex = i;
+                        methodIndex = j;
                     }
                 }
+
+                methodIndex = NodeComponentUtilt.DrawPopUp(methodIndex, methodNames, 20);
+                MethodInfo selectedMethod = methods[methodIndex];
+                _eventEntry.staticEvents[i].SetMethodInfo(selectedMethod);
+                
+                NodeComponentUtilt.DrawSpace(5);
             }
-            
-            methodIndex = NodeComponentUtilt.DrawPopUp(methodIndex, methodNames, 20);
-            _eventEntry.SetEvent(methods[methodIndex]);
+        }
+
+        private void AddEvent()
+        {
+            _eventEntry.AddNewEvent();
         }
 
     }
