@@ -8,14 +8,17 @@ public class PlayerController : MonoBehaviour
     private Vector3 _moveDirection;
     private Rigidbody2D _rigidbody2D;
     [SerializeField] private float _speed;
-    [SerializeField] private bool _freezeInputs;
-    [SerializeField] private bool _interact;
-    [SerializeField] private Collider2D _interactableObject;
+    [SerializeField] private Animator _animator;
+    private bool _freezeInputs;
+    private bool _interact;
+    private Collider2D _interactableObject;
+    
     
     
     private void Awake()
     {
         _rigidbody2D = GetComponent<Rigidbody2D>();
+        _animator = GetComponent<Animator>();
         DialogueEvents.conversationStartedEvent += Listening;
         DialogueEvents.endConversation += FinishListening;
     }
@@ -30,6 +33,7 @@ public class PlayerController : MonoBehaviour
     {
         HandleInput();
         HandleInteraction();
+        HandleAnimations();
     }
 
     private void FixedUpdate()
@@ -60,6 +64,25 @@ public class PlayerController : MonoBehaviour
 
         NpcController npc = _interactableObject.GetComponent<NpcController>();
         npc.OnInteracted();
+    }
+
+    private void HandleAnimations()
+    {
+        if (_animator == null)
+        {
+            Debug.Log("Animator is null");
+            return;
+        }
+        
+        _animator.SetInteger("Direction",(int)_moveDirection.x);
+        if (_moveDirection.x < 0)
+        {
+            transform.eulerAngles = new Vector3(0, 180, 0);
+        }
+        else if (_moveDirection.x > 0)
+        {
+            transform.eulerAngles = Vector3.zero;
+        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)

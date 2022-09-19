@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7286149692986237201
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: zCwa8
+  position: {x: 921, y: 218}
+  text: Aarr, You'll never have a cool booty chest like me.
+--- !u!114 &-7255749404217282810
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: VoO7d
+  position: {x: -86, y: 120}
+  text: I recently got me-self this new booty chest
 --- !u!114 &-6984140659370824015
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -13,7 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: EQ2mq
-  position: {x: 100, y: 100}
+  position: {x: -437, y: 117}
   text: 
   m_pointType: 0
 --- !u!114 &-6841887367150063164
@@ -36,6 +66,22 @@ MonoBehaviour:
     text: wd1wd
   - id: 2
     text: 1231
+--- !u!114 &-6725022340916515010
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: fNTwZ
+  position: {x: 225, y: 120}
+  text: But when ever someone see's it theya always tell me, That they don't like
+    the colour.
 --- !u!114 &-6010685907441858949
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,6 +98,70 @@ MonoBehaviour:
   position: {x: 100, y: 100}
   text: 
   m_pointType: 0
+--- !u!114 &-3214941652149572718
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: T3HP8
+  position: {x: 910, y: 51}
+  text: I look them straight in the eye and say "What colour is your Booty"
+--- !u!114 &-1567709197420814294
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: MM4Rv
+  position: {x: 1270, y: 216}
+  text: Here's a Gold coin to fuck right off
+  staticEvents:
+  - eventType:
+      typeName: GameEvents
+      data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: GameEvents
+        data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      methodName: GetGold
+      parameters: []
+      flags: 24
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-1512257474914680063
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 4Fmk3
+  position: {x: 581, y: 77}
+  text: You know what i tell them
+  options:
+  - id: 1
+    text: What?
+  - id: 2
+    text: I don't really care
 --- !u!114 &-773281897015532391
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -69,35 +179,61 @@ MonoBehaviour:
   startEntry: {fileID: -6984140659370824015}
   entries:
   - {fileID: -6984140659370824015}
-  - {fileID: 3612694769645001823}
-  - {fileID: 4247833858610850391}
+  - {fileID: -7255749404217282810}
+  - {fileID: -1512257474914680063}
+  - {fileID: -6725022340916515010}
+  - {fileID: -3214941652149572718}
+  - {fileID: -7286149692986237201}
+  - {fileID: -1567709197420814294}
   links:
     m_keys:
-    - {fileID: 3612694769645001823}
+    - {fileID: -7255749404217282810}
     - {fileID: -6984140659370824015}
-    - {fileID: 4247833858610850391}
+    - {fileID: -6725022340916515010}
+    - {fileID: -1512257474914680063}
+    - {fileID: -7286149692986237201}
     m_values:
     - data:
-      - id: 58zXE
+      - id: Hcfek
         option:
-          id: 2
+          id: 
           text: 
-        sourceEntry: {fileID: 3612694769645001823}
-        destinationEntry: {fileID: 4247833858610850391}
+        sourceEntry: {fileID: -7255749404217282810}
+        destinationEntry: {fileID: -6725022340916515010}
     - data:
-      - id: mmYwL
+      - id: jDzTE
         option:
           id: 
           text: 
         sourceEntry: {fileID: -6984140659370824015}
-        destinationEntry: {fileID: 3612694769645001823}
+        destinationEntry: {fileID: -7255749404217282810}
     - data:
-      - id: l7KnW
+      - id: 4AaSV
         option:
           id: 
           text: 
-        sourceEntry: {fileID: 4247833858610850391}
-        destinationEntry: {fileID: 0}
+        sourceEntry: {fileID: -6725022340916515010}
+        destinationEntry: {fileID: -1512257474914680063}
+    - data:
+      - id: jrgc2
+        option:
+          id: 1
+          text: What?
+        sourceEntry: {fileID: -1512257474914680063}
+        destinationEntry: {fileID: -3214941652149572718}
+      - id: TUQVL
+        option:
+          id: 2
+          text: I don't really care
+        sourceEntry: {fileID: -1512257474914680063}
+        destinationEntry: {fileID: -7286149692986237201}
+    - data:
+      - id: Vg0ZN
+        option:
+          id: 
+          text: 
+        sourceEntry: {fileID: -7286149692986237201}
+        destinationEntry: {fileID: -1567709197420814294}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -158,38 +294,3 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &3612694769645001823
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: wwuZo
-  position: {x: 465, y: 187}
-  text: 
-  options:
-  - id: 1
-    text: 
-  - id: 2
-    text: 
---- !u!114 &4247833858610850391
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: t2wXE
-  position: {x: 831, y: 321}
-  text: 

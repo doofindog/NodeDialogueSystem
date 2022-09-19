@@ -4,23 +4,8 @@ using UnityEngine;
 
 public class GameEvents : DialogueEvents
 {
-    public static void GiveHealth()
+    public static void GetGold()
     {
-        Debug.Log("Thanks for healing me");
-    }
-
-    public static void GiveStamina()
-    {
-        Debug.Log("Much mana, Much wow");
-    }
-
-    public static void GiveBoth()
-    {
-        Debug.Log("I got both");
-    }
-
-    public static void GetSomethingGay()
-    {
-        Debug.Log("Gayness ++");
+        Debug.Log("You received a gold coin");
     }
 }

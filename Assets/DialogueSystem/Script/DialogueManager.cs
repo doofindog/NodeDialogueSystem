@@ -18,6 +18,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] private bool isTalking;
     [SerializeField] private bool skipTalking;
     [SerializeField] private bool finishedTalking;
+    [SerializeField] private bool freezeInputs;
     
     
 
@@ -42,6 +43,9 @@ public class DialogueManager : MonoBehaviour
 
         Debug.Log("New Conversation Started");
         currentConversation = graph;
+        currentEntry = currentConversation.GetNext(graph.GetStart());
+
+        freezeInputs = false;
         inProgress = true;
         isTalking = true;
         SetupUI(graph);
@@ -51,7 +55,6 @@ public class DialogueManager : MonoBehaviour
     private void SetupUI(ConversationGraph graph)
     {
         dialogueUI.gameObject.SetActive(true);
-        currentEntry = graph.GetStart();
         dialogueUI.DisplayDialogue(currentEntry);
     }
 
@@ -62,6 +65,7 @@ public class DialogueManager : MonoBehaviour
 
     public void EndConversation()
     {
+        freezeInputs = true;
         inProgress = false;
         isTalking = false;
         currentEntry = null;
@@ -76,6 +80,11 @@ public class DialogueManager : MonoBehaviour
 
     private void HandleInputs()
     {
+        if (freezeInputs == true)
+        {
+            return;
+        }
+
         if (Input.GetKeyDown(KeyCode.Space)) { ControlConversation();}
     }
 
