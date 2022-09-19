@@ -54,6 +54,7 @@
   <ItemGroup>
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableType.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
      <Compile Include="Assets\DialogueSystem\Script\EventInfo.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializedList.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueDatabase.cs" />
@@ -61,12 +62,15 @@
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializedDictionary.cs" />
      <Compile Include="Assets\DialogueSystem\Script\CachedData.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SaveManager.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\InventoryEvents.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Entries\EventEntry.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Entries\DialogueEntry.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableDictionary\SerializableHashSet.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Option.cs" />
-     <Compile Include="Assets\npcController.cs" />
+     <Compile Include="Assets\NpcController.cs" />
+     <Compile Include="Assets\Scripts\NpcDialogueTrigger.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableDictionary\Example\UserSerializableDictionaries.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\DialogueSystemUI.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableMethodInfo.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableDictionary\SerializableDictionary.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\GameEvents.cs" />
@@ -79,7 +83,27 @@
      <Compile Include="Assets\DialogueSystem\Script\DialogueUtil.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\DialogueEvents.cs" />
      <Compile Include="Assets\DialogueSystem\Script\CharacterDialogue.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\InventoryEvents.cs" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Mobile.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile SSD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Shaders\TMP_Sprite.shader" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

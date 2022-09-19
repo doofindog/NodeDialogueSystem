@@ -7,7 +7,6 @@ namespace DialogueSystem
     
     public class DecisionEntry : Entry
     {
-        [SerializeField] public string text;
         [SerializeField] public List<Option> options;
 
         public override void Init(Vector2 position, ConversationGraph graph)
@@ -42,14 +41,19 @@ namespace DialogueSystem
             options.Remove(removeOption);
         }
 
-        public override void Invoke()
-        {
-            DialogueManager.instance.ShowDiloague(text,options);
-        }
-
         public Option[] GetOptions()
         {
             return options.ToArray();
+        }
+
+        public Option GetOptionAtIndex(int i)
+        {
+            if (i < options.Count)
+            {
+                return options[i];
+            }
+
+            return null;
         }
     }
 }

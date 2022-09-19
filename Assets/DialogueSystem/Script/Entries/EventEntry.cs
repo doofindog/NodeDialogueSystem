@@ -1,21 +1,12 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Reflection;
-using DialogueSystem;
-using UnityEditor;
 using UnityEngine;
 using UnityEngine.Events;
-using Object = UnityEngine.Object;
-
 
 namespace DialogueSystem
 {
     [System.Serializable]
     public class EventEntry : Entry
     {
-        [SerializeField, HideInInspector] public string text;
-        
         [SerializeField] public List<EventInfo> staticEvents;
         [SerializeField] private UnityEvent unityEvent;
 
@@ -35,12 +26,10 @@ namespace DialogueSystem
 
         public override void Invoke()
         {
-            //m_method.methodInfo.Invoke(null, null);
-        }
-
-        public void Invoke(object[] parameters)
-        {
-            //m_method.methodInfo.Invoke(null, parameters);
+            foreach (EventInfo info in staticEvents)
+            {
+                info.Invoke();
+            }
         }
     }
 }

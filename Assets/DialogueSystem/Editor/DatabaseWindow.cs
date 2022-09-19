@@ -37,6 +37,7 @@ namespace DialogueSystem.Editor
 
             if (dialogueDB.ContainsConversations())
             {
+                DialogueEditorEvents.removeLink += RemoveLink;
                 ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(0);
                 LoadConversation(graph);
             }
@@ -280,7 +281,7 @@ namespace DialogueSystem.Editor
         
         #endregion
 
-        #region Connections
+        #region Links
 
         public void SelectSourceNode(Node node, Option option = null)
         {
@@ -315,7 +316,7 @@ namespace DialogueSystem.Editor
                 return;
             }
             
-            foreach (Entry entry in selectedGraph.links.Keys)
+            foreach (Entry entry in selectedGraph.links.Keys.ToList())
             {
                 Link[] adjLinks = selectedGraph.GetAdjLinks(entry);
                 if (adjLinks == null)
@@ -324,9 +325,14 @@ namespace DialogueSystem.Editor
                     continue;
                 }
                 
-                foreach (Link link in adjLinks)
+                foreach (Link link in adjLinks.ToList())
                 {
-                    LinkEditor linkEditor = new LinkEditor();
+                    LinkEditor linkEditor = new LinkEditor(link);
+                    if (link.destinationEntry == null)
+                    {
+                        RemoveLink(linkEditor);
+                        continue;
+                    }
 
                     Port sourcePort = null;
                     if (entry.GetType() == typeof(DecisionEntry))
@@ -340,12 +346,18 @@ namespace DialogueSystem.Editor
                     }
 
                     Port destinationPort = GetNode(link.destinationEntry).GetInPort();
+
                     Vector2 startPos = sourcePort.GetRect().center;
                     Vector2 endPos = destinationPort.GetRect().center;
                         
                     linkEditor.Draw(startPos,endPos);
                 }
             }
+        }
+
+        public void RemoveLink(LinkEditor p_linkEditor)
+        {
+            selectedGraph.RemoveLink(p_linkEditor.GetLink());
         }
         #endregion
         

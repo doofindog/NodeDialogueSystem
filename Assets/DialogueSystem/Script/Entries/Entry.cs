@@ -10,6 +10,7 @@ namespace DialogueSystem
     {
         [HideInInspector] public string id; 
         [SerializeField, HideInInspector] private Vector2 position;
+        [SerializeField] public string text;
         private ConversationGraph _conversationGraph;
 
         public virtual void Init(Vector2 position, ConversationGraph graph)
@@ -32,6 +33,11 @@ namespace DialogueSystem
         public void UpdatePosition(Vector2 newPositon)
         {
             position = newPositon;
+        }
+
+        public virtual string GetDialogueText()
+        {
+            return text;
         }
 
         public virtual void Invoke()

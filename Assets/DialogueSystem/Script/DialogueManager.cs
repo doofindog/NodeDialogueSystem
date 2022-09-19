@@ -8,82 +8,128 @@ using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
-    [SerializeField] private ConversationGraph mConversation;
-    [SerializeField] private GameObject dialogueUI;
-    [SerializeField] private Text m_text;
-    [SerializeField] private float m_textSpeed;
-    [SerializeField] private KeyCode m_key;
-    private bool fastShow;
-    private bool endReached;
     
-    private ConversationGraph _mConversationGraph;
-    private Entry currentIndex;
+    [SerializeField] private ConversationGraph currentConversation;
+    [SerializeField] private Entry currentEntry;
+    [SerializeField] private DialogueSystemUI dialogueUI;
 
-    private IEnumerator _enumerator;
+    
+    [SerializeField] private bool inProgress;
+    [SerializeField] private bool isTalking;
+    [SerializeField] private bool skipTalking;
+    [SerializeField] private bool finishedTalking;
+    
+    
+
     public void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            instance.gameObject.SetActive(false);
-        }
+        DialogueEvents.startConversationEvent += StartConversation;
+        DialogueUIEvents.optionPressed += HandleOnClickOption;
+        DialogueUIEvents.printingCompleted += HandleTalkingComplete;
     }
 
-    public void OpenDialogue(ConversationGraph conversationGraph)
+    public void OnDestroy()
     {
-        mConversation = conversationGraph;
-        LoadDialogue(mConversation);
-        
+        DialogueEvents.startConversationEvent -= StartConversation;
+        DialogueUIEvents.optionPressed -= HandleOnClickOption;
+        DialogueUIEvents.printingCompleted -= HandleTalkingComplete;
     }
 
-    public void ShowDiloague(string text, List<Option> option = null)
+    private void StartConversation(ConversationGraph graph)
     {
-        dialogueUI.SetActive(true);
-        if (_enumerator != null)
-        {
-            StopCoroutine(_enumerator);
-        }
+        if (graph == null) { return; }
+        if (inProgress == true) { return; }
 
-        _enumerator = ShowText(text, option);
-        StartCoroutine(_enumerator);
+        Debug.Log("New Conversation Started");
+        currentConversation = graph;
+        inProgress = true;
+        isTalking = true;
+        SetupUI(graph);
+        DialogueEvents.ConversationStarted();
     }
-    
-    private IEnumerator ShowText(string text, List<Option> options = null)
-    {
-        if (text != string.Empty)
-        {
-            m_text.text = string.Empty;
-            if (fastShow != true)
-            {
-                for (int i = 0; i < text.Length; i++)
-                {
-                    m_text.text += text[i];
-                    yield return new WaitForSeconds(m_textSpeed);
-                }
-            }
-            else
-            {
-                m_text.text = text;
-            }
 
-            if (options != null)
-            {
-
-            }
-        }
-    }
-    
-    public void CloseDialogue()
+    private void SetupUI(ConversationGraph graph)
     {
-        dialogueUI.SetActive(false);
-        this.gameObject.SetActive(false);
-    }
-    
-    public void LoadDialogue(ConversationGraph conversationConversationGraph)
-    {
-        instance.gameObject.SetActive(true);
         dialogueUI.gameObject.SetActive(true);
-        _mConversationGraph = conversationConversationGraph;
+        currentEntry = graph.GetStart();
+        dialogueUI.DisplayDialogue(currentEntry);
     }
-    
+
+    private void UpdateUI(Entry entry)
+    {
+        dialogueUI.DisplayDialogue(entry);
+    }
+
+    public void EndConversation()
+    {
+        inProgress = false;
+        isTalking = false;
+        currentEntry = null;
+        dialogueUI.gameObject.SetActive(false);
+        DialogueEvents.ConversationEnded();
+    }
+
+    public void Update()
+    {
+        HandleInputs();
+    }
+
+    private void HandleInputs()
+    {
+        if (Input.GetKeyDown(KeyCode.Space)) { ControlConversation();}
+    }
+
+    private void ControlConversation()
+    {
+        if (isTalking)
+        {
+            TrySkipTalking();
+            return;
+        }
+        
+        if (currentEntry.GetType() != typeof(DecisionEntry))
+        {
+            Entry nextEntry = currentConversation.GetNext(currentEntry);
+            MoveToNext(nextEntry);
+        }
+    }
+
+    private void TrySkipTalking()
+    {
+        if (!isTalking)
+        {
+            return;
+        }
+
+        DialogueEvents.skipTalking();
+        isTalking = false;
+    }
+
+    private void HandleTalkingComplete()
+    {
+        isTalking = false;
+    }
+
+    private void MoveToNext(Entry nextEntry)
+    {
+        if (nextEntry == null)
+        {
+            EndConversation();
+            return;
+        }
+        
+        currentEntry = nextEntry;
+        UpdateUI(nextEntry);
+        currentEntry.Invoke();
+        isTalking = true;
+    }
+
+    private void HandleOnClickOption(int index)
+    {
+        DecisionEntry decisionEntry = (DecisionEntry) currentEntry;
+        Option optionPressed = decisionEntry.GetOptionAtIndex(index);
+        
+        Entry nextEntry = currentConversation.GetNext(currentEntry, optionPressed);
+        MoveToNext(nextEntry);
+    }
 }

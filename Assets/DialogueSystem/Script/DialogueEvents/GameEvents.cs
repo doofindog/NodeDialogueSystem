@@ -18,4 +18,9 @@ public class GameEvents : DialogueEvents
     {
         Debug.Log("I got both");
     }
+
+    public static void GetSomethingGay()
+    {
+        Debug.Log("Gayness ++");
+    }
 }

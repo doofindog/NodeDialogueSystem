@@ -20,8 +20,8 @@ namespace DialogueSystem
             this.option = option;
             this.sourceEntry = sourceEntry; 
             this.destinationEntry = destinationEntry;
-        } 
-        
+        }
+
 
         #region IEqualityComparer
         

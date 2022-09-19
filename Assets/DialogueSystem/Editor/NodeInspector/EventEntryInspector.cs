@@ -8,9 +8,6 @@ using UnityEngine;
 [CustomEditor(typeof(EventEntry))]
 public class EventEntryInspector : Editor
 {
-    private int typeIndex = 0;
-    private int methodIndex = 0;
-    
     public override void OnInspectorGUI()
     {
         EventEntry eventEntry = target as EventEntry;

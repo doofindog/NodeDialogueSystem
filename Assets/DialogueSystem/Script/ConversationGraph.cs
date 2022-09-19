@@ -15,7 +15,8 @@ namespace DialogueSystem
     {
         [SerializeField] private string id;
         [SerializeField] private new string name;
-        
+
+        public Entry startEntry;
         public List<Entry> entries;
         public LinkDictionary links;
 
@@ -27,7 +28,7 @@ namespace DialogueSystem
             entries = new List<Entry>();
             links = new LinkDictionary();
             
-            StartEntry startEntry = CreateEntry<StartEntry>(new Vector2(100, 100));
+            startEntry = CreateEntry<StartEntry>(new Vector2(100, 100));
         }
         
         public string GetName()
@@ -36,7 +37,41 @@ namespace DialogueSystem
         }
 
         #region  entry
-        
+
+        public Entry GetStart()
+        {
+            return startEntry;
+        }
+
+        public Entry GetNext(Entry entry)
+        {
+            if (!links.Contains(entry))
+            {
+                return null;
+            }
+            Link link = links[entry][0];
+            Debug.Log("Destination : " + link.destinationEntry);
+            return link.destinationEntry;
+        }
+
+        public Entry GetNext(Entry entry, Option option)
+        {
+            if (!links.Contains(entry)) { return null; }
+            
+            List<Link> entryLinks = links[entry];
+            for (int i = 0; i < entryLinks.Count; i++)
+            {
+                if (entryLinks[i].option == null) { return null; }
+
+                if (entryLinks[i].option.Equals(option))
+                {
+                    return entryLinks[i].destinationEntry;
+                }
+            }
+
+            return null;
+        }
+
         public Entry[] GetEntries()
         {
             if (entries != null)
@@ -88,6 +123,7 @@ namespace DialogueSystem
 
         public void RemoveEntry(Entry entry)
         {
+            links.Remove(entry);
             entries.Remove(entry);
             DestroyImmediate(entry,true);
         }
@@ -130,7 +166,27 @@ namespace DialogueSystem
             Debug.Log("(GetAdjLink) : No entry found");
             return null;
         }
-        
+
+        public void RemoveLink(Link p_link)
+        {
+            List<Link> entryLinks = links[p_link.sourceEntry];
+
+            foreach (Link link in entryLinks.ToList())
+            {
+                if (link.Equals(p_link))
+                {
+                    entryLinks.Remove(link);
+                }
+            }
+        }
+
+        public void RemoveLinks(Entry entry)
+        {
+            if (links.Contains(entry))
+            {
+                links.Remove(entry);
+            }
+        }
 
         #endregion
 

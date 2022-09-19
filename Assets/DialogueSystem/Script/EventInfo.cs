@@ -28,4 +28,11 @@ public class EventInfo
         eventType.SetType(methodInfo.DeclaringType);
     }
 
+    public void Invoke()
+    { 
+        if (eventMethod.methodInfo == null) { return; }
+
+        eventMethod.methodInfo.Invoke(null, null);
+    }
+
 }

@@ -1,0 +1,195 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6984140659370824015
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: EQ2mq
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &-6841887367150063164
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: YaLgd
+  position: {x: 445, y: 65.5}
+  text: asdasdasd13e1
+  options:
+  - id: 1
+    text: wd1wd
+  - id: 2
+    text: 1231
+--- !u!114 &-6010685907441858949
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: syI8C
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &-773281897015532391
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: GisiE
+  name: Conversation (GisiE)
+  startEntry: {fileID: -6984140659370824015}
+  entries:
+  - {fileID: -6984140659370824015}
+  - {fileID: 3612694769645001823}
+  - {fileID: 4247833858610850391}
+  links:
+    m_keys:
+    - {fileID: 3612694769645001823}
+    - {fileID: -6984140659370824015}
+    - {fileID: 4247833858610850391}
+    m_values:
+    - data:
+      - id: 58zXE
+        option:
+          id: 2
+          text: 
+        sourceEntry: {fileID: 3612694769645001823}
+        destinationEntry: {fileID: 4247833858610850391}
+    - data:
+      - id: mmYwL
+        option:
+          id: 
+          text: 
+        sourceEntry: {fileID: -6984140659370824015}
+        destinationEntry: {fileID: 3612694769645001823}
+    - data:
+      - id: l7KnW
+        option:
+          id: 
+          text: 
+        sourceEntry: {fileID: 4247833858610850391}
+        destinationEntry: {fileID: 0}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11fdd7ae4ff0a491cb08714f7a31547c, type: 3}
+  m_Name: Yaarrendrew Tate
+  m_EditorClassIdentifier: 
+  id: 
+  conversations:
+  - {fileID: -773281897015532391}
+--- !u!114 &2673142018362934090
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 6DuyT
+  position: {x: 34, y: 192}
+  text: 'We have to remove this testasoidhaiusdhaibdajknd ajsbdjkasndansdi '
+  m_pointType: 0
+--- !u!114 &3370459816075947131
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7IaXF
+  position: {x: 1165, y: 70}
+  text: 12312312saadsd
+  staticEvents:
+  - eventType:
+      typeName: GameEvents
+      data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: GameEvents
+        data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      methodName: GetSomethingGay
+      parameters: []
+      flags: 24
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &3612694769645001823
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: wwuZo
+  position: {x: 465, y: 187}
+  text: 
+  options:
+  - id: 1
+    text: 
+  - id: 2
+    text: 
+--- !u!114 &4247833858610850391
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: t2wXE
+  position: {x: 831, y: 321}
+  text: 
