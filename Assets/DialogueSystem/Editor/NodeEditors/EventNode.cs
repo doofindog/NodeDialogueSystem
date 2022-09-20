@@ -123,7 +123,6 @@ namespace DialogueSystem.Editor
 
         private void DrawParameters(SerializableVariable p_paramObj)
         {
-            Debug.Log(p_paramObj.GetObjType().Name);
             switch (p_paramObj.GetObjType().Name)
             {
                 case "Int32":
@@ -135,7 +134,7 @@ namespace DialogueSystem.Editor
                         value = (int) p_paramObj.GetObject();
                     }
                     
-                    value = Int32.Parse(NodeComponentUtilt.DrawTextField("int", value.ToString()));
+                    value = Int32.Parse(NodeComponentUtilt.DrawTextField(p_paramObj.variableName, value.ToString()));
                     p_paramObj.SetObject(value);
                     
                     break;
@@ -157,7 +156,7 @@ namespace DialogueSystem.Editor
                         
                     }
                     
-                    value = NodeComponentUtilt.DrawToggle(value);
+                    value = NodeComponentUtilt.DrawToggle(p_paramObj.variableName,value);
                     p_paramObj.SetObject(value);
                     
                     break;
@@ -178,12 +177,8 @@ namespace DialogueSystem.Editor
                         }
                     }
                     
-                    value = NodeComponentUtilt.DrawTextField("string", value);
+                    value = NodeComponentUtilt.DrawTextField(p_paramObj.variableName, value);
                     p_paramObj.SetObject(value);
-                    break;
-                }
-                case "Object":
-                {
                     break;
                 }
             }

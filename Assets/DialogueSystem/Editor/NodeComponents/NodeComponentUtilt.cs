@@ -140,7 +140,7 @@ namespace DialogueSystem.Editor.NodeComponents
             return text;
         }
 
-        public static bool DrawToggle(bool p_isTrue)
+        public static bool DrawToggle(string lable,bool p_isTrue)
         {
             Vector2 position = focusedNode.componentDrawPos;
             Vector2 offset = new Vector2
@@ -156,7 +156,7 @@ namespace DialogueSystem.Editor.NodeComponents
             Rect componentRect = new Rect(position, size);
             
             NodeBoolean boolean = new NodeBoolean(componentRect);
-            p_isTrue = boolean.Draw(p_isTrue);
+            p_isTrue = boolean.Draw(lable,p_isTrue);
 
             lastDrawnComponent = boolean;
             

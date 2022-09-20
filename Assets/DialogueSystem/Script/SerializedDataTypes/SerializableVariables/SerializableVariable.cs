@@ -11,14 +11,16 @@ using Object = UnityEngine.Object;
 [System.Serializable]
 public class SerializableVariable : ISerializationCallbackReceiver
 {
-    public object runTimeObject;
+    public object variableValue;
+    public string variableName;
     public SerializableType type;
     public byte[] data;
 
 
-    public SerializableVariable(Type p_type)
+    public SerializableVariable(Type p_type, string p_varialbleName)
     {
         type = new SerializableType(p_type);
+        variableName = p_varialbleName;
     }
 
     public void WriteData(object p_object)
@@ -48,12 +50,12 @@ public class SerializableVariable : ISerializationCallbackReceiver
         memoryStream.Write(data,0,data.Length);
         memoryStream.Seek(0, SeekOrigin.Begin);
         
-        runTimeObject = (object) binaryFormatter.Deserialize(memoryStream);
+        variableValue = (object) binaryFormatter.Deserialize(memoryStream);
     }
 
     public  void OnBeforeSerialize()
     {
-        WriteData(runTimeObject);
+        WriteData(variableValue);
     }
 
     public void OnAfterDeserialize()
@@ -63,17 +65,13 @@ public class SerializableVariable : ISerializationCallbackReceiver
     
     public void SetObject(object obj)
     {
-        runTimeObject = obj;
+        variableValue = obj;
         OnBeforeSerialize();
     }
 
     public object GetObject()
     {
-        if(runTimeObject == null)
-        {
-            Debug.Log("runtime obj is null");
-        }
-        return runTimeObject;
+        return variableValue;
     }
 
     public Type GetObjType()

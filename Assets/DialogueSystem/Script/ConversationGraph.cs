@@ -50,7 +50,6 @@ namespace DialogueSystem
                 return null;
             }
             Link link = links[entry][0];
-            Debug.Log("Destination : " + link.destinationEntry);
             return link.destinationEntry;
         }
 

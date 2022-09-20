@@ -35,11 +35,11 @@ public class NodeBoolean : NodeComponent
         _toggleRect = new Rect(textPosition, textSize);
     }
 
-    public bool Draw(bool isTrue = false)
+    public bool Draw(string lable,bool isTrue = false)
     {
 
         GUI.skin.textArea.wordWrap = true;
-        GUI.Label(_labelRect, "boolean");
+        GUI.Label(_labelRect, lable);
         _isTrue = GUI.Toggle(_toggleRect, isTrue, string.Empty);
         GUI.skin.textArea.wordWrap = false;
 

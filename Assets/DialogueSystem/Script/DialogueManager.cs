@@ -40,8 +40,7 @@ public class DialogueManager : MonoBehaviour
     {
         if (graph == null) { return; }
         if (inProgress == true) { return; }
-
-        Debug.Log("New Conversation Started");
+        
         currentConversation = graph;
         currentEntry = currentConversation.GetNext(graph.GetStart());
 

@@ -37,10 +37,14 @@ public class EventInfo
         parametersObj.Clear();
         
         if(eventMethod.parameters==null) { return; }
-        
-        foreach (SerializableType param in eventMethod.parameters)
+
+        ParameterInfo[] info = eventMethod.methodInfo.GetParameters();
+        for (int i = 0; i < eventMethod.parameters.Count; i++)
         {
-            parametersObj.Add(new SerializableVariable(param.type));
+            string paramName = info[i].Name;
+            Type paramType = info[i].ParameterType;
+            
+            parametersObj.Add(new SerializableVariable(paramType, paramName));
         }
     }
 
@@ -53,7 +57,14 @@ public class EventInfo
     { 
         if (eventMethod.methodInfo == null) { return; }
 
-        eventMethod.methodInfo.Invoke(null, null);
+        List<object> parameters = new List<object>();
+        foreach (SerializableVariable variable in parametersObj)
+        {
+            object param = variable.GetObject();
+            parameters.Add(param);
+        }
+         
+        eventMethod.methodInfo.Invoke(null, parameters.ToArray());
     }
 
     public List<SerializableVariable> GetParameterObj()
