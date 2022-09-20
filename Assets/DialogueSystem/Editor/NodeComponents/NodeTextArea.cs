@@ -7,7 +7,6 @@ namespace DialogueSystem.Editor.NodeComponents
     public class NodeTextArea : NodeComponent
     {
         private string _text;
-        private GUIStyle _style;
 
         public NodeTextArea(Rect rect)
         {

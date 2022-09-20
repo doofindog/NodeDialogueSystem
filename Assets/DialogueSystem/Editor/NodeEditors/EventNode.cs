@@ -129,21 +129,57 @@ namespace DialogueSystem.Editor
                 case "Int32":
                 {
                     int value = 0;
+                    
                     if (p_paramObj.GetObject() != null)
                     {
                         value = (int) p_paramObj.GetObject();
                     }
                     
-                    value = Int32.Parse(NodeComponentUtilt.DrawText(value.ToString(),20));
+                    value = Int32.Parse(NodeComponentUtilt.DrawTextField("int", value.ToString()));
                     p_paramObj.SetObject(value);
+                    
                     break;
                 }
                 case "Boolean":
                 {
+                    bool value = false;
+
+                    if (p_paramObj.GetObjType() != null)
+                    {
+                        if (p_paramObj.GetObject() == null)
+                        {
+                            value = false;
+                        }
+                        else
+                        {
+                            value = (bool) p_paramObj.GetObject();
+                        }
+                        
+                    }
+                    
+                    value = NodeComponentUtilt.DrawToggle(value);
+                    p_paramObj.SetObject(value);
+                    
                     break;
                 }
                 case "String":
                 {
+                    string value = string.Empty;
+                    
+                    if (p_paramObj.GetObject() != null)
+                    {
+                        if (p_paramObj.GetObject() == null)
+                        {
+                            value = string.Empty;
+                        }
+                        else
+                        {
+                            value = (string) p_paramObj.GetObject();
+                        }
+                    }
+                    
+                    value = NodeComponentUtilt.DrawTextField("string", value);
+                    p_paramObj.SetObject(value);
                     break;
                 }
                 case "Object":

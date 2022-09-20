@@ -34,9 +34,10 @@ public class EventInfo
     }
     public void UpdateParameters()
     {
+        parametersObj.Clear();
+        
         if(eventMethod.parameters==null) { return; }
         
-        parametersObj.Clear();
         foreach (SerializableType param in eventMethod.parameters)
         {
             parametersObj.Add(new SerializableVariable(param.type));

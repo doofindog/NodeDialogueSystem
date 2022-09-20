@@ -1,0 +1,1627 @@
+Using pre-set license
+
+ COMMAND LINE ARGUMENTS:
+/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MacOS/Unity
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+/Users/doof/Documents/Personal/NodeDialogueSystem
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+60811
+Successfully changed project path to: /Users/doof/Documents/Personal/NodeDialogueSystem
+/Users/doof/Documents/Personal/NodeDialogueSystem
+Using Asset Import Pipeline V2.
+Refreshing native plugins compatible for Editor in 46.20 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 2020.3.13f1 (71691879b7f5)
+[Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/doof/Documents/Personal/NodeDialogueSystem/Assets
+GfxDevice: creating device client; threaded=0
+2022-09-20 20:06:22.487 Unity[68391:1033872] 27GL850 preferred device: AMD Radeon Pro 5600M (high power)
+2022-09-20 20:06:22.487 Unity[68391:1033872] Metal devices available: 2
+2022-09-20 20:06:22.487 Unity[68391:1033872] 0: AMD Radeon Pro 5600M (high power)
+2022-09-20 20:06:22.487 Unity[68391:1033872] 1: Intel(R) UHD Graphics 630 (low power)
+2022-09-20 20:06:22.488 Unity[68391:1033872] Using device AMD Radeon Pro 5600M (high power)
+Initializing Metal device caps: AMD Radeon Pro 5600M
+Initialize mono
+Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed'
+Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
+Mono config path = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56391
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
+Registered in 0.002554 seconds.
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 50.21 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  6.147 seconds
+Platform modules already initialized, skipping
+Registering precompiled user dll's ...
+Registered in 0.001953 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 44.98 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.534 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launching external process: /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2159 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 197.8 MB.
+System memory in use after: 197.9 MB.
+
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2597.
+Total: 2.439151 ms (FindLiveObjects: 0.212207 ms CreateObjectMapping: 0.089792 ms MarkObjects: 2.067404 ms  DeleteObjects: 0.069022 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eb37e84bfad912526f68b9b78eff6af5') in 0.221409 seconds 
+  Import took 0.226943 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001300 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.333 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2136 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.9 MB.
+System memory in use after: 201.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2600.
+Total: 2.105469 ms (FindLiveObjects: 0.180237 ms CreateObjectMapping: 0.072351 ms MarkObjects: 1.838901 ms  DeleteObjects: 0.013398 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001298 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.241 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2136 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.2 MB.
+System memory in use after: 201.3 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2603.
+Total: 2.081340 ms (FindLiveObjects: 0.166028 ms CreateObjectMapping: 0.060656 ms MarkObjects: 1.840894 ms  DeleteObjects: 0.013147 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001675 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.437 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2136 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.4 MB.
+System memory in use after: 201.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2606.
+Total: 2.304938 ms (FindLiveObjects: 0.196850 ms CreateObjectMapping: 0.077705 ms MarkObjects: 2.012429 ms  DeleteObjects: 0.017166 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001735 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.391 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2136 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.7 MB.
+System memory in use after: 201.8 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2609.
+Total: 2.247655 ms (FindLiveObjects: 0.190495 ms CreateObjectMapping: 0.071413 ms MarkObjects: 1.969396 ms  DeleteObjects: 0.015388 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 195.418037 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bdba5f5387a0cf9e27d1330f66a6eae1') in 0.015534 seconds 
+  Import took 0.020575 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.060446 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7b1161dbd9429f9a04ed2e4d7e7c9183') in 0.007057 seconds 
+  Import took 0.011607 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.479380 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ff7a39e8e6eaac673e1a14dffe5ef267') in 0.011790 seconds 
+  Import took 0.015673 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.609644 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '05c0f518235bd2f9cbf992a2cef582ba') in 0.026467 seconds 
+  Import took 0.032288 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.744075 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6472d61cfa6974036970e4d6fcbac762') in 0.096123 seconds 
+  Import took 0.100797 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001736 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.417 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 206.2 MB.
+System memory in use after: 206.4 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2613.
+Total: 2.409083 ms (FindLiveObjects: 0.213307 ms CreateObjectMapping: 0.081040 ms MarkObjects: 2.093998 ms  DeleteObjects: 0.018978 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 22.200958 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '974d280200c4de602f690266d5c99af2') in 0.004639 seconds 
+  Import took 0.008996 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001339 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.294 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.43 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 206.5 MB.
+System memory in use after: 206.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2616.
+Total: 1.812088 ms (FindLiveObjects: 0.154783 ms CreateObjectMapping: 0.057463 ms MarkObjects: 1.587495 ms  DeleteObjects: 0.011722 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 27.692123 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ca3313f0bc1a4f40fcb52ef17f67f724') in 0.004392 seconds 
+  Import took 0.008633 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001679 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.74 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.328 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 206.8 MB.
+System memory in use after: 206.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2619.
+Total: 2.230659 ms (FindLiveObjects: 0.189513 ms CreateObjectMapping: 0.067061 ms MarkObjects: 1.957367 ms  DeleteObjects: 0.016063 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 36.871445 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a37f8f877f67f02564f261d908f79303') in 0.004325 seconds 
+  Import took 0.008906 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001346 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.294 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 207.0 MB.
+System memory in use after: 207.1 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2622.
+Total: 2.311989 ms (FindLiveObjects: 0.196835 ms CreateObjectMapping: 0.081013 ms MarkObjects: 2.017743 ms  DeleteObjects: 0.015526 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 12.209373 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4e8b2fc1195d38d773f4905a2129000f') in 0.004264 seconds 
+  Import took 0.007926 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 6.178890 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f0722a72bf0530256a7fa557208a450e') in 0.001565 seconds 
+  Import took 0.005939 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.383707 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '62c9d5d3b84a98ce0e809798b1127d4f') in 0.001599 seconds 
+  Import took 0.005854 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.088474 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '91951616c3a28eaa2ed0a02a283e9632') in 0.001514 seconds 
+  Import took 0.005380 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.208420 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9468d050b02d7949fab0a3580c8b278') in 0.001841 seconds 
+  Import took 0.007130 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.779478 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a2287fd945211775ea96da222f181213') in 0.001507 seconds 
+  Import took 0.005464 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.711758 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b04f0a22524c5ac62820c90365507517') in 0.002263 seconds 
+  Import took 0.006226 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 73.005559 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '114d2a83981b2212cfdb790bf1bc8c80') in 0.001510 seconds 
+  Import took 0.005934 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.749127 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '247aeaa9353d1e34d976a8705ae2adbf') in 0.002906 seconds 
+  Import took 0.007004 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001747 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.398 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 207.3 MB.
+System memory in use after: 207.4 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2625.
+Total: 2.391009 ms (FindLiveObjects: 0.177717 ms CreateObjectMapping: 0.065421 ms MarkObjects: 2.131304 ms  DeleteObjects: 0.015873 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001664 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.228 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 207.5 MB.
+System memory in use after: 207.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2628.
+Total: 2.027408 ms (FindLiveObjects: 0.214346 ms CreateObjectMapping: 0.056325 ms MarkObjects: 1.743639 ms  DeleteObjects: 0.012565 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 166.016525 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '34939d2bdf3e74faec94501b1408554b') in 0.004759 seconds 
+  Import took 0.008026 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.264562 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b1808faeb8531321c04df0c9020c432f') in 0.001655 seconds 
+  Import took 0.006188 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.800461 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b03feb25aa98134bf6f0a98d00ea779') in 0.001473 seconds 
+  Import took 0.005085 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 11.992960 seconds.
+  path: Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs
+  artifactKey: Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/NodeComponents/NodeBoolean.cs using Guid(87b0c36e3b5544c55a65b91454b0afee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '36ec804d61f2a6e81af144847ee5675f') in 0.001608 seconds 
+  Import took 0.005123 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001309 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.71 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.379 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 207.8 MB.
+System memory in use after: 207.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2631.
+Total: 2.204149 ms (FindLiveObjects: 0.190738 ms CreateObjectMapping: 0.082278 ms MarkObjects: 1.915626 ms  DeleteObjects: 0.014650 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001312 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.294 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 208.0 MB.
+System memory in use after: 208.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2634.
+Total: 2.006318 ms (FindLiveObjects: 0.160714 ms CreateObjectMapping: 0.058087 ms MarkObjects: 1.773850 ms  DeleteObjects: 0.012926 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001424 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.368 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 208.3 MB.
+System memory in use after: 208.4 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2637.
+Total: 2.672727 ms (FindLiveObjects: 0.262260 ms CreateObjectMapping: 0.121420 ms MarkObjects: 2.267260 ms  DeleteObjects: 0.020692 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001510 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.419 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 208.5 MB.
+System memory in use after: 208.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2640.
+Total: 2.229341 ms (FindLiveObjects: 0.204777 ms CreateObjectMapping: 0.080682 ms MarkObjects: 1.927455 ms  DeleteObjects: 0.015538 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001653 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.415 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 208.8 MB.
+System memory in use after: 208.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2643.
+Total: 2.431661 ms (FindLiveObjects: 0.216172 ms CreateObjectMapping: 0.082156 ms MarkObjects: 2.113841 ms  DeleteObjects: 0.018591 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001592 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.334 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 209.0 MB.
+System memory in use after: 209.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2646.
+Total: 2.223326 ms (FindLiveObjects: 0.191258 ms CreateObjectMapping: 0.073319 ms MarkObjects: 1.942528 ms  DeleteObjects: 0.015261 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 299.481685 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4c9db0e66f22dfd0950fff2ec60ed1f9') in 0.015380 seconds 
+  Import took 0.019285 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.421868 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b8bfef96a5429635294ef0b1994239f8') in 0.005547 seconds 
+  Import took 0.009224 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001651 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.402 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 209.3 MB.
+System memory in use after: 209.4 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2649.
+Total: 2.572713 ms (FindLiveObjects: 0.216316 ms CreateObjectMapping: 0.084498 ms MarkObjects: 2.250081 ms  DeleteObjects: 0.020715 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001859 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.316 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.35 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 209.6 MB.
+System memory in use after: 209.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2652.
+Total: 2.207680 ms (FindLiveObjects: 0.309698 ms CreateObjectMapping: 0.072960 ms MarkObjects: 1.810038 ms  DeleteObjects: 0.014258 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 400.210006 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b30b6206fa5d6a2f3d04526bd2370e1a') in 0.046558 seconds 
+  Import took 0.050104 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001334 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.334 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 209.8 MB.
+System memory in use after: 209.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2655.
+Total: 2.143598 ms (FindLiveObjects: 0.178768 ms CreateObjectMapping: 0.065098 ms MarkObjects: 1.885705 ms  DeleteObjects: 0.013347 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001620 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.385 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 210.1 MB.
+System memory in use after: 210.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2658.
+Total: 2.419560 ms (FindLiveObjects: 0.231218 ms CreateObjectMapping: 0.088558 ms MarkObjects: 2.080817 ms  DeleteObjects: 0.017948 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001442 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.348 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 210.3 MB.
+System memory in use after: 210.4 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2661.
+Total: 2.079567 ms (FindLiveObjects: 0.161236 ms CreateObjectMapping: 0.059122 ms MarkObjects: 1.845114 ms  DeleteObjects: 0.013543 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001642 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.356 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 210.6 MB.
+System memory in use after: 210.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2664.
+Total: 2.187963 ms (FindLiveObjects: 0.168429 ms CreateObjectMapping: 0.064515 ms MarkObjects: 1.940132 ms  DeleteObjects: 0.014272 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001931 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.411 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 210.8 MB.
+System memory in use after: 210.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2667.
+Total: 2.229187 ms (FindLiveObjects: 0.196189 ms CreateObjectMapping: 0.074783 ms MarkObjects: 1.941832 ms  DeleteObjects: 0.015402 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001628 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.338 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 211.1 MB.
+System memory in use after: 211.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2670.
+Total: 2.086197 ms (FindLiveObjects: 0.181963 ms CreateObjectMapping: 0.115267 ms MarkObjects: 1.775359 ms  DeleteObjects: 0.012904 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001629 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.311 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 211.3 MB.
+System memory in use after: 211.5 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2673.
+Total: 2.197406 ms (FindLiveObjects: 0.191392 ms CreateObjectMapping: 0.073362 ms MarkObjects: 1.916650 ms  DeleteObjects: 0.015175 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001671 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.319 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.67 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 211.6 MB.
+System memory in use after: 211.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2676.
+Total: 1.970450 ms (FindLiveObjects: 0.171941 ms CreateObjectMapping: 0.062733 ms MarkObjects: 1.721851 ms  DeleteObjects: 0.013220 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 461.094168 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f06b9d6272786d3204bb3a747af97a61') in 0.044218 seconds 
+  Import took 0.047785 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.679874 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '479ac8a1826836c4087a80efdba83d58') in 0.003455 seconds 
+  Import took 0.006378 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.540539 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfbe886d52ac8376e5be6b27ab2c4734') in 0.003624 seconds 
+  Import took 0.007021 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.714828 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd3a6255de3c9a7caa9ea62fabf80c9cd') in 0.003271 seconds 
+  Import took 0.006509 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001691 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.66 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.384 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 211.9 MB.
+System memory in use after: 212.0 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2679.
+Total: 2.293875 ms (FindLiveObjects: 0.224512 ms CreateObjectMapping: 0.084561 ms MarkObjects: 1.968123 ms  DeleteObjects: 0.015815 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001670 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.318 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 212.1 MB.
+System memory in use after: 212.2 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2682.
+Total: 2.133891 ms (FindLiveObjects: 0.193975 ms CreateObjectMapping: 0.140280 ms MarkObjects: 1.785962 ms  DeleteObjects: 0.013074 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 108.834444 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b50b4c6273bbe68fad2a4734d875c5ac') in 0.046716 seconds 
+  Import took 0.051507 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 14.975596 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '068588e3b0ccbd105d4f22b286c29555') in 0.014559 seconds 
+  Import took 0.018267 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001615 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.348 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 212.5 MB.
+System memory in use after: 212.7 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2685.
+Total: 2.309769 ms (FindLiveObjects: 0.219566 ms CreateObjectMapping: 0.067559 ms MarkObjects: 2.008196 ms  DeleteObjects: 0.013745 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 83.381475 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '3f678582d4436830c43e557afb681942') in 0.054078 seconds 
+  Import took 0.057231 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.664862 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: 'b9eb81be9ebb002fa74db3ad0502692c') in 0.004161 seconds 
+  Import took 0.007114 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.387793 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '46fecf04698525c1f5e6929cf87419e3') in 0.004218 seconds 
+  Import took 0.008537 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.126395 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '9226277262e49626f29085c43f2f7841') in 0.005495 seconds 
+  Import took 0.008402 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 155.905737 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '9933e0b94983a589d48f3c3d1cb56395') in 0.004360 seconds 
+  Import took 0.007547 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 30.971201 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '55a229b93748ff5e957502a24e9a6ee8') in 0.004302 seconds 
+  Import took 0.008389 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.613676 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: 'c16a9bcaab4375f48a085e193bb35879') in 0.004388 seconds 
+  Import took 0.007816 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.874973 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: 'f568b120f9b5b32e6e93e962159b8fed') in 0.004555 seconds 
+  Import took 0.009450 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 13.957694 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: 'c1929d3afe387d613d616df29526185a') in 0.006087 seconds 
+  Import took 0.009482 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.601628 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '6976b95ab24653eb8ee965d3b5ca482c') in 0.005767 seconds 
+  Import took 0.008814 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.957483 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: 'd56b9c8526334a8800272df0aec441b6') in 0.006668 seconds 
+  Import took 0.009798 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.837087 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: 'e35c6d5e413ccef25d37eebd46df69aa') in 0.006788 seconds 
+  Import took 0.009770 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.540780 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '53c9e7e99bc7cf803ff73c3b326f98ca') in 0.006092 seconds 
+  Import took 0.009153 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.118001 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '458d17fbffe8d4ed6276866008fb2a1a') in 0.005713 seconds 
+  Import took 0.009441 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 2.387506 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '030b78f9daf1cad5e977a718fe53c55a') in 0.005847 seconds 
+  Import took 0.009626 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.564154 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '4dad401338d850c0052869244194e5d7') in 0.005701 seconds 
+  Import took 0.008762 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.703881 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+SerializationException: Attempting to deserialize an empty stream.
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
+  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:51 
+  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:61 
+
+(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 51)
+
+ -> (artifact id: '940b6b682bef195a8cb66e2e97f502f6') in 0.006643 seconds 
+  Import took 0.010082 seconds .
+

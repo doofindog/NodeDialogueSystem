@@ -115,6 +115,56 @@ namespace DialogueSystem.Editor.NodeComponents
             focusedNode.AddComponent(line);
         }
 
+        public static string DrawTextField(string label, string text)
+        {
+            Vector2 position = focusedNode.componentDrawPos;
+            Vector2 offset = new Vector2
+            {
+                x = Mathf.Abs(position.x - focusedNode.rect.position.x),
+                y = Mathf.Abs(position.y - focusedNode.rect.position.y)
+            };
+            Vector2 size = new Vector2
+            (
+                focusedNode.rect.size.x - focusedNode.padding.x - offset.x, 
+                20
+            );
+            Rect componentRect = new Rect(position, size);
+            
+            NodeTextField textField = new NodeTextField(componentRect);
+            text = textField.Draw(label, text);
+
+            lastDrawnComponent = textField;
+            
+            focusedNode.AddComponent(textField);
+            
+            return text;
+        }
+
+        public static bool DrawToggle(bool p_isTrue)
+        {
+            Vector2 position = focusedNode.componentDrawPos;
+            Vector2 offset = new Vector2
+            {
+                x = Mathf.Abs(position.x - focusedNode.rect.position.x),
+                y = Mathf.Abs(position.y - focusedNode.rect.position.y)
+            };
+            Vector2 size = new Vector2
+            (
+                focusedNode.rect.size.x - focusedNode.padding.x - offset.x, 
+                20
+            );
+            Rect componentRect = new Rect(position, size);
+            
+            NodeBoolean boolean = new NodeBoolean(componentRect);
+            p_isTrue = boolean.Draw(p_isTrue);
+
+            lastDrawnComponent = boolean;
+            
+            focusedNode.AddComponent(boolean);
+            
+            return p_isTrue;
+        }
+
         public static NodeComponent GetLastDrawnComponent()
         {
             return lastDrawnComponent ?? null;

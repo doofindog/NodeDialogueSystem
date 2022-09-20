@@ -37,6 +37,11 @@ public class SerializableVariable : ISerializationCallbackReceiver
 
     public void ReadData()
     {
+        if (data == null)
+        {
+            return;
+        }
+
         MemoryStream memoryStream = new MemoryStream();
         BinaryFormatter binaryFormatter = new BinaryFormatter();
         
@@ -64,6 +69,10 @@ public class SerializableVariable : ISerializationCallbackReceiver
 
     public object GetObject()
     {
+        if(runTimeObject == null)
+        {
+            Debug.Log("runtime obj is null");
+        }
         return runTimeObject;
     }
 

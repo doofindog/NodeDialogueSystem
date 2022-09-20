@@ -72,6 +72,8 @@
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\DecisionNode.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeTextArea.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\CustomNodeEditorAttribute.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeTextField.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeBoolean.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

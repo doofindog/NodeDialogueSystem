@@ -1,5 +1,21 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8781157185172777684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 7sbG8
+  position: {x: 195, y: 175}
+  text: 
+  m_pointType: 0
 --- !u!114 &-8096803866845553937
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -136,6 +152,53 @@ MonoBehaviour:
   id: ExNGq
   position: {x: -569, y: 171}
   text: I don't know much of whats happening here
+--- !u!114 &-5390234255452968625
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: dCfZa
+  position: {x: 508, y: 99.5}
+  text: 
+  staticEvents:
+  - eventType:
+      typeName: GameEvents
+      data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: GameEvents
+        data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      methodName: GetGold
+      parameters: []
+      flags: 24
+    parametersObj: []
+  - eventType:
+      typeName: InventoryEvents
+      data: 0057496e76656e746f72794576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: InventoryEvents
+        data: 0057496e76656e746f72794576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      methodName: GiveBoolean
+      parameters:
+      - typeName: Boolean
+        data: 005b53797374656d2e426f6f6c65616e2c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      flags: 24
+    parametersObj:
+    - type:
+        typeName: Boolean
+        data: 005b53797374656d2e426f6f6c65616e2c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      data: 
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &-3620022785776945555
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -237,6 +300,53 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-2969568216428579841
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1k5LA
+  name: Conversation (1k5LA)
+  startEntry: {fileID: -8781157185172777684}
+  entries:
+  - {fileID: -8781157185172777684}
+  - {fileID: 8765891066790372161}
+  - {fileID: 5172098884928896883}
+  - {fileID: 3063709652024078873}
+  links:
+    m_keys:
+    - {fileID: 8765891066790372161}
+    - {fileID: -8781157185172777684}
+    - {fileID: 3063709652024078873}
+    m_values:
+    - data:
+      - id: BvSJW
+        option:
+          id: 
+          text: 
+        sourceEntry: {fileID: 8765891066790372161}
+        destinationEntry: {fileID: 5172098884928896883}
+    - data:
+      - id: COk06
+        option:
+          id: 
+          text: 
+        sourceEntry: {fileID: -8781157185172777684}
+        destinationEntry: {fileID: 3063709652024078873}
+    - data:
+      - id: RlUrc
+        option:
+          id: 1
+          text: 12312
+        sourceEntry: {fileID: 3063709652024078873}
+        destinationEntry: {fileID: 8765891066790372161}
 --- !u!114 &-2521368295702554066
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -313,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 
   conversations:
-  - {fileID: 5461566462665456354}
+  - {fileID: -2969568216428579841}
 --- !u!114 &643128107947868287
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -410,6 +520,26 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3063709652024078873
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 1LJ57
+  position: {x: 628, y: 98.5}
+  text: 123zsdasdas
+  options:
+  - id: 1
+    text: 12312
+  - id: 2
+    text: sdasdasd
 --- !u!114 &3162514161425109190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -439,7 +569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: fRPtB
-  position: {x: 721, y: 147}
+  position: {x: 681, y: 131}
   text: 
   staticEvents:
   - eventType:
@@ -462,7 +592,7 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
---- !u!114 &5461566462665456354
+--- !u!114 &5172098884928896883
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -471,18 +601,45 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0Wjl5
-  name: Conversation (0Wjl5)
-  startEntry: {fileID: -7464189343005578980}
-  entries:
-  - {fileID: -7464189343005578980}
-  - {fileID: 3693937322751782660}
-  links:
-    m_keys: []
-    m_values: []
+  id: M9m9b
+  position: {x: 1386, y: 64.5}
+  text: 123123
+  staticEvents:
+  - eventType:
+      typeName: InventoryEvents
+      data: 0057496e76656e746f72794576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: InventoryEvents
+        data: 0057496e76656e746f72794576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      methodName: GiveMultiple
+      parameters:
+      - typeName: Int32
+        data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      - typeName: String
+        data: 005a53797374656d2e537472696e672c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      - typeName: Boolean
+        data: 005b53797374656d2e426f6f6c65616e2c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      flags: 24
+    parametersObj:
+    - type:
+        typeName: Int32
+        data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      data: 0001000000ffffffff010000000000000004010000000c53797374656d2e496e74333201000000076d5f76616c75650008000000000b
+    - type:
+        typeName: String
+        data: 005a53797374656d2e537472696e672c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      data: 
+    - type:
+        typeName: Boolean
+        data: 005b53797374656d2e426f6f6c65616e2c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      data: 0001000000ffffffff010000000000000004010000000e53797374656d2e426f6f6c65616e01000000076d5f76616c75650001000b
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &6420292292800786468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -551,3 +708,130 @@ MonoBehaviour:
   id: MUSSl
   position: {x: 701, y: 263}
   text: 
+--- !u!114 &8102055686484742574
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: rkSOi
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &8131814030056241395
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Nx4tj
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &8765891066790372161
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: UMc7J
+  position: {x: 946, y: 66.5}
+  text: 
+  staticEvents:
+  - eventType:
+      typeName: InventoryEvents
+      data: 0057496e76656e746f72794576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: InventoryEvents
+        data: 0057496e76656e746f72794576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      methodName: GiveMultiple
+      parameters:
+      - typeName: Int32
+        data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      - typeName: String
+        data: 005a53797374656d2e537472696e672c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      - typeName: Boolean
+        data: 005b53797374656d2e426f6f6c65616e2c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      flags: 24
+    parametersObj:
+    - type:
+        typeName: Int32
+        data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      data: 0001000000ffffffff010000000000000004010000000c53797374656d2e496e74333201000000076d5f76616c75650008000000000b
+    - type:
+        typeName: String
+        data: 005a53797374656d2e537472696e672c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      data: 
+    - type:
+        typeName: Boolean
+        data: 005b53797374656d2e426f6f6c65616e2c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      data: 0001000000ffffffff010000000000000004010000000e53797374656d2e426f6f6c65616e01000000076d5f76616c75650001000b
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &9188079801322141248
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Ayzbo
+  position: {x: 527, y: 102.5}
+  text: 
+  staticEvents:
+  - eventType:
+      typeName: InventoryEvents
+      data: 0057496e76656e746f72794576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: InventoryEvents
+        data: 0057496e76656e746f72794576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      methodName: GiveItemOfInt
+      parameters:
+      - typeName: Int32
+        data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      flags: 24
+    parametersObj:
+    - type:
+        typeName: Int32
+        data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      data: 0001000000ffffffff010000000000000004010000000c53797374656d2e496e74333201000000076d5f76616c75650008183000000b
+  - eventType:
+      typeName: 
+      data: ff
+    eventMethod:
+      type:
+        typeName: 
+        data: ff
+      methodName: 
+      parameters: []
+      flags: 0
+    parametersObj: []
+  unityEvent:
+    m_PersistentCalls:
+      m_Calls: []

@@ -13,4 +13,14 @@ public class InventoryEvents : DialogueEvents
     {
         
     }
+
+    public static void GiveBoolean(bool isTrue)
+    {
+        
+    }
+    
+    public static void GiveMultiple(int number, string something, bool condition)
+    {
+        
+    }
 }
