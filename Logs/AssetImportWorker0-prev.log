@@ -12,58 +12,58 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-52556
+59499
 Successfully changed project path to: /Users/doof/Documents/Personal/NodeDialogueSystem
 /Users/doof/Documents/Personal/NodeDialogueSystem
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 46.92 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 54.76 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/doof/Documents/Personal/NodeDialogueSystem/Assets
 GfxDevice: creating device client; threaded=0
-2022-09-19 09:02:45.958 Unity[1456:27630] 27GL850 preferred device: AMD Radeon Pro 5600M (high power)
-2022-09-19 09:02:45.958 Unity[1456:27630] Metal devices available: 2
-2022-09-19 09:02:45.958 Unity[1456:27630] 0: AMD Radeon Pro 5600M (high power)
-2022-09-19 09:02:45.958 Unity[1456:27630] 1: Intel(R) UHD Graphics 630 (low power)
-2022-09-19 09:02:45.959 Unity[1456:27630] Using device AMD Radeon Pro 5600M (high power)
+2022-09-20 09:38:50.439 Unity[56967:712609] 27GL850 preferred device: AMD Radeon Pro 5600M (high power)
+2022-09-20 09:38:50.439 Unity[56967:712609] Metal devices available: 2
+2022-09-20 09:38:50.439 Unity[56967:712609] 0: AMD Radeon Pro 5600M (high power)
+2022-09-20 09:38:50.439 Unity[56967:712609] 1: Intel(R) UHD Graphics 630 (low power)
+2022-09-20 09:38:50.439 Unity[56967:712609] Using device AMD Radeon Pro 5600M (high power)
 Initializing Metal device caps: AMD Radeon Pro 5600M
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56456
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56967
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000316 seconds.
+Registered in 0.000430 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 46.08 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 52.35 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.068 seconds
+- Completed reload, in  5.976 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001415 seconds.
+Registered in 0.001701 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 41.68 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 51.25 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.414 seconds
+- Completed reload, in  1.729 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2155 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2158 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 197.6 MB.
 System memory in use after: 197.7 MB.
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2593.
-Total: 2.263403 ms (FindLiveObjects: 0.181492 ms CreateObjectMapping: 0.073961 ms MarkObjects: 1.941638 ms  DeleteObjects: 0.065534 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2596.
+Total: 2.473002 ms (FindLiveObjects: 0.212587 ms CreateObjectMapping: 0.085079 ms MarkObjects: 2.101482 ms  DeleteObjects: 0.072928 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -77,92 +77,30 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e9b470ca435614eb7efbead735f2d6f8') in 0.220160 seconds 
-  Import took 0.225279 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1246.640685 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c61e1a77cfead3418107403cdfeb42ad') in 0.005107 seconds 
-  Import took 0.008637 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 31.279352 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1dafb2e3be70a6a59d0ec709150d5f1d') in 0.004676 seconds 
-  Import took 0.009382 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.924030 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1adc0d9eecb33f2da6d3156faf982662') in 0.004577 seconds 
-  Import took 0.008827 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.959309 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e2a0bb50caf8851c806ce26817badfe') in 0.004482 seconds 
-  Import took 0.009345 seconds .
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32ca3e1bcea7f45d0f8c9926fbc27794') in 0.250065 seconds 
+  Import took 0.253403 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001403 seconds.
+Registered in 0.001718 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.69 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.346 seconds
+- Completed reload, in  1.469 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
 System memory in use before: 200.4 MB.
 System memory in use after: 200.5 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2596.
-Total: 2.425085 ms (FindLiveObjects: 0.218680 ms CreateObjectMapping: 0.086150 ms MarkObjects: 2.102602 ms  DeleteObjects: 0.016745 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001457 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.308 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 200.7 MB.
-System memory in use after: 200.8 MB.
-
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2599.
-Total: 2.067030 ms (FindLiveObjects: 0.168185 ms CreateObjectMapping: 0.068661 ms MarkObjects: 1.815980 ms  DeleteObjects: 0.013515 ms)
+Total: 2.253763 ms (FindLiveObjects: 0.196348 ms CreateObjectMapping: 0.078867 ms MarkObjects: 1.961681 ms  DeleteObjects: 0.015958 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -175,54 +113,64 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001670 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.273 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.43 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 200.9 MB.
-System memory in use after: 201.1 MB.
+Received Import Request.
+  Time since last request: 16.344495 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4837885272fa621d00fe24a1090a5cab') in 0.024283 seconds 
+  Import took 0.028424 seconds .
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2602.
-Total: 2.147066 ms (FindLiveObjects: 0.241633 ms CreateObjectMapping: 0.071886 ms MarkObjects: 1.818948 ms  DeleteObjects: 0.013995 ms)
+========================================================================
+Received Import Request.
+  Time since last request: 2.826436 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6cb6346a22f485d1ffaa83482d4846c3') in 0.004992 seconds 
+  Import took 0.008948 seconds .
 
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 14.327851 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a904dcd2ed64d0e5438fd51e269bb61c') in 0.005249 seconds 
+  Import took 0.008752 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.420154 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '98d54c8626399ff7324352a8f4676773') in 0.004830 seconds 
+  Import took 0.008829 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 16.916804 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fbdd209aaf56946a52a7a2908344c919') in 0.004887 seconds 
+  Import took 0.008745 seconds .
+
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001771 seconds.
+Registered in 0.001669 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.368 seconds
+- Completed reload, in  1.303 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.40 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 201.2 MB.
-System memory in use after: 201.3 MB.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 200.7 MB.
+System memory in use after: 200.8 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2605.
-Total: 1.950166 ms (FindLiveObjects: 0.163040 ms CreateObjectMapping: 0.063980 ms MarkObjects: 1.709617 ms  DeleteObjects: 0.012911 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2602.
+Total: 2.167370 ms (FindLiveObjects: 0.159405 ms CreateObjectMapping: 0.059195 ms MarkObjects: 1.933996 ms  DeleteObjects: 0.013975 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -237,274 +185,172 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001688 seconds.
+Registered in 0.002140 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.437 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.60 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.0 MB.
+System memory in use after: 201.1 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2605.
+Total: 2.288321 ms (FindLiveObjects: 0.213997 ms CreateObjectMapping: 0.069661 ms MarkObjects: 1.988396 ms  DeleteObjects: 0.014915 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001663 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.430 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.2 MB.
+System memory in use after: 201.4 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2608.
+Total: 2.410246 ms (FindLiveObjects: 0.177886 ms CreateObjectMapping: 0.067911 ms MarkObjects: 2.148753 ms  DeleteObjects: 0.014864 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001671 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.261 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.5 MB.
+System memory in use after: 201.6 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2611.
+Total: 2.128685 ms (FindLiveObjects: 0.186467 ms CreateObjectMapping: 0.067892 ms MarkObjects: 1.858468 ms  DeleteObjects: 0.015085 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001759 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.446 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 201.8 MB.
+System memory in use after: 201.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2614.
+Total: 2.346892 ms (FindLiveObjects: 0.227532 ms CreateObjectMapping: 0.086176 ms MarkObjects: 2.015808 ms  DeleteObjects: 0.016474 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001711 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.474 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 202.0 MB.
+System memory in use after: 202.1 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2617.
+Total: 2.382571 ms (FindLiveObjects: 0.244727 ms CreateObjectMapping: 0.086587 ms MarkObjects: 2.032690 ms  DeleteObjects: 0.017729 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001664 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.467 seconds
+- Completed reload, in  1.400 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 201.5 MB.
-System memory in use after: 201.6 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2608.
-Total: 2.226717 ms (FindLiveObjects: 0.210139 ms CreateObjectMapping: 0.060741 ms MarkObjects: 1.940005 ms  DeleteObjects: 0.015016 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001613 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.259 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 201.7 MB.
-System memory in use after: 201.8 MB.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 202.2 MB.
+System memory in use after: 202.4 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2611.
-Total: 2.105730 ms (FindLiveObjects: 0.234140 ms CreateObjectMapping: 0.065587 ms MarkObjects: 1.792440 ms  DeleteObjects: 0.012897 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 358.694914 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1701203a6609ad8cd804654fe9fe1e99') in 0.025044 seconds 
-  Import took 0.028442 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.036954 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1701203a6609ad8cd804654fe9fe1e99') in 0.003607 seconds 
-  Import took 0.006482 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.941098 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a1b211a0b5439676177b6c35af98bcc0') in 0.004771 seconds 
-  Import took 0.008641 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.854368 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ArgumentNullException: Value cannot be null.
-Parameter name: key
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x00008] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].set_Item (TKey key, TValue value) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableDictionaryBase`3[TKey,TValue,TValueStorage].OnAfterDeserialize () [0x00045] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs:58 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs Line: 58)
-
- -> (artifact id: 'bc8b780f1827760c642e129756708652') in 0.014618 seconds 
-  Import took 0.018499 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.255198 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ArgumentNullException: Value cannot be null.
-Parameter name: key
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x00008] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].set_Item (TKey key, TValue value) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableDictionaryBase`3[TKey,TValue,TValueStorage].OnAfterDeserialize () [0x00045] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs:58 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs Line: 58)
-
- -> (artifact id: '8b6f28ef4a6840e7e906d7b496474314') in 0.005536 seconds 
-  Import took 0.009617 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.050536 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ArgumentNullException: Value cannot be null.
-Parameter name: key
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x00008] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].set_Item (TKey key, TValue value) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableDictionaryBase`3[TKey,TValue,TValueStorage].OnAfterDeserialize () [0x00045] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs:58 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs Line: 58)
-
- -> (artifact id: '53a79e4b87bd558f65ff52ce85b1f711') in 0.005333 seconds 
-  Import took 0.009357 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.028433 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ArgumentNullException: Value cannot be null.
-Parameter name: key
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x00008] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].set_Item (TKey key, TValue value) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableDictionaryBase`3[TKey,TValue,TValueStorage].OnAfterDeserialize () [0x00045] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs:58 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs Line: 58)
-
- -> (artifact id: '8cd844625fe6d635d64f4093355ceed6') in 0.005310 seconds 
-  Import took 0.008875 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.430997 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2dadc2dec476b14a3e995fdd7188392f') in 0.004512 seconds 
-  Import took 0.008071 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 72.346520 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f21462dc68cf8a64e52836f3bb331bc2') in 0.004354 seconds 
-  Import took 0.008108 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.025707 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '245d7cb2b80c0b478cf9468b193bd2f0') in 0.004275 seconds 
-  Import took 0.008766 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.173636 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcf8f1e9594538dc64e5c9cce32a9878') in 0.004225 seconds 
-  Import took 0.008037 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.156278 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0cd1be22247bc417cfde187f1637fc24') in 0.004434 seconds 
-  Import took 0.008431 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.034666 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c87d878b3a6687531f9cc58899d8d54') in 0.004515 seconds 
-  Import took 0.008405 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.754324 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0904abe4388da847d807b5c24e97c4ae') in 0.004520 seconds 
-  Import took 0.008120 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003627 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0904abe4388da847d807b5c24e97c4ae') in 0.004303 seconds 
-  Import took 0.007352 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.599510 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64440ab0418743e6c2623fd9a218f3e8') in 0.004463 seconds 
-  Import took 0.007826 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004760 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '64440ab0418743e6c2623fd9a218f3e8') in 0.004309 seconds 
-  Import took 0.007210 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.928291 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd06a3cf38c06cf8a3f787ecedb1133f1') in 0.004274 seconds 
-  Import took 0.008029 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.308047 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ArgumentNullException: Value cannot be null.
-Parameter name: key
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x00008] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].set_Item (TKey key, TValue value) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableDictionaryBase`3[TKey,TValue,TValueStorage].OnAfterDeserialize () [0x00045] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs:58 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs Line: 58)
-
- -> (artifact id: '03a5726fe252ae6fc2985bed184d59eb') in 0.005215 seconds 
-  Import took 0.008767 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001481 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.236 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.39 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.1 MB.
-System memory in use after: 202.3 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2614.
-Total: 2.016150 ms (FindLiveObjects: 0.176335 ms CreateObjectMapping: 0.063185 ms MarkObjects: 1.762450 ms  DeleteObjects: 0.013511 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2620.
+Total: 2.173481 ms (FindLiveObjects: 0.183908 ms CreateObjectMapping: 0.071252 ms MarkObjects: 1.902441 ms  DeleteObjects: 0.015064 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -519,122 +365,22 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001551 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.63 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.329 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.4 MB.
-System memory in use after: 202.5 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2617.
-Total: 2.090374 ms (FindLiveObjects: 0.158100 ms CreateObjectMapping: 0.057131 ms MarkObjects: 1.861833 ms  DeleteObjects: 0.012762 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 60.256775 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2f7fcc343566e50d76dac888b5a49606') in 0.019835 seconds 
-  Import took 0.023981 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.691917 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2162167306105660731964a3409ec0c6') in 0.004513 seconds 
-  Import took 0.008190 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001537 seconds.
+Registered in 0.001687 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.331 seconds
+- Completed reload, in  1.444 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.7 MB.
-System memory in use after: 202.8 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2620.
-Total: 2.166308 ms (FindLiveObjects: 0.181086 ms CreateObjectMapping: 0.071089 ms MarkObjects: 1.898445 ms  DeleteObjects: 0.014944 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 19.678819 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7914c548c800434d29634cf8c313f271') in 0.017971 seconds 
-  Import took 0.021069 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.643548 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ArgumentNullException: Value cannot be null.
-Parameter name: key
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x00008] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].set_Item (TKey key, TValue value) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableDictionaryBase`3[TKey,TValue,TValueStorage].OnAfterDeserialize () [0x00045] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs:58 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs Line: 58)
-
- -> (artifact id: 'cc2305569008c74464613d251287dc1e') in 0.013877 seconds 
-  Import took 0.017767 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001682 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.86 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.307 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.68 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.9 MB.
-System memory in use after: 203.0 MB.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 202.5 MB.
+System memory in use after: 202.6 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2623.
-Total: 2.120554 ms (FindLiveObjects: 0.163843 ms CreateObjectMapping: 0.063251 ms MarkObjects: 1.878361 ms  DeleteObjects: 0.014471 ms)
+Total: 2.361770 ms (FindLiveObjects: 0.260161 ms CreateObjectMapping: 0.086274 ms MarkObjects: 1.998531 ms  DeleteObjects: 0.015735 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -648,177 +394,85 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 19.834247 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cc8c52039984d92da91b443e023a4ca1') in 0.017882 seconds 
-  Import took 0.021668 seconds .
+  Time since last request: 233.345010 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '486dc2604d084290250054a9ad3f7fa3') in 0.017275 seconds 
+  Import took 0.021306 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.766019 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '21cedf2830ac68094fe99badf8bb5a7a') in 0.004569 seconds 
-  Import took 0.007740 seconds .
+  Time since last request: 0.044275 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '486dc2604d084290250054a9ad3f7fa3') in 0.003394 seconds 
+  Import took 0.006730 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.678374 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5605244f38419ccb341b2784721d6836') in 0.004810 seconds 
-  Import took 0.008303 seconds .
+  Time since last request: 3.812486 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451dbcb48e823670a92f6f2e79f90b28') in 0.004780 seconds 
+  Import took 0.009000 seconds .
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.720742 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a75f6f3aee36b95982ea7ef5f2507b20') in 0.004444 seconds 
-  Import took 0.008139 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.630683 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '27ed912e041bcae1f8e355c2badb0769') in 0.004519 seconds 
-  Import took 0.008023 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.548357 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) ArgumentNullException: Value cannot be null.
-Parameter name: key
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].TryInsert (TKey key, TValue value, System.Collections.Generic.InsertionBehavior behavior) [0x00008] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Collections.Generic.Dictionary`2[TKey,TValue].set_Item (TKey key, TValue value) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableDictionaryBase`3[TKey,TValue,TValueStorage].OnAfterDeserialize () [0x00045] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs:58 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableDictionary/SerializableDictionary.cs Line: 58)
-
- -> (artifact id: '1a92047fa67a8252a6e84d789db8cfad') in 0.013991 seconds 
-  Import took 0.016964 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.142276 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8e70b07a8abe726d74e8510c069e8b74') in 0.004364 seconds 
-  Import took 0.007609 seconds .
+  Time since last request: 0.000700 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '451dbcb48e823670a92f6f2e79f90b28') in 0.004317 seconds 
+  Import took 0.007588 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001292 seconds.
+Registered in 0.001752 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.404 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.2 MB.
-System memory in use after: 203.3 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2626.
-Total: 2.287815 ms (FindLiveObjects: 0.213329 ms CreateObjectMapping: 0.084798 ms MarkObjects: 1.972560 ms  DeleteObjects: 0.016205 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001530 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.237 seconds
+- Completed reload, in  1.392 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.5 MB.
-System memory in use after: 203.6 MB.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 202.8 MB.
+System memory in use after: 202.9 MB.
+
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2626.
+Total: 2.572250 ms (FindLiveObjects: 0.222815 ms CreateObjectMapping: 0.085342 ms MarkObjects: 2.242215 ms  DeleteObjects: 0.020880 ms)
+
+AssetImportParameters requested are different than current active one (requested -> active):
+  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
+  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
+  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
+  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
+  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
+  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
+  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
+  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001913 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for OSXStandalone target not found
+Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.458 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 2135 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 203.0 MB.
+System memory in use after: 203.1 MB.
 
 Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2629.
-Total: 2.312962 ms (FindLiveObjects: 0.211934 ms CreateObjectMapping: 0.086500 ms MarkObjects: 1.997920 ms  DeleteObjects: 0.015755 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001645 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.370 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.45 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.7 MB.
-System memory in use after: 203.8 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2632.
-Total: 2.196019 ms (FindLiveObjects: 0.185775 ms CreateObjectMapping: 0.069883 ms MarkObjects: 1.924711 ms  DeleteObjects: 0.014889 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001560 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.58 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.243 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2132 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 204.0 MB.
-System memory in use after: 204.1 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2635.
-Total: 2.156860 ms (FindLiveObjects: 0.194148 ms CreateObjectMapping: 0.075528 ms MarkObjects: 1.872391 ms  DeleteObjects: 0.014226 ms)
+Total: 2.322662 ms (FindLiveObjects: 0.208502 ms CreateObjectMapping: 0.089475 ms MarkObjects: 2.006343 ms  DeleteObjects: 0.017517 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -832,82 +486,10 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  Time since last request: 270.605081 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86a9afe1e5db52fe5f5886a48b3ccb0c') in 0.017930 seconds 
-  Import took 0.020966 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.044370 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '86a9afe1e5db52fe5f5886a48b3ccb0c') in 0.003035 seconds 
-  Import took 0.006033 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.745387 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2c191b96cd9140a2a8519e84f3ef288b') in 0.004251 seconds 
-  Import took 0.007747 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.137174 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c1763b9dc1df809f479508d574691488') in 0.004724 seconds 
-  Import took 0.008517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.996863 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '80611ff7e2e5a440dcc46b89cf1ed017') in 0.004395 seconds 
-  Import took 0.007837 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.663020 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '213fdf43442cce7d34c1e2c2b0b4da87') in 0.004422 seconds 
-  Import took 0.007302 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.351163 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'acaf7b01baf109f738a795840f2d9f06') in 0.004856 seconds 
-  Import took 0.008199 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.271610 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '071e1a6968f7cb7fccaec06b843f3001') in 0.004909 seconds 
-  Import took 0.007794 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.069948 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '703e6df290332d92418c748da4459e32') in 0.004524 seconds 
-  Import took 0.008273 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.090406 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset
-  artifactKey: Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Yaarrendrew Tate.asset using Guid(c75d5f32c41ac4e928d248120f3b17b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dc3ab861a1f9086ddb17a484fd3bc2f3') in 0.004268 seconds 
-  Import took 0.007497 seconds .
+  Time since last request: 75.894521 seconds.
+  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
+  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '0c43351a52979c498dcfba17c8c33ae3') in 0.025771 seconds 
+  Import took 0.030123 seconds .
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

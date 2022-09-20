@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: zCwa8
-  position: {x: 921, y: 218}
+  position: {x: 845, y: 248}
   text: Aarr, You'll never have a cool booty chest like me.
 --- !u!114 &-7255749404217282810
 MonoBehaviour:
@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: VoO7d
-  position: {x: -86, y: 120}
+  position: {x: -162, y: 150}
   text: I recently got me-self this new booty chest
 --- !u!114 &-6984140659370824015
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: EQ2mq
-  position: {x: -437, y: 117}
+  position: {x: -513, y: 147}
   text: 
   m_pointType: 0
 --- !u!114 &-6841887367150063164
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: fNTwZ
-  position: {x: 225, y: 120}
+  position: {x: 149, y: 150}
   text: But when ever someone see's it theya always tell me, That they don't like
     the colour.
 --- !u!114 &-6010685907441858949
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: T3HP8
-  position: {x: 910, y: 51}
+  position: {x: 834, y: 81}
   text: I look them straight in the eye and say "What colour is your Booty"
 --- !u!114 &-1567709197420814294
 MonoBehaviour:
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: MM4Rv
-  position: {x: 1270, y: 216}
+  position: {x: 1194, y: 246}
   text: Here's a Gold coin to fuck right off
   staticEvents:
   - eventType:
@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4Fmk3
-  position: {x: 581, y: 77}
+  position: {x: 505, y: 107}
   text: You know what i tell them
   options:
   - id: 1

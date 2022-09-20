@@ -8,4 +8,9 @@ public class InventoryEvents : DialogueEvents
     {
         Debug.Log("Debug Item given");
     }
+
+    public static void GiveItemOfInt(int number)
+    {
+        
+    }
 }
