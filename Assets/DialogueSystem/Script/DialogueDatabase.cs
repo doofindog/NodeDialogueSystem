@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using DialogueSystem;
@@ -8,15 +9,14 @@ using UnityEngine;
 [System.Serializable]
 public class DialogueDatabase : ScriptableObject
 {
-    [SerializeField] private string id;
+    [SerializeField] public string m_id;
+    [SerializeField] private string m_name;
     [SerializeField] private List<ConversationGraph> conversations;
-
 
     public bool ContainsConversations()
     {
         if (conversations == null) { return false; }
         if (conversations.Count == 0) { return false; }
-        
         return true;
     }
 

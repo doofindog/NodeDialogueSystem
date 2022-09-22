@@ -929,7 +929,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0905e0cfaa94449cf9d50ead140cb6eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueList: {fileID: 11400000, guid: 647139f286aa841f39fcf76728625118, type: 2}
+  _dialogueList: {fileID: 11400000, guid: 647139f286aa841f39fcf76728625118, type: 2}
+  _selectedConversation: {fileID: -2212994748162478035, guid: 647139f286aa841f39fcf76728625118, type: 2}
 --- !u!114 &1109362745
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4399,7 +4400,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0905e0cfaa94449cf9d50ead140cb6eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueList: {fileID: 11400000, guid: c75d5f32c41ac4e928d248120f3b17b1, type: 2}
+  _dialogueList: {fileID: 11400000, guid: c75d5f32c41ac4e928d248120f3b17b1, type: 2}
+  _selectedConversation: {fileID: -773281897015532391, guid: c75d5f32c41ac4e928d248120f3b17b1, type: 2}
 --- !u!114 &1546524118
 MonoBehaviour:
   m_ObjectHideFlags: 0

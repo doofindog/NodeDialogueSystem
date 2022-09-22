@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 7sbG8
-  position: {x: 180, y: 255}
+  position: {x: -121, y: 207}
   text: 
   m_pointType: 0
 --- !u!114 &-8096803866845553937
@@ -213,7 +213,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: q758H
-  position: {x: 540, y: 239}
+  position: {x: 239, y: 191}
   text: I am a Parameter
   staticEvents:
   - eventType:
@@ -230,6 +230,22 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &-3938387192910839696
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8tCmX
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
 --- !u!114 &-3620022785776945555
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -344,7 +360,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 1k5LA
-  name: Conversation (1k5LA)
+  name: Welcome Convo
   startEntry: {fileID: -8781157185172777684}
   entries:
   - {fileID: -8781157185172777684}
@@ -387,6 +403,22 @@ MonoBehaviour:
           text: 
         sourceEntry: {fileID: -5026035451857205268}
         destinationEntry: {fileID: -2688388350177187304}
+--- !u!114 &-2959793167645493770
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: zOchL
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
 --- !u!114 &-2688388350177187304
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -400,7 +432,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: CF4bV
-  position: {x: 876, y: 111}
+  position: {x: 575, y: 63}
   text: 1231231
   staticEvents:
   - eventType:
@@ -456,6 +488,50 @@ MonoBehaviour:
   position: {x: 100, y: 100}
   text: 
   m_pointType: 0
+--- !u!114 &-2212994748162478035
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: UtkWU
+  name: Death Convo
+  startEntry: {fileID: 4564111685487433649}
+  entries:
+  - {fileID: 4564111685487433649}
+  - {fileID: 6064277601048360444}
+  links:
+    m_keys:
+    - {fileID: 4564111685487433649}
+    m_values:
+    - data:
+      - id: nGDal
+        option:
+          id: 
+          text: 
+        sourceEntry: {fileID: 4564111685487433649}
+        destinationEntry: {fileID: 6064277601048360444}
+--- !u!114 &-1589787879445726438
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: LQAMv
+  position: {x: 570, y: 233}
+  text: 
 --- !u!114 &-1450585488748639068
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -498,9 +574,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11fdd7ae4ff0a491cb08714f7a31547c, type: 3}
   m_Name: Whalter
   m_EditorClassIdentifier: 
-  id: 
+  m_id: 
+  m_name: 
   conversations:
   - {fileID: -2969568216428579841}
+  - {fileID: 8298335459117663119}
+  - {fileID: -2212994748162478035}
 --- !u!114 &643128107947868287
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -544,7 +623,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: g4ZBU
-  position: {x: 1151, y: 229}
+  position: {x: 850, y: 181}
   text: 123123
   staticEvents:
   - eventType:
@@ -650,6 +729,21 @@ MonoBehaviour:
   position: {x: 100, y: 100}
   text: 
   m_pointType: 0
+--- !u!114 &3686863128403886769
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: rHsMk
+  position: {x: 482, y: 142}
+  text: I don't like you I'm going to beat you up
 --- !u!114 &3693937322751782660
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -687,6 +781,72 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &4564111685487433649
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: q2Oc0
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &4943085636479888414
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: tfMmt
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &5582950700936080443
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: DkBrz
+  name: Conversation (DkBrz)
+  startEntry: {fileID: 0}
+  entries: []
+  links:
+    m_keys: []
+    m_values: []
+--- !u!114 &6064277601048360444
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 8rRzp
+  position: {x: 582, y: 129}
+  text: No Please don't hurt me i'm scared
 --- !u!114 &6420292292800786468
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -800,7 +960,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: sQWfb
-  position: {x: 1472, y: 204}
+  position: {x: 1171, y: 156}
   text: sadasdasd
   staticEvents:
   - eventType:
@@ -838,6 +998,35 @@ MonoBehaviour:
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8298335459117663119
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: QdA1Q
+  name: Attack Convo
+  startEntry: {fileID: -3938387192910839696}
+  entries:
+  - {fileID: -3938387192910839696}
+  - {fileID: 3686863128403886769}
+  links:
+    m_keys:
+    - {fileID: -3938387192910839696}
+    m_values:
+    - data:
+      - id: 1NX9B
+        option:
+          id: 
+          text: 
+        sourceEntry: {fileID: -3938387192910839696}
+        destinationEntry: {fileID: 3686863128403886769}
 --- !u!114 &9188079801322141248
 MonoBehaviour:
   m_ObjectHideFlags: 1

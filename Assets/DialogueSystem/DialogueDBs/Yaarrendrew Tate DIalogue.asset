@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: zCwa8
-  position: {x: 845, y: 248}
+  position: {x: 1406, y: 293}
   text: Aarr, You'll never have a cool booty chest like me.
 --- !u!114 &-7255749404217282810
 MonoBehaviour:
@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: VoO7d
-  position: {x: -162, y: 150}
+  position: {x: 399, y: 195}
   text: I recently got me-self this new booty chest
 --- !u!114 &-6984140659370824015
 MonoBehaviour:
@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: EQ2mq
-  position: {x: -513, y: 147}
+  position: {x: 48, y: 192}
   text: 
   m_pointType: 0
 --- !u!114 &-6841887367150063164
@@ -79,7 +79,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: fNTwZ
-  position: {x: 149, y: 150}
+  position: {x: 710, y: 195}
   text: But when ever someone see's it theya always tell me, That they don't like
     the colour.
 --- !u!114 &-6010685907441858949
@@ -98,6 +98,61 @@ MonoBehaviour:
   position: {x: 100, y: 100}
   text: 
   m_pointType: 0
+--- !u!114 &-3811295458025076901
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: v2VYV
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &-3397384463819265759
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: Y2e9F
+  name: Conversation (Y2e9F)
+  startEntry: {fileID: 0}
+  entries: []
+  links:
+    m_keys: []
+    m_values: []
+--- !u!114 &-3250556329936125595
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: GkHI3
+  name: Conversation (GkHI3)
+  startEntry: {fileID: 3659522419941073507}
+  entries:
+  - {fileID: 3659522419941073507}
+  links:
+    m_keys: []
+    m_values: []
 --- !u!114 &-3214941652149572718
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,7 +166,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: T3HP8
-  position: {x: 834, y: 81}
+  position: {x: 1395, y: 126}
   text: I look them straight in the eye and say "What colour is your Booty"
 --- !u!114 &-1567709197420814294
 MonoBehaviour:
@@ -126,7 +181,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: MM4Rv
-  position: {x: 1194, y: 246}
+  position: {x: 1755, y: 291}
   text: Here's a Gold coin to fuck right off
   staticEvents:
   - eventType:
@@ -139,6 +194,7 @@ MonoBehaviour:
       methodName: GetGold
       parameters: []
       flags: 24
+    parametersObj: []
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -155,13 +211,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id: 4Fmk3
-  position: {x: 505, y: 107}
+  position: {x: 1066, y: 152}
   text: You know what i tell them
   options:
   - id: 1
     text: What?
   - id: 2
     text: I don't really care
+--- !u!114 &-1349767893000312199
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: VPloN
+  name: Conversation (VPloN)
+  startEntry: {fileID: 0}
+  entries: []
+  links:
+    m_keys: []
+    m_values: []
 --- !u!114 &-773281897015532391
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -234,6 +309,22 @@ MonoBehaviour:
           text: 
         sourceEntry: {fileID: -7286149692986237201}
         destinationEntry: {fileID: -1567709197420814294}
+--- !u!114 &-398718026454803260
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: XOqxK
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,11 +335,69 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 11fdd7ae4ff0a491cb08714f7a31547c, type: 3}
-  m_Name: Yaarrendrew Tate
+  m_Name: Yaarrendrew Tate DIalogue
   m_EditorClassIdentifier: 
-  id: 
+  m_id: 
+  m_name: 
   conversations:
   - {fileID: -773281897015532391}
+  - {fileID: 3359933198051410217}
+  - {fileID: 553030423446279046}
+  - {fileID: -3250556329936125595}
+  - {fileID: 2933913787429294516}
+  - {fileID: 5871191010205828697}
+--- !u!114 &553030423446279046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: p4dHY
+  name: Conversation (p4dHY)
+  startEntry: {fileID: 8745804550652469128}
+  entries:
+  - {fileID: 8745804550652469128}
+  links:
+    m_keys: []
+    m_values: []
+--- !u!114 &994534608187051417
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: f2Cif
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &2203550319032556397
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: iFhwB
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
 --- !u!114 &2673142018362934090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -265,6 +414,46 @@ MonoBehaviour:
   position: {x: 34, y: 192}
   text: 'We have to remove this testasoidhaiusdhaibdajknd ajsbdjkasndansdi '
   m_pointType: 0
+--- !u!114 &2933913787429294516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: jKpiA
+  name: Conversation (jKpiA)
+  startEntry: {fileID: 994534608187051417}
+  entries:
+  - {fileID: 994534608187051417}
+  links:
+    m_keys: []
+    m_values: []
+--- !u!114 &3359933198051410217
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: hLqPK
+  name: Conversation (hLqPK)
+  startEntry: {fileID: 2203550319032556397}
+  entries:
+  - {fileID: 2203550319032556397}
+  links:
+    m_keys: []
+    m_values: []
 --- !u!114 &3370459816075947131
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -291,6 +480,75 @@ MonoBehaviour:
       methodName: GetSomethingGay
       parameters: []
       flags: 24
+    parametersObj: []
   unityEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &3501168150370930052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: E8IYV
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &3659522419941073507
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: xGTpA
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0
+--- !u!114 &5871191010205828697
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: A2oIm
+  name: Conversation (A2oIm)
+  startEntry: {fileID: -398718026454803260}
+  entries:
+  - {fileID: -398718026454803260}
+  links:
+    m_keys: []
+    m_values: []
+--- !u!114 &8745804550652469128
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: YP81S
+  position: {x: 100, y: 100}
+  text: 
+  m_pointType: 0

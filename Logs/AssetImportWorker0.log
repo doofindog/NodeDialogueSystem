@@ -12,58 +12,58 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-56360
+54844
 Successfully changed project path to: /Users/doof/Documents/Personal/NodeDialogueSystem
 /Users/doof/Documents/Personal/NodeDialogueSystem
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 52.07 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 57.10 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.13f1 (71691879b7f5)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/doof/Documents/Personal/NodeDialogueSystem/Assets
 GfxDevice: creating device client; threaded=0
-2022-09-20 21:38:01.349 Unity[70915:1087729] 27GL850 preferred device: AMD Radeon Pro 5600M (high power)
-2022-09-20 21:38:01.349 Unity[70915:1087729] Metal devices available: 2
-2022-09-20 21:38:01.349 Unity[70915:1087729] 0: AMD Radeon Pro 5600M (high power)
-2022-09-20 21:38:01.349 Unity[70915:1087729] 1: Intel(R) UHD Graphics 630 (low power)
-2022-09-20 21:38:01.349 Unity[70915:1087729] Using device AMD Radeon Pro 5600M (high power)
+2022-09-22 18:07:08.490 Unity[3120:169349] 27GL850 preferred device: AMD Radeon Pro 5600M (high power)
+2022-09-22 18:07:08.490 Unity[3120:169349] Metal devices available: 2
+2022-09-22 18:07:08.490 Unity[3120:169349] 0: AMD Radeon Pro 5600M (high power)
+2022-09-22 18:07:08.490 Unity[3120:169349] 1: Intel(R) UHD Graphics 630 (low power)
+2022-09-22 18:07:08.490 Unity[3120:169349] Using device AMD Radeon Pro 5600M (high power)
 Initializing Metal device caps: AMD Radeon Pro 5600M
 Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = '/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56915
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56120
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.000660 seconds.
+Registered in 0.000411 seconds.
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 44.95 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 65.03 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  2.300 seconds
+- Completed reload, in  2.738 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.001394 seconds.
+Registered in 0.001791 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 50.33 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 59.72 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.520 seconds
+- Completed reload, in  2.293 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
 Launching external process: /Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Tools/UnityShaderCompiler
 Launched and connected shader compiler UnityShaderCompiler after 0.01 seconds
-Refreshing native plugins compatible for Editor in 0.56 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.55 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2160 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 197.8 MB.
-System memory in use after: 197.9 MB.
+Unloading 2161 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 197.9 MB.
+System memory in use after: 198.0 MB.
 
-Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2598.
-Total: 2.385311 ms (FindLiveObjects: 0.176797 ms CreateObjectMapping: 0.071613 ms MarkObjects: 2.066913 ms  DeleteObjects: 0.069246 ms)
+Unloading 28 unused Assets to reduce memory usage. Loaded Objects now: 2600.
+Total: 3.142265 ms (FindLiveObjects: 0.218334 ms CreateObjectMapping: 0.081734 ms MarkObjects: 2.762960 ms  DeleteObjects: 0.077975 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -77,674 +77,30 @@ AssetImportParameters requested are different than current active one (requested
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
 ========================================================================
 Received Import Request.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '6ed1c0319a928bc0934dbed69040cb48') in 0.151760 seconds 
-  Import took 0.154847 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.233696 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '260ed902b23f8180d3ef6695dce0bed3') in 0.010205 seconds 
-  Import took 0.013960 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.096202 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '1dd2909e8978904e0582e210776952b3') in 0.010745 seconds 
-  Import took 0.013907 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.161980 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: 'd339d8d70c05e8b883a281cb5162ff26') in 0.011913 seconds 
-  Import took 0.015780 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.437462 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '5bfaf397a17abc2ed25cf219cbdcd695') in 0.010912 seconds 
-  Import took 0.014122 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 824.993646 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '03ffde9f035c3c1d607c6e695b04b70e') in 0.017507 seconds 
-  Import took 0.023046 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 72.230162 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '2b1bb91d088978970835976342c497c8') in 0.010725 seconds 
-  Import took 0.015085 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.810589 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '3cf16a8a101f87a5522e3183d829fef1') in 0.009531 seconds 
-  Import took 0.014910 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 8.840207 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: 'c2cff9ea8c591bc2216a78870632e66c') in 0.009013 seconds 
-  Import took 0.014234 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.915518 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: 'c14b8c5cf85d960cbff8923fa32925e0') in 0.008876 seconds 
-  Import took 0.014813 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.150586 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: 'ad84f489a1b5cd6fe8696158d46b55c0') in 0.006366 seconds 
-  Import took 0.011106 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.795349 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '0074bf8b829f33809d75519893f7bd90') in 0.007423 seconds 
-  Import took 0.013779 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.324482 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: '061b6317967de98ddc451b841b7c793a') in 0.007285 seconds 
-  Import took 0.012486 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 99.071696 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
-SerializationException: Attempting to deserialize an empty stream.
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Boolean isCrossAppDomain, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x0003c] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck, System.Runtime.Remoting.Messaging.IMethodCallMessage methodCallMessage) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler, System.Boolean fCheck) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream, System.Runtime.Remoting.Messaging.HeaderHandler handler) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at System.Runtime.Serialization.Formatters.Binary.BinaryFormatter.Deserialize (System.IO.Stream serializationStream) [0x00000] in <695d1cc93cca45069c528c15c9fdd749>:0 
-  at SerializableVariable.ReadData () [0x0003d] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:53 
-  at SerializableVariable.OnAfterDeserialize () [0x00001] in /Users/doof/Documents/Personal/NodeDialogueSystem/Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs:63 
-
-(Filename: Assets/DialogueSystem/Script/SerializedDataTypes/SerializableVariables/SerializableVariable.cs Line: 53)
-
- -> (artifact id: 'acae93821bbc871961a49e8704d8a0c7') in 0.007901 seconds 
-  Import took 0.012238 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 6.203675 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ae0f4dd32387c778f6f694f2ff50d888') in 0.005448 seconds 
-  Import took 0.010702 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.152294 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ba42d2517f8f1ffaeddc7f2b896effe0') in 0.007286 seconds 
-  Import took 0.011393 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.655158 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e833f2c26ce4297ad4140bac4fdc516') in 0.004437 seconds 
-  Import took 0.008193 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.806172 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5092d5c091c58cf45ac69bd326555cf6') in 0.005192 seconds 
-  Import took 0.010189 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.278033 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '50705b53e953bfd700571ffbaf752d23') in 0.005300 seconds 
-  Import took 0.010442 seconds .
+  path: Assets/DialogueSystem/Editor/Nodes
+  artifactKey: Guid(c28a49dc05092401f9d0b8db09f872c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DialogueSystem/Editor/Nodes using Guid(c28a49dc05092401f9d0b8db09f872c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a7cbc43c26090f160911b5e43037da8') in 0.004494 seconds 
+  Import took 0.008345 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.004581 seconds.
+Registered in 0.001956 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.405 seconds
+- Completed reload, in  1.573 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 201.0 MB.
-System memory in use after: 201.2 MB.
+Unloading 2138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 196.2 MB.
+System memory in use after: 196.4 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2601.
-Total: 2.179067 ms (FindLiveObjects: 0.201298 ms CreateObjectMapping: 0.076942 ms MarkObjects: 1.885558 ms  DeleteObjects: 0.014373 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 213.581649 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c862ca15eb07844249da85dbe835b56') in 0.017526 seconds 
-  Import took 0.020736 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001682 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.279 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.76 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 201.3 MB.
-System memory in use after: 201.4 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2604.
-Total: 2.182458 ms (FindLiveObjects: 0.168694 ms CreateObjectMapping: 0.063517 ms MarkObjects: 1.935808 ms  DeleteObjects: 0.013752 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2603.
+Total: 2.191799 ms (FindLiveObjects: 0.331764 ms CreateObjectMapping: 0.069268 ms MarkObjects: 1.771382 ms  DeleteObjects: 0.018403 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -759,218 +115,22 @@ AssetImportParameters requested are different than current active one (requested
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.001711 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.320 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 201.6 MB.
-System memory in use after: 201.7 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2607.
-Total: 2.193187 ms (FindLiveObjects: 0.190666 ms CreateObjectMapping: 0.080473 ms MarkObjects: 1.906716 ms  DeleteObjects: 0.014585 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001742 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.50 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.401 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 201.9 MB.
-System memory in use after: 202.0 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2610.
-Total: 2.222974 ms (FindLiveObjects: 0.177814 ms CreateObjectMapping: 0.071474 ms MarkObjects: 1.958782 ms  DeleteObjects: 0.014032 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 319.268575 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d111ea6dec946e371bf8a34530bb298') in 0.021142 seconds 
-  Import took 0.025556 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000257 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8d111ea6dec946e371bf8a34530bb298') in 0.005177 seconds 
-  Import took 0.008861 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001702 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.436 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.51 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.1 MB.
-System memory in use after: 202.3 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2613.
-Total: 2.277335 ms (FindLiveObjects: 0.202517 ms CreateObjectMapping: 0.086814 ms MarkObjects: 1.971233 ms  DeleteObjects: 0.015904 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001634 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.464 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.4 MB.
-System memory in use after: 202.5 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2616.
-Total: 2.175978 ms (FindLiveObjects: 0.192182 ms CreateObjectMapping: 0.077641 ms MarkObjects: 1.890055 ms  DeleteObjects: 0.015071 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001673 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.49 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.459 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.54 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.6 MB.
-System memory in use after: 202.8 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2619.
-Total: 2.186165 ms (FindLiveObjects: 0.193152 ms CreateObjectMapping: 0.076669 ms MarkObjects: 1.900617 ms  DeleteObjects: 0.014561 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001678 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.47 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.323 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.38 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 202.9 MB.
-System memory in use after: 203.0 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2622.
-Total: 2.238442 ms (FindLiveObjects: 0.196409 ms CreateObjectMapping: 0.062045 ms MarkObjects: 1.965544 ms  DeleteObjects: 0.013551 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001681 seconds.
+Registered in 0.001271 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for OSXStandalone target not found
 Refreshing native plugins compatible for Editor in 0.48 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.347 seconds
+- Completed reload, in  1.289 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.42 ms, found 3 plugins.
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.1 MB.
-System memory in use after: 203.3 MB.
+Unloading 2138 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 196.5 MB.
+System memory in use after: 196.6 MB.
 
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2625.
-Total: 2.438488 ms (FindLiveObjects: 0.311954 ms CreateObjectMapping: 0.134397 ms MarkObjects: 1.977880 ms  DeleteObjects: 0.013443 ms)
+Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2606.
+Total: 2.140312 ms (FindLiveObjects: 0.194521 ms CreateObjectMapping: 0.066404 ms MarkObjects: 1.858256 ms  DeleteObjects: 0.020260 ms)
 
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -982,128 +142,3 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 192.887589 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5a71ff5c3a3c782cc350340b8afa2040') in 0.028539 seconds 
-  Import took 0.032343 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 157.806169 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b2c0b6681bf51a824cae74577ac02cac') in 0.026078 seconds 
-  Import took 0.030545 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.543677 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '15361dd33ea9b014655b7a58560fab1c') in 0.006985 seconds 
-  Import took 0.010834 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.649318 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5ab5b55547146a8483ce565737aa2d57') in 0.005482 seconds 
-  Import took 0.009194 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.170856 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ea8d43a5747522d712a73cd1deb53b37') in 0.005587 seconds 
-  Import took 0.008579 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.557014 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f8a09a176223e9da6f12738299b41e9f') in 0.006643 seconds 
-  Import took 0.009790 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.830532 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '53bcc9c3dcebe0037fdec4434d9a41fb') in 0.007025 seconds 
-  Import took 0.010897 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001706 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.57 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.432 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.4 MB.
-System memory in use after: 203.5 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2628.
-Total: 2.230301 ms (FindLiveObjects: 0.211857 ms CreateObjectMapping: 0.087607 ms MarkObjects: 1.915116 ms  DeleteObjects: 0.014774 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Import Request.
-  Time since last request: 43.046045 seconds.
-  path: Assets/DialogueSystem/DialogueDBs/Whalter.asset
-  artifactKey: Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/DialogueSystem/DialogueDBs/Whalter.asset using Guid(647139f286aa841f39fcf76728625118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1e9c7b167d59d0c53e32fc820c4489ad') in 0.048557 seconds 
-  Import took 0.052945 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.001658 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for OSXStandalone target not found
-Refreshing native plugins compatible for Editor in 0.46 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  1.281 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.41 ms, found 3 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 2137 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 203.7 MB.
-System memory in use after: 203.8 MB.
-
-Unloading 16 unused Assets to reduce memory usage. Loaded Objects now: 2631.
-Total: 2.531890 ms (FindLiveObjects: 0.162482 ms CreateObjectMapping: 0.062191 ms MarkObjects: 2.294024 ms  DeleteObjects: 0.012564 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-AssetImportWorkerClient::OnTransportError - code=2 error=End of file

@@ -66,6 +66,7 @@
      <Compile Include="Assets\DialogueSystem\Editor\NodeInspector\EventEntryInspector.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DialogueEditorEvents.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeComponentUtilt.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NpcDialogueInspector.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeLine.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeTextField.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DatabaseEditorManager.cs" />

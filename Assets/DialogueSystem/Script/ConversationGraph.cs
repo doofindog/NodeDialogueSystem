@@ -1,12 +1,8 @@
 using System;
-using UnityEngine;
 using System.Collections.Generic;
-using System.IO;
 using System.Linq;
 using UnityEditor;
-using UnityEngine.Events;
-using UnityEngine.PlayerLoop;
-
+using UnityEngine;
 
 namespace DialogueSystem
 {
