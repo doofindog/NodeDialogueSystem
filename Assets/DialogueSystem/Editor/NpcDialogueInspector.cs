@@ -9,9 +9,9 @@ using Object = System.Object;
 [CanEditMultipleObjects]
 public class NpcDialogueInspector : Editor
 {
-    private int index = -1;
-    private string selectedConversationName = string.Empty;
-    private SerializedObject selectedObj = null;
+    private int _index = -1;
+    private SerializedObject _selectedObj = null;
+    
     public override void OnInspectorGUI()
     {
         base.OnInspectorGUI();
@@ -21,16 +21,15 @@ public class NpcDialogueInspector : Editor
         SerializedProperty selectedProperty = serializedObject.FindProperty("_selectedConversation");
         if (selectedProperty.objectReferenceValue != null)
         {
-            selectedObj = new SerializedObject(selectedProperty.objectReferenceValue);
+            _selectedObj = new SerializedObject(selectedProperty.objectReferenceValue);
         }
         
-
-
         SerializedProperty dialogueProperty = serializedObject.FindProperty("_dialogueList");
         SerializedObject dialogueObj = new SerializedObject(dialogueProperty.objectReferenceValue);
 
-        SerializedProperty conversations = dialogueObj.FindProperty("conversations");
-        List<string> values = null;
+        SerializedProperty conversations = dialogueObj.FindProperty("_conversations");
+        List<string> values = new List<string>();
+        
         if (conversations.isArray)
         {
             int arrayLength = 0;
@@ -42,14 +41,13 @@ public class NpcDialogueInspector : Editor
  
             conversations.Next(true); // advance to first array index
             
-            values = new List<string>(arrayLength);
             int lastIndex = arrayLength - 1;
             for (int i = 0; i < arrayLength; i++)
             {
                 SerializedObject obj = new SerializedObject(conversations.objectReferenceValue);
-                SerializedProperty property = obj.FindProperty("name");
+                SerializedProperty property = obj.FindProperty("_name");
                 values.Add(property.stringValue);
-                if (index == i)
+                if (_index == i)
                 {
                     trigger._selectedConversation = conversations.objectReferenceValue as ConversationGraph;
                 }
@@ -58,10 +56,7 @@ public class NpcDialogueInspector : Editor
             }
         }
 
-        if (values != null)
-        {
-            index = EditorGUILayout.Popup(index, values.ToArray());
-        }
+        _index = EditorGUILayout.Popup(_index, values.ToArray());
         
         serializedObject.ApplyModifiedProperties();
         SaveManager.SaveData(trigger);

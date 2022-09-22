@@ -10,7 +10,7 @@ namespace DialogueSystem.Editor.NodeComponents
 
         public NodeTextArea(Rect rect)
         {
-            canvasRect = rect;
+            base.rect = rect;
         }
 
         public string Draw(string text = null)
@@ -21,7 +21,7 @@ namespace DialogueSystem.Editor.NodeComponents
             }
 
             GUI.skin.textArea.wordWrap = true;
-            _text = GUI.TextArea(canvasRect, text);
+            _text = GUI.TextArea(rect, text);
             GUI.skin.textArea.wordWrap = true;
             return _text;
         }

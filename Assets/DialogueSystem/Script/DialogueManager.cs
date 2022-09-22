@@ -1,27 +1,22 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using DialogueSystem;
+
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
     
-    [SerializeField] private ConversationGraph currentConversation;
-    [SerializeField] private Entry currentEntry;
-    [SerializeField] private DialogueSystemUI dialogueUI;
-
     
-    [SerializeField] private bool inProgress;
-    [SerializeField] private bool isTalking;
-    [SerializeField] private bool skipTalking;
-    [SerializeField] private bool finishedTalking;
-    [SerializeField] private bool freezeInputs;
+    [SerializeField] private Entry _currentEntry;
+    [SerializeField] private DialogueSystemUI _dialogueUI;
+    [SerializeField] private ConversationGraph _currentConversation;
+    [SerializeField] private bool _inProgress;
+    [SerializeField] private bool _isTalking;
+    [SerializeField] private bool _skipTalking;
+    [SerializeField] private bool _finishedTalking;
+    [SerializeField] private bool _freezeInputs;
     
-    
-
     public void Awake()
     {
         DialogueEvents.startConversationEvent += StartConversation;
@@ -36,39 +31,42 @@ public class DialogueManager : MonoBehaviour
         DialogueUIEvents.printingCompleted -= HandleTalkingComplete;
     }
 
-    private void StartConversation(ConversationGraph graph)
+    private void StartConversation(ConversationGraph p_graph)
     {
-        if (graph == null) { return; }
-        if (inProgress == true) { return; }
+        if (p_graph == null) { return; }
+        if (_inProgress == true) { return; }
         
-        currentConversation = graph;
-        currentEntry = currentConversation.GetNext(graph.GetStart());
+        _currentConversation = p_graph;
+        _currentEntry = _currentConversation.GetNext(p_graph.GetStart());
 
-        freezeInputs = false;
-        inProgress = true;
-        isTalking = true;
-        SetupUI(graph);
+        _freezeInputs = false;
+        _inProgress = true;
+        _isTalking = true;
+        
+        SetupUI(p_graph);
+        
         DialogueEvents.ConversationStarted();
     }
 
     private void SetupUI(ConversationGraph graph)
     {
-        dialogueUI.gameObject.SetActive(true);
-        dialogueUI.DisplayDialogue(currentEntry);
+        _dialogueUI.gameObject.SetActive(true);
+        _dialogueUI.DisplayDialogue(_currentEntry);
     }
 
-    private void UpdateUI(Entry entry)
+    private void UpdateUI(Entry p_entry)
     {
-        dialogueUI.DisplayDialogue(entry);
+        _dialogueUI.DisplayDialogue(p_entry);
     }
 
-    public void EndConversation()
+    private void EndConversation()
     {
-        freezeInputs = true;
-        inProgress = false;
-        isTalking = false;
-        currentEntry = null;
-        dialogueUI.gameObject.SetActive(false);
+        _freezeInputs = true;
+        _inProgress = false;
+        _isTalking = false;
+        _currentEntry = null;
+        _dialogueUI.gameObject.SetActive(false);
+        
         DialogueEvents.ConversationEnded();
     }
 
@@ -79,7 +77,7 @@ public class DialogueManager : MonoBehaviour
 
     private void HandleInputs()
     {
-        if (freezeInputs == true)
+        if (_freezeInputs == true)
         {
             return;
         }
@@ -89,55 +87,57 @@ public class DialogueManager : MonoBehaviour
 
     private void ControlConversation()
     {
-        if (isTalking)
+        if (_isTalking)
         {
             TrySkipTalking();
             return;
         }
         
-        if (currentEntry.GetType() != typeof(DecisionEntry))
+        if (_currentEntry.GetType() != typeof(DecisionEntry))
         {
-            Entry nextEntry = currentConversation.GetNext(currentEntry);
+            Entry nextEntry = _currentConversation.GetNext(_currentEntry);
             MoveToNext(nextEntry);
         }
     }
 
     private void TrySkipTalking()
     {
-        if (!isTalking)
+        if (!_isTalking)
         {
             return;
         }
 
         DialogueEvents.skipTalking();
-        isTalking = false;
+        
+        _isTalking = false;
     }
 
     private void HandleTalkingComplete()
     {
-        isTalking = false;
+        _isTalking = false;
     }
 
-    private void MoveToNext(Entry nextEntry)
+    private void MoveToNext(Entry p_nextEntry)
     {
-        if (nextEntry == null)
+        if (p_nextEntry == null)
         {
             EndConversation();
             return;
         }
         
-        currentEntry = nextEntry;
-        UpdateUI(nextEntry);
-        currentEntry.Invoke();
-        isTalking = true;
+        UpdateUI(p_nextEntry);
+        
+        _currentEntry = p_nextEntry;
+        _currentEntry.Invoke();
+        _isTalking = true;
     }
 
-    private void HandleOnClickOption(int index)
+    private void HandleOnClickOption(int p_index)
     {
-        DecisionEntry decisionEntry = (DecisionEntry) currentEntry;
-        Option optionPressed = decisionEntry.GetOptionAtIndex(index);
+        DecisionEntry decisionEntry = (DecisionEntry) _currentEntry;
+        Option optionPressed = decisionEntry.GetOptionAtIndex(p_index);
+        Entry nextEntry = _currentConversation.GetNext(_currentEntry, optionPressed);
         
-        Entry nextEntry = currentConversation.GetNext(currentEntry, optionPressed);
         MoveToNext(nextEntry);
     }
 }

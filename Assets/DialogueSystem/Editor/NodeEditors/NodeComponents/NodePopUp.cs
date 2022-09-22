@@ -10,15 +10,15 @@ public class NodePopUp : NodeComponent
     private int _index;
     private string[] _content;
 
-    public NodePopUp(Rect rect,int index, string[] content)
+    public NodePopUp(Rect p_rect,int index, string[] content)
     {
         _index = index;
         _content = content;
-        canvasRect = rect;
+        rect = p_rect;
     }
 
     public int Draw()
     {
-        return EditorGUI.Popup(canvasRect, _index, _content);
+        return EditorGUI.Popup(rect, _index, _content);
     }
 }

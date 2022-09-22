@@ -7,10 +7,10 @@ namespace DialogueSystem.Editor.NodeEditors
     {
         public DialogueEntry dialogueEntry;
 
-        public override void Init(Entry entry, DatabaseWindow databaseWindow )
+        public override void Init(Entry p_entry, DatabaseWindow p_databaseWindow )
         {
-            base.Init(entry, databaseWindow);
-            dialogueEntry = (DialogueEntry)entry;
+            base.Init(p_entry, p_databaseWindow);
+            dialogueEntry = (DialogueEntry)p_entry;
         }
 
         protected override void DrawComponents()

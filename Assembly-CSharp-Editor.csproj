@@ -52,29 +52,28 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeBoolean.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\NodeBoolean.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\StartNode.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\Node.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponent.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\NodeComponent.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableDictionary\Editor\SerializableDictionaryPropertyDrawer.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\EventNode.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DatabaseWindow.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeSpace.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodePopUp.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\Port.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\NodeSpace.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\NodePopUp.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\Port.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DialogueDBInspector.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeInspector\EventEntryInspector.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DialogueEditorEvents.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeComponentUtilt.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\NodeComponentUtilt.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NpcDialogueInspector.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeLine.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeTextField.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\NodeLine.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\NodeTextField.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\DatabaseEditorManager.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\LinkEditor.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\DialogueNode.cs" />
      <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\DecisionNode.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\NodeComponents\NodeTextArea.cs" />
-     <Compile Include="Assets\DialogueSystem\Editor\CustomNodeEditorAttribute.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\NodeComponents\NodeTextArea.cs" />
+     <Compile Include="Assets\DialogueSystem\Editor\NodeEditors\CustomNodeEditorAttribute.cs" />
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2020.3.13f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>

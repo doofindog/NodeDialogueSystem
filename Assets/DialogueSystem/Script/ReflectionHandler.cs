@@ -6,20 +6,20 @@ using UnityEngine;
 
 public class ReflectionHandler 
 {
-    public static Type[] GetDerivedTypes(Type baseType)
+    public static Type[] GetDerivedTypes(Type p_baseType)
     {
         List<Type> types = new List<Type>();
+        
         System.Reflection.Assembly[] assemblies = System.AppDomain.CurrentDomain.GetAssemblies();
-
         foreach (Assembly assembly in assemblies)
         {
             try
             {
-                types.AddRange(assembly.GetTypes().Where(t => !t.IsAbstract && baseType.IsAssignableFrom(t)).ToArray());
+                types.AddRange(assembly.GetTypes().Where(t => !t.IsAbstract && p_baseType.IsAssignableFrom(t)).ToArray());
             }
             catch (Exception e)
             {
-                Console.WriteLine(e);
+                Debug.Log(e);
                 throw;
             }
         }
@@ -27,9 +27,9 @@ public class ReflectionHandler
         return types.ToArray();
     }
 
-    public static MethodInfo[] GetMethods(Type target, BindingFlags flags)
+    public static MethodInfo[] GetMethods(Type p_target, BindingFlags p_flags)
     {
-        MethodInfo[] infos = target.GetMethods(flags);
+        MethodInfo[] infos = p_target.GetMethods(p_flags);
         return infos;
     }
 }

@@ -1,98 +1,90 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+
 using UnityEditor;
 using UnityEngine;
-
 
 [InitializeOnLoad]
 public class CachedData : MonoBehaviour
 {
-    public static Type[] eventTypes;
-    public static string[] eventNames;
-    
-    public static Dictionary<Type, MethodInfo[]> methods;
-    public static Dictionary<Type, string[]> methodNames;
+    private static Type[] _eventTypes;
+    private static string[] _eventNames;
+
+    private static Dictionary<Type, MethodInfo[]> _methods;
+    private static Dictionary<Type, string[]> _methodNames;
 
     static CachedData()
     {
-        methods = new Dictionary<Type, MethodInfo[]>();
-        methodNames = new Dictionary<Type, string[]>();
+        _methods = new Dictionary<Type, MethodInfo[]>();
+        _methodNames = new Dictionary<Type, string[]>();
+        
         CacheEvents();
     }
 
     private static void CacheEvents()
     {
-        eventTypes = ReflectionHandler.GetDerivedTypes(typeof(DialogueEvents));
-        eventNames = (from type in eventTypes select type.Name).ToArray();
+        _eventTypes = ReflectionHandler.GetDerivedTypes(typeof(DialogueEvents));
+        _eventNames = (from type in _eventTypes select type.Name).ToArray();
 
-        for (int i = 0; i < eventTypes.Length; i++)
+        for (int i = 0; i < _eventTypes.Length; i++)
         {
-            MethodInfo[] methodInfos = ReflectionHandler.GetMethods(eventTypes[i], BindingFlags.Static | BindingFlags.Public);
+            MethodInfo[] methodInfos = ReflectionHandler.GetMethods(_eventTypes[i], BindingFlags.Static | BindingFlags.Public);
             string[] names = (from method in methodInfos select method.Name).ToArray();
             
-            methods.Add(eventTypes[i], methodInfos);
-            methodNames.Add(eventTypes[i], names);
+            _methods.Add(_eventTypes[i], methodInfos);
+            _methodNames.Add(_eventTypes[i], names);
         }
     }
 
     public static Type[] GetEventTypes()
     {
-        return eventTypes;
+        return _eventTypes;
     }
 
-    public static Type GetEvent(string typeName)
+    public static Type GetEvent(string p_typeName)
     {
-        for (int i = 0; i < eventTypes.Length; i++)
+        for (int i = 0; i < _eventTypes.Length; i++)
         {
-            if (eventTypes[i].Name == typeName)
+            if (_eventTypes[i].Name == p_typeName)
             {
-                return eventTypes[i];
+                return _eventTypes[i];
             }
         }
 
         return null;
     }
     
-    public static Type GetEvent(int index)
+    public static Type GetEvent(int p_index)
     {
-        return eventTypes[index];
+        return _eventTypes[p_index];
     }
-    
 
     public static string[] GetEventNames()
     {
-        return eventNames;
+        return _eventNames;
     }
 
-    public static MethodInfo[] GetMethods(Type type)
+    public static MethodInfo[] GetMethods(Type p_type)
     {
-        return methods[type];
+        return _methods[p_type];
     }
 
-    public static string[] GetMethodNames(Type type)
+    public static string[] GetMethodNames(Type p_type)
     {
-        return methodNames[type] != null ? methodNames[type] : null;
+        return _methodNames[p_type] != null ? _methodNames[p_type] : null;
     }
 
-    public static MethodInfo GetMethod(Type type, string methodName)
+    public static MethodInfo GetMethod(Type p_type, string p_methodName)
     {
-        if (type == null)
-        {
-            return null;
-        }
+        if (p_type == null) { return null; }
+        if (string.IsNullOrEmpty(p_methodName)) { return null; }
 
-        if (string.IsNullOrEmpty(methodName))
-        {
-            return null;
-        }
-
-        MethodInfo[] methodInfos = GetMethods(type);
+        MethodInfo[] methodInfos = GetMethods(p_type);
         for (int i = 0; i < methodInfos.Length; i++)
         {
-            if (methodInfos[i].Name.Equals(methodName))
+            if (methodInfos[i].Name.Equals(p_methodName))
             {
                 return methodInfos[i];
             }

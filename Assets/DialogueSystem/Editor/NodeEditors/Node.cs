@@ -11,7 +11,6 @@ namespace DialogueSystem.Editor
     [CustomNodeEditor(typeof(DialogueSystem.Entry))]
     public abstract class Node : UnityEditor.Editor, IEquatable<Node>
     {
-        //ID and References
         [HideInInspector] public DatabaseWindow databaseWindow;
         [HideInInspector] public DialogueSystem.Entry entry;
         [HideInInspector] public Vector2 padding;
@@ -20,29 +19,28 @@ namespace DialogueSystem.Editor
         [HideInInspector] public Vector2 spacing;
 
         private Vector2 _defaultSize;
-        protected GenericMenu menu;
-        
         private Vector2 _rescaleSize;
         private bool _isSelected;
         private bool _canDrag;
-        private GUIStyle _panelStyle;
-
+        
         protected Port inPort;
         protected Port outPort;
+        protected GenericMenu menu;
         
-        public virtual void Init(DialogueSystem.Entry entry,DatabaseWindow databaseWindow)
+        public virtual void Init(DialogueSystem.Entry p_entry,DatabaseWindow p_databaseWindow)
         {
-            this.databaseWindow = databaseWindow;
-            this.entry = entry;
-
             menu = new GenericMenu();
+            
+            databaseWindow = p_databaseWindow;
+            entry = p_entry;
             
             ConfigMenu();
             
-            this.padding = new Vector2(20, 20);
+            padding = new Vector2(20, 20);
             _defaultSize = new Vector2(250, 50);
             _rescaleSize = Vector2.zero; 
-            rect = new Rect(entry.GetPosition(), _defaultSize);
+            
+            rect = new Rect(p_entry.GetPosition(), _defaultSize);
         }
 
         protected virtual void ConfigMenu()
@@ -55,66 +53,66 @@ namespace DialogueSystem.Editor
             menu.ShowAsContext();
         }
 
-        public virtual void ProcessEvent(Event e)
+        public virtual void ProcessEvent(Event p_event)
         {
-            switch (e.type)
+            switch (p_event.type)
             {
                 case EventType.MouseDown:
                 {
-                    OnMouseDown(e);
+                    OnMouseDown(p_event);
                     break;
                 }
                 case EventType.MouseUp:
                 {
-                    OnMouseUp(e);
+                    OnMouseUp(p_event);
                     break; 
                 }
                 case EventType.MouseDrag:
                 {
-                    OnMouseDrag(e);
+                    OnMouseDrag(p_event);
                     break;
                 }
             }
         }
 
-        protected virtual void OnMouseDown(Event e)
+        protected virtual void OnMouseDown(Event p_event)
         {
-            if (e.button == 1 && rect.Contains(e.mousePosition))
+            if (p_event.button == 1 && rect.Contains(p_event.mousePosition))
             {
                 OpenMenu();
-                e.Use();
+                p_event.Use();
             }
 
-            if (e.button == 0 && rect.Contains(e.mousePosition))
+            if (p_event.button == 0 && rect.Contains(p_event.mousePosition))
             {
                 Selection.activeObject = entry;
                 _isSelected = true;
                 _canDrag = true;
-                e.Use();
+                p_event.Use();
             }
         }
 
-        private void OnMouseUp(Event e)
+        protected virtual void OnMouseUp(Event p_event)
         {
-            if (e.button == 0 && _isSelected == true)
+            if (p_event.button == 0 && _isSelected == true)
             {
                 _isSelected = false;
                 _canDrag = false;
             }
         }
 
-        private void OnMouseDrag(Event e)
+        protected virtual void OnMouseDrag(Event p_event)
         {
-            if (e.button == 0 && _canDrag == true)
+            if (p_event.button == 0 && _canDrag == true)
             {
-                UpdatePosition(e.delta);
-                e.Use();
+                UpdatePosition(p_event.delta);
+                p_event.Use();
             }
         }
 
-        public void UpdatePosition(Vector2 deltaPosition)
+        public void UpdatePosition(Vector2 p_deltaPosition)
         {
-            rect.position += deltaPosition;
+            rect.position += p_deltaPosition;
             entry.UpdatePosition(rect.position);
         }
 
@@ -123,7 +121,7 @@ namespace DialogueSystem.Editor
             databaseWindow.RemoveNode(this);
         }
         
-        public virtual void Draw()
+        public void Draw()
         {
             rect.size = _defaultSize;
             if (_rescaleSize.y + (padding.y*2) > _defaultSize.y)
@@ -131,7 +129,6 @@ namespace DialogueSystem.Editor
                 rect.size = new Vector2(_defaultSize.x, _rescaleSize.y + (padding.y * 2));
             }
             
-            _panelStyle = new GUIStyle(GUI.skin.box) { alignment = TextAnchor.UpperCenter };
             GUI.Box(rect, entry.GetType().Name);
 
             componentDrawPos = rect.position + padding;
@@ -144,9 +141,9 @@ namespace DialogueSystem.Editor
         {
         }
 
-        public void AddComponent(NodeComponent component)
+        public void AddComponent(NodeComponent p_component)
         {
-            Vector2 size = component.GetRect().size;
+            Vector2 size = p_component.GetRect().size;
             
             componentDrawPos += new Vector2(0, size.y);
             _rescaleSize += new Vector2(0,size.y);
@@ -159,12 +156,12 @@ namespace DialogueSystem.Editor
 
         protected void HandleInPortSelect()
         {
-            DatabaseEditorManager.window.SelectDestinationNode(this);
+            DatabaseEditorManager.WINDOW.SelectDestinationNode(this);
         }
 
         protected void HandleOutPortSelect()
         {
-            DatabaseEditorManager.window.SelectSourceNode(this);
+            DatabaseEditorManager.WINDOW.SelectSourceNode(this);
         }
 
         public Port GetInPort()
@@ -179,20 +176,19 @@ namespace DialogueSystem.Editor
 
         #region Equatable
         
-        public bool Equals(Node other)
+        public bool Equals(Node p_other)
         {
-            if (ReferenceEquals(null, other)) return false;
-            if (ReferenceEquals(this, other)) return true;
-            return base.Equals(other) && Equals(entry, other.entry);
+            if (ReferenceEquals(null, p_other)) return false;
+            if (ReferenceEquals(this, p_other)) return true;
+            return base.Equals(p_other) && Equals(entry, p_other.entry);
         }
-        public override bool Equals(object obj)
+        public override bool Equals(object p_obj)
         {
-            if (ReferenceEquals(null, obj)) return false;
-            if (ReferenceEquals(this, obj)) return true;
-            if (obj.GetType() != this.GetType()) return false;
-            return Equals((Node) obj);
+            if (ReferenceEquals(null, p_obj)) return false;
+            if (ReferenceEquals(this, p_obj)) return true;
+            if (p_obj.GetType() != this.GetType()) return false;
+            return Equals((Node) p_obj);
         }
-
         public override int GetHashCode()
         {
             unchecked
@@ -200,6 +196,7 @@ namespace DialogueSystem.Editor
                 return (base.GetHashCode() * 397) ^ (entry != null ? entry.GetHashCode() : 0);
             }
         }
+        
         #endregion
 
     }

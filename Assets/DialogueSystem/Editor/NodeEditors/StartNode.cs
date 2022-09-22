@@ -1,9 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
 using DialogueSystem.Editor.NodeComponents;
-using UnityEditor;
-using UnityEngine;
-
 
 namespace DialogueSystem.Editor
 {
@@ -12,26 +7,16 @@ namespace DialogueSystem.Editor
     {
         private StartEntry _startEntry;
 
-        public override void Init(Entry entry, DatabaseWindow databaseWindow)
+        public override void Init(Entry p_entry, DatabaseWindow p_databaseWindow)
         {
-            base.Init(entry, databaseWindow);
-            _startEntry = (StartEntry) entry;
+            base.Init(p_entry, p_databaseWindow);
+            _startEntry = (StartEntry) p_entry;
         }
 
         protected override void DrawComponents()
         {
             NodeComponentUtilt.DrawText(_startEntry.GetPointType().ToString(), 50);
             outPort = NodeComponentUtilt.DrawPort(PortType.Out, HandleOutPortSelect);
-        }
-
-        protected override void ConfigMenu()
-        {
-            //base.ConfigMenu();
-        }
-
-        public override void OnInspectorGUI()
-        {
-            
         }
     }
 }

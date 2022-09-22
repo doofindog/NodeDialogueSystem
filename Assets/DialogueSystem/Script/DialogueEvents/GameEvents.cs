@@ -8,4 +8,9 @@ public class GameEvents : DialogueEvents
     {
         Debug.Log("You received a gold coin");
     }
+
+    public static void IncreaseSkill(string skillName, int amount)
+    {
+        Debug.Log(skillName + "increased by " + amount);
+    }
 }

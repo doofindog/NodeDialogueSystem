@@ -1,23 +1,18 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.IO;
-using System.Runtime.Serialization;
 using System.Runtime.Serialization.Formatters.Binary;
-using UnityEditor;
+
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 [System.Serializable]
-public class SerializableVariable : ISerializationCallbackReceiver
+public class SerializableObjectVariable : ISerializationCallbackReceiver
 {
     public object variableValue;
     public string variableName;
-    public SerializableType type;
     public byte[] data;
-
-
-    public SerializableVariable(Type p_type, string p_varialbleName)
+    public SerializableType type;
+    
+    public SerializableObjectVariable(Type p_type, string p_varialbleName)
     {
         type = new SerializableType(p_type);
         variableName = p_varialbleName;
@@ -39,10 +34,8 @@ public class SerializableVariable : ISerializationCallbackReceiver
 
     public void ReadData()
     {
-        if (data == null)
-        {
-            return;
-        }
+        if (data == null) {return;} 
+        if (data.Length == 0) {return;}
 
         MemoryStream memoryStream = new MemoryStream();
         BinaryFormatter binaryFormatter = new BinaryFormatter();
@@ -50,7 +43,7 @@ public class SerializableVariable : ISerializationCallbackReceiver
         memoryStream.Write(data,0,data.Length);
         memoryStream.Seek(0, SeekOrigin.Begin);
         
-        variableValue = (object) binaryFormatter.Deserialize(memoryStream);
+        variableValue = binaryFormatter.Deserialize(memoryStream);
     }
 
     public  void OnBeforeSerialize()
@@ -63,9 +56,9 @@ public class SerializableVariable : ISerializationCallbackReceiver
         ReadData();
     }
     
-    public void SetObject(object obj)
+    public void SetObject(object p_obj)
     {
-        variableValue = obj;
+        variableValue = p_obj;
         OnBeforeSerialize();
     }
 

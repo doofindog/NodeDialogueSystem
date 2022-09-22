@@ -6,13 +6,13 @@ using UnityEngine;
 
 public class NodeLine : NodeComponent
 {
-    public NodeLine(Rect rect)
+    public NodeLine(Rect p_rect)
     {
-        canvasRect = rect;
+        rect = p_rect;
     }
 
     public void Draw()
     {
-        EditorGUI.DrawRect(canvasRect,Color.gray);
+        EditorGUI.DrawRect(rect,Color.gray);
     }
 }

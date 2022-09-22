@@ -10,21 +10,20 @@ namespace DialogueSystem
     [System.Serializable]
     public class StartEntry : Entry
     {
-        [SerializeField] private PointType m_pointType;
-        
+        [SerializeField] private PointType _pointType;
         
         public PointType GetPointType()
         {
-            return m_pointType;
+            return _pointType;
         }
 
-        public void setPointType(PointType type)
+        public void setPointType(PointType p_type)
         {
-            m_pointType = type;
+            _pointType = p_type;
         }
     }
 
-    public enum PointType
+    public enum PointType  // Feature not used for now.
     {
         START,
         END

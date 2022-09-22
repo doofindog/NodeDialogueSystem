@@ -5,10 +5,10 @@ namespace DialogueSystem
 {
     public class NodeManager
     {
-
         public static string GenerateUniqueId()
         {
             Guid g = Guid.NewGuid();
+            
             string longID = Convert.ToBase64String(g.ToByteArray());
             longID = longID.Replace("=", "");
             longID = longID.Replace("+", "");

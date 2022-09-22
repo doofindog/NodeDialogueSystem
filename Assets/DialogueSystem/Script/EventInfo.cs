@@ -1,23 +1,21 @@
 using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
 using System.Reflection;
+
 using UnityEngine;
-using Object = UnityEngine.Object;
 
 [System.Serializable]
 public class EventInfo
 {
     [SerializeField] public SerializableType eventType;
     [SerializeField] public SerializableMethodInfo eventMethod;
-    [SerializeField] public List<SerializableVariable> parametersObj;
+    [SerializeField] public List<SerializableObjectVariable> parametersObj;
 
     public EventInfo()
     {
         eventType = new SerializableType(null);
         eventMethod = new SerializableMethodInfo(null);
-        parametersObj = new List<SerializableVariable>();
+        parametersObj = new List<SerializableObjectVariable>();
     }
 
     public void SetEventType(Type type)
@@ -25,13 +23,16 @@ public class EventInfo
         eventType.SetType(type);
     }
 
-    public SerializableMethodInfo SetMethodInfo(MethodInfo methodInfo)
+    public SerializableMethodInfo SetMethodInfo(MethodInfo p_methodInfo)
     {
-        eventMethod.SetMethodInfo(methodInfo);
-        eventType.SetType(methodInfo.DeclaringType);
+        eventMethod.SetMethodInfo(p_methodInfo);
+        eventType.SetType(p_methodInfo.DeclaringType);
+        
         UpdateParameters();
+        
         return eventMethod;
     }
+    
     public void UpdateParameters()
     {
         parametersObj.Clear();
@@ -44,11 +45,11 @@ public class EventInfo
             string paramName = info[i].Name;
             Type paramType = info[i].ParameterType;
             
-            parametersObj.Add(new SerializableVariable(paramType, paramName));
+            parametersObj.Add(new SerializableObjectVariable(paramType, paramName));
         }
     }
 
-    public List<SerializableVariable> GetParameters()
+    public List<SerializableObjectVariable> GetParameters()
     {
         return parametersObj;
     }
@@ -58,7 +59,7 @@ public class EventInfo
         if (eventMethod.methodInfo == null) { return; }
 
         List<object> parameters = new List<object>();
-        foreach (SerializableVariable variable in parametersObj)
+        foreach (SerializableObjectVariable variable in parametersObj)
         {
             object param = variable.GetObject();
             parameters.Add(param);
@@ -67,7 +68,7 @@ public class EventInfo
         eventMethod.methodInfo.Invoke(null, parameters.ToArray());
     }
 
-    public List<SerializableVariable> GetParameterObj()
+    public List<SerializableObjectVariable> GetParameterObj()
     {
         return parametersObj;
     }

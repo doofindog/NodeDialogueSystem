@@ -14,15 +14,17 @@ namespace DialogueSystem.Editor
     {
         private EventEntry _eventEntry;
 
-        public override void Init(Entry entry, DatabaseWindow databaseWindow)
+        public override void Init(Entry p_entry, DatabaseWindow p_databaseWindow)
         {
-            base.Init(entry, databaseWindow);
-            _eventEntry = (EventEntry) entry;
+            base.Init(p_entry, p_databaseWindow);
+            
+            _eventEntry = (EventEntry) p_entry;
         }
 
         protected override void ConfigMenu()
         {
             base.ConfigMenu();
+            
             menu.AddItem(new GUIContent("Add Function"), false, AddEvent );
         }
         
@@ -52,8 +54,10 @@ namespace DialogueSystem.Editor
                 NodeComponentUtilt.DrawLine();
                 NodeComponentUtilt.DrawSpace(5);
                 
-                /* //////////////// Draw Types //////////////// */
-                
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                #region ----> Draw Types <----
+
                 int typeIndex = -1;
                 
                 Type[] types = CachedData.GetEventTypes();
@@ -80,8 +84,13 @@ namespace DialogueSystem.Editor
                 }
 
                 if (typeIndex == -1) { continue; }
+
+                #endregion
                 
-                /* //////////////// Draw Methods/Functions //////////////// */
+                
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                #region ----> Draw Method Functions <----
                 
                 Type selectedType = types[typeIndex];
                 
@@ -111,17 +120,24 @@ namespace DialogueSystem.Editor
                 }
 
                 if (methodIndex == -1) { continue; }
-                
-                /* //////////////// Draw Parameters //////////////// */
 
-                foreach (SerializableVariable param in _eventEntry.staticEvents[i].GetParameterObj())
+                #endregion
+                
+                //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+                #region ----> Draw parameters <----
+
+                foreach (SerializableObjectVariable param in _eventEntry.staticEvents[i].GetParameterObj())
                 {
                     DrawParameters(param);
                 }
+
+                #endregion
+                
             }
         }
 
-        private void DrawParameters(SerializableVariable p_paramObj)
+        private void DrawParameters(SerializableObjectVariable p_paramObj)
         {
             switch (p_paramObj.GetObjType().Name)
             {
@@ -153,7 +169,6 @@ namespace DialogueSystem.Editor
                         {
                             value = (bool) p_paramObj.GetObject();
                         }
-                        
                     }
                     
                     value = NodeComponentUtilt.DrawToggle(p_paramObj.variableName,value);

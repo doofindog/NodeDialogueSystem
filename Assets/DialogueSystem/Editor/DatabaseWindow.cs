@@ -1,12 +1,12 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
 using System.Linq;
-using System.Timers;
-using DialogueSystem.Editor.NodeComponents;
-using DialogueSystem.Editor.NodeEditors;
+using System.Collections.Generic;
+
 using UnityEditor;
 using UnityEngine;
+
+using DialogueSystem.Editor.NodeComponents;
+using DialogueSystem.Editor.NodeEditors;
 
 namespace DialogueSystem.Editor
 {
@@ -21,36 +21,38 @@ namespace DialogueSystem.Editor
         private Entry _source;
         private Entry _destination;
         private Option _option;
-        
         private Vector2 _offset;
         private Vector2 _drag;
         
-        
-
-        public void Initialise(DialogueDatabase dialogueDB)
-        {
-            this.dialogueDB = dialogueDB;
-
-            _source = null;
-            _destination = null;
-            nodes = new Dictionary<Entry,Node>();
-
-            if (dialogueDB.ContainsConversations())
-            {
-                DialogueEditorEvents.removeLink += RemoveLink;
-                ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(0);
-                LoadConversation(graph);
-            }
-        }
-
         public void OnEnable()
         {
             this.dialogueDB = null;
         }
+        
+        public void Initialise(DialogueDatabase p_dialogueDB)
+        {
+            dialogueDB = p_dialogueDB;
+            _source = null;
+            _destination = null;
+            nodes = new Dictionary<Entry,Node>();
 
+            convIndex = -1;
+
+            if (p_dialogueDB.ContainsConversations())
+            {
+                DialogueEditorEvents.removeLink += RemoveLink;
+                ConversationGraph graph = p_dialogueDB.GetConversationGraphAtIndex(0);
+                
+                LoadConversation(graph);
+            }
+        }
+        
         private void OnGUI()
         {
-            if (dialogueDB == null) { return; }
+            if (dialogueDB == null)
+            {
+                return;
+            }
             
             GUIStyle headerStyle = new GUIStyle(GUI.skin.label)
             {
@@ -58,57 +60,52 @@ namespace DialogueSystem.Editor
                 fontStyle = FontStyle.Bold
             };
             EditorGUILayout.LabelField(dialogueDB.name,headerStyle);
-
-            #region Conversation Selection GUI
-
-            EditorGUILayout.BeginHorizontal();
             
-            if (dialogueDB.ContainsConversations())
-            {
-                List<string> dropDownContent = new List<string>();
-                
-                foreach (ConversationGraph conv in dialogueDB.GetAllConversations())
-                {
-                    dropDownContent.Add(conv.GetName());
-                }
-                
-                EditorGUI.BeginChangeCheck();
-                convIndex = EditorGUILayout.Popup("Conversations", convIndex, dropDownContent.ToArray());
-                
-                if (EditorGUI.EndChangeCheck())
-                {
-                    ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(convIndex);
-                    LoadConversation(graph);
-                }
-            }
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+            #region ----> Conversation Selection GUI <----
+
+            EditorGUILayout.BeginHorizontal(); 
             
-            if (GUILayout.Button("+",GUILayout.Width(50)))
+            List<string> dropDownContent = new List<string>();
+            foreach (ConversationGraph conv in dialogueDB.GetAllConversations())
             {
-                selectedGraph = dialogueDB.CreateNewConversation();
-                Selection.activeObject = selectedGraph;
-                LoadNodes();
-                
-                convIndex = dialogueDB.GetAllConversations().Count - 1;
+                dropDownContent.Add(conv.GetName());
             }
-            if (GUILayout.Button("-",GUILayout.Width(50)))
+                
+            EditorGUI.BeginChangeCheck();
+            convIndex = EditorGUILayout.Popup("Conversations", convIndex, dropDownContent.ToArray());
+            if (EditorGUI.EndChangeCheck())
             {
                 ConversationGraph graph = dialogueDB.GetConversationGraphAtIndex(convIndex);
-                dialogueDB.DeleteDialogue(graph);
-                convIndex = 0;
+                LoadConversation(graph);
             }
+            
+            if (GUILayout.Button("+",GUILayout.Width(50))) { CreateNewConversation(); }
+            if (GUILayout.Button("-",GUILayout.Width(50))) { LoadConversation(dialogueDB.GetConversationGraphAtIndex(convIndex)); }
             
             EditorGUILayout.EndHorizontal();
 
-            #endregion
+            if (convIndex == -1)
+            {
+                if (GUI.changed) { Repaint(); }   
+                return;
+            }
 
-            #region Grid GUI
+            #endregion
+            
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////
+            
+            #region ----> Grid GUI <----
 
             DrawGrid(20, 0.2f, Color.gray);
             DrawGrid(100, 0.4f, Color.gray);
 
             #endregion
+            
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
-            #region Graph GUI
+            #region ----> Graph GUI <----
             
             if (selectedGraph == null)
             {
@@ -123,38 +120,41 @@ namespace DialogueSystem.Editor
             ProcessEvents(Event.current);
             
             #endregion
+            
+            //////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
             if (GUI.changed) { Repaint(); }    
         }
 
-        #region Events Processes
+        #region ----> Events Processes () <-----
         
-        private void ProcessEvents(Event e)
+        private void ProcessEvents(Event p_event)
         {
-            switch (e.type)
+            switch (p_event.type)
             {
                 case EventType.MouseDown:
                 {
-                    OnMouseDown(e);
+                    OnMouseDown(p_event);
                     break;
                 }
                 case EventType.MouseDrag:
                 {
-                    OnMouseDrag(e);
+                    OnMouseDrag(p_event);
                     break;
                 }
                 case EventType.MouseUp:
                 {
-                    OnMouseUp(e);
+                    OnMouseUp(p_event);
                     break;
                 }
             }
         }
 
-        private void OnMouseDown(Event e)
+        private void OnMouseDown(Event p_event)
         {
-            if (e.button == 1) { OpenContextMenu(e.mousePosition); }
-            if (e.button == 0)
+            if (p_event.button == 1) { OpenContextMenu(p_event.mousePosition); }
+            
+            if (p_event.button == 0)
             {
                 if (selectedGraph != null)
                 {
@@ -163,21 +163,24 @@ namespace DialogueSystem.Editor
             }
         }
 
-        private void OnMouseUp(Event e)
+        private void OnMouseUp(Event p_event)
         {
-            if (e.button == 0) { DatabaseEditorManager.SaveData(); }
+            if (p_event.button == 0)
+            {
+                DatabaseEditorManager.SaveData();
+            }
         }
 
-        private void OnMouseDrag(Event e)
+        private void OnMouseDrag(Event p_event)
         {
-            if (e.button == 2)
+            if (p_event.button == 2)
             {
-                DragWindow(e.delta);
-                e.Use();
+                DragWindow(p_event.delta);
+                p_event.Use();
             }
         }
         
-        private void OpenContextMenu(Vector2 contextPosition)
+        private void OpenContextMenu(Vector2 p_contextPosition)
         {
             List<Type> ignoreType = new List<Type>() {typeof(StartEntry)};
             Type[] types = ReflectionHandler.GetDerivedTypes(typeof(Entry));
@@ -186,9 +189,10 @@ namespace DialogueSystem.Editor
             foreach (Type type in types)
             {
                 if (ignoreType.Contains(type)) { continue; }
+                
                 contextMenu.AddItem(new GUIContent(type.Name), false, () =>
                 {
-                    selectedGraph.CreateEntry(type, contextPosition);
+                    selectedGraph.CreateEntry(type, p_contextPosition);
                     LoadNodes();
                 });
             }
@@ -198,36 +202,50 @@ namespace DialogueSystem.Editor
         
         #endregion
         
-        #region Conversation
+        #region ----> Conversation () <----
 
-        public void LoadConversation(ConversationGraph conv)
+        private void CreateNewConversation()
         {
-            if(conv == null) { return; }
+            selectedGraph = dialogueDB.CreateNewConversation();
+            Selection.activeObject = selectedGraph;
+            LoadNodes();
+            convIndex = dialogueDB.GetAllConversations().Count - 1;
+        }
 
-            Selection.activeObject = selectedGraph = conv;
+        private void DeletedConversation(ConversationGraph p_graph)
+        {
+            dialogueDB.DeleteDialogue(p_graph);
+            convIndex = 0;
+        }
+
+        private void LoadConversation(ConversationGraph p_conv)
+        {
+            if(p_conv == null) { return; }
+
+            Selection.activeObject = selectedGraph = p_conv;
             LoadNodes();
         }
 
         #endregion
 
-        #region Nodes
+        #region ----> Nodes () <----
         
-        public void CreateNode(Entry entry)
+        public void CreateNode(Entry p_entry)
         {
-            Type nodeType = entry.GetType();
+            Type nodeType = p_entry.GetType();
             Type editorType = DatabaseEditorManager.GetCustomEditor(nodeType);
             
             Node node = ScriptableObject.CreateInstance(editorType) as Node;
             
             if (node == null) { return; }
 
-            node.Init(entry,this);
-            nodes.Add(entry,node);
+            node.Init(p_entry,this);
+            nodes.Add(p_entry,node);
         }
 
-        public Node GetNode(Entry entry)
+        public Node GetNode(Entry p_entry)
         {
-            return !nodes.ContainsKey(entry) ? null : nodes[entry];
+            return !nodes.ContainsKey(p_entry) ? null : nodes[p_entry];
         }
 
         public void LoadNodes()
@@ -258,14 +276,14 @@ namespace DialogueSystem.Editor
             }
         }
         
-        public void RemoveNode(Node node)
+        public void RemoveNode(Node p_node)
         {
-            selectedGraph.RemoveEntry(node.entry);
+            selectedGraph.RemoveEntry(p_node.entry);
             DatabaseEditorManager.SaveData();
             LoadNodes();
         }
         
-        private void ProcessNodeEvents(Event e)
+        private void ProcessNodeEvents(Event p_event)
         {
             foreach (Entry entry in nodes.Keys)
             {
@@ -275,24 +293,24 @@ namespace DialogueSystem.Editor
                     continue;
                 }
 
-                node.ProcessEvent(e);
+                node.ProcessEvent(p_event);
             }
         }
         
         #endregion
 
-        #region Links
+        #region ----> Links () <----
 
-        public void SelectSourceNode(Node node, Option option = null)
+        public void SelectSourceNode(Node p_node, Option p_option = null)
         {
-            _source = node.entry;
-            _option = option;
+            _source = p_node.entry;
+            _option = p_option;
             TryCreateLink();
         }
 
-        public void SelectDestinationNode(Node node)
+        public void SelectDestinationNode(Node p_node)
         {
-            _destination = node.entry;
+            _destination = p_node.entry;
             TryCreateLink();
         }
 
@@ -319,11 +337,7 @@ namespace DialogueSystem.Editor
             foreach (Entry entry in selectedGraph.links.Keys.ToList())
             {
                 Link[] adjLinks = selectedGraph.GetAdjLinks(entry);
-                if (adjLinks == null)
-                {
-                    Debug.Log("(Draw Link) : Adj Graph is empty");
-                    continue;
-                }
+                if (adjLinks == null) { continue; }
                 
                 foreach (Link link in adjLinks.ToList())
                 {
@@ -335,6 +349,7 @@ namespace DialogueSystem.Editor
                     }
 
                     Port sourcePort = null;
+                    
                     if (entry.GetType() == typeof(DecisionEntry))
                     {
                         DecisionNode node = (DecisionNode) GetNode(entry);
@@ -359,9 +374,10 @@ namespace DialogueSystem.Editor
         {
             selectedGraph.RemoveLink(p_linkEditor.GetLink());
         }
+        
         #endregion
         
-        private void DragWindow(Vector2 newPosition)
+        private void DragWindow(Vector2 p_newPosition)
         {
             foreach (Entry entry in nodes.Keys)
             {
@@ -371,31 +387,31 @@ namespace DialogueSystem.Editor
                     continue;
                 }
                 
-                node.UpdatePosition(newPosition);
+                node.UpdatePosition(p_newPosition);
             }
 
             GUI.changed = true;
         }
         
-        private void DrawGrid(float gridSpacing, float gridOpacity, Color gridColor)
+        private void DrawGrid(float p_gridSpacing, float p_gridOpacity, Color p_gridColor)
         {
-            int widthDivs = Mathf.CeilToInt(position.width / gridSpacing);
-            int heightDivs = Mathf.CeilToInt(position.height / gridSpacing);
+            int widthDivs = Mathf.CeilToInt(position.width / p_gridSpacing);
+            int heightDivs = Mathf.CeilToInt(position.height / p_gridSpacing);
  
             Handles.BeginGUI();
-            Handles.color = new Color(gridColor.r, gridColor.g, gridColor.b, gridOpacity);
+            Handles.color = new Color(p_gridColor.r, p_gridColor.g, p_gridColor.b, p_gridOpacity);
  
             _offset += _drag * 0.5f;
-            Vector3 newOffset = new Vector3(_offset.x % gridSpacing, _offset.y % gridSpacing, 0);
+            Vector3 newOffset = new Vector3(_offset.x % p_gridSpacing, _offset.y % p_gridSpacing, 0);
  
             for (int i = 0; i < widthDivs; i++)
             {
-                Handles.DrawLine(new Vector3(gridSpacing * i, -gridSpacing, 0) + newOffset, new Vector3(gridSpacing * i, position.height, 0f) + newOffset);
+                Handles.DrawLine(new Vector3(p_gridSpacing * i, -p_gridSpacing, 0) + newOffset, new Vector3(p_gridSpacing * i, position.height, 0f) + newOffset);
             }
  
             for (int j = 0; j < heightDivs; j++)
             {
-                Handles.DrawLine(new Vector3(-gridSpacing, gridSpacing * j, 0) + newOffset, new Vector3(position.width, gridSpacing * j, 0f) + newOffset);
+                Handles.DrawLine(new Vector3(-p_gridSpacing, p_gridSpacing * j, 0) + newOffset, new Vector3(position.width, p_gridSpacing * j, 0f) + newOffset);
             }
  
             Handles.color = Color.white;

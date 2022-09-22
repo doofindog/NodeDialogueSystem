@@ -55,13 +55,11 @@
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableType.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueManager.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableVariables\SerializableVariable.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableObjectVariable.cs" />
      <Compile Include="Assets\DialogueSystem\Script\EventInfo.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializedList.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueDatabase.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableDictionary\Example\SerializableDictionaryExample.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializedDictionary.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\EventParameters\IntegerParam.cs" />
+     <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializedDictionaryVariables.cs" />
      <Compile Include="Assets\DialogueSystem\Script\CachedData.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SaveManager.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\InventoryEvents.cs" />
@@ -75,7 +73,6 @@
      <Compile Include="Assets\DialogueSystem\Script\DialogueSystemUI.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableMethodInfo.cs" />
      <Compile Include="Assets\DialogueSystem\Script\SerializedDataTypes\SerializableDictionary\SerializableDictionary.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\EventParameters\EventParameters.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\GameEvents.cs" />
      <Compile Include="Assets\DialogueSystem\Script\StartEntry.cs" />
      <Compile Include="Assets\DialogueSystem\Script\Link.cs" />
@@ -85,7 +82,6 @@
      <Compile Include="Assets\DialogueSystem\Script\ConversationGraph.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueUtil.cs" />
      <Compile Include="Assets\DialogueSystem\Script\DialogueEvents\DialogueEvents.cs" />
-     <Compile Include="Assets\DialogueSystem\Script\CharacterDialogue.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />

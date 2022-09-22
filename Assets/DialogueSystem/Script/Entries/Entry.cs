@@ -1,23 +1,23 @@
-using System;using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 
+using UnityEngine;
 
 namespace DialogueSystem
 {
     [System.Serializable]
     public abstract class Entry : ScriptableObject, IEqualityComparer<Entry>
     {
-        [HideInInspector] public string id; 
-        [SerializeField, HideInInspector] private Vector2 position;
-        [SerializeField] public string text;
         private ConversationGraph _conversationGraph;
-
-        public virtual void Init(Vector2 position, ConversationGraph graph)
+        [SerializeField, HideInInspector] private Vector2 position;
+        
+        public string text;
+        [HideInInspector] public string id;
+        
+        public virtual void Init(Vector2 p_position, ConversationGraph p_graph)
         {
             this.id = NodeManager.GenerateUniqueId();
-            _conversationGraph = graph;
-            this.position = position;
+            _conversationGraph = p_graph;
+            position = p_position;
         }
 
         public string GetId()
@@ -30,9 +30,9 @@ namespace DialogueSystem
             return position;
         }
 
-        public void UpdatePosition(Vector2 newPositon)
+        public void UpdatePosition(Vector2 p_newPositon)
         {
-            position = newPositon;
+            position = p_newPositon;
         }
 
         public virtual string GetDialogueText()
@@ -45,7 +45,7 @@ namespace DialogueSystem
             
         }
         
-        #region IEqualityComparer
+        #region ----> IEqualityComparer <----
         
         public bool Equals(Entry x, Entry y)
         {

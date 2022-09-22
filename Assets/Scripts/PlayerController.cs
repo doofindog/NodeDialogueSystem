@@ -1,19 +1,17 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+
     private Vector3 _moveDirection;
     private Rigidbody2D _rigidbody2D;
-    [SerializeField] private float _speed;
-    [SerializeField] private Animator _animator;
-    private bool _freezeInputs;
-    private bool _interact;
     private Collider2D _interactableObject;
     
+    private bool _freezeInputs;
+    private bool _interact;
     
+    [SerializeField] private float _speed;
+    [SerializeField] private Animator _animator;
     
     private void Awake()
     {
@@ -54,7 +52,7 @@ public class PlayerController : MonoBehaviour
 
     private void Move(Vector2 p_direction, float p_speed)
     {
-        _rigidbody2D.position += p_direction * _speed * Time.deltaTime;
+        _rigidbody2D.position += p_direction * p_speed * Time.deltaTime;
     }
 
     private void HandleInteraction()
@@ -75,6 +73,7 @@ public class PlayerController : MonoBehaviour
         }
         
         _animator.SetInteger("Direction",(int)_moveDirection.x);
+        
         if (_moveDirection.x < 0)
         {
             transform.eulerAngles = new Vector3(0, 180, 0);
@@ -85,14 +84,14 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    private void OnTriggerEnter2D(Collider2D p_other)
     {
-        _interactableObject = other;
+        _interactableObject = p_other;
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    private void OnTriggerExit2D(Collider2D p_other)
     {
-        if (_interactableObject == other)
+        if (_interactableObject == p_other)
         {
             _interactableObject = null;
         }

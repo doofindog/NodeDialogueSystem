@@ -13,7 +13,7 @@ public class NodeTextField : NodeComponent
 
    public NodeTextField(Rect rect)
    {
-      canvasRect = rect;
+      base.rect = rect;
 
       Vector2 labelPosition = rect.position;
       Vector2 labelSize = new Vector2()

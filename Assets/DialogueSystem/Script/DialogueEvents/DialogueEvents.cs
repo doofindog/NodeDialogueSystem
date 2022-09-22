@@ -1,21 +1,21 @@
 using System;
-using System.Collections;
-using System.Collections.Generic;
-using DialogueSystem;
+
 using UnityEngine;
+
+using DialogueSystem;
 
 [System.Serializable]
 public abstract class DialogueEvents : MonoBehaviour
 {
     public static Action<ConversationGraph> startConversationEvent;
-    public static void StartConversation(ConversationGraph graph)
+    public static void StartConversation(ConversationGraph p_graph)
     {
-        if (graph == null)
+        if (p_graph == null)
         {
             return;
         }
 
-        startConversationEvent?.Invoke(graph);
+        startConversationEvent?.Invoke(p_graph);
     }
     
     public static Action conversationStartedEvent;
@@ -48,9 +48,8 @@ public abstract class DialogueUIEvents
     }
 
     public static Action<int> optionPressed;
-
-    public static void OptionPressed(int index)
+    public static void OptionPressed(int p_index)
     {
-        optionPressed?.Invoke(index);
+        optionPressed?.Invoke(p_index);
     }
 }

@@ -7,22 +7,22 @@ namespace DialogueSystem.Editor.NodeComponents
     {
         private PortType _portType;
         
-        private const int maxSizeX = 20;
-        private const int maxSizeY = 20;
+        private const int MAX_SIZE_X = 20;
+        private const int MAX_SIZE_Y = 20;
 
         private Action _callBack;
 
-        public Port(Rect rect, PortType portType, Action callBack)
+        public Port(Rect p_rect, PortType p_portType, Action p_callBack)
         {
-            canvasRect = rect;
-            _portType = portType;
-            _callBack = callBack;
+            rect = p_rect;
+            _portType = p_portType;
+            _callBack = p_callBack;
 
         }
 
         public void Draw()
         {
-            if (GUI.Button(canvasRect, string.Empty))
+            if (GUI.Button(rect, string.Empty))
             {
                 _callBack?.Invoke();
             }
@@ -30,7 +30,7 @@ namespace DialogueSystem.Editor.NodeComponents
 
         public Vector2 GetCenterPosition()
         {
-            return canvasRect.center;
+            return rect.center;
         }
     }
 

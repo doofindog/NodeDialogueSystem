@@ -6,9 +6,9 @@ namespace DialogueSystem.Editor.NodeComponents
     public static class NodeComponentUtilt
     {
         public static Node focusedNode;
-        public static NodeComponent lastDrawnComponent;
+        private static NodeComponent _lastDrawnComponent;
         
-        public static string DrawText(string text, int length)
+        public static string DrawText(string p_text, int p_length)
         {
             Vector2 position = focusedNode.componentDrawPos;
             Vector2 offset = new Vector2
@@ -19,37 +19,37 @@ namespace DialogueSystem.Editor.NodeComponents
             Vector2 size = new Vector2
             (
                 focusedNode.rect.size.x - focusedNode.padding.x - offset.x, 
-                length == 0 ? focusedNode.rect.size.y - focusedNode.padding.y - offset.y : length
+                p_length == 0 ? focusedNode.rect.size.y - focusedNode.padding.y - offset.y : p_length
             );
             Rect componentRect = new Rect(position, size);
             
             NodeTextArea textArea = new NodeTextArea(componentRect);
-            text = textArea.Draw(text);
+            p_text = textArea.Draw(p_text);
 
-            lastDrawnComponent = textArea;
+            _lastDrawnComponent = textArea;
             
             focusedNode.AddComponent(textArea);
             
-            return text;
+            return p_text;
         }
 
-        public static void DrawSpace(int length)
+        public static void DrawSpace(int p_length)
         {
             Vector2 position = focusedNode.componentDrawPos;
-            Vector2 size = new Vector2(0, length);
+            Vector2 size = new Vector2(0, p_length);
             Rect componentRect = new Rect(position, size);
             
             NodeSpace nodeSpace = new NodeSpace(componentRect);
-            lastDrawnComponent = nodeSpace;
+            _lastDrawnComponent = nodeSpace;
             
             focusedNode.AddComponent(nodeSpace);
         }
 
-        public static Port DrawPort(PortType type, Action callBack ,float yPos = 0)
+        public static Port DrawPort(PortType p_type, Action p_callBack ,float p_yPos = 0)
         {
             Vector2 size = new Vector2(20, 20);
             Vector2 position = Vector2.zero;
-            switch (type)
+            switch (p_type)
             {
                 case PortType.In:
                     position.x = (focusedNode.rect.position.x - size.x * 0.5f);
@@ -58,18 +58,18 @@ namespace DialogueSystem.Editor.NodeComponents
                     position.x = (focusedNode.rect.position.x + focusedNode.rect.size.x - size.x * 0.5f);
                     break;
             }
-            position.y = yPos!=0 ? yPos : focusedNode.rect.position.y + (focusedNode.rect.size.y * 0.5f) - (size.y * 0.5f);
+            position.y = p_yPos!=0 ? p_yPos : focusedNode.rect.position.y + (focusedNode.rect.size.y * 0.5f) - (size.y * 0.5f);
 
             Rect componentRect = new Rect(position, size);
 
-            Port port = new Port(componentRect, type, callBack);
-            lastDrawnComponent = port;
+            Port port = new Port(componentRect, p_type, p_callBack);
+            _lastDrawnComponent = port;
             port.Draw();
 
             return port;
         }
 
-        public static int DrawPopUp(int index, string[] content, int length)
+        public static int DrawPopUp(int p_index, string[] p_content, int p_length)
         {
             Vector2 position = focusedNode.componentDrawPos;
             Vector2 offset = new Vector2
@@ -80,14 +80,14 @@ namespace DialogueSystem.Editor.NodeComponents
             Vector2 size = new Vector2
             (
                 focusedNode.rect.size.x - focusedNode.padding.x - offset.x, 
-                length == 0 ? focusedNode.rect.size.y - focusedNode.padding.y - offset.y : length
+                p_length == 0 ? focusedNode.rect.size.y - focusedNode.padding.y - offset.y : p_length
             );
             Rect componentRect = new Rect(position, size);
 
-            NodePopUp popUp = new NodePopUp(componentRect, index, content);
+            NodePopUp popUp = new NodePopUp(componentRect, p_index, p_content);
             int selectedIndex = popUp.Draw();
 
-            lastDrawnComponent = popUp;
+            _lastDrawnComponent = popUp;
             
             focusedNode.AddComponent(popUp);
             
@@ -115,7 +115,7 @@ namespace DialogueSystem.Editor.NodeComponents
             focusedNode.AddComponent(line);
         }
 
-        public static string DrawTextField(string label, string text)
+        public static string DrawTextField(string p_label, string p_text)
         {
             Vector2 position = focusedNode.componentDrawPos;
             Vector2 offset = new Vector2
@@ -131,16 +131,16 @@ namespace DialogueSystem.Editor.NodeComponents
             Rect componentRect = new Rect(position, size);
             
             NodeTextField textField = new NodeTextField(componentRect);
-            text = textField.Draw(label, text);
+            p_text = textField.Draw(p_label, p_text);
 
-            lastDrawnComponent = textField;
+            _lastDrawnComponent = textField;
             
             focusedNode.AddComponent(textField);
             
-            return text;
+            return p_text;
         }
 
-        public static bool DrawToggle(string lable,bool p_isTrue)
+        public static bool DrawToggle(string p_lable,bool p_isTrue)
         {
             Vector2 position = focusedNode.componentDrawPos;
             Vector2 offset = new Vector2
@@ -156,9 +156,9 @@ namespace DialogueSystem.Editor.NodeComponents
             Rect componentRect = new Rect(position, size);
             
             NodeBoolean boolean = new NodeBoolean(componentRect);
-            p_isTrue = boolean.Draw(lable,p_isTrue);
+            p_isTrue = boolean.Draw(p_lable,p_isTrue);
 
-            lastDrawnComponent = boolean;
+            _lastDrawnComponent = boolean;
             
             focusedNode.AddComponent(boolean);
             
@@ -167,7 +167,7 @@ namespace DialogueSystem.Editor.NodeComponents
 
         public static NodeComponent GetLastDrawnComponent()
         {
-            return lastDrawnComponent ?? null;
+            return _lastDrawnComponent ?? null;
         }
     }
 }

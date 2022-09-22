@@ -1,6 +1,7 @@
-using System.Collections.Generic;
-using System.IO;
+using System;
 using System.Reflection;
+using System.Collections.Generic;
+
 using UnityEngine;
 
 [System.Serializable]
@@ -8,13 +9,13 @@ public class SerializableMethodInfo : ISerializationCallbackReceiver
 {
     public MethodInfo methodInfo;
     public SerializableType type;
-    public string methodName;
     public List<SerializableType> parameters = null;
+    public string methodName;
     public int flags = 0;
 
-    public SerializableMethodInfo(MethodInfo aMethodInfo)
+    public SerializableMethodInfo(MethodInfo p_methodInfo)
     {
-        methodInfo = aMethodInfo;
+        methodInfo = p_methodInfo;
     }
 
     public void SetMethodInfo(MethodInfo p_methodInfo)
@@ -25,25 +26,29 @@ public class SerializableMethodInfo : ISerializationCallbackReceiver
 
     public void OnBeforeSerialize()
     {
-        if (methodInfo == null)
-            return;
+        if (methodInfo == null) {return;}
+        
         type = new SerializableType(methodInfo.DeclaringType);
         methodName = methodInfo.Name;
+        
         if (methodInfo.IsPrivate)
             flags |= (int)BindingFlags.NonPublic;
         else
             flags |= (int)BindingFlags.Public;
+        
         if (methodInfo.IsStatic)
             flags |= (int)BindingFlags.Static;
         else
             flags |= (int)BindingFlags.Instance;
-        var p = methodInfo.GetParameters();
-        if (p != null && p.Length > 0)
+        
+        ParameterInfo[] parameterInfos = methodInfo.GetParameters();
+        
+        if (parameterInfos != null && parameterInfos.Length > 0)
         {
-            parameters = new List<SerializableType>(p.Length);
-            for (int i = 0; i < p.Length; i++)
+            parameters = new List<SerializableType>(parameterInfos.Length);
+            for (int i = 0; i < parameterInfos.Length; i++)
             {
-                parameters.Add(new SerializableType(p[i].ParameterType));
+                parameters.Add(new SerializableType(parameterInfos[i].ParameterType));
             }
         }
         else
@@ -52,10 +57,11 @@ public class SerializableMethodInfo : ISerializationCallbackReceiver
 
     public void OnAfterDeserialize()
     {
-        if (type == null || string.IsNullOrEmpty(methodName))
-            return;
-        var t = type.type;
+        if (type == null || string.IsNullOrEmpty(methodName)) {return;}
+        
         System.Type[] param = null;
+        
+        Type t = type.type;
         if (parameters != null && parameters.Count>0)
         {
             param = new System.Type[parameters.Count];
@@ -64,6 +70,7 @@ public class SerializableMethodInfo : ISerializationCallbackReceiver
                 param[i] = parameters[i].type;
             }
         }
+        
         if (param == null)
             methodInfo = t.GetMethod(methodName, (BindingFlags)flags);
         else

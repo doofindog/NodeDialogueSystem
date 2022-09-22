@@ -12,20 +12,21 @@ namespace DialogueSystem
     [System.Serializable]
     public class Option : IEqualityComparer<Option>, IEquatable<Option>
     {
-        [HideInInspector] public string id;
+        
         public string text;
+        [HideInInspector] public string id;
 
         public Option()
         {
             id = string.Empty;
         }
 
-        public Option(string id)
+        public Option(string p_id)
         {
-            this.id = id;
+            id = p_id;
         }
 
-        #region IEquialityComparer
+        #region ----> IEquialityComparer <----
         public bool Equals(Option x, Option y)
         {
             if (x == null || y == null)
@@ -43,7 +44,7 @@ namespace DialogueSystem
         #endregion
 
 
-        #region IEqualable
+        #region ----> IEqualable <----
 
         public bool Equals(Option other)
         {

@@ -1,11 +1,11 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
-using DialogueSystem;
-using TMPro;
+
 using UnityEngine;
-using UnityEngine.Events;
 using UnityEngine.UI;
+
+using TMPro;
+
+using DialogueSystem;
 
 public class DialogueSystemUI : MonoBehaviour
 {
@@ -25,6 +25,7 @@ public class DialogueSystemUI : MonoBehaviour
     {
         _stopTyper = false;
         _isPrinting = false;
+        
         for (int i = 0; i < _options.transform.childCount; i++)
         {
             _options.transform.GetChild(i).gameObject.SetActive(false);
@@ -36,25 +37,28 @@ public class DialogueSystemUI : MonoBehaviour
         DialogueEvents.skipTalking -= StopTypeWrite;
     }
 
-    public void DisplayDialogue(Entry entry)
+    public void DisplayDialogue(Entry p_entry)
     {
         _dialogueText.text = string.Empty;
-        StartCoroutine(StartTypeWriter(entry));
+        
+        StartCoroutine(StartTypeWriter(p_entry));
     }
 
-    public void TryDisplayOptions(Entry entry)
+    private void TryDisplayOptions(Entry p_entry)
     {
-        if (entry.GetType() != typeof(DecisionEntry)) { return; }
+        if (p_entry.GetType() != typeof(DecisionEntry)) { return; }
         
-        DecisionEntry decisionEntry = (DecisionEntry)entry;
         _options.SetActive(true);
+        
+        DecisionEntry decisionEntry = (DecisionEntry)p_entry;
         for (int i = 0; i < decisionEntry.options.Count; i++)
         {
             Button optionButton = null;
             if (i >= _options.transform.childCount)
             {
-                optionButton = Instantiate(_optionButtonPrefab, _options.transform).GetComponent<Button>();
                 int optionIndex = i;
+                
+                optionButton = Instantiate(_optionButtonPrefab, _options.transform).GetComponent<Button>();
                 optionButton.onClick.AddListener(() =>
                 {
                     DialogueUIEvents.OptionPressed(optionIndex);
@@ -68,15 +72,16 @@ public class DialogueSystemUI : MonoBehaviour
 
             TextMeshProUGUI optionText = optionButton.transform.GetComponentInChildren<TextMeshProUGUI>();
             optionText.text = decisionEntry.GetOptionAtIndex(i).text;
+            
             optionButton.gameObject.SetActive(true);
         }
     }
 
-    private IEnumerator StartTypeWriter(Entry entry)
+    private IEnumerator StartTypeWriter(Entry p_entry)
     {
-        string text = entry.GetDialogueText();
         _isPrinting = true;
         
+        string text = p_entry.GetDialogueText();
         for (int i = 0; i < text.Length; i++)
         {
             if (_stopTyper)
@@ -86,12 +91,15 @@ public class DialogueSystemUI : MonoBehaviour
             }
 
             _dialogueText.text += text[i];
+            
             yield return new WaitForSeconds(Time.fixedDeltaTime);
         }
 
         _stopTyper = false;
         _isPrinting = false;
-        TryDisplayOptions(entry);
+        
+        TryDisplayOptions(p_entry);
+        
         DialogueUIEvents.SendPrintingCompleted();
     }
 

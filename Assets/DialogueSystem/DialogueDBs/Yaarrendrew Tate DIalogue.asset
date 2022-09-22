@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-8270896294492061397
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _id: p2RyK
+  _name: Buggati
+  startEntry: {fileID: -4684261929539169061}
+  entries:
+  - {fileID: -4684261929539169061}
+  - {fileID: 5228060226800211485}
+  - {fileID: -3535756840734611189}
+  - {fileID: 4320758225878693384}
+  links:
+    m_keys:
+    - {fileID: -4684261929539169061}
+    - {fileID: 5228060226800211485}
+    m_values:
+    - data:
+      - id: kKVY8
+        option:
+          text: 
+          id: 
+        sourceEntry: {fileID: -4684261929539169061}
+        destinationEntry: {fileID: 5228060226800211485}
+    - data:
+      - id: ndqis
+        option:
+          text: What colour is your hair
+          id: 1
+        sourceEntry: {fileID: 5228060226800211485}
+        destinationEntry: {fileID: -3535756840734611189}
+      - id: 0LSfB
+        option:
+          text: I don't have a bugatti
+          id: 2
+        sourceEntry: {fileID: 5228060226800211485}
+        destinationEntry: {fileID: 4320758225878693384}
 --- !u!114 &-7286149692986237201
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -12,9 +57,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: zCwa8
   position: {x: 1406, y: 293}
   text: Aarr, You'll never have a cool booty chest like me.
+  id: zCwa8
 --- !u!114 &-7255749404217282810
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -27,9 +72,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: VoO7d
   position: {x: 399, y: 195}
   text: I recently got me-self this new booty chest
+  id: VoO7d
 --- !u!114 &-6984140659370824015
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -42,10 +87,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: EQ2mq
   position: {x: 48, y: 192}
   text: 
-  m_pointType: 0
+  id: EQ2mq
+  _pointType: 0
 --- !u!114 &-6841887367150063164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -58,14 +103,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: YaLgd
   position: {x: 445, y: 65.5}
   text: asdasdasd13e1
+  id: YaLgd
   options:
-  - id: 1
-    text: wd1wd
-  - id: 2
-    text: 1231
+  - text: wd1wd
+    id: 1
+  - text: 1231
+    id: 2
 --- !u!114 &-6725022340916515010
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,10 +123,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: fNTwZ
   position: {x: 710, y: 195}
   text: But when ever someone see's it theya always tell me, That they don't like
     the colour.
+  id: fNTwZ
 --- !u!114 &-6010685907441858949
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,10 +139,56 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: syI8C
   position: {x: 100, y: 100}
   text: 
-  m_pointType: 0
+  id: syI8C
+  _pointType: 0
+--- !u!114 &-5957318779828987979
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 487, y: 328}
+  text: 
+  id: 1QKbt
+  staticEvents:
+  - eventType:
+      typeName: 
+      data: ff
+    eventMethod:
+      type:
+        typeName: 
+        data: ff
+      parameters: []
+      methodName: 
+      flags: 0
+    parametersObj: []
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &-4684261929539169061
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 225, y: 82}
+  text: 
+  id: 82MJA
+  _pointType: 0
 --- !u!114 &-3811295458025076901
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -110,10 +201,54 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: v2VYV
   position: {x: 100, y: 100}
   text: 
-  m_pointType: 0
+  id: v2VYV
+  _pointType: 0
+--- !u!114 &-3535756840734611189
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 1003, y: 78}
+  text: 'I''m gonna cry '
+  id: XiRKK
+  staticEvents:
+  - eventType:
+      typeName: GameEvents
+      data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+    eventMethod:
+      type:
+        typeName: GameEvents
+        data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
+      parameters:
+      - typeName: String
+        data: 005a53797374656d2e537472696e672c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      - typeName: Int32
+        data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+      methodName: IncreaseSkill
+      flags: 24
+    parametersObj:
+    - variableName: skillName
+      data: 0001000000ffffffff01000000000000000601000000065370656563680b
+      type:
+        typeName: String
+        data: 005a53797374656d2e537472696e672c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+    - variableName: amount
+      data: 0001000000ffffffff010000000000000004010000000c53797374656d2e496e74333201000000076d5f76616c756500080a0000000b
+      type:
+        typeName: Int32
+        data: 005953797374656d2e496e7433322c206d73636f726c69622c2056657273696f6e3d342e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d62373761356335363139333465303839
+  _unityEvent:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &-3397384463819265759
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -126,8 +261,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: Y2e9F
-  name: Conversation (Y2e9F)
+  _id: 
+  _name: 
   startEntry: {fileID: 0}
   entries: []
   links:
@@ -145,8 +280,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: GkHI3
-  name: Conversation (GkHI3)
+  _id: 
+  _name: 
   startEntry: {fileID: 3659522419941073507}
   entries:
   - {fileID: 3659522419941073507}
@@ -165,9 +300,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: T3HP8
   position: {x: 1395, y: 126}
   text: I look them straight in the eye and say "What colour is your Booty"
+  id: T3HP8
 --- !u!114 &-1567709197420814294
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,9 +315,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: MM4Rv
   position: {x: 1755, y: 291}
   text: Here's a Gold coin to fuck right off
+  id: MM4Rv
   staticEvents:
   - eventType:
       typeName: GameEvents
@@ -191,11 +326,11 @@ MonoBehaviour:
       type:
         typeName: GameEvents
         data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
-      methodName: GetGold
       parameters: []
+      methodName: GetGold
       flags: 24
     parametersObj: []
-  unityEvent:
+  _unityEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &-1512257474914680063
@@ -210,14 +345,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 4Fmk3
   position: {x: 1066, y: 152}
   text: You know what i tell them
+  id: 4Fmk3
   options:
-  - id: 1
-    text: What?
-  - id: 2
-    text: I don't really care
+  - text: What?
+    id: 1
+  - text: I don't really care
+    id: 2
 --- !u!114 &-1349767893000312199
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -230,8 +365,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: VPloN
-  name: Conversation (VPloN)
+  _id: 
+  _name: 
   startEntry: {fileID: 0}
   entries: []
   links:
@@ -249,8 +384,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: GisiE
-  name: Conversation (GisiE)
+  _id: 
+  _name: 
   startEntry: {fileID: -6984140659370824015}
   entries:
   - {fileID: -6984140659370824015}
@@ -260,6 +395,7 @@ MonoBehaviour:
   - {fileID: -3214941652149572718}
   - {fileID: -7286149692986237201}
   - {fileID: -1567709197420814294}
+  - {fileID: -5957318779828987979}
   links:
     m_keys:
     - {fileID: -7255749404217282810}
@@ -271,42 +407,42 @@ MonoBehaviour:
     - data:
       - id: Hcfek
         option:
-          id: 
           text: 
+          id: 
         sourceEntry: {fileID: -7255749404217282810}
         destinationEntry: {fileID: -6725022340916515010}
     - data:
       - id: jDzTE
         option:
-          id: 
           text: 
+          id: 
         sourceEntry: {fileID: -6984140659370824015}
         destinationEntry: {fileID: -7255749404217282810}
     - data:
       - id: 4AaSV
         option:
-          id: 
           text: 
+          id: 
         sourceEntry: {fileID: -6725022340916515010}
         destinationEntry: {fileID: -1512257474914680063}
     - data:
       - id: jrgc2
         option:
-          id: 1
           text: What?
+          id: 1
         sourceEntry: {fileID: -1512257474914680063}
         destinationEntry: {fileID: -3214941652149572718}
       - id: TUQVL
         option:
-          id: 2
           text: I don't really care
+          id: 2
         sourceEntry: {fileID: -1512257474914680063}
         destinationEntry: {fileID: -7286149692986237201}
     - data:
       - id: Vg0ZN
         option:
-          id: 
           text: 
+          id: 
         sourceEntry: {fileID: -7286149692986237201}
         destinationEntry: {fileID: -1567709197420814294}
 --- !u!114 &-398718026454803260
@@ -321,10 +457,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: XOqxK
   position: {x: 100, y: 100}
   text: 
-  m_pointType: 0
+  id: XOqxK
+  _pointType: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -337,15 +473,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11fdd7ae4ff0a491cb08714f7a31547c, type: 3}
   m_Name: Yaarrendrew Tate DIalogue
   m_EditorClassIdentifier: 
-  m_id: 
-  m_name: 
-  conversations:
-  - {fileID: -773281897015532391}
-  - {fileID: 3359933198051410217}
-  - {fileID: 553030423446279046}
-  - {fileID: -3250556329936125595}
-  - {fileID: 2933913787429294516}
-  - {fileID: 5871191010205828697}
+  _conversations:
+  - {fileID: -8270896294492061397}
 --- !u!114 &553030423446279046
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -358,8 +487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: p4dHY
-  name: Conversation (p4dHY)
+  _id: 
+  _name: 
   startEntry: {fileID: 8745804550652469128}
   entries:
   - {fileID: 8745804550652469128}
@@ -378,10 +507,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: f2Cif
   position: {x: 100, y: 100}
   text: 
-  m_pointType: 0
+  id: f2Cif
+  _pointType: 0
 --- !u!114 &2203550319032556397
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -394,10 +523,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: iFhwB
   position: {x: 100, y: 100}
   text: 
-  m_pointType: 0
+  id: iFhwB
+  _pointType: 0
 --- !u!114 &2673142018362934090
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -410,10 +539,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 6DuyT
   position: {x: 34, y: 192}
   text: 'We have to remove this testasoidhaiusdhaibdajknd ajsbdjkasndansdi '
-  m_pointType: 0
+  id: 6DuyT
+  _pointType: 0
 --- !u!114 &2933913787429294516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -426,8 +555,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: jKpiA
-  name: Conversation (jKpiA)
+  _id: 
+  _name: 
   startEntry: {fileID: 994534608187051417}
   entries:
   - {fileID: 994534608187051417}
@@ -446,8 +575,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: hLqPK
-  name: Conversation (hLqPK)
+  _id: 
+  _name: 
   startEntry: {fileID: 2203550319032556397}
   entries:
   - {fileID: 2203550319032556397}
@@ -466,9 +595,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 461b5ea61dc6e6147bb2fcd27d9fccc9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 7IaXF
   position: {x: 1165, y: 70}
   text: 12312312saadsd
+  id: 7IaXF
   staticEvents:
   - eventType:
       typeName: GameEvents
@@ -477,11 +606,11 @@ MonoBehaviour:
       type:
         typeName: GameEvents
         data: 005247616d654576656e74732c20417373656d626c792d4353686172702c2056657273696f6e3d302e302e302e302c2043756c747572653d6e65757472616c2c205075626c69634b6579546f6b656e3d6e756c6c
-      methodName: GetSomethingGay
       parameters: []
+      methodName: GetSomethingGay
       flags: 24
     parametersObj: []
-  unityEvent:
+  _unityEvent:
     m_PersistentCalls:
       m_Calls: []
 --- !u!114 &3501168150370930052
@@ -496,10 +625,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: E8IYV
   position: {x: 100, y: 100}
   text: 
-  m_pointType: 0
+  id: E8IYV
+  _pointType: 0
 --- !u!114 &3659522419941073507
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -512,10 +641,45 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: xGTpA
   position: {x: 100, y: 100}
   text: 
-  m_pointType: 0
+  id: xGTpA
+  _pointType: 0
+--- !u!114 &4320758225878693384
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ee0f2f527139d45b792b4bd97674ff32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 1062, y: 301}
+  text: Yes exactly
+  id: Ox58P
+--- !u!114 &5228060226800211485
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8327dee39ad46424cade9dcf8c2e3bee, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  position: {x: 639, y: 96}
+  text: What colour is your buggati
+  id: Mg1r9
+  options:
+  - text: What colour is your hair
+    id: 1
+  - text: I don't have a bugatti
+    id: 2
 --- !u!114 &5871191010205828697
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -528,8 +692,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dbbf877d59e04dd0bd345bfbe440fda, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: A2oIm
-  name: Conversation (A2oIm)
+  _id: 
+  _name: 
   startEntry: {fileID: -398718026454803260}
   entries:
   - {fileID: -398718026454803260}
@@ -548,7 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1f7559481fb8db84991e6f239eeb115b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: YP81S
   position: {x: 100, y: 100}
   text: 
-  m_pointType: 0
+  id: YP81S
+  _pointType: 0

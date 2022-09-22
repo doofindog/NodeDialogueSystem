@@ -6,42 +6,38 @@ using UnityEngine;
 public class NodeBoolean : NodeComponent
 {
     private bool _isTrue;
-    
     private Rect _labelRect;
     private Rect _toggleRect;
 
-    public NodeBoolean(Rect rect)
+    public NodeBoolean(Rect p_rect)
     {
-        canvasRect = rect;
+        rect = p_rect;
 
-        Vector2 labelPosition = rect.position;
+        Vector2 labelPosition = p_rect.position;
         Vector2 labelSize = new Vector2()
         {
-            x = rect.size.x * 0.3f,
-            y = rect.size.y
+            x = p_rect.size.x * 0.3f,
+            y = p_rect.size.y
         };
         _labelRect = new Rect(labelPosition, labelSize);
 
         Vector2 textPosition = new Vector2()
         {
             x = labelPosition.x + labelSize.x + 10,
-            y = rect.position.y
+            y = p_rect.position.y
         };
         Vector2 textSize = new Vector2()
         {
-            x = rect.size.x * 0.65f,
-            y = rect.size.y
+            x = p_rect.size.x * 0.65f,
+            y = p_rect.size.y
         };
         _toggleRect = new Rect(textPosition, textSize);
     }
 
-    public bool Draw(string lable,bool isTrue = false)
+    public bool Draw(string p_lable,bool p_isTrue = false)
     {
-
-        GUI.skin.textArea.wordWrap = true;
-        GUI.Label(_labelRect, lable);
-        _isTrue = GUI.Toggle(_toggleRect, isTrue, string.Empty);
-        GUI.skin.textArea.wordWrap = false;
+        GUI.Label(_labelRect, p_lable);
+        _isTrue = GUI.Toggle(_toggleRect, p_isTrue, string.Empty);
 
         return _isTrue;
     }

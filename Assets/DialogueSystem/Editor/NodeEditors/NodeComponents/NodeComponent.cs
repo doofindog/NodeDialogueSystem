@@ -4,12 +4,11 @@ namespace DialogueSystem.Editor
 {
     public class NodeComponent
     {
-        protected Node node;
-        protected Rect canvasRect;
+        protected Rect rect;
 
         public Rect GetRect()
         {
-            return canvasRect;
+            return rect;
         }
     }
 }

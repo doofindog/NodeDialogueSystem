@@ -1,5 +1,5 @@
-using System.Collections;
 using System.Collections.Generic;
+
 using UnityEngine;
 
 namespace DialogueSystem
@@ -9,9 +9,9 @@ namespace DialogueSystem
     {
         [SerializeField] public List<Option> options;
 
-        public override void Init(Vector2 position, ConversationGraph graph)
+        public override void Init(Vector2 p_position, ConversationGraph p_graph)
         {
-            base.Init(position, graph);
+            base.Init(p_position, p_graph);
             
             options = new List<Option>();
             for (int i = 0; i < 2; i++)
@@ -26,12 +26,12 @@ namespace DialogueSystem
             options.Add(option);
         }
 
-        public void RemoveOption(Option option)
+        public void RemoveOption(Option p_option)
         {
             Option removeOption = null;
             for (int i = 0; i < options.Count; i++)
             {
-                if (option.id == options[i].id)
+                if (p_option.id == options[i].id)
                 {
                     removeOption = options[i];
                     break;

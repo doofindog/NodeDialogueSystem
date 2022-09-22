@@ -1,43 +1,36 @@
 using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
 using System.Reflection;
-using DialogueSystem.Editor;
+
 using UnityEditor;
-using UnityEngine;
 
 namespace DialogueSystem.Editor
 {
     [InitializeOnLoad]
     public class DatabaseEditorManager
     {
-        public static DatabaseWindow window;
-
-        private static Dictionary<Type, Type> m_editors = new Dictionary<Type, Type>();
+        public static DatabaseWindow WINDOW;
+        private static Dictionary<Type, Type> _editors = new Dictionary<Type, Type>();
         
         static DatabaseEditorManager()
         {
             CacheCustomNodeEditor();
         }
         
-        public static void OpenDatabaseWindow(DialogueDatabase dialogueDB)
+        public static void OpenDatabaseWindow(DialogueDatabase p_dialogueDB)
         {
-            window = (DatabaseWindow) EditorWindow.GetWindow(typeof(DatabaseWindow),false,"Dialogue Database");
-            window.Initialise(dialogueDB);
-            window.Show();
+            WINDOW = (DatabaseWindow) EditorWindow.GetWindow(typeof(DatabaseWindow),false,"Dialogue Database");
+            WINDOW.Initialise(p_dialogueDB);
+            WINDOW.Show();
         }
         
         public static void SaveData()
         {
-            if (window == null)
-            {
-                return;
-            }
+            if (WINDOW == null) { return; }
 
-            if (window.dialogueDB != null)
+            if (WINDOW.dialogueDB != null)
             {
-                EditorUtility.SetDirty(window.dialogueDB);
+                EditorUtility.SetDirty(WINDOW.dialogueDB);
                 AssetDatabase.SaveAssets();
             }
         }
@@ -45,37 +38,31 @@ namespace DialogueSystem.Editor
         private static void CacheCustomNodeEditor()
         {
             Type[] nodeEditors = ReflectionHandler.GetDerivedTypes(typeof(Node));
+            
             for (int i = 0; i < nodeEditors.Length; i++)
             {
-                CustomNodeEditorAttribute NodeEditorAttrib = nodeEditors[i].GetCustomAttribute(typeof(CustomNodeEditorAttribute)) as CustomNodeEditorAttribute;
-                if (NodeEditorAttrib != null) { m_editors.Add(NodeEditorAttrib.GetInspectedType(), nodeEditors[i]); }
+                CustomNodeEditorAttribute nodeEditorAttribute = nodeEditors[i].GetCustomAttribute(typeof(CustomNodeEditorAttribute)) as CustomNodeEditorAttribute;
+                
+                if (nodeEditorAttribute != null)
+                {
+                    _editors.Add(nodeEditorAttribute.GetInspectedType(), nodeEditors[i]);
+                }
             }
         }
         
-        public static Type GetCustomEditor(Type type)
+        public static Type GetCustomEditor(Type p_type)
         {
-            if (type == null)
-            {
-                return null;
-            }
-            if (m_editors == null)
-            {
-                CacheCustomNodeEditor();
-            }
+            if (p_type == null) { return null; }
+            if (_editors == null) { CacheCustomNodeEditor(); }
 
-            System.Type result;
-            if (m_editors.TryGetValue(type, out result))
+            System.Type result = null;
+            
+            if (_editors.TryGetValue(p_type, out result))
             {
                 return result;
             }
-
-            return GetCustomEditor(type.BaseType);
-        }
-        
-
-        public static String GetName(string fullPath)
-        {
-            return string.Empty;
+            
+            return GetCustomEditor(p_type.BaseType);
         }
     }
 }

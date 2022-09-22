@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -6,15 +7,16 @@ namespace DialogueSystem
 {
     [System.Serializable]
     public class EventEntry : Entry
-    {
-        [SerializeField] public List<EventInfo> staticEvents;
-        [SerializeField] private UnityEvent unityEvent;
+    { 
+        public List<EventInfo> staticEvents;
+        
+        [SerializeField] private UnityEvent _unityEvent;
 
-        public override void Init(Vector2 position, ConversationGraph graph)
+        public override void Init(Vector2 p_position, ConversationGraph p_graph)
         {
-            base.Init(position, graph);
-            staticEvents = new List<EventInfo>();
+            base.Init(p_position, p_graph);
             
+            staticEvents = new List<EventInfo>();
             AddNewEvent();
         }
 

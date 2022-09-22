@@ -1,8 +1,6 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using DialogueSystem;
 using UnityEngine;
+
+using DialogueSystem;
 
 public class NpcDialogueTrigger : MonoBehaviour
 {

@@ -1,7 +1,7 @@
 using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Reflection;
+using System.Collections.Generic;
+
 using UnityEngine;
 
 [System.Serializable]
@@ -10,71 +10,85 @@ public class SerializableType : ISerializationCallbackReceiver, IEqualityCompare
     public System.Type type;
     public string typeName;
     public byte[] data;
-    public SerializableType(System.Type aType)
+    
+    public SerializableType(System.Type p_type)
     {
-        if (aType != null)
+        if (p_type == null)
         {
-            type = aType;
-            typeName = aType.Name;
+            return;
         }
+
+        type = p_type;
+        typeName = p_type.Name;
     }
 
     public void SetType(Type p_type)
     {
-        this.type = p_type;
+        type = p_type;
         typeName = p_type.Name;
+        
         OnBeforeSerialize();
     }
 
-    public static System.Type Read(BinaryReader aReader)
+    public static System.Type Read(BinaryReader p_reader)
     {
-        var paramCount = aReader.ReadByte();
+        byte paramCount = p_reader.ReadByte();
         if (paramCount == 0xFF)
+        {
             return null;
-        var typeName = aReader.ReadString();
-        var type = System.Type.GetType(typeName);
+        }
+        
+        string typeName = p_reader.ReadString();
+        Type type = System.Type.GetType(typeName);
+        
         if (type == null)
-            throw new System.Exception("Can't find type; '" + typeName + "'");
+        {
+            Debug.LogError("Can't find type; '" + typeName + "'");
+        }
+
         if (type.IsGenericTypeDefinition && paramCount > 0)
         {
-            var p = new System.Type[paramCount];
+            Type[] p = new System.Type[paramCount];
             for (int i = 0; i < paramCount; i++)
             {
-                p[i] = Read(aReader);
+                p[i] = Read(p_reader);
             }
+            
             type = type.MakeGenericType(p);
         }
         return type;
     }
 
-    public static void Write(BinaryWriter aWriter, System.Type aType)
+    public static void Write(BinaryWriter p_writer, System.Type p_type)
     {
-        if (aType == null)
+        if (p_type == null)
         {
-            aWriter.Write((byte)0xFF);
+            p_writer.Write((byte)0xFF);
             return;
         }
-        if (aType.IsGenericType)
+        
+        if (p_type.IsGenericType)
         {
-            var t = aType.GetGenericTypeDefinition();
-            var p = aType.GetGenericArguments();
-            aWriter.Write((byte)p.Length);
-            aWriter.Write(t.AssemblyQualifiedName);
+            Type t = p_type.GetGenericTypeDefinition();
+            Type[] p = p_type.GetGenericArguments();
+            
+            p_writer.Write((byte)p.Length);
+            p_writer.Write(t.AssemblyQualifiedName);
+            
             for (int i = 0; i < p.Length; i++)
             {
-                Write(aWriter, p[i]);
+                Write(p_writer, p[i]);
             }
             return;
         }
-        aWriter.Write((byte)0);
-        aWriter.Write(aType.AssemblyQualifiedName);
+        p_writer.Write((byte)0);
+        p_writer.Write(p_type.AssemblyQualifiedName);
     }
-
-
+    
     public void OnBeforeSerialize()
     {
-        using (var stream = new MemoryStream())
-        using (var w = new BinaryWriter(stream))
+        using (MemoryStream stream = new MemoryStream())
+        using (BinaryWriter w = new BinaryWriter(stream))
         {
             Write(w, type);
             data = stream.ToArray();
@@ -83,24 +97,30 @@ public class SerializableType : ISerializationCallbackReceiver, IEqualityCompare
 
     public void OnAfterDeserialize()
     {
-        using (var stream = new MemoryStream(data))
-        using (var r = new BinaryReader(stream))
+        using (MemoryStream stream = new MemoryStream(data))
+        using (BinaryReader r = new BinaryReader(stream))
         {
             type = Read(r);
         }
     }
 
-    public bool Equals(SerializableType x, SerializableType y)
+    #region ----> IEqualityComparer <----
+
+    public bool Equals(SerializableType p_x, SerializableType p_y)
     {
-        if (ReferenceEquals(x, y)) return true;
-        if (ReferenceEquals(x, null)) return false;
-        if (ReferenceEquals(y, null)) return false;
-        if (x.GetType() != y.GetType()) return false;
-        return x.typeName == y.typeName;
+        if (ReferenceEquals(p_x, p_y)) return true;
+        if (ReferenceEquals(p_x, null)) return false;
+        if (ReferenceEquals(p_y, null)) return false;
+        if (p_x.GetType() != p_y.GetType()) return false;
+        
+        return p_x.typeName == p_y.typeName;
     }
 
-    public int GetHashCode(SerializableType obj)
+    public int GetHashCode(SerializableType p_obj)
     {
-        return (obj.typeName != null ? obj.typeName.GetHashCode() : 0);
+        return (p_obj.typeName != null ? p_obj.typeName.GetHashCode() : 0);
     }
+
+    #endregion
+
 }

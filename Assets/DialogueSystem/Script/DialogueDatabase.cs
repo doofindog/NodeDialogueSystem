@@ -1,36 +1,35 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
-using DialogueSystem;
+
 using UnityEditor;
 using UnityEngine;
+
+using DialogueSystem;
 
 [CreateAssetMenu(fileName = "Dialogue Database", menuName = "Dialogue/Create Dialogue DataBase")]
 [System.Serializable]
 public class DialogueDatabase : ScriptableObject
 {
-    [SerializeField] public string m_id;
-    [SerializeField] private string m_name;
-    [SerializeField] private List<ConversationGraph> conversations;
+    [SerializeField] private List<ConversationGraph> _conversations;
 
     public bool ContainsConversations()
     {
-        if (conversations == null) { return false; }
-        if (conversations.Count == 0) { return false; }
+        if (_conversations == null) { return false; }
+        if (_conversations.Count == 0) { return false; }
+        
         return true;
     }
 
     public List<ConversationGraph> GetAllConversations()
     {
-        conversations ??= new List<ConversationGraph>();
-        return conversations;
+        _conversations ??= new List<ConversationGraph>();
+        return _conversations;
     }
 
-    public ConversationGraph GetConversationGraphAtIndex(int index)
+    public ConversationGraph GetConversationGraphAtIndex(int p_index)
     {
-        if (index < conversations.Count)
+        if (p_index < _conversations.Count)
         {
-            return conversations[index];
+            return _conversations[p_index];
         }
 
         return null;
@@ -38,7 +37,7 @@ public class DialogueDatabase : ScriptableObject
 
     public ConversationGraph CreateNewConversation()
     {
-        conversations ??= new List<ConversationGraph>();
+        _conversations ??= new List<ConversationGraph>();
         
         AssetDatabase.StartAssetEditing();
         
@@ -52,17 +51,19 @@ public class DialogueDatabase : ScriptableObject
         
         AssetDatabase.StopAssetEditing();
         
-        conversations.Add(graph);
+        _conversations.Add(graph);
 
         return graph;
     }
 
-    public void DeleteDialogue(ConversationGraph conv)
+    public void DeleteDialogue(ConversationGraph p_conv)
     {
-        if (conversations.Contains(conv))
+        if (!_conversations.Contains(p_conv))
         {
-            conversations.Remove(conv);
-            DestroyImmediate(conv, this);
+            return;
         }
+        
+        _conversations.Remove(p_conv);
+        DestroyImmediate(p_conv, this);
     }
 }

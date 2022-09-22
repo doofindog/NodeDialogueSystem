@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class CustomNodeEditorAttribute : Attribute
 {
-    private Type m_targetType;
+    private Type _targetType;
 
-    public CustomNodeEditorAttribute(Type type)
+    public CustomNodeEditorAttribute(Type p_type)
     {
-        m_targetType = type;
+        _targetType = p_type;
     }
 
     public Type GetInspectedType()
     {
-        return m_targetType;
+        return _targetType;
     }
 }

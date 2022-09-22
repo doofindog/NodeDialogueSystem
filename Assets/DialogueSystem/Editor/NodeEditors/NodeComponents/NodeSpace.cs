@@ -6,7 +6,7 @@ namespace DialogueSystem.Editor.NodeComponents
     {
         public NodeSpace(Rect rect)
         {
-            canvasRect = rect;
+            base.rect = rect;
         }
     }
 }
