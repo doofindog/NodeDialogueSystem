@@ -1,126 +1,143 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using DialogueSystem;
+
 using UnityEngine;
-using UnityEngine.UI;
+
 
 public class DialogueManager : MonoBehaviour
 {
     public static DialogueManager instance;
-    [SerializeField] private DialogueGraph m_dialogue;
-    [SerializeField] private GameObject dialogueUI;
-    [SerializeField] private Text m_text;
-    [SerializeField] private float m_textSpeed;
-    [SerializeField] private KeyCode m_key;
-    private bool fastShow;
-    private bool textCompleted;
-    private bool endReached;
     
-    private DialogueGraph _mDialogueGraph;
-    private Node currentIndex;
-
-    private IEnumerator _enumerator;
+    
+    [SerializeField] private Entry _currentEntry;
+    [SerializeField] private DialogueSystemUI _dialogueUI;
+    [SerializeField] private ConversationGraph _currentConversation;
+    [SerializeField] private bool _inProgress;
+    [SerializeField] private bool _isTalking;
+    [SerializeField] private bool _skipTalking;
+    [SerializeField] private bool _finishedTalking;
+    [SerializeField] private bool _freezeInputs;
+    
     public void Awake()
     {
-        if (instance == null)
-        {
-            instance = this;
-            instance.gameObject.SetActive(false);
-        }
+        DialogueEvents.startConversationEvent += StartConversation;
+        DialogueUIEvents.optionPressed += HandleOnClickOption;
+        DialogueUIEvents.printingCompleted += HandleTalkingComplete;
     }
 
-    public void OpenDialogue(DialogueGraph dialogueGraph)
+    public void OnDestroy()
     {
-        m_dialogue = dialogueGraph;
-        LoadDialogue(m_dialogue);
+        DialogueEvents.startConversationEvent -= StartConversation;
+        DialogueUIEvents.optionPressed -= HandleOnClickOption;
+        DialogueUIEvents.printingCompleted -= HandleTalkingComplete;
+    }
+
+    private void StartConversation(ConversationGraph p_graph)
+    {
+        if (p_graph == null) { return; }
+        if (_inProgress == true) { return; }
         
+        _currentConversation = p_graph;
+        _currentEntry = _currentConversation.GetNext(p_graph.GetStart());
+
+        _freezeInputs = false;
+        _inProgress = true;
+        _isTalking = true;
+        
+        SetupUI(p_graph);
+        
+        DialogueEvents.ConversationStarted();
     }
 
-    public void ShowDiloague(string text, List<Option> option = null)
+    private void SetupUI(ConversationGraph graph)
     {
-        dialogueUI.SetActive(true);
-        if (_enumerator != null)
+        _dialogueUI.gameObject.SetActive(true);
+        _dialogueUI.DisplayDialogue(_currentEntry);
+    }
+
+    private void UpdateUI(Entry p_entry)
+    {
+        _dialogueUI.DisplayDialogue(p_entry);
+    }
+
+    private void EndConversation()
+    {
+        _freezeInputs = true;
+        _inProgress = false;
+        _isTalking = false;
+        _currentEntry = null;
+        _dialogueUI.gameObject.SetActive(false);
+        
+        DialogueEvents.ConversationEnded();
+    }
+
+    public void Update()
+    {
+        HandleInputs();
+    }
+
+    private void HandleInputs()
+    {
+        if (_freezeInputs == true)
         {
-            StopCoroutine(_enumerator);
+            return;
         }
 
-        _enumerator = ShowText(text, option);
-        StartCoroutine(_enumerator);
+        if (Input.GetKeyDown(KeyCode.Space)) { ControlConversation();}
     }
-    
-    private IEnumerator ShowText(string text, List<Option> options = null)
+
+    private void ControlConversation()
     {
-        if (text != string.Empty)
+        if (_isTalking)
         {
-            m_text.text = string.Empty;
-            if (fastShow != true)
-            {
-                for (int i = 0; i < text.Length; i++)
-                {
-                    m_text.text += text[i];
-                    yield return new WaitForSeconds(m_textSpeed);
-                }
-            }
-            else
-            {
-                m_text.text = text;
-            }
-
-            if (options != null)
-            {
-
-            }
-
-            textCompleted = true;
+            TrySkipTalking();
+            return;
+        }
+        
+        if (_currentEntry.GetType() != typeof(DecisionEntry))
+        {
+            Entry nextEntry = _currentConversation.GetNext(_currentEntry);
+            MoveToNext(nextEntry);
         }
     }
-    public void CloseDialogue()
+
+    private void TrySkipTalking()
     {
-        dialogueUI.SetActive(false);
-        this.gameObject.SetActive(false);
-    }
-    
-    public void LoadDialogue(DialogueGraph dialogueDialogueGraph)
-    {
-        instance.gameObject.SetActive(true);
-        dialogueUI.gameObject.SetActive(true);
-        _mDialogueGraph = dialogueDialogueGraph;
-        currentIndex = _mDialogueGraph.GetStarNode();
-        MoveToNextNode();
-    }
-    
-    public void MoveToNextNode()
-    {
-        Node node = _mDialogueGraph.GetNext(currentIndex);
-        if (node != null)
+        if (!_isTalking)
         {
-            currentIndex = node;
-            if (node.GetType() == typeof(PointNode))
-            {
-                CloseDialogue();
-            }
-            else
-            {
-                currentIndex.Invoke();
-            }
+            return;
         }
 
-
+        DialogueEvents.skipTalking();
+        
+        _isTalking = false;
     }
 
-    private void Update()
+    private void HandleTalkingComplete()
     {
-        if (Input.GetKeyDown(m_key))
+        _isTalking = false;
+    }
+
+    private void MoveToNext(Entry p_nextEntry)
+    {
+        if (p_nextEntry == null)
         {
-            if (textCompleted != true)
-            {
-                fastShow = true;
-            }
-            else
-            {
-                MoveToNextNode();
-            }
+            EndConversation();
+            return;
         }
+        
+        UpdateUI(p_nextEntry);
+        
+        _currentEntry = p_nextEntry;
+        _currentEntry.Invoke();
+        _isTalking = true;
+    }
+
+    private void HandleOnClickOption(int p_index)
+    {
+        DecisionEntry decisionEntry = (DecisionEntry) _currentEntry;
+        Option optionPressed = decisionEntry.GetOptionAtIndex(p_index);
+        Entry nextEntry = _currentConversation.GetNext(_currentEntry, optionPressed);
+        
+        MoveToNext(nextEntry);
     }
 }

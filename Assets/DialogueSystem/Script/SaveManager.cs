@@ -1,12 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
+using UnityEngine; 
 using UnityEditor;
 
 public class SaveManager 
 {
-    public static void SaveData(UnityEngine.Object target)
+    public static void SaveData(UnityEngine.Object p_target)
     {
-        EditorUtility.SetDirty(target);
+        EditorUtility.SetDirty(p_target);
     }
 }
