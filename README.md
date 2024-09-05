@@ -1,3 +1,9 @@
+
+
+
+https://github.com/user-attachments/assets/b467c45b-cb2b-4a8e-a491-267ff98a3cef
+
+
 # Introduction
 The dialogue system I created is ingeniously crafted with a node-based architecture, making it highly adaptable and easy to manage. This system, built with Unity and C#, employs optimized reflection and serialization methods to handle conversations smoothly, showcasing a sophisticated blend of technology and user-friendly design.
 
